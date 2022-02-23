@@ -1,4 +1,4 @@
-package student_yevgeniy_tolks.lesson_2_variables;
+package student_yevgeniy_tolks.lesson_2.level_1;
 
 import java.util.Scanner;
 

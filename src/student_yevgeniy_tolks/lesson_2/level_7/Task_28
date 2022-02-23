@@ -1,0 +1,11 @@
+
+Correct from point of Java code class names
+
+
+class Book{}
+class BankAccount{}
+class SystemUnit{}
+class LoginService{}
+class BankTransaction{}
+class Task1{}
+
