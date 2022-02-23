@@ -24,7 +24,7 @@ public class Task_2 {
         }
         else{
             double division=firstNumber/secondNumber;
-            System.out.println("Sum of two numbers: " +division);
+            System.out.println("Division of two numbers: " +division);
         }
     }
 }
