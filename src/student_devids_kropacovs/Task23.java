@@ -1,6 +1,6 @@
 package student_devids_kropacovs;
 
-public class task23 {
+public class Task23 {
 
 
     public static void main(String[] args) {
