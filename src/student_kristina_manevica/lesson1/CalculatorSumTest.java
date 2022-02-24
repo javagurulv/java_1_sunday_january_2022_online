@@ -6,10 +6,14 @@ public class CalculatorSumTest {
         int b = 36;
         int c = 50;
         int d = 3;
-        int result1 = a + b;
-        int result2 = c / d;
-        System.out.println(result1);
-        System.out.println(result2);
+        int e = 50;
+        int f = 3;
+        int resultFirst = a + b;
+        int resultSecond = c / d;
+        int resultThird = e * f;
+        System.out.println(resultFirst);
+        System.out.println(resultSecond);
+        System.out.println(resultThird);
       }
 }
 
