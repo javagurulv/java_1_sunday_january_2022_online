@@ -1,8 +1,8 @@
-package student_Vitaly_Galuzo.lesson_2_task_11;
+package student_Vitaly_Galuzo.lesson_2;
 
 import java.util.Scanner;
 
-public class Average {
+public class Task_11 {
     public static void main(String[] args) {
 
             Scanner scr=new Scanner(System.in);
