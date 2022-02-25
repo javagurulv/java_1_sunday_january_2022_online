@@ -1,4 +1,4 @@
-package student_Vitaly_Galuzo.Variables;
+package student_Vitaly_Galuzo.lesson_2_task_1;
 
 
 import java.util.Scanner;
