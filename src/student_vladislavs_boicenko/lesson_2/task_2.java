@@ -23,5 +23,4 @@ public class task_2 {
         System.out.println(num1 + "*" + num2 + "=" + res4);
 
     }
-
 }
