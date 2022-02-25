@@ -1,8 +1,8 @@
-package student_Vitaly_Galuzo.lesson_2_task_9;
+package student_Vitaly_Galuzo.lesson_2;
 
 import java.util.Scanner;
 
-public class Multiplication_table {
+public class Task_9 {
     public static void main(String[] args) {
 
         Scanner numb = new Scanner(System.in);
