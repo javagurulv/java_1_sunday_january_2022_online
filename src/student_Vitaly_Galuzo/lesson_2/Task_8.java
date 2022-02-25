@@ -1,8 +1,8 @@
-package student_Vitaly_Galuzo.lesson_2_task_8;
+package student_Vitaly_Galuzo.lesson_2;
 
 import java.util.Scanner;
 
-public class Login {
+public class Task_8 {
     public static void main(String[] args) {
         
         Scanner scr = new Scanner(System.in);
