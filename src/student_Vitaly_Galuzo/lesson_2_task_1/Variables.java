@@ -3,7 +3,7 @@ package student_Vitaly_Galuzo.lesson_2_task_1;
 
 import java.util.Scanner;
 
-public class variables {
+public class Variables {
     public static void main(String[] args) {
 
         Scanner scr=new Scanner(System.in);
