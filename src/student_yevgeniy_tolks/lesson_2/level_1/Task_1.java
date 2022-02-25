@@ -11,12 +11,12 @@ public class Task_1 {
         int secondNumber=scanner.nextInt();
 
         int sum = firstNumber+secondNumber;
-        int deduction = firstNumber-secondNumber;
+        int subtraction = firstNumber-secondNumber;
         int multiplication= firstNumber*secondNumber;
 
 
         System.out.println("Sum of two numbers: " +sum);
-        System.out.println("Deduction of two numbers: " +deduction);
+        System.out.println("Deduction of two numbers: " +subtraction);
         System.out.println("Multiplication of two numbers: " +multiplication);
 
         if(secondNumber==0){
