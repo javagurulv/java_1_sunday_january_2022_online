@@ -7,7 +7,7 @@ This should ask if you are Mr or Ms, then ask your name and write it down
  */
 public class Architect_task {
     public static void main(String[] args) {
-        System.out.print("Please, press 1 if you are Mr, press 2 if you are MS");
+        System.out.print("Please, press 1 if you are Mr, press 2 if you are MS ");
         Scanner scannerGender = new Scanner(System.in);
         int gender = scannerGender.nextInt();
         if (gender ==1 || gender == 2) {

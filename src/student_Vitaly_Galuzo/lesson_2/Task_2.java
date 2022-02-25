@@ -1,8 +1,8 @@
-package student_Vitaly_Galuzo.lesson_2_task_2;
+package student_Vitaly_Galuzo.lesson_2;
 
 import java.util.Scanner;
 
-public class variables_2 {
+public class Task_2 {
 
     public static void main(String[] args) {
 
