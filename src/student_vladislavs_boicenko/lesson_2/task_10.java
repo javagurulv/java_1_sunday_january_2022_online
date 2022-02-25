@@ -14,7 +14,6 @@ public class task_10 {
         System.out.println("Результат: ");
         System.out.println("Периметр круга: " + resP);
         System.out.println("Площадь круга: " + resS);
-        System.out.println("Площадь круга: " + resS);
 
     }
 
