@@ -11,5 +11,4 @@ public class task_8 {
         System.out.println("Hello, " + name + "!");
 
     }
-
 }
