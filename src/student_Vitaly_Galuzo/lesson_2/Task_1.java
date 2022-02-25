@@ -1,9 +1,9 @@
-package student_Vitaly_Galuzo.lesson_2_task_1;
+package student_Vitaly_Galuzo.lesson_2;
 
 
 import java.util.Scanner;
 
-public class Variables {
+public class Task_1 {
     public static void main(String[] args) {
 
         Scanner scr=new Scanner(System.in);
