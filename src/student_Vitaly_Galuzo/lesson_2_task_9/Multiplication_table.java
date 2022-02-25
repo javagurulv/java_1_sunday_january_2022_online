@@ -2,7 +2,7 @@ package student_Vitaly_Galuzo.lesson_2_task_9;
 
 import java.util.Scanner;
 
-public class multiplication_table {
+public class Multiplication_table {
     public static void main(String[] args) {
 
         Scanner numb = new Scanner(System.in);

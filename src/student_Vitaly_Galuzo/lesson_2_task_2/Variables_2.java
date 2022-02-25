@@ -2,7 +2,7 @@ package student_Vitaly_Galuzo.lesson_2_task_2;
 
 import java.util.Scanner;
 
-public class variables_2 {
+public class Variables_2 {
 
     public static void main(String[] args) {
 
