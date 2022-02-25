@@ -16,5 +16,4 @@ public class task_10 {
         System.out.println("Площадь круга: " + resS);
 
     }
-
 }
