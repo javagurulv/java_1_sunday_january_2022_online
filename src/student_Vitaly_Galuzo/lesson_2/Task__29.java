@@ -1,6 +1,6 @@
 package student_Vitaly_Galuzo.lesson_2;
 
-public class Task_29 {
+public class Task__29 {
 
     public static void main(String[] args) {
 
