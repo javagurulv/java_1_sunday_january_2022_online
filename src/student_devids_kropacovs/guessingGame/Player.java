@@ -13,6 +13,6 @@ public class Player {
     }
 
     public int number() {
-        return 0;
+        return number;
     }
 }
