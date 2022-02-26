@@ -10,6 +10,7 @@ public class Task_11 {
 
         System.out.println("Hello, I will subtract your arithmetic mean.");
 
+
         System.out.println("Please enter the first integer:");
         float first = scanner.nextInt();
 
