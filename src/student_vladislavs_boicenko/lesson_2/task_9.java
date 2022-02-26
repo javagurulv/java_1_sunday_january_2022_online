@@ -31,5 +31,6 @@ public class task_9 {
         System.out.println(num + "*" + 9 + "=" + res8);
         System.out.println(num + "*" + 10 + "=" + res9);
 
+
     }
 }
