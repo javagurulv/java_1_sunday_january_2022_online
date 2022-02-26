@@ -2,11 +2,12 @@ package student_sergei_klunkov.lesson2.homework;
 
 import java.util.Scanner;
 
-public class Level1Task1Addition {
+public class Multiplication {
 
     public static void main(String[] args) {
         // 1. get first number from user
         Scanner myInput = new Scanner( System.in );
+        System.out.println("Hello!");
         System.out.println("Enter first number:");
         int firstNumber = myInput.nextInt();
 
@@ -14,12 +15,13 @@ public class Level1Task1Addition {
         System.out.println("Enter second number:");
         int secondNumber = myInput.nextInt();
 
-        // 3. first number + second number
-        int result = firstNumber + secondNumber;
+        System.out.println("Wait a second, please...");
+
+        // 3. first number * second number
+        int result = firstNumber * secondNumber;
 
         // 4. print result to console
         System.out.println("Result = " + result);
 
     }
-
 }
