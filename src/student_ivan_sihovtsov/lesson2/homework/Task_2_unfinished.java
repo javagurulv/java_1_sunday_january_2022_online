@@ -14,10 +14,6 @@ public class Task_2_unfinished {
         System.out.println("Enter second number: ");
         double secondNumber = scanner.nextInt();
 
-        double sum = firstNumber + secondNumber;
-        double sub = firstNumber - secondNumber;
-        double mul = firstNumber * secondNumber;
-        double div = firstNumber / secondNumber;
 
         System.out.println(firstNumber + " + " + secondNumber + " = " +
                 (firstNumber + secondNumber));

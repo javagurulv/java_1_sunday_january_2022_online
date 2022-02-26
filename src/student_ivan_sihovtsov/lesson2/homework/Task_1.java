@@ -8,16 +8,14 @@ public class Task_1 {
 
         Scanner scanner = new Scanner(System.in);
 
+
+
         System.out.println("Enter first number: ");
         int firstNumber = scanner.nextInt();
-
         System.out.println("Enter second number: ");
         int secondNumber = scanner.nextInt();
 
-        int sum = firstNumber + secondNumber;
-        int sub = firstNumber - secondNumber;
-        int mul = firstNumber * secondNumber;
-        int div = firstNumber / secondNumber;
+
 
         System.out.println(firstNumber + " + " + secondNumber + " = " +
                 (firstNumber + secondNumber));
@@ -30,6 +28,8 @@ public class Task_1 {
 
         System.out.println(firstNumber + " / " + secondNumber + " = " +
                 (firstNumber / secondNumber));
+
+
 
         System.out.println(" ");
         System.out.println("Have a nice day! ");
