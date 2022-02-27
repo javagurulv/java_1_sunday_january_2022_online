@@ -1,4 +1,4 @@
-package student_ivan_sihovtsov.lesson2.homework;
+package student_ivan_sihovtsov.lesson2.level_3;
 
 import java.util.Scanner;
 
@@ -10,8 +10,7 @@ public class Task_9 {
         System.out.println("Enter the number");
         int firstNumber = scanner.nextInt();
 
-        System.out.println(firstNumber + " x " + 1 + " = " +
-                (firstNumber * 1));
+
         System.out.println(firstNumber + " x " + 2 + " = " +
                 (firstNumber * 2));
         System.out.println(firstNumber + " x " + 3 + " = " +

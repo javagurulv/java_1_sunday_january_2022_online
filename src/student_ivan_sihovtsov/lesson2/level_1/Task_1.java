@@ -1,18 +1,20 @@
-package student_ivan_sihovtsov.lesson2.homework;
+package student_ivan_sihovtsov.lesson2.level_1;
 
 import java.util.Scanner;
 
-public class Task_2_unfinished {
+public class Task_1 {
 
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Enter first number: ");
-        double firstNumber = scanner.nextInt();
 
+
+        System.out.println("Enter first number: ");
+        int firstNumber = scanner.nextInt();
         System.out.println("Enter second number: ");
-        double secondNumber = scanner.nextInt();
+        int secondNumber = scanner.nextInt();
+
 
 
         System.out.println(firstNumber + " + " + secondNumber + " = " +
@@ -28,6 +30,9 @@ public class Task_2_unfinished {
                 (firstNumber / secondNumber));
 
 
+
+        System.out.println(" ");
+        System.out.println("Have a nice day! ");
 
 
 
