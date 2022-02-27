@@ -2,11 +2,11 @@ package student_vladislavs_boicenko.lesson_2;
 
 import java.util.Scanner;
 
-public class task_9 {
+public class Task_9 {
 
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        System.out.print("Введите число: ");
+        System.out.print("Enter the number: ");
         int num = scan.nextInt();
 
         int res1 = num * 2;
@@ -19,7 +19,6 @@ public class task_9 {
         int res8 = num * 9;
         int res9 = num * 10;
 
-        System.out.println("Результат: ");
         System.out.println(num + "*" + 1 + "=" + num);
         System.out.println(num + "*" + 2 + "=" + res1);
         System.out.println(num + "*" + 3 + "=" + res2);
