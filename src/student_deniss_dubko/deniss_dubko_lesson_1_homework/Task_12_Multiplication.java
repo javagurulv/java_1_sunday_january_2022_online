@@ -5,12 +5,12 @@ import java.util.Scanner;
 public class Task_12_Multiplication {
     public static void main (String[] args) {
         Scanner input = new Scanner(System.in);
-        System.out.print("Введите число A = ");
+        System.out.print("Enter the number A = ");
         int a = input.nextInt();
-        System.out.println("Введите число B = ");
+        System.out.println("Enter the number B = ");
         int b = input.nextInt();
         int d = a*b;
         System.out.println();
-        System.out.println("Произведение = " +d);
+        System.out.println("Multiplication = " +d);
     }
 }
