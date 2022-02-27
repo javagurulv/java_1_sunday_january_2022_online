@@ -1,8 +1,8 @@
-package student_deniss_dubko.deniss_dubko_lesson_3;
+package student_deniss_dubko.deniss_dubko_lesson_2;
 
 import java.util.Scanner;
 
-public class lesson_3_sum {
+public class lesson_2_sum {
 
     public static void main(String[] args) {
 
