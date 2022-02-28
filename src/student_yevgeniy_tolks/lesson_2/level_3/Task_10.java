@@ -8,7 +8,7 @@ public class Task_10 {
         System.out.println("Enter radius of the circle : ");
         double radius = scanner.nextDouble();
 
-        double perimeter = 2*Math.PI*radius;
+        double perimeter = 2 * Math.PI * radius;
         double area = Math.PI * radius * radius;
 
         System.out.println("Perimeter is = " + perimeter);
