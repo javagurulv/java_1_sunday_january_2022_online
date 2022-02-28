@@ -1,4 +1,4 @@
-package student_deniss_dubko.deniss_dubko_lesson_2;
+package student_deniss_dubko.work_in_class;
 
 import java.util.Scanner;
 
