@@ -1,4 +1,4 @@
-package student_devids_kropacovs;
+package student_devids_kropacovs.arrayTraining1;
 
 public class RandomWordGenerator {
     public static void main(String[] args) {

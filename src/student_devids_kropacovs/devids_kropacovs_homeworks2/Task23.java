@@ -1,4 +1,4 @@
-package student_devids_kropacovs;
+package student_devids_kropacovs.devids_kropacovs_homeworks2;
 
 public class Task23 {
 
