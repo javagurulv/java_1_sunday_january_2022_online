@@ -1,4 +1,4 @@
-package student_vladislavs_boicenko.lesson_2;
+package student_vladislavs_boicenko.lesson_2.level_3;
 
 import java.util.Scanner;
 
