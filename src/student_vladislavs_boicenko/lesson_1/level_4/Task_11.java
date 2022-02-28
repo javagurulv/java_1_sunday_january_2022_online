@@ -4,8 +4,7 @@ public class Task_11 {
 
     public static void main(String[] args) {
 
-        int num1 = 46;
-        int num2 = 38;
+        int num1 = 46, num2 = 38;
         int res = num1 + num2;
         System.out.println("Result: " + num1 + "+" + num2 + "=" + res);
 
