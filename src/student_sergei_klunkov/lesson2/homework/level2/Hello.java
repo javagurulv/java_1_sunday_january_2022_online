@@ -1,4 +1,4 @@
-package student_sergei_klunkov.lesson2.homework;
+package student_sergei_klunkov.lesson2.homework.level2;
 
 import java.util.Scanner;
 
@@ -8,12 +8,11 @@ public class Hello {
 
         Scanner scanner = new Scanner(System.in);
 
-                System.out.print("Enter your name");
+        System.out.println("Enter your name");
 
         String name = scanner.next();
 
-
-                System.out.println("Hello,"+" "+ name +"!");
+        System.out.println("Hello,"+" "+ name +"!");
 
     }
 }

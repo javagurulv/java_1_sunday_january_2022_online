@@ -1,4 +1,4 @@
-package student_sergei_klunkov.lesson2.homework;
+package student_sergei_klunkov.lesson2.homework.level3;
 
 import java.util.Scanner;
 
@@ -17,7 +17,13 @@ import java.util.Scanner;
                 int n = scan.nextInt();
 
 
-                for(int i=1; i<=10; ++i) System.out.println(n + " * " + i + " = " + i * n);
+                for(int i=1; i<=10; ++i)
+
+                    System.out.println(n + " * " + i + " = " + i * n);
+
+
+
+
 
 
             }

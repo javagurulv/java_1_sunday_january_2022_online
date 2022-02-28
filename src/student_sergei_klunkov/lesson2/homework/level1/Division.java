@@ -1,4 +1,4 @@
-package student_sergei_klunkov.lesson2.homework;
+package student_sergei_klunkov.lesson2.homework.level1;
 
 import java.util.Scanner;
 
