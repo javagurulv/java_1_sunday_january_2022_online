@@ -1,4 +1,4 @@
-package teacher.codereview.lesson_4_if_statement.lessoncode;
+package teacher.lesson_4_if_statement.lessoncode;
 
 class Calculator {
 
