@@ -17,10 +17,10 @@ public class EnterTwoNumbers {
         int multiplication = firstNumber * secondNumber;
         double division = firstNumber / (double) secondNumber;
 
-        System.out.println("Sum of yours number is:" + sum);
-        System.out.println("Minus of yours two numbers is:" + minus);
-        System.out.println("Multiplication of yours two numbers is:" + multiplication);
-        System.out.println("Division of yours yours numbers is:" + division);
+        System.out.println("Sum of yours number is: " + sum);
+        System.out.println("Minus of yours two numbers is: " + minus);
+        System.out.println("Multiplication of yours two numbers is: " + multiplication);
+        System.out.println("Division of yours yours numbers is: " + division);
     }
 }
 
