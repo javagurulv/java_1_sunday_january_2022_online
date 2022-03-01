@@ -1,7 +1,7 @@
 package student_yevgeniy_tolks.lesson_2.level_8;
 //test task with primitive data types
 
-public class Task_33 {
+ class Task_33 {
 
 //instance variables (non-static fields), object store their individual states
     int numInt=1;
