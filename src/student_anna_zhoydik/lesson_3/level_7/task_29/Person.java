@@ -1,4 +1,4 @@
-package student_anna_zhoydik.lesson_3.level_7;
+package student_anna_zhoydik.lesson_3.level_7.task_29;
 
 public class Person {
   int date;

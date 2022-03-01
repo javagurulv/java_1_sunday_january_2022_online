@@ -10,7 +10,6 @@ public class Dog {
   public int happyBirthday() {
     this.age = this.age + 1;
     return this.age;
-    // напишите тут команду увеличения возраста на 1
   }
 
   public void voice(){
