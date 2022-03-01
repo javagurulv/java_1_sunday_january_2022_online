@@ -1,11 +1,20 @@
-package student_elina_kucenko.lesson3.task3;
+package student_elina_kucenko.lesson3.level1;
 
 public class RobotDemo {
     public static void main(String[] args) {
-        // создайте экземпляр класса Robot вызвав конструктор класса
-        // сохраните ссылку (указатель) на только, что созданный
-        // виртуальный обьект класса Robot в переменную,
-        // она нам понадобиться для дальнейшего использования.
+
+        Robot robot = new Robot();
+        robot.sayHello();
+        robot.sayYourName();
+
+        Robot robot1 = new Robot();
+        robot1.sayHello();
+        robot1.sayYourName();
+
+        Robot robot2 = new Robot();
+        robot2.sayHello();
+        robot2.sayYourName();
+
     }
-    
+
    }
