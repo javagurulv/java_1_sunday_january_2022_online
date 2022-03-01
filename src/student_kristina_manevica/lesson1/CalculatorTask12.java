@@ -1,6 +1,6 @@
 package student_kristina_manevica.lesson1;
 
-public class CalculatorMultiplier {
+public class CalculatorTask12 {
     public static void main(String[] args){
         int first = 50;
         int second = 3;
