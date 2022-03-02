@@ -4,7 +4,7 @@ public class Robot {
 
     String name;
 
-    public Robot(String robotName) {
+    Robot(String robotName) {
         this.name = robotName;
     }
 
