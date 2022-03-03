@@ -2,7 +2,7 @@ package student_devids_kropacovs.guessingGame;
 
 import java.util.Scanner;
 
-public class Player {
+class Player {
     int number = 0;
 
     public void guess(){
