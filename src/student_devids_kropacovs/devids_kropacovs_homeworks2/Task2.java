@@ -2,7 +2,7 @@ package student_devids_kropacovs.devids_kropacovs_homeworks2;
 
 import java.util.Scanner;
 
-public class Task2 {
+class Task2 {
 
     public static void main(String[] args) {
 

@@ -2,7 +2,7 @@ package student_yevgeniy_tolks.lesson_2.level_5;
 
 import java.util.Scanner;
 
-public class Task_15 {
+ class Task_15 {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         System.out.print("Enter text:  ");

@@ -15,16 +15,16 @@ public class Task_1 {
                 int secondNumber = scanner.nextInt();
 
                 int sum = firstNumber + secondNumber;
-                System.out.println("Sum=" + sum);
+                System.out.println("Addition=" + sum);
 
                 int sum2 = firstNumber - secondNumber;
-                System.out.println("Sum2=" + sum2);
+                System.out.println("Deduction=" + sum2);
 
                 int sum3 = firstNumber * secondNumber;
-                System.out.println("Sum3=" + sum3);
+                System.out.println("Multiplication=" + sum3);
 
                 int sum4 = firstNumber / secondNumber;
-                System.out.println("Sum4=" + sum4);
+                System.out.println("Division=" + sum4);
 
 
         }
