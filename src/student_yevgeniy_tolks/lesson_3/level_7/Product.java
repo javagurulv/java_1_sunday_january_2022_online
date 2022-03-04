@@ -25,7 +25,7 @@ package student_yevgeniy_tolks.lesson_3.level_7;
         void printInformation(){
             System.out.println();
             System.out.println("Price of chosen product " + this.name + " " + String.format("%.2f",regularPrice) + "euro");
-            System.out.println("Discount on chosen product " + this.name + " " + discount + "%");
+            System.out.println("Discount on chosen product was " + this.name + " " + discount + "%");
         }
 
 
