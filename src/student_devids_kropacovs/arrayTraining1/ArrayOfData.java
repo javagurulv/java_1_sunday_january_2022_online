@@ -2,7 +2,7 @@ package student_devids_kropacovs.arrayTraining1;
 
 import java.util.Scanner;
 
-public class ArrayOfData {
+class ArrayOfData {
     String[] names;
     int[] ages;
     int[] heights;
