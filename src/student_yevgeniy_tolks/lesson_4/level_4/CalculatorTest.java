@@ -24,9 +24,7 @@ class CalculatorTest {
             System.out.println("Sum test is - OK!");
         } else {
             System.out.println("Sum test - FAILED!");
-
         }
-
     }
 
     public void subTest() {
@@ -34,16 +32,13 @@ class CalculatorTest {
         int secondNumber = 5;
         int expectedResult = 15;
 
-
         Calculator calculator = new Calculator();
         int subResult = calculator.subOfTwoNumbers(firstNumber, secondNumber);
-
         if (subResult == expectedResult) {
             System.out.println("Sub test is - OK!");
         } else {
             System.out.println("Sub test - FAILED");
         }
-
     }
 
     public void mulTest() {
@@ -54,14 +49,11 @@ class CalculatorTest {
 
         Calculator calculator = new Calculator();
         int mulResult = calculator.mulOfTwoNumbers(firstNumber, secondNumber);
-
         if (mulResult == expectedResult) {
             System.out.println("Multiplication test is - OK");
         } else {
             System.out.println("Multiplication test - FAILED");
         }
-
-
     }
 
     public void divTest() {
@@ -70,17 +62,15 @@ class CalculatorTest {
         int secondNumber = 20;
         int expectedResult = 5;
 
-            Calculator calculator = new Calculator();
-            int divResult = calculator.divOfTwoNumbers(firstNumber, secondNumber);
-
-            if (divResult == expectedResult) {
+        Calculator calculator = new Calculator();
+        int divResult = calculator.divOfTwoNumbers(firstNumber, secondNumber);
+        if (divResult == expectedResult) {
             System.out.println("Div test is - OK!");
         }
         else {
             System.out.println("Div result - FAILED");
         }
-
-        }
+    }
 
         public void evenTestResult(){
 
@@ -98,8 +88,6 @@ class CalculatorTest {
             System.out.println("Division result is EVEN number - " + divResultEvenTest);
 
         }
-
-
     }
 
 
