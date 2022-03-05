@@ -1,6 +1,6 @@
 package student_devids_kropacovs.arrayTraining1;
 
-public class RandomWordGenerator {
+class RandomWordGenerator {
     public static void main(String[] args) {
         String[] colors = {"Red","Blue","Orange","Black","Pink"};
         int numOfWords = colors.length;
