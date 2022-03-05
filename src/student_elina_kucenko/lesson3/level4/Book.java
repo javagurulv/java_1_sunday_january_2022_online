@@ -1,6 +1,6 @@
 package student_elina_kucenko.lesson3.level4;
 
-public class Book {
+class Book {
 
     String title;
 

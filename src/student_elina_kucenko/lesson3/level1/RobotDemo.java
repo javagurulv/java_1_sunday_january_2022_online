@@ -1,6 +1,6 @@
 package student_elina_kucenko.lesson3.level1;
 
-public class RobotDemo {
+class RobotDemo {
     public static void main(String[] args) {
 
         Robot robot = new Robot();

@@ -1,6 +1,6 @@
 package student_elina_kucenko.lesson2.level7;
 
-public class  Task30CorrectDataTypes {
+class  Task30CorrectDataTypes {
     public static void main(String[] args) {
 
         int numberOne = 10;
