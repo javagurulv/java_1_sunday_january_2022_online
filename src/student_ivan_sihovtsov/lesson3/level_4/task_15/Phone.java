@@ -4,8 +4,8 @@ public class Phone {
 
     String model;
 
-    Phone(String bookTitle) {
-        this.model = bookTitle;
+    Phone(String newModel) {
+        this.model = newModel;
     }
 
     String getModel() {
