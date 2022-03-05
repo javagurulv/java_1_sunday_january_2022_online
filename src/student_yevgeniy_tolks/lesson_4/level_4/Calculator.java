@@ -30,7 +30,6 @@ class Calculator {
             return false;
         }
    }
-
 }
 
 class CalculatorDemo{
@@ -49,11 +48,6 @@ class CalculatorDemo{
         System.out.println("Mul = " + calc.mulOfTwoNumbers(firstNumber,secondNumber));
         System.out.println("Div = " + calc.divOfTwoNumbers(firstNumber,secondNumber));
 
-        System.out.println();
 
-        System.out.println("Sum result number is even - " + calc.isEven(calc.sumOfTwoNumbers(firstNumber,secondNumber)));
-        System.out.println("Sub result number is even - " + calc.isEven(calc.subOfTwoNumbers(firstNumber,secondNumber)));
-        System.out.println("Mul if number is even - " + calc.isEven(calc.mulOfTwoNumbers(firstNumber,secondNumber)));
-        System.out.println("Div if number is even - " + calc.isEven(calc.divOfTwoNumbers(firstNumber,secondNumber)));
     }
 }
