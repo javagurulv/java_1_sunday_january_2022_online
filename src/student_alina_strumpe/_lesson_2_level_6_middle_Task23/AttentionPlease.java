@@ -1,4 +1,4 @@
-package student_alina_strumpe._level_6_middle_Task23;
+package student_alina_strumpe._lesson_2_level_6_middle_Task23;
 
 public class AttentionPlease {
 
