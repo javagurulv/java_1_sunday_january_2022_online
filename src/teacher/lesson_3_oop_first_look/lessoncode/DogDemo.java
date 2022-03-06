@@ -17,6 +17,9 @@ public class DogDemo {
 		sharik.voiceYourName();
 		pupsik.voiceYourName();
 
+		sharik.voiceYourAge();
+		pupsik.voiceYourAge();
+
 	}
 
 }
