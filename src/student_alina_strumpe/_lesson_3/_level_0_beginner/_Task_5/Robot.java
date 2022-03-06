@@ -3,7 +3,7 @@ package student_alina_strumpe._lesson_3._level_0_beginner._Task_5;
 public class Robot {
 
 
-    String name;
+    private String name;
 
     public Robot(String name){
         this.name = name;
