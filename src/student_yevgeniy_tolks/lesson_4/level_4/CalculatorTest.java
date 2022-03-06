@@ -10,6 +10,7 @@ class CalculatorTest {
         calculator.divTest();
         System.out.println();
         calculator.evenTestResult();
+        calculator.testMaxOfTwoNumbers();
     }
 
     public void sumTest() {
@@ -86,6 +87,18 @@ class CalculatorTest {
             System.out.println("Subtraction result is EVEN number - " + subResultEvenTest);
             System.out.println("Multiplication result is EVEN number - " + mulResultEvenTest);
             System.out.println("Division result is EVEN number - " + divResultEvenTest);
+
+        }
+
+            public void testMaxOfTwoNumbers(){
+
+            int firstNumber =200;
+            int secondNumber = 201;
+
+            Calculator calculator = new Calculator();
+            int maxNumber=calculator.maxOfTwoNumbers(firstNumber,secondNumber);
+
+            System.out.println(maxNumber);
 
         }
     }
