@@ -11,7 +11,8 @@ public class Dog {
 	}
 
 	public void voice() {
-		System.out.println("Gaf Gaf Gaf");
+
+        System.out.println("Gaf Gaf Gaf");
 	}
 
 	public void voiceYourName() {
@@ -20,6 +21,10 @@ public class Dog {
 
 	public void voiceYourAge() {
 		System.out.println("My age is " + this.age);
+	}
+
+	public void changeName(String newName) {
+		this.name = newName;
 	}
 
 }
