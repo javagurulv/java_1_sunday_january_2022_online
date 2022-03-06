@@ -1,4 +1,4 @@
-package student_elina_kucenko;
+package student_elina_kucenko.lesson3.level7.task29;
 
 import java.util.Scanner;
 

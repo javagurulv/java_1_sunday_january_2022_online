@@ -1,4 +1,4 @@
-package student_elina_kucenko;
+package student_elina_kucenko.lesson3.level7.task29;
 
 public class Income {
     String name;
@@ -22,7 +22,6 @@ public class Income {
     }
 
     public boolean giveCitizenship(){
-        //test
         return this.citizenship;
     }
 
