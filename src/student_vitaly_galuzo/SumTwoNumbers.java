@@ -1,4 +1,4 @@
-package student_Vitaly_Galuzo;
+package student_vitaly_galuzo;
 
 
 import java.util.Scanner;
