@@ -15,10 +15,12 @@ public class CarDemo {
         audi.turnRadioOn();
         bmw.turnRadioOn();
         System.out.println("Audi radio = " + audi.isRadioOn());
+        System.out.println("Bmw radio = " + bmw.isRadioOn());
 
         audi.turnRadioOff();
         bmw.turnRadioOff();
         System.out.println("Audi radio = " + audi.isRadioOn());
+        System.out.println("Bmw radio = " + bmw.isRadioOn());
 
 
     }
