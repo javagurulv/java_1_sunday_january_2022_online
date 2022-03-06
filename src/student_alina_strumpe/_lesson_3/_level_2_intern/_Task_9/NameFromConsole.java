@@ -9,7 +9,8 @@ public class NameFromConsole {
         Scanner scan = new Scanner(System.in);
         System.out.println("Insert your name: ");
         String userName = scan.nextLine();
-        System.out.println("Hello "+userName);
+        System.out.println("Hello "+userName+"!");
 
     }
 }
+
