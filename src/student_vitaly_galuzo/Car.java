@@ -4,15 +4,20 @@ public class Car {
 
     String model;
 
+
     Car(String newModel) {
         this.model = newModel;
+
     }
 
     String getModel() {
         return this.model;
     }
-
 }
+
+
+
+
 
 class CarDemo {
 
@@ -20,22 +25,10 @@ class CarDemo {
         Car myCar = new Car("Nissan");
         String carModel = myCar.getModel();
         System.out.println("Car model = " + carModel);
+
+
+
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
