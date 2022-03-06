@@ -22,6 +22,7 @@ public class Income {
     }
 
     public boolean giveCitizenship(){
+        //test
         return this.citizenship;
     }
 
