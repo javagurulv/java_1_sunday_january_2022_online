@@ -1,22 +1,20 @@
-package student_Vitaly_Galuzo.lesson_2;
+package student_vitaly_galuzo.lesson_2;
 
-public class Task_30 {
+public class Task__29 {
 
     public static void main(String[] args) {
 
-        float numberOne = 10;
-        double numberTwo = 20;
+        int numberOne;
+        int numberTwo;
+        
+        numberOne = 10;
+        numberTwo = 20;
 
         System.out.println("Number 1 = " + numberOne);
         System.out.println("Number 2 = " + numberTwo);
 
-         double sum = numberOne + numberTwo;
+        int sum = numberOne + numberTwo;
 
         System.out.println("Sum = " + sum);
     }
-        }
-
-
-
-
-
+}
