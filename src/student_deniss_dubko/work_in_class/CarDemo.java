@@ -16,15 +16,7 @@ public class CarDemo {
         BMW.setColour();
 
 
-
-
     }
-
-
-
-
-
-
 
 
 }
