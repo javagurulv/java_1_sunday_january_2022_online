@@ -10,7 +10,9 @@ class CalculatorTest {
         calculator.divTest();
         System.out.println();
         calculator.evenTestResult();
+        System.out.println();
         calculator.testMaxOfTwoNumbers();
+
     }
 
     public void sumTest() {
@@ -92,13 +94,18 @@ class CalculatorTest {
 
             public void testMaxOfTwoNumbers(){
 
-            int firstNumber =200;
-            int secondNumber = 201;
+            int firstNumber =207;
+            int secondNumber = 2090;
 
             Calculator calculator = new Calculator();
-            int maxNumber=calculator.maxOfTwoNumbers(firstNumber,secondNumber);
 
-            System.out.println(maxNumber);
+//            if(firstNumber==secondNumber){
+//                System.out.println("Numbers are equal");
+//            }
+//            else {
+                int maxNumber = calculator.maxOfTwoNumbers(firstNumber, secondNumber);
+                System.out.println(maxNumber);
+
 
         }
     }
