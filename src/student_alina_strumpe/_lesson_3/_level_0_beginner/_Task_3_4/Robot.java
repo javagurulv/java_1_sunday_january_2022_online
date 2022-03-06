@@ -8,6 +8,6 @@ public class Robot {
         this.greeting = greeting;
     }
     public void sayHello(){
-        System.out.print("Hello!");
+        System.out.print(greeting);
     }
 }
