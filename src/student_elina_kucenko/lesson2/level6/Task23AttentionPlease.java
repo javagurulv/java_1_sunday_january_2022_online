@@ -1,6 +1,6 @@
 package student_elina_kucenko.lesson2.level6;
 
-public class  Task23AttentionPlease {
+class  Task23AttentionPlease {
 
     public static void main(String[] args) {
 

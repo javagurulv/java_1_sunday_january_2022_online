@@ -1,6 +1,6 @@
 package student_elina_kucenko.lesson2.level7;
 
-public class Task29SumTwoNumbers {
+class Task29SumTwoNumbers {
         public static void main(String[] args) {
 
             int numberOne = 10;

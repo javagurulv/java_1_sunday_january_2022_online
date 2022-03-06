@@ -2,7 +2,7 @@ package student_elina_kucenko.lesson2.level7;
 
 import java.util.Scanner;
 
-public class Task32 {
+class Task32 {
     public static void main(String[] args) {
         //adding username
         Scanner scanner = new Scanner(System.in);

@@ -2,7 +2,7 @@ package student_elina_kucenko.lesson2.level1;
 
 import java.util.Scanner;
 
-public class Task2 {
+class Task2 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("please enter 1st double number");
