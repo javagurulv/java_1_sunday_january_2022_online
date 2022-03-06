@@ -22,4 +22,8 @@ public class Dog {
 		System.out.println("My age is " + this.age);
 	}
 
+	public void changeName(String newName) {
+		this.name = newName;
+	}
+
 }
