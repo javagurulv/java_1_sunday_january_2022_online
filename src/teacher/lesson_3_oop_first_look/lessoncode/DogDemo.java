@@ -20,6 +20,11 @@ public class DogDemo {
 		sharik.voiceYourAge();
 		pupsik.voiceYourAge();
 
+
+		sharik.voiceYourName();
+		sharik.changeName("Mopsik");
+		sharik.voiceYourName();
+
 	}
 
 }
