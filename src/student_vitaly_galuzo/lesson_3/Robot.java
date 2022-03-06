@@ -2,19 +2,29 @@ package student_vitaly_galuzo.lesson_3;
 
 public class Robot {
 
+    String name;
 
-    public Robot(){}
+
+    public Robot(String nameIs){
+        this.name = nameIs;
+
+
+    }
+
     public void sayHello(){
 
         System.out.println("Hello!");
     }
     public void sayYourName(){
-        System.out.println("My name is Robocop!");
+        System.out.println("My name is "+ this.name);
 
     }
 
 
 }
+
+
+
 
 
 
