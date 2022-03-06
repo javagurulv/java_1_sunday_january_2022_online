@@ -7,6 +7,7 @@ public class DogDemo {
 		Dog pupsik = new Dog("Pupsik", 9);
 
 
+		sharik.voice();
 
 	}
 

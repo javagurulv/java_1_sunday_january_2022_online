@@ -10,5 +10,9 @@ public class Dog {
 		this.age = dogAge;
 	}
 
+	public void voice() {
+		System.out.println("Gaf Gaf Gaf");
+	}
+
 
 }
