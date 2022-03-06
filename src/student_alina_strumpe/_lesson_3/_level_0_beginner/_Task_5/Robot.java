@@ -9,6 +9,6 @@ public class Robot {
         this.name = name;
     }
 
-    public void sayYourName() {System.out.print("My name is ROBO.");}
+    public void sayYourName() {System.out.print("My name is "+this.name);}
 
 }
