@@ -46,16 +46,16 @@ class Calculator {
           return secondNumber;
         }
         else if (firstNumber==secondNumber&&firstNumber>thirdNumber){
-            return firstNumber; //or return second
+            return firstNumber; //or return secondNumber
         }
         else if (firstNumber==thirdNumber&&firstNumber>secondNumber) {
-            return firstNumber; //or return  third
+            return firstNumber; //or return  thirdNumber
         }
         else if (secondNumber==thirdNumber&&secondNumber>firstNumber){
-            return secondNumber; // or return third
+            return secondNumber; // or return thirdNumber
         }
         else if (firstNumber==secondNumber&&secondNumber==thirdNumber){
-          return secondNumber;
+          return secondNumber; //return any
         }
         else{
             return thirdNumber;
