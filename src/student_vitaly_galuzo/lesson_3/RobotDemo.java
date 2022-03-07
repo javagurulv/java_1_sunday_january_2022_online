@@ -10,6 +10,9 @@ public class RobotDemo {
              Robot wally = new Robot("wally");
         wally.sayHello();
         wally.sayYourName();
+        Robot tom = new Robot("tom");
+        tom.sayHello();
+        tom.sayYourName();
 
 
     }

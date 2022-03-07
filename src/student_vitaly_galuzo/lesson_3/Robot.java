@@ -5,8 +5,8 @@ public class Robot {
     String name;
 
 
-    public Robot(String nameIs){
-        this.name = nameIs;
+    public Robot(String name){
+        this.name = name;
 
 
     }
