@@ -6,7 +6,7 @@ public class MonitorDemo {
 
 
         Monitor samsung = new Monitor(true);
-        Monitor sony = new Monitor(false);
+        Monitor sony = new Monitor(true);
 
 
 
@@ -24,12 +24,5 @@ public class MonitorDemo {
 
 
     }
-
-
-
-
-
-
-
 
 }

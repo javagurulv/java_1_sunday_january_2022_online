@@ -10,17 +10,13 @@ public class Monitor {
 
     }
 
-
-
     public void switchedOn(){
         this.powerOn = true;
-
 
     }
 
     public void switchedOff(){
         this.powerOn = false;
-
 
     }
 

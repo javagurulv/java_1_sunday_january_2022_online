@@ -1,10 +1,10 @@
 package student_aleksandra_jefimova.lesson_3;
 
-public class CatDemo {
+class CatDemo {
 
     public static void main(String[] args) {
-        Cat pushok = new Cat(catName: "Pushok", catAge: 2);
-        Cat rizhik = new Cat(catName: "Rizhik", catAge: 3);
+        Cat pushok = new Cat( "Pushok",  2); //Aleksandra, tyt bila oshibochka, ispravil
+        Cat rizhik = new Cat("Rizhik", 3);   // Alekandra, i tyt tozhe ispravil
 
         pushok.voice();
         rizhik.voice();
