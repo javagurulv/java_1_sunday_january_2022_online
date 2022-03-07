@@ -242,8 +242,8 @@ class CalculatorTest {
         int thirdNumber =20;
 
         Calculator calculator= new Calculator();
-        int maxFromTwo=calculator.maxOfThreeNumbers(firstNumber,secondNumber,thirdNumber);
-        if(maxFromTwo == secondNumber && maxFromTwo==thirdNumber){
+        int allEqual=calculator.maxOfThreeNumbers(firstNumber,secondNumber,thirdNumber);
+        if(allEqual == secondNumber && allEqual==thirdNumber){
             System.out.println("All three numbers are equal - TEST OK");
         }
         else{
