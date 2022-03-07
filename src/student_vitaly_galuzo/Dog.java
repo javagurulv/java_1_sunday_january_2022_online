@@ -4,10 +4,14 @@ public class Dog {
 
 
     String nickName;
+    int age;
 
 
-    public Dog(String nickName){
+
+    public Dog(String nickName,int age){
         this.nickName = nickName;
+        this.age = age;
+
 
 
     }
@@ -18,6 +22,15 @@ public class Dog {
     public void dogNickName(){
         System.out.println("Argo");
     }
+
+    public int getAge(){
+        return this.age;
+    }
+
+
+
+
+
 
 
 }
