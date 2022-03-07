@@ -1,6 +1,6 @@
 package student_vitaly_galuzo;
 
-public class Car {
+class Car {
 
     String model;
 
