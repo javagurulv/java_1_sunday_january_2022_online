@@ -1,4 +1,4 @@
-package student_aleksandra_jefimova.lesson_3.level_3.Task11;
+package student_aleksandra_jefimova.lesson_3.level_3.task_11;
 
 public class Robot {
     private String name;
