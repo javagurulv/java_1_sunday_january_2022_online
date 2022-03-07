@@ -34,21 +34,31 @@ class Calculator {
     }
 
     public int maxOfTwoNumbers(int firstNumber, int secondNumber) {
+        return Math.max(firstNumber, secondNumber);
+        }
 
-        if (firstNumber > secondNumber) {
-            System.out.println("First number bigger than second");
+    public int maxOfThreeNumbers(int firstNumber,int secondNumber,int thirdNumber){
+
+        if(firstNumber>secondNumber && firstNumber>thirdNumber){
             return firstNumber;
         }
-        else if(firstNumber==secondNumber) {
-            System.out.println("Numbers are equal");
+        else if (secondNumber>firstNumber && secondNumber>thirdNumber) {
+          return secondNumber;
         }
-        else {
-            System.out.println("Second number bigger then first");
+        else if (firstNumber==secondNumber&&firstNumber>thirdNumber){
+            return firstNumber;
+        }
+        else if (firstNumber==thirdNumber&&firstNumber>secondNumber) {
+            return firstNumber;
+        }
+        else if (secondNumber==thirdNumber&&secondNumber>firstNumber){
             return secondNumber;
-                 }
-
-        return secondNumber;
+        }
+        else if (firstNumber==secondNumber&&secondNumber==thirdNumber){
+          return secondNumber;
+        }
+        else{
+            return thirdNumber;
+        }
     }
-
-
-   }
+}
