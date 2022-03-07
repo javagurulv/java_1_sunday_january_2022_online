@@ -1,6 +1,6 @@
 package student_aleksandra_jefimova.lesson_3;
 
-public class CatDemo {
+class CatDemo {
 
     public static void main(String[] args) {
         Cat pushok = new Cat( "Pushok",  2); //Aleksandra, tyt bila oshibochka, ispravil

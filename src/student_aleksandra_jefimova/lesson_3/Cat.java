@@ -1,6 +1,6 @@
 package student_aleksandra_jefimova.lesson_3;
 
-public class Cat {
+class Cat {
 
     private String name;
     private int age;
