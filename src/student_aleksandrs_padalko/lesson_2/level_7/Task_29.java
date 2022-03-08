@@ -1,4 +1,4 @@
-package student_aleksandrs_padalko.lesson_2.level_1;
+package student_aleksandrs_padalko.lesson_2.level_7;
 
 //Исправьте ошибки компиляции в данной программе.
 //

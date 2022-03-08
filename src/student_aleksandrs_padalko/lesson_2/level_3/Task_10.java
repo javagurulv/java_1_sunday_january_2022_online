@@ -1,4 +1,4 @@
-package student_aleksandrs_padalko.lesson_2.level_1;
+package student_aleksandrs_padalko.lesson_2.level_3;
 
 //Напишите программу, которая запрашивает у пользователя
 //радиус круга (вещественное число) и печатает на консоль
