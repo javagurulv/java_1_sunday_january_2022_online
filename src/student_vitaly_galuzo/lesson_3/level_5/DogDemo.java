@@ -1,4 +1,6 @@
-package student_vitaly_galuzo;
+package student_vitaly_galuzo.lesson_3.level_5;
+
+import student_vitaly_galuzo.lesson_3.level_5.Dog;
 
 public class DogDemo {
 
@@ -16,7 +18,9 @@ public class DogDemo {
         dog.dogVoice();
         int birthDay = dog.happyBirthday();
         System.out.println("I'm now "+birthDay+" "+"y.o"+"!");
-        dog.changeColor("Gray");
+        dog.changeColor("Grey");
+
+
 
 
     }

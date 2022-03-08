@@ -1,4 +1,4 @@
-package student_vitaly_galuzo;
+package student_vitaly_galuzo.lesson_3.level_5;
 
 public class Dog {
 
@@ -13,6 +13,7 @@ public class Dog {
         this.nickName = nickName;
         this.age = age;
         this.color = color;
+        //
 
 
 
@@ -30,12 +31,12 @@ public class Dog {
     }
 
     public int happyBirthday(){
-        this.age = this.age +1;
+        this.age = this.age+1;
         return this.age;
     }
     public void changeColor(String newColor) {
-        color = newColor;
-        System.out.println("My new color is "+color);
+        this.color = newColor;
+        System.out.println("My new color is "+this.color);
 
 
     }

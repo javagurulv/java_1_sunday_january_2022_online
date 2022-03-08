@@ -5,12 +5,15 @@ public class Dog {
   String name;
   double age;
   double weight;
+  String animal;
 
 
-  public Dog(String name, double age, double weight){
+  public Dog(String name, double age, double weight,String animal){
       this.name = name;
       this.age = age;
       this.weight = weight;
+      this.animal = animal;
+
 
   }
 
@@ -30,7 +33,9 @@ public class Dog {
       return newWeight;
     }
 
+    }
 
 
 
-}
+
+

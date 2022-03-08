@@ -1,4 +1,6 @@
-package student_vitaly_galuzo;
+package student_vitaly_galuzo.my_code;
+
+import student_vitaly_galuzo.my_code.Human;
 
 public class HumanDemo {
 

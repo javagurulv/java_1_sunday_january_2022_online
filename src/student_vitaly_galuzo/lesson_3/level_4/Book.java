@@ -1,4 +1,4 @@
-package student_vitaly_galuzo;
+package student_vitaly_galuzo.lesson_3.level_4;
 
 public class Book {
 
