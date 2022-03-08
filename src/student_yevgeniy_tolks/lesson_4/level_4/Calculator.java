@@ -34,30 +34,31 @@ class Calculator {
     }
 
     public int maxOfTwoNumbers(int firstNumber, int secondNumber) {
-        if (firstNumber > secondNumber) {
-            return firstNumber;
-                } else {
-            return secondNumber;
+        return Math.max(firstNumber, secondNumber);
         }
-    }
 
-    class CalculatorDemo {
+    public int maxOfThreeNumbers(int firstNumber,int secondNumber,int thirdNumber){
 
-        public static void main(String[] args) {
-            Calculator calc = new Calculator();
-
-            Scanner scanner = new Scanner(System.in);
-            System.out.print("Enter first number: ");
-            int firstNumber = scanner.nextInt();
-            System.out.print("Enter second number: ");
-            int secondNumber = scanner.nextInt();
-
-            System.out.println("Sum = " + calc.sumOfTwoNumbers(firstNumber, secondNumber));
-            System.out.println("Sub = " + calc.subOfTwoNumbers(firstNumber, secondNumber));
-            System.out.println("Mul = " + calc.mulOfTwoNumbers(firstNumber, secondNumber));
-            System.out.println("Div = " + calc.divOfTwoNumbers(firstNumber, secondNumber));
-
-
+        if(firstNumber>secondNumber && firstNumber>thirdNumber){
+            return firstNumber;
+        }
+        else if (secondNumber>firstNumber && secondNumber>thirdNumber) {
+          return secondNumber;
+        }
+        else if (firstNumber==secondNumber&&firstNumber>thirdNumber){
+            return firstNumber; //or return secondNumber
+        }
+        else if (firstNumber==thirdNumber&&firstNumber>secondNumber) {
+            return firstNumber; //or return  thirdNumber
+        }
+        else if (secondNumber==thirdNumber&&secondNumber>firstNumber){
+            return secondNumber; // or return thirdNumber
+        }
+        else if (firstNumber==secondNumber&&secondNumber==thirdNumber){
+          return secondNumber; //return any
+        }
+        else{
+            return thirdNumber;
         }
     }
 }
