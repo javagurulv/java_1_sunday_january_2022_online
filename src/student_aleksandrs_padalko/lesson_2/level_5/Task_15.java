@@ -1,4 +1,4 @@
-package student_aleksandrs_padalko.lesson_2.level_1;
+package student_aleksandrs_padalko.lesson_2.level_5;
 
 //Команда System.out.println("text"); выводит указанный "text"
 //на консоль, и переводит курсор на новую строку.

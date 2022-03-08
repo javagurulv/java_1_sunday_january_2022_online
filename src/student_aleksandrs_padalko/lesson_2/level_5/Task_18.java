@@ -1,4 +1,4 @@
-package student_aleksandrs_padalko.lesson_2.level_1;
+package student_aleksandrs_padalko.lesson_2.level_5;
 //Заставьте эту программу работать!
 //
 //class SizeMatters {

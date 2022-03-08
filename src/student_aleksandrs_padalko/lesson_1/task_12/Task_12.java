@@ -1,4 +1,4 @@
-package student_aleksandrs_padalko.lesson_1.task_11;
+package student_aleksandrs_padalko.lesson_1.task_12;
 
 
 public class Task_12 {
