@@ -1,4 +1,4 @@
-package student_vitaly_galuzo.lesson_2;
+package student_vitaly_galuzo.lesson_2.level_5;
 
 public class Task_18 {
     public static void main(String[] args) {

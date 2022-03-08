@@ -1,4 +1,6 @@
-package student_vitaly_galuzo.lesson_3;
+package student_vitaly_galuzo.lesson_3.level_1;
+
+import student_vitaly_galuzo.lesson_3.level_1.Robot;
 
 public class RobotDemo {
 
