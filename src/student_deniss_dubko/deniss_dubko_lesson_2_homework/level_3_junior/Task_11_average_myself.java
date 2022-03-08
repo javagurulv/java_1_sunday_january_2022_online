@@ -1,8 +1,8 @@
-package student_deniss_dubko.deniss_dubko_lesson_2_homework;
+package student_deniss_dubko.deniss_dubko_lesson_2_homework.level_3_junior;
 
 import java.util.Scanner;
 
-public class Task_11_average_google {
+public class Task_11_average_myself {
 
     public static void main(String[] args) {
 
@@ -13,13 +13,9 @@ public class Task_11_average_google {
         int b = scanner.nextInt();
         int c = scanner.nextInt();
 
-        double[] nums = {a, b, c};
-        double result = 0;
+        double x = (a + b + c) / 3;
 
-        for (double d : nums) {
-            result += d;
-        }
-        System.out.println("Average = " + result / nums.length);
+        System.out.println("Average = " + x);
 
 
     }

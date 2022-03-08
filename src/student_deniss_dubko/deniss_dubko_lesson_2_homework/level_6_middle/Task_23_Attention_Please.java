@@ -1,4 +1,4 @@
-package student_deniss_dubko.deniss_dubko_lesson_2_homework;
+package student_deniss_dubko.deniss_dubko_lesson_2_homework.level_6_middle;
 
 public class Task_23_Attention_Please {
 

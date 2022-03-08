@@ -1,4 +1,4 @@
-package student_deniss_dubko.deniss_dubko_lesson_2_homework;
+package student_deniss_dubko.deniss_dubko_lesson_2_homework.level_5_middle;
 
 import java.util.Scanner;
 
