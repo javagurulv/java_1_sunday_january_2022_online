@@ -14,9 +14,9 @@ public class IfClass {
 
     if (num == num2 && num2 == num3) {
       System.out.println("Numbers are equal");
-    } else if (num != num2 && num2 != num3) {
+    }else if(num!=num2&&num2!=num3) {
       System.out.println("Numbers are not equal");
-    } else {
+    }else{
       System.out.println("Numbers are different");
     }
   }
