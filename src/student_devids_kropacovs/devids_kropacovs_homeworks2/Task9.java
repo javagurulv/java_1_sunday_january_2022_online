@@ -4,7 +4,7 @@ import com.sun.source.tree.WhileLoopTree;
 
 import java.util.Scanner;
 
-public class Task9 {
+class Task9 {
     public static void main(String[] args) {
         System.out.println("Please enter a number to see the table: ");
         Scanner scanner = new Scanner(System.in);

@@ -1,6 +1,6 @@
 package student_yevgeniy_tolks.lesson_3.level_1;
 
-public class RobotDemo {
+ class RobotDemo {
     public static void main(String[] args) {
         //creation of two virtual objects and invoking methods from Robot class
         Robot robot=new Robot();

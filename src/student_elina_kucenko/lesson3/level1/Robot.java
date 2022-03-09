@@ -1,6 +1,6 @@
 package student_elina_kucenko.lesson3.level1;
 
-public class Robot {
+class Robot {
 
     public Robot(){
     }

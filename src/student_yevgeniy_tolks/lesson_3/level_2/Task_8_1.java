@@ -2,7 +2,7 @@ package student_yevgeniy_tolks.lesson_3.level_2;
 
 //concatenation of two Strings using concat() method;
 
-public class Task_8_1 {
+ class Task_8_1 {
     public static void main(String[] args) {
 
         String myFirstName = "Yevgeniy";

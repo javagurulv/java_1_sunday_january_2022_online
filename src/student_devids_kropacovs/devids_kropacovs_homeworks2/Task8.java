@@ -2,7 +2,7 @@ package student_devids_kropacovs.devids_kropacovs_homeworks2;
 
 import java.util.Scanner;
 
-public class Task8 {
+class Task8 {
     public static void main(String[] args) {
         System.out.print("Please, write your name: ");
         Scanner scanner = new Scanner(System.in);

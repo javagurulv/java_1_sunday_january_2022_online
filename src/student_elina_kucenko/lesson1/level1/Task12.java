@@ -1,6 +1,6 @@
 package student_elina_kucenko.lesson1.level1;
 
-public class Task12 {
+class Task12 {
     public static void main(String[] args) {
         int a = 50;
         int b = 3;

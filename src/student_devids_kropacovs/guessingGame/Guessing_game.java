@@ -1,6 +1,6 @@
 package student_devids_kropacovs.guessingGame;
 
-public class Guessing_game {
+class Guessing_game {
     Player p;
     public void startGame(){
         p = new Player();
