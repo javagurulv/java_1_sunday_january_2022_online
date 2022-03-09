@@ -1,7 +1,7 @@
-package student_aleksandrs_padalko.lesson_3;
+package student_aleksandrs_padalko.lesson_3.level_1;
 
 
-
+import student_aleksandrs_padalko.lesson_3.level_1.Robot;
 
 public class RobotDemo { public static void main(String[] args) {
 
