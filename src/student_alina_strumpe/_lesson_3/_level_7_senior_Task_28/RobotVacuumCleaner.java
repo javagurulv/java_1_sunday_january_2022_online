@@ -29,13 +29,15 @@ class RobotVacuumCleaner {
 
     public boolean switchON() {
         boolean isOn = true;
+        System.out.println("Switched ON");
         return isON;
     }
 
     public boolean switchOFF() {
         boolean isON = false;
-        return false;
-            }
+        System.out.println("Switched OFF");
+        return isON;
+    }
             public void voiceFinished(){ System.out.println("Work is DONE");}
 
     public double calculateClFinishedTime(){ return this.vacClFinishedTime = this.vacClStartTime + this.vacClTime +
