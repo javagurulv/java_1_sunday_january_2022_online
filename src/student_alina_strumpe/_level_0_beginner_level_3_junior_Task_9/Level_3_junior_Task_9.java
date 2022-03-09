@@ -1,4 +1,4 @@
-package student_alina_strumpe;
+package student_alina_strumpe._level_0_beginner_level_3_junior_Task_9;
 
 import java.util.Scanner;
 
@@ -42,3 +42,4 @@ public class Level_3_junior_Task_9 {
 }
 
 
+// я как то додумалась )))))
