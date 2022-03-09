@@ -10,8 +10,10 @@ public class CalculatorDemo {
     public static void main(String[] args){
 
         Scanner scan = new Scanner(System.in);
+
         System.out.println("Insert income amount: ");
         double brMonthIncome = scan.nextDouble();
+
 
         Calculator incomeCalculator = new Calculator(brMonthIncome);
 
@@ -23,6 +25,27 @@ public class CalculatorDemo {
         System.out.println(taxMonthTax2);
         double ntMontIncome = incomeCalculator.calculateNtMonthIncome();
         System.out.println(ntMontIncome);
+
+//        System.out.println();
+//
+//        Calculator taxMonth3 = new Calculator(brMonthIncome);
+//        double tamMonth3 = incomeCalculator.getMonthTax3();
+//
+//        System.out.println(taxMonth3);
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     }
