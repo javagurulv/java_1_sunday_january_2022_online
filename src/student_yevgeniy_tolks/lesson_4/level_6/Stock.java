@@ -16,18 +16,17 @@ class Stock {
 
     public int updatePrice(int price) {
 
-        if(maxPrice>currentPrice && minPrice<currentPrice){
+        if (maxPrice>currentPrice && minPrice<currentPrice) {
             this.currentPrice=price;
         }
-               else if(price>currentPrice ) {
-                    this.maxPrice = price;
-                }
-                 else   if (price < currentPrice) {
-                        this.minPrice = price;
-                }
-                        return price;
-
-                }
+        else if(price>currentPrice ) {
+            this.maxPrice = price;
+        }
+        else if (price < currentPrice) {
+            this.minPrice = price;
+        }
+        return price;
+    }
 
         public String getPriceInformation () {
 
