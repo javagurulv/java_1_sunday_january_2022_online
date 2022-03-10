@@ -2,7 +2,7 @@ package student_aleksandra_jefimova.lesson_3;
 
 class Cat {
 
-    private String name;
+     String name;
     private int age;
 
     public Cat (String catName, int catAge) {
