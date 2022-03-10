@@ -31,11 +31,10 @@ class Stock {
 
         public String getPriceInformation () {
 
-            String getInformation = "Company name = " + this.companyName +
+            return "Company name = " + this.companyName +
                     ", Current price = " + this.currentPrice +
                     ", Min price = " + this.minPrice +
                     ", Max price = " + this.maxPrice;
-            return getInformation;
         }
 
     }
