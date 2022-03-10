@@ -1,4 +1,4 @@
-package student_vitaly_galuzo.lesson_4.level_1.level_3;
+package student_vitaly_galuzo.lesson_4.level_3;
 
 import java.util.Scanner;
 
