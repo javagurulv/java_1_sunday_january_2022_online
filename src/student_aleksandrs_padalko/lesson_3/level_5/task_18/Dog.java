@@ -1,4 +1,4 @@
-package student_aleksandrs_padalko;
+package student_aleksandrs_padalko.lesson_3.level_5.task_18;
 
 public class Dog { private String name;
 
