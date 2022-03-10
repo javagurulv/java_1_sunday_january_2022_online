@@ -2,9 +2,15 @@ package student_yevgeniy_tolks.lesson_4.level_practice;
 
 import java.util.Scanner;
 
-public class PalindromeTest {
-    public static void main(String[] args) {
+/*
+Practice task was to write a code and to test that code,
+where entered number is same after reversing.
+*/
 
+
+public class PalindromeTest {
+
+    public static void main(String[] args) {
         PalindromeTest palindromeTest = new PalindromeTest();
         palindromeTest.checkForPalindromeNumber();
     }
@@ -19,10 +25,10 @@ public class PalindromeTest {
 
         boolean palindromeNumberResult = palindrome.palindromeNumber(n,temp);
         if (palindromeNumberResult) {
-            System.out.println(" number is palindrome - test OK");
+            System.out.println("Number is palindrome - test OK");
         }
         else {
-            System.out.println(" number is not palindrome - test FAILED");
+            System.out.println("Number is not palindrome - test FAILED");
         }
     }
 }
