@@ -17,11 +17,10 @@ class LightColorDetectorTest {
 
         LightColorDetector lightColorDetector = new LightColorDetector();
         String waveColor = lightColorDetector.detect(waveLenght);
-        if (waveColor == "Violet") {
+        if (waveColor.equals("Violet")) {
             System.out.println("Test OK");
         }
         else {
-
             System.out.println("Test FAILED");
         }
     }
@@ -30,7 +29,7 @@ class LightColorDetectorTest {
 
         LightColorDetector lightColorDetector = new LightColorDetector();
         String waveColor = lightColorDetector.detect(waveLenght);
-        if (waveColor == "Blue") {
+        if (waveColor.equals("Blue")) {
                 System.out.println("Test OK");
         }
         else {
@@ -42,7 +41,7 @@ class LightColorDetectorTest {
 
         LightColorDetector lightColorDetector = new LightColorDetector();
         String waveColor = lightColorDetector.detect(waveLenght);
-        if (waveColor == "Green") {
+        if (waveColor.equals("Green")) {
             System.out.println("Test OK");
         }
         else {
@@ -54,7 +53,7 @@ class LightColorDetectorTest {
 
         LightColorDetector lightColorDetector = new LightColorDetector();
         String waveColor = lightColorDetector.detect(waveLenght);
-        if (waveColor == "Yellow") {
+        if (waveColor.equals("Yellow")) {
             System.out.println("Test OK");
         }
         else {
@@ -66,7 +65,7 @@ class LightColorDetectorTest {
 
         LightColorDetector lightColorDetector=new LightColorDetector();
         String waveColor = lightColorDetector.detect(waveLenght);
-        if(waveColor=="Orange"){
+        if (waveColor.equals("Orange")) {
             System.out.println("Test OK");
         }
         else {
@@ -78,7 +77,7 @@ class LightColorDetectorTest {
 
         LightColorDetector lightColorDetector=new LightColorDetector();
         String waveColor = lightColorDetector.detect(waveLenght);
-        if(waveColor=="Red"){
+        if (waveColor.equals("Red")) {
             System.out.println("Test OK");
         }
         else {
@@ -86,11 +85,11 @@ class LightColorDetectorTest {
         }
     }
     public void colorOutOfBoundary(){
-        int waveLenght=379;
+        int waveLenght = 379;
 
         LightColorDetector lightColorDetector = new LightColorDetector();
         String waveColor = lightColorDetector.detect(waveLenght);
-        if(waveColor == "Invisible light"){
+        if(waveColor.equals("Invisible light")){
             System.out.println("Test OK");
         }
         else {
