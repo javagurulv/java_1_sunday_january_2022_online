@@ -4,11 +4,6 @@ public class Comment {
 
   public static void main(String[] args) {
 
-    /*int numberOne;
-    int numberTwo;*/
-
-    // System.out.println("Number 1 = " + numberOne);
-    //System.out.println("Number 2 = " + numberTwo);
 
     int numberOne = 10;
     int numberTwo = 20;

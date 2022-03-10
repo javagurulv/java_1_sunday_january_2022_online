@@ -123,7 +123,7 @@ class CalculatorTest {
     public void testSecondMaxOfTwoNumbers() {
 
         int firstNumber = 47;
-        int secondNumber = 4;
+        int secondNumber = 49;
 
         Calculator calculator = new Calculator();
 
