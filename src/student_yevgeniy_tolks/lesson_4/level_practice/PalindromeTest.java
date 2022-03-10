@@ -8,6 +8,7 @@ public class PalindromeTest {
         PalindromeTest palindromeTest = new PalindromeTest();
         palindromeTest.checkForPalindromeNumber();
     }
+
     public void checkForPalindromeNumber(){
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter number: ");

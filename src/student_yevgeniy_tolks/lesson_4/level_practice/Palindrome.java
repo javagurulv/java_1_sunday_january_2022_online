@@ -6,7 +6,6 @@ public class Palindrome {
         int sum;
 
         public boolean palindromeNumber(int n,int temp) {
-
             while (n > 0) {
                 r = n % 10;
                 sum = (sum * 10) + r;
