@@ -1,11 +1,11 @@
-package student_sergei_klunkov.lesson_3.homework.level_5;
+package student_sergei_klunkov.lesson_3.homework.level_5.Task_19;
 
-public class Dog2 {
+public class Dog {
 
     int dogAge;
     String dogName;
 
-    public Dog2() {
+    public Dog() {
 
         this.dogAge = 2;
         this.dogName = "Lucya";
