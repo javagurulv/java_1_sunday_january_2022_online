@@ -3,10 +3,6 @@ package student_vitaly_galuzo.lesson_4.level_4;
 public class Calculator {
 
 
-
-
-
-
     public int sum(int num1, int num2) {
         return num1 + num2;
     }
@@ -35,15 +31,32 @@ public class Calculator {
     }
 
     public int maxOfTwoNumbers(int num1, int num2) {
-        return Math.max(num1 , num2);
+        return Math.max(num1, num2);
 
     }
 
+    public int maxOfThreeNumbers(int num1, int num2, int num3) {
+
+        if (num1 > num2 && num1 > num3) {
+            return num1;
+        } else if (num2 > num1 && num2 > num3) {
+            return num2;
+        } else if (num3 > num2 && num3 > num1) {    //a b c
+            return num3;
+        } else if (num1 == num2 && num1 > num3) {
+            return num1;
+        } else if (num1 == num3 && num1 > num2) {
+            return num1;
+        } else if (num2 == num3 && num2 > num1) {
+            return num2;
+        } else if (num1 == num2 && num2 == num3) {
+            return num2;
+        } else {
+            return num3;
+        }
 
 
-
-
-
+    }
 }
 
 
