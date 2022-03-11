@@ -14,6 +14,13 @@ public class CalculatorTest {
         calculatorTest.maxOfTwoNumbersTest1();
         calculatorTest.maxOfTwoNumbersTest2();
         calculatorTest.maxOfTwoNumbersTest3();
+        calculatorTest.maxOfThreeNumbersTest1();
+        calculatorTest.maxOfThreeNumbersTest2();
+        calculatorTest.maxOfThreeNumbersTest3();
+        calculatorTest.twoNumbersMaxOfThreeTest1();
+        calculatorTest.twoNumbersMaxOfThreeTest2();
+        calculatorTest.twoNumbersMaxOfThreeTest3();
+        calculatorTest.threeNumbersEqualTest4();
 
     }
 
@@ -130,6 +137,109 @@ public class CalculatorTest {
         }
         }
 
+        public void maxOfThreeNumbersTest1(){
+        int num1 = 20;
+        int num2 = 15;
+        int num3 = 10;
+
+        Calculator calculator = new Calculator();
+        int maxNum1 = calculator.maxOfThreeNumbers(num1, num2, num3);
+
+        if(maxNum1==num1){
+            System.out.println(num1 + " is the greatest! TEST = PASS");
+        }else {
+            System.out.println("Test = FAIL");
+        }
+        }
+
+    public void maxOfThreeNumbersTest2(){
+        int num1 = 10;
+        int num2 = 20;
+        int num3 = 15;
+
+        Calculator calculator = new Calculator();
+        int maxNum2 = calculator.maxOfThreeNumbers(num1, num2, num3);
+
+        if(maxNum2==num2){
+            System.out.println(num2 + " is the greatest! TEST = PASS");
+        }else {
+            System.out.println("Test = FAIL");
+        }
+        }
+
+    public void maxOfThreeNumbersTest3(){
+        int num1 = 10;
+        int num2 = 15;
+        int num3 = 20;
+
+        Calculator calculator = new Calculator();
+        int maxNum3 = calculator.maxOfThreeNumbers(num1, num2, num3);
+
+        if(maxNum3==num3){
+            System.out.println(num3 + " is the greatest! TEST = PASS");
+        }else {
+            System.out.println("Test = FAIL");
+        }
+        }
+
+    public void twoNumbersMaxOfThreeTest1(){
+        int num1 = 20;
+        int num2 = 20;
+        int num3 = 10;
+
+        Calculator calculator = new Calculator();
+        int maxTwoNum1 = calculator.maxOfThreeNumbers(num1, num2, num3);
+
+        if(maxTwoNum1==num1 && maxTwoNum1==num2 && maxTwoNum1 > num3){
+            System.out.println("Both first numbers are equal and greatest than third! TEST = PASS");
+        }else {
+            System.out.println("Test = FAIL");
+        }
+        }
+    public void twoNumbersMaxOfThreeTest2(){
+        int num1 = 10;
+        int num2 = 20;
+        int num3 = 20;
+
+        Calculator calculator = new Calculator();
+        int maxTwoNum2 = calculator.maxOfThreeNumbers(num1, num2, num3);
+
+        if(maxTwoNum2==num2 && maxTwoNum2==num3 && maxTwoNum2 > num1){
+            System.out.println("Both last numbers are equal and greatest than first! TEST = PASS");
+        }else {
+            System.out.println("Test = FAIL");
+        }
+        }
+
+    public void twoNumbersMaxOfThreeTest3(){
+        int num1 = 20;
+        int num2 =10;
+        int num3 = 20;
+
+        Calculator calculator = new Calculator();
+        int maxTwoNum3 = calculator.maxOfThreeNumbers(num1, num2, num3);
+
+        if(maxTwoNum3==num1 && maxTwoNum3==num3 && maxTwoNum3 > num2){
+            System.out.println("First and last numbers are equal and greatest than second! TEST = PASS");
+        }else {
+            System.out.println("Test = FAIL");
+        }
+        }
+
+    public void threeNumbersEqualTest4(){
+        int num1 = 10;
+        int num2 = 10;
+        int num3 = 10;
+
+        Calculator calculator = new Calculator();
+        int maxTwoNum4 = calculator.maxOfThreeNumbers(num1, num2, num3);
+
+        if(maxTwoNum4==num1 && maxTwoNum4==num2 && maxTwoNum4==num3){
+            System.out.println("All three numbers are equals! TEST = PASS");
+        }else {
+            System.out.println("Test = FAIL");
+        }
+    }
 }
 
 
