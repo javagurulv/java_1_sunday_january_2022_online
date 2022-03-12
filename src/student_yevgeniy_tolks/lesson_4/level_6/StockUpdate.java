@@ -3,7 +3,7 @@ package student_yevgeniy_tolks.lesson_4.level_6;
 class StockUpdate {
     public static void main(String[] args) {
 
-        Stock caterpillar=new Stock("MaK Caterpillar",10);
+        Stock caterpillar = new Stock("MaK Caterpillar", 10);
         String getInformation = caterpillar.getPriceInformation();
         System.out.println(getInformation);
 

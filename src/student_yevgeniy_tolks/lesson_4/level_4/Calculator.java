@@ -35,29 +35,23 @@ class Calculator {
 
     public int maxOfTwoNumbers(int firstNumber, int secondNumber) {
         return Math.max(firstNumber, secondNumber);
-        }
+    }
 
-    public int maxOfThreeNumbers(int firstNumber,int secondNumber,int thirdNumber){
+    public int maxOfThreeNumbers(int firstNumber, int secondNumber, int thirdNumber) {
 
-        if(firstNumber>secondNumber && firstNumber>thirdNumber){
+        if (firstNumber > secondNumber && firstNumber > thirdNumber) {
             return firstNumber;
-        }
-        else if (secondNumber>firstNumber && secondNumber>thirdNumber) {
-          return secondNumber;
-        }
-        else if (firstNumber==secondNumber&&firstNumber>thirdNumber){
+        } else if (secondNumber > firstNumber && secondNumber > thirdNumber) {
+            return secondNumber;
+        } else if (firstNumber == secondNumber && firstNumber > thirdNumber) {
             return firstNumber; //or return secondNumber
-        }
-        else if (firstNumber==thirdNumber&&firstNumber>secondNumber) {
+        } else if (firstNumber == thirdNumber && firstNumber > secondNumber) {
             return firstNumber; //or return  thirdNumber
-        }
-        else if (secondNumber==thirdNumber&&secondNumber>firstNumber){
+        } else if (secondNumber == thirdNumber && secondNumber > firstNumber) {
             return secondNumber; // or return thirdNumber
-        }
-        else if (firstNumber==secondNumber&&secondNumber==thirdNumber){
-          return secondNumber; //return any
-        }
-        else{
+        } else if (firstNumber == secondNumber && secondNumber == thirdNumber) {
+            return secondNumber; //return any
+        } else {
             return thirdNumber;
         }
     }

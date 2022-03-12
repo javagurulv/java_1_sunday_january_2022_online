@@ -15,19 +15,18 @@ public class PalindromeTest {
         palindromeTest.checkForPalindromeNumber();
     }
 
-    public void checkForPalindromeNumber(){
+    public void checkForPalindromeNumber() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter number: ");
         int n = scanner.nextInt();
         int temp = n;
 
-        Palindrome palindrome=new Palindrome();
+        Palindrome palindrome = new Palindrome();
 
-        boolean palindromeNumberResult = palindrome.palindromeNumber(n,temp);
+        boolean palindromeNumberResult = palindrome.palindromeNumber(n, temp);
         if (palindromeNumberResult) {
             System.out.println("Number is palindrome - test OK");
-        }
-        else {
+        } else {
             System.out.println("Number is not palindrome - test FAILED");
         }
     }
