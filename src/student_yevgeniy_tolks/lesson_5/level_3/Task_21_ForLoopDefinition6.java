@@ -1,6 +1,6 @@
 package student_yevgeniy_tolks.lesson_5.level_3;
 
-class Task_21_ForLoopDefinition6 {   //received a message that class already exists
+class Task_21_ForLoopDefinition6 {   
 
     public static void main(String[] args) {
         for (int i = 0; i < 10; i++) {  //loop "{" expected
