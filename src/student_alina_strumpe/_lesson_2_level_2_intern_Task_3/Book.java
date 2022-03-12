@@ -1,5 +1,8 @@
 package student_alina_strumpe._lesson_2_level_2_intern_Task_3;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public class Book {
 
     public String bookName;

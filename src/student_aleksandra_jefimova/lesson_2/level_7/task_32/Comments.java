@@ -1,7 +1,10 @@
 package student_aleksandra_jefimova.lesson_2.level_7.task_32;
 import java.util.Scanner;
 
-public class Comments {
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
+class Comments {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
