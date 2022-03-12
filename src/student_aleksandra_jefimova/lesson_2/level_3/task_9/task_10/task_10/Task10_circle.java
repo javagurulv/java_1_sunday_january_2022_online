@@ -2,7 +2,10 @@ package student_aleksandra_jefimova.lesson_2.level_3.task_9.task_10.task_10;
 
 import java.util.Scanner;
 
-public class Task10_circle {
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
+class Task10_circle {
     public static void main(String[] args) {
         System.out.println("Enter circle radius: ");
         Scanner scanner = new Scanner(System.in);

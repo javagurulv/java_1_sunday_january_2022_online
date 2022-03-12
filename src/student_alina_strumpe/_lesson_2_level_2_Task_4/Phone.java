@@ -1,6 +1,8 @@
 package student_alina_strumpe._lesson_2_level_2_Task_4;
 
+import teacher.codereview.CodeReview;
 
+@CodeReview(approved = true)
 public class Phone {
 
 
