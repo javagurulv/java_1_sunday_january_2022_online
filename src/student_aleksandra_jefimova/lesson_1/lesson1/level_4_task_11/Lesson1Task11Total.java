@@ -2,7 +2,7 @@ package student_aleksandra_jefimova.lesson_1.lesson1.level_4_task_11;
 
 import java.util.Scanner;
 
-public class Lesson1Task11Total {
+class Lesson1Task11Total {
 
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in); // объект класса Scanner

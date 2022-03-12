@@ -1,7 +1,7 @@
 package student_aleksandra_jefimova.lesson_2.level_3.task_9.task_10.task_11;
 import java.util.Scanner;
 
-public class Task11_average {
+class Task11_average {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);

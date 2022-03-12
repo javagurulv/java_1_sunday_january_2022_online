@@ -1,7 +1,7 @@
 package student_aleksandra_jefimova.lesson_1.lesson1.level_4_task_11;
 import java.util.Scanner;
 
-public class Lesson1Task11 {
+class Lesson1Task11 {
     public static void main(String[] args)
     {
         Scanner input = new Scanner (System.in);
