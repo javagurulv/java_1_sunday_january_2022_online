@@ -12,7 +12,7 @@ public class Task_1 {
         boolean numberPoz = num > 0;
 
 
-        System.out.println(num + " = "+" "+"is positive" +" "+"("+ numberPoz+")");
+        System.out.println(num + " = " + "" + "is positive" + " " + "("+ numberPoz+")");
 
 
 
