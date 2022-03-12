@@ -27,6 +27,9 @@ package student_aleksandrs_padalko.lesson_2.level_7;
 //переменные нельзя до тех пор пока
 //им не будет присвоено начальное значение.
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public class Task_29 { public static class SumTwoNumbers {
 
 	public static void main(String[] args) {
