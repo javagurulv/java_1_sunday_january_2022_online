@@ -7,25 +7,23 @@ public class Integer {
 
 
         Scanner scanner = new Scanner(System.in);
-
-        System.out.println("Enter first number:");
+        System.out.println("Enter first number: ");
         int firstNumber = scanner.nextInt();
 
-        System.out.println("Enter second number:");
+        System.out.println("Enter second number: ");
         int secondNumber = scanner.nextInt();
 
         int sum = firstNumber + secondNumber;
-        System.out.println("Sum = " + sum);
+        System.out.println("Sum +" + sum);
 
-        int difference = firstNumber / secondNumber;
-        System.out.println("Difference = " + difference);
+        int difference = firstNumber - secondNumber;
+        System.out.println("Difference -" + difference);
 
         int multiplication = firstNumber * secondNumber;
-        System.out.println("Multiplication = " + multiplication);
+        System.out.println("Multiplication * " + multiplication);
 
         int division = firstNumber / secondNumber;
-        System.out.println("Division = " + division);
-
-
+        System.out.println("Division / " + division);
     }
+
 }
