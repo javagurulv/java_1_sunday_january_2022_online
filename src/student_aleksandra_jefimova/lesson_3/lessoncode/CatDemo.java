@@ -1,4 +1,6 @@
-package student_aleksandra_jefimova.lesson_3;
+package student_aleksandra_jefimova.lesson_3.lessoncode;
+
+import student_aleksandra_jefimova.lesson_3.lessoncode.Cat;
 
 class CatDemo {
 

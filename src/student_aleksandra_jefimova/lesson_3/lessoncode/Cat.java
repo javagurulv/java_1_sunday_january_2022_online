@@ -1,4 +1,4 @@
-package student_aleksandra_jefimova.lesson_3;
+package student_aleksandra_jefimova.lesson_3.lessoncode;
 
 class Cat {
 
