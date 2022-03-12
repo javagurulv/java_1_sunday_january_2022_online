@@ -1,5 +1,8 @@
 package student_aleksandra_jefimova.lesson_2.level_7.task_29;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class SumTwoNumbers {
     public static void main(String[] args) {
 
