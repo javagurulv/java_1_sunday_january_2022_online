@@ -10,9 +10,9 @@ package student_alina_strumpe._lesson_4_if._level_1_Task_9;
 
 
     public String compareNumbers(int number1, int number2, int number3){
-        if (number1 < number2 && number1 < number3) {
+        if ((number1 < number2) && (number1 < number3)) {
             System.out.println("Increasing");
-        } else if (number1 > number2 && number1 > number3) {
+        } else if ((number1 > number2) && (number1 > number3)) {
             System.out.println("Decreasing");
         } else {
             System.out.println("Neither increasing or decreasing order");
