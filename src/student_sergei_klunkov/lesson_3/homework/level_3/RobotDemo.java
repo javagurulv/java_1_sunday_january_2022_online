@@ -1,6 +1,6 @@
 package student_sergei_klunkov.lesson_3.homework.level_3;
 
-public class RobotDemo {
+class RobotDemo {
 
 
     public static void main(String[] args) {
