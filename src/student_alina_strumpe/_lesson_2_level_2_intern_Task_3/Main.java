@@ -1,7 +1,10 @@
 package student_alina_strumpe._lesson_2_level_2_intern_Task_3;
 
-import java.awt.event.WindowEvent;
+import java.awt.event.WindowEvent;  // удалить этот импорт
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public class Main {
     public static void main(String[] args) {
 

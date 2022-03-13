@@ -1,6 +1,6 @@
 package student_aleksandra_jefimova.lesson_3.level_3.task_12;
 
-public class Robot {
+class Robot {
     private String name;
     public Robot(String robotName) {
 

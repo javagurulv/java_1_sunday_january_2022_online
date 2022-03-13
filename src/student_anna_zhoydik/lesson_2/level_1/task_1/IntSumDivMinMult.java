@@ -18,6 +18,5 @@ public class IntSumDivMinMult {
     System.out.println("Умножение: " + mult);
     System.out.println("Деление: " + div);
 
-
   }
 }
