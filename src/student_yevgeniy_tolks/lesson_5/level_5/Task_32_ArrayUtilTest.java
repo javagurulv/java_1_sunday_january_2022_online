@@ -5,7 +5,6 @@ class Task_32_ArrayUtilTest {
     public static void main(String[] args) {
         Task_32_ArrayUtilTest test = new Task_32_ArrayUtilTest();
         test.shouldCreateArray();
-
     }
 
     public void shouldCreateArray() {
@@ -17,6 +16,5 @@ class Task_32_ArrayUtilTest {
         } else {
             System.out.println("Array is not created - Test FAILED!");
         }
-
     }
 }
