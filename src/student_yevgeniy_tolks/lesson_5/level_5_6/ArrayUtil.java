@@ -16,9 +16,9 @@ class ArrayUtil {
 
     public void printArrayToConsole(int[] array) {
         for(int printArray: array){
-           // System.out.print(printArray + " " );
+            System.out.print(printArray + " " );
         }
-        System.out.println(Arrays.toString(array));
+//        System.out.println(Arrays.toString(array));
     }
 
     public int findMaxNumber(int[] array) {
