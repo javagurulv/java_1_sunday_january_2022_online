@@ -22,11 +22,11 @@ class Task_28 {
                 minNumberOfArray = numbers[i];
             }
         }
-        System.out.println("1. Smalest number is " + minNumberOfArray);
+        System.out.println("1st. Smalest number is " + minNumberOfArray);
         //pass array numbers to string
         System.out.println(Arrays.toString(numbers));
 
         int minNumber = Arrays.stream(numbers).min().getAsInt();
-        System.out.println("2. Smallest number in array: " + minNumber);
+        System.out.println("2nd. Smallest number in array: " + minNumber);
     }
 }
