@@ -1,6 +1,6 @@
 package student_elina_kucenko.lesson3.level7.task29;
 
-public class TableDemo {
+class TableDemo {
     public static void main(String[] args) {
         Table table = new Table("white","small", 10);
         table.describeThisTable();

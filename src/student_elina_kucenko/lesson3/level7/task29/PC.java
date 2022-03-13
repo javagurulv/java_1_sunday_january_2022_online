@@ -1,6 +1,6 @@
 package student_elina_kucenko.lesson3.level7.task29;
 
-public class PC {
+class PC {
     String name;
     String type;
     int productionYear;
