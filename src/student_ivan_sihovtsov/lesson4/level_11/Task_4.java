@@ -1,4 +1,4 @@
-package student_ivan_sihovtsov.lesson4.level_1;
+package student_ivan_sihovtsov.lesson4.level_11;
 
 import java.util.Scanner;
 
