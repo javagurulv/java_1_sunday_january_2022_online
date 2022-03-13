@@ -2,7 +2,7 @@ package student_sergei_klunkov.lesson_2.level_3;
 
 import java.util.Scanner;
 
-public class Circle {
+class Circle {
 
     public static void main(String[] args) {
 

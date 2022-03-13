@@ -2,7 +2,7 @@ package student_sergei_klunkov.lesson_3.homework.level_5.Task_21;
 
 import java.awt.*;
 
-public class Dog {
+class Dog {
 
     String color = " black ";
     String voice = " Gaf! ";

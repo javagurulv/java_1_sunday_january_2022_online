@@ -1,6 +1,6 @@
 package student_sergei_klunkov.lesson_2.level_5;
 
-public class SizeMatters {
+class SizeMatters {
 
         public static void main(String[] args) {
 
