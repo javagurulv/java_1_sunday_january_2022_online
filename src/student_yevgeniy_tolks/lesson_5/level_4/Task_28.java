@@ -14,19 +14,13 @@ class Task_28 {
 
         int minNumberOfArray = numbers[0];
         for (int i = 0; i < numbers.length; i++) {
-
             int arrayNumbers = numbers[i];
             System.out.println(arrayNumbers);
-
             if (numbers[i] < minNumberOfArray) {
                 minNumberOfArray = numbers[i];
             }
         }
-        System.out.println("1st. Smalest number is " + minNumberOfArray);
-        //pass array numbers to string
-        System.out.println(Arrays.toString(numbers));
+        System.out.println("Smallest number is " + minNumberOfArray);
 
-        int minNumber = Arrays.stream(numbers).min().getAsInt();
-        System.out.println("2nd. Smallest number in array: " + minNumber);
     }
 }
