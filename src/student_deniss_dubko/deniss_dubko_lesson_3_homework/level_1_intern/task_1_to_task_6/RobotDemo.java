@@ -4,15 +4,15 @@ class RobotDemo {
 
     public static void main(String[] args) {
 
-        Robot robot1 = new Robot("001");
+        Robot robot1 = new Robot("ROBO 001");
         robot1.sayHello();
         robot1.voiceYourName();
 
-        Robot robot2 = new Robot("002");
+        Robot robot2 = new Robot("ROBO 002");
         robot2.sayHello();
         robot2.voiceYourName();
 
-        Robot robot3 = new Robot("003");
+        Robot robot3 = new Robot("ROBO 003");
         robot3.sayHello();
         robot3.voiceYourName();
     }
