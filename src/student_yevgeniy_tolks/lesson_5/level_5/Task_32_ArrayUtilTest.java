@@ -1,6 +1,6 @@
 package student_yevgeniy_tolks.lesson_5.level_5;
 
-public class Task_32_ArrayUtilTest {
+class Task_32_ArrayUtilTest {
 
     public static void main(String[] args) {
         Task_32_ArrayUtilTest test = new Task_32_ArrayUtilTest();
