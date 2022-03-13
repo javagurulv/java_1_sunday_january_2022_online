@@ -1,9 +1,9 @@
-package student_yevgeniy_tolks.lesson_5.level_5;
+package student_yevgeniy_tolks.lesson_5.level_5_6;
 
 public class ArrayUtilDemo {
 
     public static void main(String[] args) {
-        
+
         ArrayUtil arrayUtil = new ArrayUtil();
         int[] array = arrayUtil.createArray(12);
         arrayUtil.fillArrayWithRandomNumbers(array);

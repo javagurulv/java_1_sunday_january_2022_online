@@ -1,4 +1,4 @@
-package student_yevgeniy_tolks.lesson_5.level_5;
+package student_yevgeniy_tolks.lesson_5.level_5_6;
 
 import java.util.Arrays;
 
