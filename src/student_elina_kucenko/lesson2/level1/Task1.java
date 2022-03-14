@@ -11,7 +11,7 @@ package student_elina_kucenko.lesson2.level1;
  (каждый результат на новой строке отдельно).*/
 
 import java.util.Scanner;
-public class Task1 {
+class Task1 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("please enter 1st number");
