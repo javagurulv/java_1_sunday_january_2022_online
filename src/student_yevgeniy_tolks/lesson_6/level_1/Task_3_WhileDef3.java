@@ -6,8 +6,6 @@ class Task_3_WhileDef3 {
         while (i <= 100) {
             System.out.println(i);
             i++;
-
         }
-
     }
 }   // "}" expected
