@@ -1,4 +1,4 @@
-package student_alina_strumpe._lesson_5_if._level_4_Task_16;
+package student_alina_strumpe._lesson_4_if._level_4_Task_16;
 
 public class LightColorDetectorTest {
 
