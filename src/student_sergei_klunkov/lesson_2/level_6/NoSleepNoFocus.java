@@ -1,6 +1,6 @@
 package student_sergei_klunkov.lesson_2.level_6;
 
-public class NoSleepNoFocus {
+class NoSleepNoFocus {
 
         public static void main(String[] args) {
 

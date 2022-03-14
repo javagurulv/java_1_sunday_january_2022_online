@@ -2,7 +2,7 @@ package student_elina_kucenko.lesson3.level7.task29;
 
 import java.util.Scanner;
 
-public class IncomeDemo {
+class IncomeDemo {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
