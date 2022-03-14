@@ -1,6 +1,6 @@
-package student_sergei_klunkov.lesson_3.homework.level_7;
+package student_sergei_klunkov.lesson_3.homework.level_7.task_29;
 
-import javax.swing.plaf.synth.SynthOptionPaneUI;
+import student_sergei_klunkov.lesson_3.homework.level_7.task_29.Computer;
 
 class ComputerDemo {
 

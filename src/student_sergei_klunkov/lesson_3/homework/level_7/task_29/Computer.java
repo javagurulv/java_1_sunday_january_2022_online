@@ -1,4 +1,4 @@
-package student_sergei_klunkov.lesson_3.homework.level_7;
+package student_sergei_klunkov.lesson_3.homework.level_7.task_29;
 
 class Computer {
 
