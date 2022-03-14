@@ -1,6 +1,6 @@
 package student_alina_strumpe._lesson_4_if._level_1_Task_13;
 
-class Calculator {
+public class Calculator {
 
     public int number;
     boolean isEven = true;
