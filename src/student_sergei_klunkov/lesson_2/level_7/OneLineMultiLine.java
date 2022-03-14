@@ -2,11 +2,10 @@ package student_sergei_klunkov.lesson_2.level_7;
 
 
 import java.util.Scanner;
+class OneLineMultiLine {
 
-public class OneLineMultiLine {
 
-
-        public static void main(String[] args) {
+        static void main(String[] args) {
             // 1. get first number from user
 
             Scanner myInput = new Scanner( System.in );

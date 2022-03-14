@@ -2,7 +2,7 @@ package student_sergei_klunkov.lesson_2.level_1;
 
 import java.util.Scanner;
 
-public class Subtraction {
+class Subtraction {
 
     public static void main(String[] args) {
 

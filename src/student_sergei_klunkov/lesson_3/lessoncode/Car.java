@@ -1,6 +1,6 @@
 package student_sergei_klunkov.lesson_3.lessoncode;
 
-public class Car {
+class Car {
 
     private String brand;
     private boolean radioOn;
