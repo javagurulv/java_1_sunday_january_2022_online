@@ -6,7 +6,11 @@ class Dog {
     private String newColor;
     private String voice;
 
-    void changeColor(String newColor){
+    void changeColor(String newColor) {
+
+        this.newColor = newColor;
+        System.out.println(" My color is " + this.newColor);
+
 
     }
 
