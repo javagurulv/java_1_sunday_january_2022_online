@@ -1,6 +1,6 @@
 package student_sergei_klunkov.lesson_3.homework.level_7.task_33;
 
-public class Computer {
+class Computer {
 
     String manufacturer;
     String model;
