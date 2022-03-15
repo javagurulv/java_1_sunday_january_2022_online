@@ -4,6 +4,7 @@ public class Dog {
   String name;
 
   Dog(String dogName) {
+
     this.name = dogName;
   }
 

@@ -1,6 +1,6 @@
 package student_anna_zhoydik.lesson_3.level_7.task_29;
 
-public class Person {
+ class Person {
   int date;
   String name;
   String surname;
@@ -13,16 +13,16 @@ public class Person {
     this.country = ownersCountry;
   }
 
-  public void showData() {
+   void showData() {
     System.out.println("name: " + this.name + ", surname: " + this.surname + ", date of birth: " + this.date + ", country: " + country);
   }
 
-  public int showAge() {
+  int showAge() {
     this.date = 2022 - this.date;
     return this.date;
   }
 
-  public void speak() {
+   void speak() {
     System.out.println("Hello, my name is " + this.name + this.surname + " and im " + this.date + " years old!");
   }
 
