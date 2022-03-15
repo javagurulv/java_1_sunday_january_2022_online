@@ -2,7 +2,7 @@ package student_devids_kropacovs.lesson_4.level_2;
 
 import java.util.Scanner;
 
-public class Task_5_6_7 {
+ class Task_5_6_7 {
     public static void main(String[] args) {
 
         Scanner s = new Scanner(System.in);

@@ -14,6 +14,9 @@ package student_aleksandrs_padalko.lesson_2.level_6;
 //распологаться программный код. В языке программирования Java
 //программный код с командами должен находиться внутри метода.
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public class Task_23 {  static class AttentionPlease {
     public static void main(String[] args) {
         System.out.println("Code outside the method will not compile!");

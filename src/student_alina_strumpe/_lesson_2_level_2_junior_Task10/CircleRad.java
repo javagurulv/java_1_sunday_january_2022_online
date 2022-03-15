@@ -2,6 +2,9 @@ package student_alina_strumpe._lesson_2_level_2_junior_Task10;
 
 import java.util.Scanner;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public class CircleRad {
      public static void main(String[] args){
 

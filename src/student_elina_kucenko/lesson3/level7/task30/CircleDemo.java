@@ -1,6 +1,6 @@
 package student_elina_kucenko.lesson3.level7.task30;
 
-public class CircleDemo {
+class CircleDemo {
     public static void main(String[] args) {
         double radius = 5;
         Circle circle = new Circle(radius);

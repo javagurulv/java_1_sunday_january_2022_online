@@ -11,10 +11,9 @@ public class Task_6 {
         System.out.print("Enter second number: ");
         int secondNumber = scanner.nextInt();
 
-        if(firstNumber>secondNumber){
+        if (firstNumber > secondNumber) {
             System.out.println(secondNumber + " is lowest between two entered numbers");
-        }
-        else{
+        } else {
             System.out.println(firstNumber + " is the lowest between two entered numbers");
         }
 

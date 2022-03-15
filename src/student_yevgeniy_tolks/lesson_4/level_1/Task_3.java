@@ -2,14 +2,14 @@ package student_yevgeniy_tolks.lesson_4.level_1;
 
 import java.util.Scanner;
 
- class Task_3 {
+class Task_3 {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter any number from 1 to 7: ");
-        int number =scanner.nextInt();
+        int number = scanner.nextInt();
 
-        switch (number){
+        switch (number) {
             case 1:
                 System.out.println("Monday");
                 break;
