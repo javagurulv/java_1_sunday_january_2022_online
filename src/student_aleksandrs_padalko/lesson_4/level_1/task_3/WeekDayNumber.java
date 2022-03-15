@@ -1,4 +1,4 @@
-package student_aleksandrs_padalko.lesson_4.task_3;
+package student_aleksandrs_padalko.lesson_4.level_1.task_3;
 
 import java.util.Scanner;
 
