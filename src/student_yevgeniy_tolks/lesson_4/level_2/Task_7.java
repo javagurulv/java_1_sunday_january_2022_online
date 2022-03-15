@@ -11,7 +11,7 @@ public class Task_7 {
         System.out.print("Enter second number: ");
         double secondNumber = scanner.nextDouble();
 
-        if (firstNumber!= secondNumber) {
+        if (firstNumber != secondNumber) {
             System.out.println("Numbers are different!");
         } else {
             System.out.println("Numbers are equal!");

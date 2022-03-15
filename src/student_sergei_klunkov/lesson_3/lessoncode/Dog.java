@@ -1,6 +1,6 @@
 package student_sergei_klunkov.lesson_3.lessoncode;
 
-public class Dog {
+class Dog {
 
      private String name;
      private int age;

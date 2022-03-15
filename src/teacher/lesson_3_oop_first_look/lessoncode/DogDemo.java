@@ -15,21 +15,21 @@ public class DogDemo {
 		Dog sharik = new Dog(dogName, dogAge);
 
 
-		Dog pupsik = new Dog("Pupsik", 9);
+		Dog bobik = new Dog("Pupsik", 9);
 
 		sharik.voice();
 		sharik.voice();
 		sharik.voice();
 
-		pupsik.voice();
-		pupsik.voice();
-		pupsik.voice();
+		bobik.voice();
+		bobik.voice();
+		bobik.voice();
 
 		sharik.voiceYourName();
-		pupsik.voiceYourName();
+		bobik.voiceYourName();
 
 		sharik.voiceYourAge();
-		pupsik.voiceYourAge();
+		bobik.voiceYourAge();
 
 
 		sharik.voiceYourName();

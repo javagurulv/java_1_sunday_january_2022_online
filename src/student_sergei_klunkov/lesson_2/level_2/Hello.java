@@ -2,7 +2,7 @@ package student_sergei_klunkov.lesson_2.level_2;
 
 import java.util.Scanner;
 
-public class Hello {
+class Hello {
 
     public static void main(String[] args) {
 

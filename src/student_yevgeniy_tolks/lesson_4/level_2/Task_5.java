@@ -11,13 +11,11 @@ public class Task_5 {
         System.out.println("Enter second number: ");
         double secondNumber = scanner.nextDouble();
 
-        if (firstNumber>secondNumber){
+        if (firstNumber > secondNumber) {
             System.out.println(firstNumber + " bigger than " + secondNumber);
-        }
-        else if(firstNumber<secondNumber){
+        } else if (firstNumber < secondNumber) {
             System.out.println(firstNumber + " less than " + secondNumber);
-        }
-        else{
+        } else {
             System.out.println(firstNumber + " is equal to " + secondNumber);
         }
 

@@ -1,6 +1,6 @@
 package student_sergei_klunkov.lesson_3.homework.level_5.Task_20;
 
-public class Dog {
+class Dog {
 
     int age = 1;
     String happyBirthday = "Happy birthday to me!";

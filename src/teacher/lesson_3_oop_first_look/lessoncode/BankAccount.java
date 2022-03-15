@@ -2,7 +2,7 @@ package teacher.lesson_3_oop_first_look.lessoncode;
 
 class BankAccount {
 
-    private final String owner;
+    private String owner;
     private int moneyAmount;
 
     public BankAccount(String owner) {

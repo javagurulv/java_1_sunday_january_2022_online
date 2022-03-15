@@ -3,7 +3,7 @@ package student_sergei_klunkov.lesson_3.lessoncode;
 
 import student_sergei_klunkov.lesson_3.lessoncode.Car;
 
-public class CarDemo {
+class CarDemo {
 
     public static void main(String[] args) {
         Car audi = new Car("Audi", false);

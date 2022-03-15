@@ -1,6 +1,6 @@
 package student_sergei_klunkov.lesson_3.homework.level_4;
 
-public class Car {
+class Car {
 
     String model;
 
