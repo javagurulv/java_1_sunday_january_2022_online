@@ -15,19 +15,19 @@ public class RealTwoNumbers {
 
 
         double sum = firstDoubleNumber + secondDoubleNumber;
-        System.out.println("Sum + " + sum);
+        System.out.println("Sum = " + sum);
 
 
         double difference = firstDoubleNumber - secondDoubleNumber;
-        System.out.println("Difference - "  + difference);
+        System.out.println("Difference = " + difference);
 
 
         double multiplication = firstDoubleNumber * secondDoubleNumber;
-        System.out.println("Multiplication * " + multiplication);
+        System.out.println("Multiplication = " + multiplication);
 
 
         double division = firstDoubleNumber / secondDoubleNumber;
-        System.out.println("Division / " + division);
+        System.out.println("Division = " + division);
 
 
 

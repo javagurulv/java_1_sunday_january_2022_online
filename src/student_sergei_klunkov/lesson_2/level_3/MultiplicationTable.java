@@ -7,7 +7,7 @@ import java.util.Scanner;
 
         // Показать таблицу умножения для этого числа до 10
 
-        public class MultiplicationTable {
+        class MultiplicationTable {
 
 
             public static void main(String[] args) {
