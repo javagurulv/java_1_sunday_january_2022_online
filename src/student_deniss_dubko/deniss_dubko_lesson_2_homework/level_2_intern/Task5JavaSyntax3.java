@@ -1,14 +1,11 @@
 package student_deniss_dubko.deniss_dubko_lesson_2_homework.level_2_intern;
 
-public class Task_7_java_syntax_5 {
+public class Task5JavaSyntax3 {
 
-    class LoginService {
+    class BankAccount {
 
         public static void main(String[] args) {
-            System.out.println("You can login!");
         }
-
-
     }
 
 

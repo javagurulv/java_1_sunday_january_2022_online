@@ -1,15 +1,11 @@
 package student_deniss_dubko.deniss_dubko_lesson_2_homework.level_2_intern;
 
-public class Task_5_java_syntax_3 {
+public class Task6JavaSyntax4 {
 
-    class BankAccount {
+    class Turtle {
 
         public static void main(String[] args) {
-
-
         }
-
-
     }
 
 
