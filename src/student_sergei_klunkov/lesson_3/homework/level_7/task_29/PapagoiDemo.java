@@ -2,7 +2,7 @@ package student_sergei_klunkov.lesson_3.homework.level_7.task_29;
 
 import student_sergei_klunkov.lesson_3.homework.level_7.task_29.Papagoi;
 
-public class PapagoiDemo {
+class PapagoiDemo {
 
     public static void main(String[] args) {
 
