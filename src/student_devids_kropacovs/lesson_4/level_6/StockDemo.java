@@ -1,6 +1,6 @@
 package student_devids_kropacovs.lesson_4.level_6;
 
-public class StockDemo {
+class StockDemo {
     public static void main(String[] args) {
         Stock stock1 = new Stock("GOOGLE", 100);
         stock1.updatePrice(50);

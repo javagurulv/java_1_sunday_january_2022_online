@@ -2,7 +2,7 @@ package student_devids_kropacovs.lesson_4.level_5;
 
 import java.util.Scanner;
 
-public class LightColorDetectorDemo {
+ class LightColorDetectorDemo {
     public static void main(String[] args) {
         System.out.print("Please, enter a diapason number: ");
         Scanner s = new Scanner(System.in);
