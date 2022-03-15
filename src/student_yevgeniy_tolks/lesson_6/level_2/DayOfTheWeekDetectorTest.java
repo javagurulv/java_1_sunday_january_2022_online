@@ -2,7 +2,7 @@ package student_yevgeniy_tolks.lesson_6.level_2;
 
 import java.util.Objects;
 
-public class DayOfTheWeekDetectorTest {
+class DayOfTheWeekDetectorTest {
     public static void main(String[] args) {
         DayOfTheWeekDetectorTest weekDetectorTest = new DayOfTheWeekDetectorTest();
         weekDetectorTest.dayOfTheWeekMonday();
