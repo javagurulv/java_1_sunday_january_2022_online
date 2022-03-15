@@ -1,4 +1,4 @@
-package student_stanislav_astafjev.lesson_3;
+package student_stanislav_astafjev.lesson_2;
 
 import teacher.lesson_3_oop_first_look.lessoncode.Dog;
 

@@ -1,4 +1,4 @@
-package student_stanislav_astafjev.lesson_3;
+package student_stanislav_astafjev.lesson_2;
 
 public class Dog {
 
