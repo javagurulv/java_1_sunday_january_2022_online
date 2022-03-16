@@ -1,4 +1,4 @@
-package student_aleksandra_jefimova.lesson_4.lessoncode.level_1;
+package student_aleksandra_jefimova.lesson_4.task_1;
 
 import java.util.Scanner;
 
