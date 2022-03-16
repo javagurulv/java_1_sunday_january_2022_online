@@ -2,7 +2,7 @@ package student_devids_kropacovs.lesson_4.level_3;
 
 import java.util.Scanner;
 
-public class Task_8_9_10 {
+ class Task_8_9_10 {
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
         System.out.print("Enter 1st number: ");
