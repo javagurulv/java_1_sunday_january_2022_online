@@ -13,8 +13,6 @@ public class Task30CorrectDataTypes {
         double sum = numberOne + numberTwo;
 
         System.out.println("Sum = " + sum);
-
-
     }
 
 

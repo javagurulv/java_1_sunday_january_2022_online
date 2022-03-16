@@ -20,8 +20,6 @@ public class Task32Comments {
         int sum = numberOne + numberTwo;
 
         System.out.println("Sum = " + sum);
-
-
     }
 
 
