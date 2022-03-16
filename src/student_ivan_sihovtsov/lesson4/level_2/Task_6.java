@@ -19,8 +19,6 @@ public class Task_6 {
 
         if (numberTwo > numberOne) {
             System.out.println("Smallest number is: " + numberOne);
-        } else {
-            System.out.println("The numbers are equal " + numberTwo + " = " + numberOne);
         }
 
 

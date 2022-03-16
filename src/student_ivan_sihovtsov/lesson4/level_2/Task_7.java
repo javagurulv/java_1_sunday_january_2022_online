@@ -2,7 +2,7 @@ package student_ivan_sihovtsov.lesson4.level_2;
 
 import java.util.Scanner;
 
-public class Task_5 {
+public class Task_7 {
 
     public static void main(String[] args) {
 
@@ -13,15 +13,11 @@ public class Task_5 {
         System.out.print("Enter the second number: ");
         int numberTwo = scanner.nextInt();
 
-        if (numberOne > numberTwo) {
-            System.out.println("Largest number is: " + numberOne);
+        if (numberOne == numberTwo) {
+            System.out.println("Numbers are equals");
+        }else {
+            System.out.println("Numbers are different");
         }
-
-        if (numberTwo > numberOne) {
-            System.out.println("Largest number is: " + numberTwo);
-        }
-
-
     }
 
 }
