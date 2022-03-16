@@ -13,7 +13,7 @@ public class RobotDemo {
         robot2.sayHello();
         robot2.voiceYourName();
 
-        Robot robot3 = new Robot("qwerty");
+        Robot robot3 = new Robot("Qwerty");
         robot3.sayHello();
         robot3.voiceYourName();
 
