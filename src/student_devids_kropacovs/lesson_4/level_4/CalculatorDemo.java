@@ -1,6 +1,6 @@
 package student_devids_kropacovs.lesson_4.level_4;
 
-public class CalculatorDemo {
+ class CalculatorDemo {
 
     public static void main(String[] args) {
         Calculator c = new Calculator();

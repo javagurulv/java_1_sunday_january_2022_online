@@ -5,7 +5,7 @@ import java.util.Scanner;
 class Player {
     int number = 0;
 
-    public void guess(){
+    public void guess() {
         System.out.print("Please, write your guess: ");
         Scanner scanner = new Scanner(System.in);
         number = scanner.nextInt();

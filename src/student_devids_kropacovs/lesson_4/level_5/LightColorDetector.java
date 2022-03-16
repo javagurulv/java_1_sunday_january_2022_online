@@ -6,7 +6,7 @@ package student_devids_kropacovs.lesson_4.level_5;
         590 ... 619 - Оранжевый ("Orange")
         620 ... 750 - Красный ("Red")
          */
-public class LightColorDetector {
+ class LightColorDetector {
     public String detect(int wavelength) {
         if(wavelength >= 380 && wavelength <= 449){
             return "Violet";

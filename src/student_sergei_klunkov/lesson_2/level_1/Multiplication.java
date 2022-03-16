@@ -2,7 +2,7 @@ package student_sergei_klunkov.lesson_2.level_1;
 
 import java.util.Scanner;
 
-public class Multiplication {
+class Multiplication {
 
     public static void main(String[] args) {
         // 1. get first number from user

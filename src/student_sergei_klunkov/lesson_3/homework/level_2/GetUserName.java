@@ -2,7 +2,7 @@ package student_sergei_klunkov.lesson_3.homework.level_2;
 
 import java.util.Scanner;
 
-public class GetUserName {
+class GetUserName {
 
     public static void main(String[] args) {
 

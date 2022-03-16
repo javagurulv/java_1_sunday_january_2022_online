@@ -13,8 +13,6 @@ public class Task29RepairSumTwoNumbers {
         int sum = numberOne + numberTwo;
 
         System.out.println("Sum = " + sum);
-
-
     }
 
 

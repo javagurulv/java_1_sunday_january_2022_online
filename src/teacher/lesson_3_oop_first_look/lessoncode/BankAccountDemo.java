@@ -4,6 +4,7 @@ class BankAccountDemo {
 
     public static void main(String[] args) {
         BankAccount bankAccount = new BankAccount("Viktor");
+        BankAccount alexAccount = new BankAccount("Alex");
 
         int money = bankAccount.addMoney(1000);
         System.out.println("Money = " + money);
