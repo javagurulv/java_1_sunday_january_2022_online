@@ -8,7 +8,8 @@ class CalculatorTest {
         calculatorTest.minTest();
         calculatorTest.mulTest();
         calculatorTest.divTest();
-        calculatorTest.isEvenTest();
+        calculatorTest.isEvenTest1();
+        calculatorTest.isEvenTest2();
         calculatorTest.maxOfTwoNumbersTest1();
         calculatorTest.maxOfTwoNumbersTest2();
         calculatorTest.maxOfTwoNumbersTest3();
@@ -26,10 +27,9 @@ class CalculatorTest {
     public void sumTest() {
         int firstNumber = 10;
         int secondNumber = 5;
-        int expectedResult = 15;
         Calculator calculator = new Calculator();
         int realResult = calculator.sum(firstNumber, secondNumber);
-        if (realResult == expectedResult) {
+        if (realResult == 15) {
             System.out.println("Sum test = OK");
         } else {
             System.out.println("Sum test = FAIL");
@@ -39,10 +39,9 @@ class CalculatorTest {
     public void minTest() {
         int firstNumber = 10;
         int secondNumber = 5;
-        int expectedResult = 5;
         Calculator calculator = new Calculator();
         int realResult = calculator.min(firstNumber, secondNumber);
-        if (realResult == expectedResult) {
+        if (realResult == 5) {
             System.out.println("Min test = OK");
         } else {
             System.out.println("Min test = FAIL");
@@ -52,10 +51,9 @@ class CalculatorTest {
     public void mulTest() {
         int firstNumber = 10;
         int secondNumber = 5;
-        int expectedResult = 50;
         Calculator calculator = new Calculator();
         int realResult = calculator.mul(firstNumber, secondNumber);
-        if (realResult == expectedResult) {
+        if (realResult == 50) {
             System.out.println("Mul test = OK");
         } else {
             System.out.println("Mul test = FAIL");
@@ -65,22 +63,27 @@ class CalculatorTest {
     public void divTest() {
         int firstNumber = 10;
         int secondNumber = 5;
-        int expectedResult = 2;
         Calculator calculator = new Calculator();
         int realResult = calculator.div(firstNumber, secondNumber);
-        if (realResult == expectedResult) {
+        if (realResult == 2) {
             System.out.println("Div test = OK");
         } else {
             System.out.println("Div test = FAIL");
         }
     }
 
-    public void isEvenTest() {
-        int testNumber = 7;
+    public void isEvenTest1() {
         Calculator calculator = new Calculator();
-        boolean result = calculator.isEven(testNumber);
-        boolean expected = false;
-        if (result == expected) {
+        if (calculator.isEven(10)) {
+            System.out.println("IsEvent test = OK");
+        } else {
+            System.out.println("IsEvent test = FAIL");
+        }
+    }
+
+    public void isEvenTest2() {
+        Calculator calculator = new Calculator();
+        if (!calculator.isEven(7)) {
             System.out.println("IsEvent test = OK");
         } else {
             System.out.println("IsEvent test = FAIL");

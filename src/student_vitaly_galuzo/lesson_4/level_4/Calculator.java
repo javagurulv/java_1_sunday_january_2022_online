@@ -1,6 +1,6 @@
 package student_vitaly_galuzo.lesson_4.level_4;
 
-public class Calculator {
+ class Calculator {
 
 
     public int sum(int num1, int num2) {

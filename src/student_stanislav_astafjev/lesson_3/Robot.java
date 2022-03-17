@@ -9,11 +9,11 @@ public class Robot {
     }
 
     public void sayHello() {
-        System.out.println("Hello!");
+        System.out.print("Hello ");
     }
 
     public void voiceYourName() {
-        System.out.println("My name is " + this.name);
+        System.out.println("my name is " + this.name + "!");
     }
 
 
