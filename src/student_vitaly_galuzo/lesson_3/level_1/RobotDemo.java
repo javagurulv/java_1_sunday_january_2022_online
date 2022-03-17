@@ -2,7 +2,7 @@ package student_vitaly_galuzo.lesson_3.level_1;
 
 import student_vitaly_galuzo.lesson_3.level_1.Robot;
 
-public class RobotDemo {
+ class RobotDemo {
 
     public static void main(String[] args) {
 
