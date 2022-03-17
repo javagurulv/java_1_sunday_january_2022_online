@@ -1,6 +1,6 @@
 package student_aleksandra_jefimova.lesson_4.task_10;
 import java.util.Scanner;
-public class Task_10_PrintBiggerNumber {
+class Task_10_PrintBiggerNumber {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Insert number One: ");
