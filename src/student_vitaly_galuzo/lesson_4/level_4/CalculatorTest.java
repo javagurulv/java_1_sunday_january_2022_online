@@ -1,6 +1,6 @@
 package student_vitaly_galuzo.lesson_4.level_4;
 
-public class CalculatorTest {
+ class CalculatorTest {
 
     public static void main(String[] args) {
 
