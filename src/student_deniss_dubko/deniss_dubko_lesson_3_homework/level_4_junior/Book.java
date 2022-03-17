@@ -1,6 +1,6 @@
 package student_deniss_dubko.deniss_dubko_lesson_3_homework.level_4_junior;
 
-public class Book {
+class Book {
 
     private String title;
 
