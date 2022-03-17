@@ -14,7 +14,7 @@ public class Task_10_PrintBiggerNumber {
         if (numberTwo > numberOne && numberTwo > numberThree) {
             System.out.println(numberTwo);}
         else if (numberThree> numberOne && numberThree > numberTwo)
-         {
+        {
             System.out.println(numberThree);
         }
     }
