@@ -6,8 +6,8 @@ class ArrayService {
     boolean contains(int[] array, int numberToSearch) {
         boolean numberFound = false;
 
-        for (int i = 0; i < array.length; i++) {
-            if (numberToSearch == array[i]) {
+        for (int j : array) {
+            if (numberToSearch == j) {
                 numberFound = true;
                 break;
             }
