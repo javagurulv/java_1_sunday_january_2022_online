@@ -10,10 +10,11 @@ class Computer {
         this.model = model;
     }
 
-    String getManufacturer(){
+    String getManufacturer() {
         return this.manufacturer;
     }
-    String getModel(){
+
+    String getModel() {
         return this.model;
     }
 

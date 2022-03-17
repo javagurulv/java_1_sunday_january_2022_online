@@ -10,46 +10,46 @@ public class FizzBuzzTest {
         fizzBuzzTest.numberReturnCheck();
     }
 
-    public void fizzCheck(){
-        int number = 9 ;
+    public void fizzCheck() {
+        int number = 9;
         String expectedResult = "Fizz";
         FizzBuzz f = new FizzBuzz(number);
-        if (expectedResult.equals(f.fizzBuzzGame())){
+        if (expectedResult.equals(f.fizzBuzzGame())) {
             System.out.println("Fizz Test Pass");
-        }else{
+        } else {
             System.out.println("Fizz Test Fail");
         }
     }
 
-    public void buzzCheck(){
-        int number = 20 ;
+    public void buzzCheck() {
+        int number = 20;
         String expectedResult = "Buzz";
         FizzBuzz f = new FizzBuzz(number);
-        if (expectedResult.equals(f.fizzBuzzGame())){
+        if (expectedResult.equals(f.fizzBuzzGame())) {
             System.out.println("Buzz Test Pass");
-        }else{
+        } else {
             System.out.println("Buzz Test Fail");
         }
     }
 
-    public void fizzBuzzCheck(){
-        int number = 30 ;
+    public void fizzBuzzCheck() {
+        int number = 30;
         String expectedResult = "FizzBuzz";
         FizzBuzz f = new FizzBuzz(number);
-        if (expectedResult.equals(f.fizzBuzzGame())){
+        if (expectedResult.equals(f.fizzBuzzGame())) {
             System.out.println("FizzBuzz Test Pass");
-        }else{
+        } else {
             System.out.println("FizzBuzz Test Fail");
         }
     }
 
-    public void numberReturnCheck(){
-        int number = 14 ;
+    public void numberReturnCheck() {
+        int number = 14;
         String expectedResult = "14";
         FizzBuzz f = new FizzBuzz(number);
-        if (expectedResult.equals(f.fizzBuzzGame())){
+        if (expectedResult.equals(f.fizzBuzzGame())) {
             System.out.println("Number Test Pass");
-        }else{
+        } else {
             System.out.println("Number Test Fail");
         }
     }

@@ -8,7 +8,7 @@ class Car {
         this.model = newModel;
     }
 
-    String getModel(){
+    String getModel() {
         return this.model;
     }
 

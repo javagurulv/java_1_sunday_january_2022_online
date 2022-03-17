@@ -14,15 +14,15 @@ class Task1 {
         int secondNumber = scanner2.nextInt();
 
         int sum = firstNumber + secondNumber;
-        System.out.println(firstNumber+" + " + secondNumber + " = " + sum);
+        System.out.println(firstNumber + " + " + secondNumber + " = " + sum);
 
         int sub = firstNumber - secondNumber;
-        System.out.println(firstNumber+" - " + secondNumber + " = " + sub);
+        System.out.println(firstNumber + " - " + secondNumber + " = " + sub);
 
         int div = firstNumber / secondNumber;
-        System.out.println(firstNumber+" / " + secondNumber + " = " + div);
+        System.out.println(firstNumber + " / " + secondNumber + " = " + div);
 
         int mul = firstNumber * secondNumber;
-        System.out.println(firstNumber+" * " + secondNumber + " = " + mul);
+        System.out.println(firstNumber + " * " + secondNumber + " = " + mul);
     }
 }

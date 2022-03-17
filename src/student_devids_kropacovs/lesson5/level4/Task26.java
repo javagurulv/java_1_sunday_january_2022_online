@@ -8,14 +8,14 @@ public class Task26 {
         System.out.print("How long will be an array?");
         Scanner scanner = new Scanner(System.in);
         int arraySize = scanner.nextInt();
-        int [] numbers = new int[arraySize];
+        int[] numbers = new int[arraySize];
 
-        for (int i = 0; i< arraySize; i++){
-            numbers[i] = (int) (Math.random() * 10 +1);
+        for (int i = 0; i < arraySize; i++) {
+            numbers[i] = (int) (Math.random() * 10 + 1);
         }
 
-        for ( int i = 0; i<arraySize; i++){
-            System.out.println("Number " + (i+1) + " of an array is " + numbers[i]);
+        for (int i = 0; i < arraySize; i++) {
+            System.out.println("Number " + (i + 1) + " of an array is " + numbers[i]);
         }
     }
 }

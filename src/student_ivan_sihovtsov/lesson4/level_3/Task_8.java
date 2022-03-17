@@ -1,7 +1,5 @@
 package student_ivan_sihovtsov.lesson4.level_3;
 
-import kotlin.reflect.jvm.internal.impl.renderer.ClassifierNamePolicy;
-
 import java.util.Scanner;
 
 public class Task_8 {
