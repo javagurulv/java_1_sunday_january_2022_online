@@ -1,10 +1,10 @@
 package student_alina_strumpe._lesson_4_if._level_7_Task_24;
 
-class CalculatorTest {
+class CalculatorTestAlina {
 
     public static void main(String[] args) {
 
-        Calculator calculator = new Calculator();
+        CalculatorAlina calculator = new CalculatorAlina();
         int sum = calculator.sum(10, 5);
         int sub = calculator.sub(10, 5);
         int mul = calculator.mul(10, 5);
@@ -12,7 +12,7 @@ class CalculatorTest {
         boolean isEven = calculator.isEven(4);
 
 
-        CalculatorTest calculatorTest = new CalculatorTest();
+        CalculatorTestAlina calculatorTest = new CalculatorTestAlina();
         calculatorTest.sumTest();
         calculatorTest.subTest();
         calculatorTest.mulTest();
@@ -24,42 +24,42 @@ class CalculatorTest {
     }
 
     public void sumTest() {
-        Calculator calculator = new Calculator();
+        CalculatorAlina calculator = new CalculatorAlina();
         int expectedResult = 8;
         int actualResult = calculator.sum(5, 3);
         check(actualResult, expectedResult, "sumTest");
     }
 
     public void subTest() {
-        Calculator calculator = new Calculator();
+        CalculatorAlina calculator = new CalculatorAlina();
         int expectedResult = 1;
         int actualResult = calculator.sub(5, 4);
         check(expectedResult, expectedResult, "subTest");
     }
 
     public void mulTest() {
-        Calculator calculator = new Calculator();
+        CalculatorAlina calculator = new CalculatorAlina();
         int expectedResult = 9;
         int actualResult = calculator.mul(3, 3);
         check(expectedResult, actualResult, "mulTest");
     }
 
     public void divTest() {
-        Calculator calculator = new Calculator();
+        CalculatorAlina calculator = new CalculatorAlina();
         int expectedResult = 2;
         int actualResult = calculator.div(8, 4);
         check(expectedResult, actualResult, "divTest");
     }
 
     public void isEvenTest1() {
-        Calculator calculator = new Calculator();
+        CalculatorAlina calculator = new CalculatorAlina();
         boolean result = calculator.isEven(8);
         check(result == true, "isEven Test 1");
     }
 
     //
     public void isEvenTest2() {
-        Calculator calculator = new Calculator();
+        CalculatorAlina calculator = new CalculatorAlina();
         boolean result = calculator.isEven(9);
         check(result == false, "isEven Test 2");
     }

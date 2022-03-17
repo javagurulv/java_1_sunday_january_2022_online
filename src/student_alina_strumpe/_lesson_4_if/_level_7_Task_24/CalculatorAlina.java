@@ -1,6 +1,6 @@
 package student_alina_strumpe._lesson_4_if._level_7_Task_24;
 
- class Calculator {
+ class CalculatorAlina {
 
     public int sum(int firstNumber, int secondNumber){return firstNumber + secondNumber;}
 
