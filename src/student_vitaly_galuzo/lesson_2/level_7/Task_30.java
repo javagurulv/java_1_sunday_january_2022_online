@@ -1,6 +1,6 @@
 package student_vitaly_galuzo.lesson_2.level_7;
 
-public class Task_30 {
+class Task_30 {
 
     public static void main(String[] args) {
 

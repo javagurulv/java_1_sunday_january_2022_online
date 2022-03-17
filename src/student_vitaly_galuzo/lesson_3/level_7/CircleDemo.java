@@ -1,6 +1,6 @@
 package student_vitaly_galuzo.lesson_3.level_7;
 
-public class CircleDemo {
+ class CircleDemo {
 
     public static void main(String[] args) {
 
