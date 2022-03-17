@@ -1,9 +1,9 @@
 package student_elina_kucenko.lesson5.task1;
 
-class ArrayDefinition1 {
+class ArrayDefinition3 {
 
     public static void main(String[] args) {
-        int[] numbers = new int[6];  // missing "[]" and [size] were added;
+        boolean[] numbers = new boolean[10];  // missing [] were added
     }
 
 }
