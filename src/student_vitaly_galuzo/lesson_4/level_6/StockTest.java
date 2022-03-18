@@ -1,10 +1,11 @@
 package student_vitaly_galuzo.lesson_4.level_6;
 
 public class StockTest {
-    Stock stock = new Stock("ASrock",10);
+    Stock stock = new Stock("ASrock",1000);
     public static void main(String[] args) {
 
         StockTest stockTest = new StockTest();
+        stockTest.maxValueTest();
 
 
 
@@ -13,7 +14,17 @@ public class StockTest {
 
     public void maxValueTest() {
 
-      int result =  stock.updatePrice(999);
+      int expectedMax = 999;
+      int actualResult = stock.currentPrice;
+      if (expectedMax > stock.currentPrice) {
+          System.out.println("TEST is OK!");
+      } else {
+          System.out.println("TEST FAILED!");
+      }
+
+      }
+
+
 
 
 
@@ -43,4 +54,4 @@ public class StockTest {
 
 
 
-}
+
