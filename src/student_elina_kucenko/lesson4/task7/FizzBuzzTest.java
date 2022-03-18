@@ -1,6 +1,6 @@
 package student_elina_kucenko.lesson4.task7;
 
-public class FizzBuzzTest {
+class FizzBuzzTest {
     FizzBuzz fizzBuzz = new FizzBuzz();
 
     public static void main(String[] args) {
