@@ -3,7 +3,7 @@ package student_elina_kucenko.lesson5.task4;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class Task25 {
+class Task25 {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
