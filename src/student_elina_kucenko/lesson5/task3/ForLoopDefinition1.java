@@ -1,6 +1,6 @@
 package student_elina_kucenko.lesson5.task3;
 
-public class ForLoopDefinition1 {
+class ForLoopDefinition1 {
 
     public static void main(String[] args) {
         for (int i = 0; i < 10; i++) {  //"int i" changed to "int i = 0"

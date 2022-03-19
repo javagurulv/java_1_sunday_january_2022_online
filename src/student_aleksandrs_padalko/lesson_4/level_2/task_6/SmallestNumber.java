@@ -1,8 +1,8 @@
-package student_aleksandrs_padalko.lesson_4.level_1.task_5;
+package student_aleksandrs_padalko.lesson_4.level_2.task_6;
 
 import java.util.Scanner;
 
-public class BiggestNumber { public static void main(String[] args) {
+class SmallestNumber {public static void main(String[] args) {
     int number1, number2;
     Scanner sc = new Scanner(System.in);
 
@@ -12,13 +12,13 @@ public class BiggestNumber { public static void main(String[] args) {
     System.out.print(" Please Enter the Second Number : ");
     number2 = sc.nextInt();
 
-    if(number1 > number2)
+    if(number1 < number2)
     {
-        System.out.println("\n The Largest Number = " + number1);
+        System.out.println("\n The Smallest Number = " + number1);
     }
-    else if (number2 > number1)
+    else if (number2 < number1)
     {
-        System.out.println("\n The Largest Number = " + number2);
+        System.out.println("\n The Smallest Number = " + number2);
     }
     else
     {
@@ -26,4 +26,3 @@ public class BiggestNumber { public static void main(String[] args) {
     }
 }
 }
-

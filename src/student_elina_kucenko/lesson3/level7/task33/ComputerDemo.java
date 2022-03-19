@@ -1,6 +1,6 @@
 package student_elina_kucenko.lesson3.level7.task33;
 
-public class ComputerDemo {
+class ComputerDemo {
     public static void main(String[] args) {
         Computer dell = new Computer("Dell", "XXX-1");
         String manufacturer = dell.getManufacturer();
