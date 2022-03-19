@@ -2,18 +2,18 @@ package student_ivan_sihovtsov.lesson4.level_5.task_16;
 
 public class LightColor {
 
-    public String detect(int wavelength){
-        if (wavelength > 380 && wavelength <= 449) {
+    public String detect(int waveLength){
+        if (waveLength > 380 && waveLength <= 449) {
             return "Violet";
-        }else if (wavelength > 450 && wavelength <= 494) {
+        }else if (waveLength > 450 && waveLength <= 494) {
             return "Blue";
-        }else if (wavelength > 495 && wavelength <= 569) {
+        }else if (waveLength > 495 && waveLength <= 569) {
             return "Green";
-        }else if (wavelength > 570 && wavelength <= 589) {
+        }else if (waveLength > 570 && waveLength <= 589) {
             return "Yellow";
-        }else if (wavelength > 590 && wavelength <= 619) {
+        }else if (waveLength > 590 && waveLength <= 619) {
             return "Orange";
-        }else if (wavelength > 620 && wavelength <= 750) {
+        }else if (waveLength > 620 && waveLength <= 750) {
             return "Red";
         }else {
             return "Invisible";
