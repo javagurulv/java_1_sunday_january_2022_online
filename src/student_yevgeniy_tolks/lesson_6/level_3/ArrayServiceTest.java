@@ -14,6 +14,7 @@ class ArrayServiceTest {
         arrayServiceTest.firstArrayNumberNotChangedTest();
         arrayServiceTest.changedAllTest();
         arrayServiceTest.nothingChangedTest();
+        arrayServiceTest.turnOverArrayTest();
     }
 
     public void arrayNumberFoundTest() {
@@ -168,5 +169,18 @@ class ArrayServiceTest {
         } else {
             System.out.println("Changes done in array - Test FAILED");
         }
+    }
+
+    public void turnOverArrayTest() {
+        int[] arr = new int[6];
+        arr[0] = 19;
+        arr[1] = 2;
+        arr[2] = 13;
+        arr[3] = 16;
+        arr[4] = 1;
+        arr[5] = 21;
+
+        ArrayService arrayService = new ArrayService();
+        arrayService.turnOverArray(arr);
     }
 }
