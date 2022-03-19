@@ -10,22 +10,17 @@ class MasRandDemo {
         int sum = 0;
         for (int i=0; i< mas.length;i++){
             mas[i]= (int)(Math.random()*100);
-            sum += mas[i];           // zapolnenie mas + summa - mas+summa - .....
-     //       System.out.println(Arrays.toString(mas));
-            System.out.println(mas[0]);
-            System.out.println(mas[1]);
-            System.out.println(mas[2]);
-            System.out.println(sum);
+            sum += mas[i];
+            //    System.out.println(Arrays.toString(mas));   // vivod - po odnomu drug za drugom  * 3
+         //   System.out.println(mas[0]);
+          //  System.out.println(mas[1]);
+            //System.out.println(mas[2]);
+            //System.out.println(sum);
         }
-        int sum2 =0;
-        for (int numbers : mas){
-            sum2 += numbers;
-        System.out.println(Arrays.toString(mas));
-            System.out.println(sum2);
-        }
-
-
-
-
+        System.out.println(Arrays.toString(mas));  // vivod massiv ponostju, kazhdij indeks, i summa
+        System.out.println(mas[0]);
+        System.out.println(mas[1]);
+        System.out.println(mas[2]);
+        System.out.println(sum);
     }
 }
