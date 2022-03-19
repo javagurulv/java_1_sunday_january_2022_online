@@ -155,13 +155,13 @@ class ArrayServiceTest {
         int[] arr = new int[5];
         arr[0] = 19;
         arr[1] = 2;
-        arr[2] = 14;
-        arr[3] = 11;
+        arr[2] = 13;
+        arr[3] = 16;
         arr[4] = 1;
 
 
         ArrayService arrayService = new ArrayService();
-        int resultOfOccurrence = arrayService.changeAll(arr, 16, 4);
+        int resultOfOccurrence = arrayService.changeAll(arr, 14, 4);
         if (resultOfOccurrence == 0) {
 
             System.out.println("Nothing was changed in array - Test OK");
