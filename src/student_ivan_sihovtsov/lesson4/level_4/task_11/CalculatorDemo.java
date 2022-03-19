@@ -1,5 +1,7 @@
 package student_ivan_sihovtsov.lesson4.level_4.task_11;
 
+import student_ivan_sihovtsov.lesson4.level_4.task_11.Calculator;
+
 import java.util.Scanner;
 
 public class CalculatorDemo {
