@@ -1,6 +1,6 @@
 package student_vitaly_galuzo.lesson_3.level_5;
 
-public class Dog {
+class Dog {
 
 
     String nickName;

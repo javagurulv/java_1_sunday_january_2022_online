@@ -34,14 +34,6 @@ class Calculator {
             return secondNumber;
         }
     }
-//Тесты должны покрывать следующие тестовые сценарии:
-//- первое число больше второго и третьего
-//- второе число больше первого и третьего
-//- третье число больше первого и второго
-//- первые два равны и больше третьего
-//- ...
-//- три числа равны
-//По одному тесту на каждый из сценариев!
 
     public int maxOfThreeNumbers(int firstNum, int secondNum, int thirdNum) {
         if ((firstNum > secondNum && firstNum > thirdNum)||(firstNum == secondNum && firstNum > thirdNum)) {
@@ -52,7 +44,8 @@ class Calculator {
             return thirdNum;
         } else if (thirdNum == firstNum&&firstNum==secondNum) {
             return thirdNum;
-          }else {
+
+        }else {
             return thirdNum;
         }
 
