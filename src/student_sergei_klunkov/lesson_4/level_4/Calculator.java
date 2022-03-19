@@ -15,4 +15,38 @@ class Calculator {
         return firstNumber / secondNumber;
     }
 
+    public boolean isEven(int number) {
+        if(number%2==0){
+            return true;
+        } else {
+            return false;
+
+            }
+    }
+
+    public int maxOfTwoNumbers(int firstNumber, int secondNumber) {
+
+        if (firstNumber>secondNumber){
+            return firstNumber;
+        } else {
+        if (secondNumber>firstNumber){
+            return secondNumber;
+        } else {
+        if (firstNumber==secondNumber ){
+        } return firstNumber;
+
+        }
+
 }
+}
+
+
+
+}
+
+
+
+
+
+
+
