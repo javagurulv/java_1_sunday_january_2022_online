@@ -25,6 +25,14 @@ class ForExample {
 			i++; // for third part
 		}
 
+		// number = number + 1;
+		// number++;
+
+		for (int number = 1; number <= 50; number++) {
+			System.out.println("Number = " + number);
+		}
+
+
 		for (int j = 1; j < 100; j++) {
 			System.out.println(j);
 		}

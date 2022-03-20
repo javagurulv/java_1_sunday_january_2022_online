@@ -1,5 +1,7 @@
 package teacher.lesson_5_arrays_for_loop.lessoncode;
 
+import java.util.Scanner;
+
 class ArrayExample {
 
 	public static void main(String[] args) {
@@ -11,10 +13,12 @@ class ArrayExample {
 		int mark3 = 4;
 		int mark4 = 6;
 
+		Scanner scanner = new Scanner(System.in);
+		int arrayLength = scanner.nextInt();
 
 		//          |_|_|_|_|
 		//index -    0 1 2 3
-		int[] marks = new int[4];
+		int[] marks = new int[arrayLength];
 
 		// int -> 4 byte - new int[4] -> 4 * 4 = 16 byte RAM
 
