@@ -22,8 +22,8 @@ class ArrayExample {
 
 
         // Можно взять данные с консоли
-        // Scanner scanner = new Scanner(System.in);
-        // int arrayLength = scanner.nextInt();
+        Scanner scanner = new Scanner(System.in);
+        int arrayLength = scanner.nextInt();
 
         // int[] marks = new int[arrayLength];
 
