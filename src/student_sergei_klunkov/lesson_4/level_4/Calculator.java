@@ -1,6 +1,6 @@
 package student_sergei_klunkov.lesson_4.level_4;
 
-class Calculator {
+class                            Calculator {
 
     public int sum(int firstNumber, int secondNumber) {
         return firstNumber + secondNumber;
@@ -20,23 +20,20 @@ class Calculator {
             return true;
         } else {
             return false;
-
-            }
+        }
     }
 
     public int maxOfTwoNumbers(int firstNumber, int secondNumber) {
 
         if (firstNumber>secondNumber){
             return firstNumber;
-        } else {
+        }
         if (secondNumber>firstNumber){
             return secondNumber;
         } else {
-        if (firstNumber==secondNumber ){
-        } return firstNumber;
-
+            return firstNumber;
         }
-}
+
     }
 
     public int threeNumbers(int firstNum, int secondNum, int thirdNum){
@@ -51,10 +48,11 @@ class Calculator {
             return thirdNum;}
 
         if(firstNum>thirdNum && secondNum>thirdNum && firstNum==secondNum);
-        return firstNum;}
-
-
+        return firstNum;
     }
+
+
+}
 
 
 
