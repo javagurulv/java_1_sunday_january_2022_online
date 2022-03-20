@@ -183,10 +183,10 @@ class ArrayServiceTest {
 
         ArrayService arrayService = new ArrayService();
         arrayService.turnOverArray(arr);
-        System.out.println();
+        System.out.println(Arrays.toString(arr));
     }
 
-    public void sortArrayTest() {
+    public void sortArrayTest() {   //ascending sorting of array
         int[] arr = new int[6];
         arr[0] = 19;
         arr[1] = 2;
