@@ -12,6 +12,11 @@ class CalculatorTest {
         calculatorTest.maxOfTwoNumbersTest1();
         calculatorTest.maxOfTwoNumbersTest2();
         calculatorTest.maxOfTwoNumbersTest3();
+        calculatorTest.threeNumbers();
+        calculatorTest.threeNumbers2();
+        calculatorTest.threeNumbers3();
+        calculatorTest.threeNumbers4();
+        calculatorTest.threeNumbers5();
 
     }
 
@@ -109,4 +114,79 @@ class CalculatorTest {
         }
     }
 
+    public void threeNumbers(){
+        int firstNum = 10;
+        int secondNum = 4;
+        int thirdNum = 7;
+        int expectedResult = 10;
+        Calculator calculator = new Calculator();
+        int realResult = calculator.threeNumbers(firstNum, secondNum, thirdNum);
+        if (realResult == expectedResult){
+            System.out.println("First number are greater then Second and Third number");
+        } else {
+            System.out.println("First number are NOT greater then Second and Third number");
+        }
+    }
+
+    public void threeNumbers2(){
+        int firstNum = 10;
+        int secondNum = 15;
+        int thirdNum = 7;
+        int expectedResult = 15;
+        Calculator calculator = new Calculator();
+        int realResult = calculator.threeNumbers(firstNum, secondNum, thirdNum);
+        if (realResult == expectedResult){
+            System.out.println("Second number are greater then First and Third number");
+        } else {
+            System.out.println("Second number are NOT greater then First and Third number");
+        }
+
+    }
+    public void threeNumbers3(){
+        int firstNum = 10;
+        int secondNum = 15;
+        int thirdNum = 20;
+        int expectedResult = 20;
+        Calculator calculator = new Calculator();
+        int realResult = calculator.threeNumbers(firstNum, secondNum, thirdNum);
+        if (realResult == expectedResult){
+            System.out.println("Third number are greater then First and Second number");
+        } else {
+            System.out.println("Third number are NOT greater then First and Second number ");
+
 }
+    }
+        public void threeNumbers4(){
+            int firstNum = 10;
+            int secondNum = 10;
+            int thirdNum = 5;
+            int expectedResult = 10;
+            Calculator calculator = new Calculator();
+            int realResult = calculator.threeNumbers(firstNum, secondNum, thirdNum);
+            if (realResult == expectedResult){
+                System.out.println("First and Second numbers are equal, but  greater then Third number");
+            } else {
+                System.out.println("First and Second numbers are equal, but NOT greater then Third number");
+            }
+        }
+
+    public void threeNumbers5(){
+        int firstNum = 10;
+        int secondNum = 10;
+        int thirdNum = 10;
+        int expectedResult = 10;
+        Calculator calculator = new Calculator();
+        int realResult = calculator.threeNumbers(firstNum, secondNum, thirdNum);
+        if (realResult == expectedResult){
+            System.out.println("First, Second and Third numbers are equal");
+        } else {
+            System.out.println("First, Second and Third numbers are NOT equal");
+        }
+
+    }
+}
+
+
+
+
+
