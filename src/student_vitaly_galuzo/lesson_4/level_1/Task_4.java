@@ -2,7 +2,7 @@ package student_vitaly_galuzo.lesson_4.level_1;
 
 import java.util.Scanner;
 
-public class Task_4 {
+ class Task_4 {
 
     public static void main(String[] args) {
 

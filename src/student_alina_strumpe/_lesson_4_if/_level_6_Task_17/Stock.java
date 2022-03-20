@@ -30,9 +30,11 @@ class Stock {
         }
         return newValue;
     }
+
      public void getPriceInformation(){
          System.out.println("Company name: "+ companyName + "\n" + "Stock price: " + currentValue + "\n" + "Max value: "
                  + maxValue + "\n" + "Min value: "+ minValue + "\n" + date);
+
      }
 
 }

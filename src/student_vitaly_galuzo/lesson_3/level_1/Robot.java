@@ -1,6 +1,6 @@
 package student_vitaly_galuzo.lesson_3.level_1;
 
-public class Robot {
+ class Robot {
 
     String name;
 

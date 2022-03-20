@@ -19,8 +19,6 @@ public class Task_5 {
 
         if (numberTwo > numberOne) {
             System.out.println("Largest number is: " + numberTwo);
-        } else {
-            System.out.println("The numbers are equal " + numberOne + " = " + numberTwo);
         }
 
 
