@@ -2,7 +2,7 @@ package student_deniss_dubko.work_in_class;
 
 import java.util.Scanner;
 
-public class lesson_2_sum {
+public class Lesson2Sum {
 
     public static void main(String[] args) {
 
