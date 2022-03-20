@@ -10,6 +10,11 @@ class ArrayServiceTest {
         arrayServiceTest.arrayNumberNotFoundTest();
         arrayServiceTest.countOccurrenceTest();
         arrayServiceTest.countNoOccurrenceTest();
+        arrayServiceTest.firstArrayNumberChangedTest();
+        arrayServiceTest.firstArrayNumberNotChangedTest();
+        arrayServiceTest.changedAllTest();
+        arrayServiceTest.nothingChangedTest();
+        arrayServiceTest.turnOverArrayTest();
     }
 
     public void arrayNumberFoundTest() {
@@ -22,10 +27,10 @@ class ArrayServiceTest {
         arr[3] = 15;
         arr[4] = 13;
 
-        boolean numberSearch = arrayService.contains(arr, 7);
+        boolean resultNumberSearch = arrayService.contains(arr, 7);
         System.out.println(Arrays.toString(arr));
 
-        if (numberSearch) {
+        if (resultNumberSearch) {
             System.out.println("Searched number found -  Test OK");
         } else {
             System.out.println("Searched file was not found  - Test FAILED");
@@ -41,10 +46,10 @@ class ArrayServiceTest {
         arr[4] = 15;
 
         ArrayService arrayService = new ArrayService();
-        boolean numberSearch = arrayService.contains(arr, 8);
+        boolean resultNumberSearch = arrayService.contains(arr, 8);
         System.out.println(Arrays.toString(arr));
 
-        if (!numberSearch) {
+        if (!resultNumberSearch) {
             System.out.println("Searched number not found -  Test OK");
         } else {
             System.out.println("Searched number found  - Test FAILED");
@@ -62,10 +67,10 @@ class ArrayServiceTest {
         int countOccurredNumbers = 3;
 
         ArrayService arrayService = new ArrayService();
-        int occurredNumber = arrayService.countOccurrence(arr, 17);
+        int resultOccurredNumber = arrayService.countOccurrence(arr, 17);
         System.out.println(Arrays.toString(arr));
-        if (occurredNumber == countOccurredNumbers) {
-            System.out.println(" Occurrence found " + occurredNumber + " times - Test OK");
+        if (resultOccurredNumber == countOccurredNumbers) {
+            System.out.println(" Occurrence found " + resultOccurredNumber + " times - Test OK");
         } else {
             System.out.println("No occurrence - Test failed");
         }
@@ -80,12 +85,104 @@ class ArrayServiceTest {
         arr[4] = 9;
 
         ArrayService arrayService = new ArrayService();
-        int occurredNumber = arrayService.countOccurrence(arr, 1);
+        int resultOccurredNumber = arrayService.countOccurrence(arr, 1);
         System.out.println(Arrays.toString(arr));
-        if (occurredNumber == 0) {
+        if (resultOccurredNumber == 0) {
             System.out.println("No Occurrence found - Test OK");
         } else {
             System.out.println("Occurrence found - Test failed");
         }
+    }
+
+    public void firstArrayNumberChangedTest() {
+        int[] arr = new int[5];
+        arr[0] = 16;
+        arr[1] = 2;
+        arr[2] = 17;
+        arr[3] = 13;
+        arr[4] = 9;
+
+
+        ArrayService arrayService = new ArrayService();
+        boolean resultFirstNumber = arrayService.changeFirstArrayNumber(arr, 16, 3);
+        if (resultFirstNumber) {
+            System.out.println("First array number changed - Test OK");
+
+        } else {
+            System.out.println("First array number not changed - Test FAILED");
+        }
+    }
+
+    public void firstArrayNumberNotChangedTest() {
+        int[] arr = new int[5];
+        arr[0] = 16;
+        arr[1] = 2;
+        arr[2] = 17;
+        arr[3] = 13;
+        arr[4] = 9;
+
+
+        ArrayService arrayService = new ArrayService();
+        boolean resultFirstNumber = arrayService.changeFirstArrayNumber(arr, 16, 16);
+        if (!resultFirstNumber) {
+            System.out.println("First array number not changed - Test OK");
+
+        } else {
+            System.out.println("First array number changed - Test FAILED");
+        }
+    }
+
+    public void changedAllTest() {
+        int[] arr = new int[5];
+        arr[0] = 19;
+        arr[1] = 2;
+        arr[2] = 16;
+        arr[3] = 11;
+        arr[4] = 16;
+
+
+        ArrayService arrayService = new ArrayService();
+        int resultOfOccurrence = arrayService.changeAll(arr, 16, 4);
+        if (resultOfOccurrence > 0) {
+
+            System.out.println("Changed all repeating numbers - Test OK");
+        } else {
+            System.out.println("All numbers are different - Test FAILED");
+        }
+
+    }
+
+    public void nothingChangedTest() {
+        int[] arr = new int[5];
+        arr[0] = 19;
+        arr[1] = 2;
+        arr[2] = 13;
+        arr[3] = 16;
+        arr[4] = 1;
+
+
+        ArrayService arrayService = new ArrayService();
+        int resultOfOccurrence = arrayService.changeAll(arr, 14, 4);
+        if (resultOfOccurrence == 0) {
+
+            System.out.println("Nothing was changed in array - Test OK");
+        } else {
+            System.out.println("Changes done in array - Test FAILED");
+        }
+    }
+
+    public void turnOverArrayTest() {
+        int[] arr = new int[6];
+        arr[0] = 19;
+        arr[1] = 2;
+        arr[2] = 13;
+        arr[3] = 16;
+        arr[4] = 1;
+        arr[5] = 21;
+
+        ArrayService arrayService = new ArrayService();
+        arrayService.turnOverArray(arr);
+
+
     }
 }
