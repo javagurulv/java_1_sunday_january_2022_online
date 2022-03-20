@@ -2,7 +2,7 @@ package student_deniss_dubko.deniss_dubko_lesson_2_homework.level_1_intern;
 
 import java.util.Scanner;
 
-public class Task1TwoIntegersShort {
+class Task1TwoIntegersShort {
 
     public static void main(String[] args) {
 

@@ -1,6 +1,6 @@
 package student_deniss_dubko.deniss_dubko_lesson_2_homework.level_7_senior;
 
-public class Task30CorrectDataTypes {
+class Task30CorrectDataTypes {
 
     public static void main(String[] args) {
 
