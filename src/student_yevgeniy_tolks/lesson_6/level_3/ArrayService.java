@@ -53,10 +53,6 @@ class ArrayService {
     }
 
     public void turnOverArray(int[] array) {
-        for (int i = 0; i < array.length; i++) {
-        }
-        String original = Arrays.toString(array);
-        System.out.println("Initial array - " + original);
 
         for (int i = 0; i < array.length / 2; i++) {
             int swapNumber = array[i];
