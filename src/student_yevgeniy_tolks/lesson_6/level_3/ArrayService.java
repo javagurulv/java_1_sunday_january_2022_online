@@ -59,8 +59,19 @@ class ArrayService {
             array[i] = array[array.length - i - 1];
             array[array.length - i - 1] = swapNumber;
         }
-        String reverse = Arrays.toString(array);
-        System.out.println("Reversed array - "+reverse);
+    }
+
+    public void sortArray(int[] array) {
+        int temp;
+        for (int i = 0; i < array.length; i++) {
+            for (int j = i + 1; j < array.length; j++) {
+                if (array[i] > array[j]) {
+                    temp = array[i];
+                    array[i] = array[j];
+                    array[j] = temp;
+                }
+            }
+        }
     }
 }
 
