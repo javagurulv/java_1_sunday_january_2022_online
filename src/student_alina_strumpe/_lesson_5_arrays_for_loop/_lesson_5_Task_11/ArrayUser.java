@@ -13,15 +13,18 @@ public class ArrayUser {
 //        int number2 = scan.nextInt();
 //        int number3 = scan.nextInt();
 //        int [] numbers = {number1,number2,number3};
-//        System.out.println(Arrays.toString(numbers));
+//        System.out.println(Arrays.toString(numbers)); int userNumbers = scan.nextInt();
+
 
         int[] numbers = new int[3];
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < numbers.length; i++) {
             int userNumbers = scan.nextInt();
             numbers[i] = userNumbers;
+            System.out.println("index: " + i);
+        }
             System.out.println(Arrays.toString(numbers));
         }
-
-
-    }
 }
+
+
+
