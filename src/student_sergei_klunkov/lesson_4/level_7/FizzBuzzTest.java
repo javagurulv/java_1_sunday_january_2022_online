@@ -10,7 +10,7 @@ class FizzBuzzTest {
          fizzBuzzTest.fizzTest();
          fizzBuzzTest.buzzTest();
          fizzBuzzTest.fizzBuzzTest();
-         fizzBuzzTest.number();
+         fizzBuzzTest.notDividedNumber();
 
      }
 
@@ -27,7 +27,7 @@ class FizzBuzzTest {
          }
      }
 
-    public void buzzTest() {
+     public void buzzTest() {
 
         FizzBuzz fizzBuzz = new FizzBuzz();
         int number = 20;
@@ -38,11 +38,9 @@ class FizzBuzzTest {
         } else {
             System.out.println("TEST = FAILED!");
         }
-
      }
 
-
-    public void fizzBuzzTest() {
+     public void fizzBuzzTest() {
 
         FizzBuzz fizzBuzz = new FizzBuzz();
         int number = 15;
@@ -53,19 +51,19 @@ class FizzBuzzTest {
         } else {
             System.out.println("TEST = FAILED!");
         }
-    }
-    public void number() {
+     }
+
+     public void notDividedNumber() {
 
         FizzBuzz fizzBuzz = new FizzBuzz();
         int number = 11;
         String expectedResult = "" + number;
         String actualResult = fizzBuzz.detect(number);
-        if ( expectedResult == actualResult) {
-            System.out.println(expectedResult + " " + "TEST = PASSED!");
-        } else {
-            System.out.println("TEST = FAILED!");
+        if ( expectedResult != actualResult) {
+            System.out.println("NotDividedNumber TEST = " + "Number " +  expectedResult + " is not divided by 3 or 5, that's why TEST PASSED!");
         }
-    }
+     }
+
 }
 
 
