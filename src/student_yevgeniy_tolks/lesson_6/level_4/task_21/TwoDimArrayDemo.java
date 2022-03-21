@@ -8,8 +8,9 @@ public class TwoDimArrayDemo {
         TwoDimArray dimArray = new TwoDimArray();
         int[][] resultOfArray = dimArray.twoDimArray(3,3);
         dimArray.fillArray(resultOfArray);
-        System.out.println(Arrays.deepToString(resultOfArray));
+        System.out.println();
         int resultOfSum=dimArray.sumTwoDimArray(resultOfArray);
+        System.out.println(Arrays.deepToString(resultOfArray));
         System.out.println("Sum = " + resultOfSum);
     }
 
