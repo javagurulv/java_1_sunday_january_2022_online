@@ -15,6 +15,7 @@ class ArrayServiceTest {
         arrayServiceTest.changedAllTest();
         arrayServiceTest.nothingChangedTest();
         arrayServiceTest.turnOverArrayTest();
+        arrayServiceTest.sortArrayTest();
     }
 
     public void arrayNumberFoundTest() {
@@ -182,7 +183,22 @@ class ArrayServiceTest {
 
         ArrayService arrayService = new ArrayService();
         arrayService.turnOverArray(arr);
-
-
+        System.out.println(Arrays.toString(arr));
     }
+
+    public void sortArrayTest() {   //ascending sorting of array
+        int[] arr = new int[6];
+        arr[0] = 19;
+        arr[1] = 2;
+        arr[2] = 13;
+        arr[3] = 16;
+        arr[4] = 1;
+        arr[5] = 21;
+
+        ArrayService arrayService = new ArrayService();
+        arrayService.sortArray(arr);
+        System.out.println(Arrays.toString(arr));
+    }
+
+
 }
