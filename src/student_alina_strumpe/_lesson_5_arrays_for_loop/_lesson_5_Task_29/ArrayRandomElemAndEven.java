@@ -3,7 +3,7 @@ package student_alina_strumpe._lesson_5_arrays_for_loop._lesson_5_Task_29;
 import java.util.Arrays;
 import java.util.Random;
 
-public class ArrayRandomElemAndEven {
+ class ArrayRandomElemAndEven {
 
 /*    public static void main(String[] args){
         Random random = new Random();

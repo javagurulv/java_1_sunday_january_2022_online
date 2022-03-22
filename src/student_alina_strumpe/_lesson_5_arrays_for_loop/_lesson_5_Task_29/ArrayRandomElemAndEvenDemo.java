@@ -1,6 +1,6 @@
 package student_alina_strumpe._lesson_5_arrays_for_loop._lesson_5_Task_29;
 
-public class ArrayRandomElemAndEvenDemo {
+ class ArrayRandomElemAndEvenDemo {
 
     public static void main(String[] args){
 
