@@ -20,7 +20,7 @@ class DayOfTheWeekDetector {
             case 5 -> day = "Friday";
             case 6 -> day = "Saturday";
             case 7 -> day = "Sunday";
-            default -> System.out.println("Not correct number");
+            default -> day = "Day not found";
         }
         return day;
     }

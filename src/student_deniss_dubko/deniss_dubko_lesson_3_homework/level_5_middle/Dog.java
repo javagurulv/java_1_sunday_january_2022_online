@@ -2,28 +2,36 @@ package student_deniss_dubko.deniss_dubko_lesson_3_homework.level_5_middle;
 
 class Dog {
 
-    private String name;
+    String dogName;
+    int dogAge;
+    String dogColour;
 
-    public Dog(String dogName) {
-
-        this.name = dogName;
+    public Dog (String dogName, int dogAge, String dogColour) {
+        this.dogName = dogName;
+        this.dogAge = dogAge;
+        this.dogColour = dogColour;
     }
 
     public void voiceYourName() {
-
-        System.out.println(this.name);
+        System.out.println("Name: " + this.dogName);
     }
 
-}
+    public void voiceYourAge() {
+        System.out.println("Age: " + this.dogAge);
+    }
 
-class DogDemo {
+    public void voiceYourColour() {
+        System.out.println("Colour: " + this.dogColour);
+    }
 
-    public static void main(String[] args) {
+    public void happyBirthday() {
+        this.dogAge = dogAge + 1;
+        System.out.println("Happy Birthday! Age: " + this.dogAge);
+    }
 
-        Dog Java = new Dog("Java");
-        Java.voiceYourName();
-        Java.voiceYourName();
-        Java.voiceYourName();
+    public void changeColor(String newColor) {
+        this.dogColour = newColor;
+        System.out.println("New Colour: " + this.dogColour);
     }
 
 

@@ -2,7 +2,7 @@ package student_deniss_dubko.deniss_dubko_lesson_2_homework.level_1_intern;
 
 import java.util.Scanner;
 
-public class Task2TwoFractionalNumbers {
+class Task2TwoFractionalNumbers {
 
     public static void main(String[] args) {
 
