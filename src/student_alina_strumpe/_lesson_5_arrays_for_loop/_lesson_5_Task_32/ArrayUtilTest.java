@@ -18,11 +18,11 @@ class ArrayUtilTest {
       public void shouldCreateArray(){
           ArrayUtil arrayUtil = new ArrayUtil();
 
-          int[] array = arrayUtil.createNewArray(3);
+          int[] array = arrayUtil.createNewArray(4);
           if(array.length > 0){
-            System.out.println("Test should create Array is OK");
+            System.out.println("\"Test should create Array is OK\"");
           } else {
-              System.out.println("\"Test should create Array is OK\"");
+              System.out.println("\"Test should create Array is FAILED\"");
           }
 
 
