@@ -13,11 +13,13 @@ public class Task_15 {
         for (int a = 0; a < randomNumbers.length; a++) {
             int randomNumber = random.nextInt(100);
             randomNumbers[a] = randomNumber;
-            System.out.println("----" + randomNumbers[a]);
+            System.out.println(randomNumbers[a] );
         }
+        System.out.println("--");
+
         for (int a = 0; a < randomNumbers.length; a++) {
             randomNumbers[a] = randomNumbers[a] + 2;
-            System.out.println("----" + randomNumbers[a]);
+            System.out.println(randomNumbers[a]);
         }
 
     }
