@@ -76,7 +76,7 @@ class TicTacToeTest {
     public void isDrawTest() {
         int[][] gameArray = {
                 {0, 0, 1},
-                {1, 1, 0},
+                {1, 1, 1},
                 {0, 0, 1}};
 
         TicTacToe ticTacToe = new TicTacToe();

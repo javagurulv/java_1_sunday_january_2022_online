@@ -1,5 +1,8 @@
 package student_yevgeniy_tolks.lesson_6.level_5_6;
 
+import java.util.Arrays;
+import java.util.Scanner;
+
 class TicTacToe {
 
     public boolean isWinPositionForHorizontals(int[][] field, int playerToCheck) {
@@ -55,17 +58,15 @@ class TicTacToe {
         boolean isEmpty = true;
         for (int i = 0; i < field.length; i++) {
             for (int j = 0; j < field.length; j++) {
-                isEmpty = false;
+                isEmpty = field[i][j] == -1;
             }
         }
         return isEmpty;
     }
 
     public boolean isDrawPosition(int[][] field) {
-        boolean isDraw = false;
-        if (!isWinPosition(field, 0) && !isWinPosition(field, 1) && !isAllCellsEmpty(field)) {
-            isDraw = true;
-        }
+        boolean isDraw = !isWinPosition(field, 0) && !isWinPosition(field, 1)
+                && isAllCellsEmpty(field);
         return isDraw;
     }
 
@@ -81,4 +82,51 @@ class TicTacToe {
     }
 
 
+    public Move getNextMove() {
+        Scanner coordinates = new Scanner(System.in);
+        System.out.println("Enter X: ");
+        int getX = coordinates.nextInt();
+        System.out.println("Enter Y: ");
+        int getY = coordinates.nextInt();
+
+        return new Move(getX, getY);
+
+    }
+
+    public void printFieldToConsole(int[][] field) {
+        System.out.println(Arrays.deepToString(field));
+        System.out.println();
+    }
+
+    public void play() {
+        int[][] field = createField();
+        while (true) {
+            printFieldToConsole(field);
+            Move move0 = getNextMove();
+            field[move0.getX()][move0.getY()] = 0;
+            printFieldToConsole(field);
+            if (isWinPosition(field, 0)) {
+                System.out.println("Player 0 Win!!!");
+                break;
+            }
+            if (isDrawPosition(field)) {
+                System.out.println("Draw in the game!");
+                break;
+            }
+            printFieldToConsole(field);
+            Move move1 = getNextMove();
+            field[move1.getX()][move1.getY()] = 1;
+            printFieldToConsole(field);
+            if (isWinPosition(field, 1)) {
+                System.out.println("Player 1 Win!!!");
+                break;
+            }
+            if (isDrawPosition(field)) {
+                System.out.println("Draw");
+                break;
+            }
+
+        }
+
+    }
 }
