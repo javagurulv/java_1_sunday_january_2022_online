@@ -55,18 +55,20 @@ class TicTacToe {
     }
 
     public boolean isAllCellsEmpty(int[][] field) {
-        boolean isEmpty = true;
+
         for (int i = 0; i < field.length; i++) {
             for (int j = 0; j < field.length; j++) {
-                isEmpty = field[i][j] == -1;
+                if (field[i][j] == -1) {
+                    return true;
+                }
             }
         }
-        return isEmpty;
+        return false;
     }
 
     public boolean isDrawPosition(int[][] field) {
         boolean isDraw = !isWinPosition(field, 0) && !isWinPosition(field, 1)
-                && isAllCellsEmpty(field);
+                && !isAllCellsEmpty(field);
         return isDraw;
     }
 
@@ -122,7 +124,7 @@ class TicTacToe {
                 break;
             }
             if (isDrawPosition(field)) {
-                System.out.println("Draw");
+                System.out.println("Draw in the game!!!");
                 break;
             }
 
