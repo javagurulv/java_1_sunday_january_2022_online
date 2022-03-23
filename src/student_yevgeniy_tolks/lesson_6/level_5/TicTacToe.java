@@ -42,4 +42,14 @@ public class TicTacToe {
         }
         return winPosForDiagonals;
     }
+
+    public boolean isWinPosition(int[][] field, int playerToCheck) {
+        boolean winPosition = false;
+        if (isWinPositionForDiagonals(field, playerToCheck) ||
+                isWinPositionForHorizontals(field, playerToCheck) ||
+                isWinPositionForVerticals(field, playerToCheck)) {
+            winPosition = true;
+        }
+        return winPosition;
+    }
 }
