@@ -142,7 +142,7 @@ class CalculatorTest {
 
         int maxNumber = calculator.maxOfTwoNumbers(firstNumber, secondNumber);
 
-        if (maxNumber == firstNumber && maxNumber == secondNumber) {
+        if (maxNumber == firstNumber) {
             System.out.println("Numbers are egual- TEST OK");
         } else {
             System.out.println("TEST FAILED");
@@ -180,7 +180,7 @@ class CalculatorTest {
     public void testThirdMax() {
         int firstNumber = 1042;
         int secondNumber = 1011;
-        int thirdNumber = 1010;
+        int thirdNumber = 1050;
 
         Calculator calculator = new Calculator();
         int maxFromThree = calculator.maxOfThreeNumbers(firstNumber, secondNumber, thirdNumber);
@@ -198,7 +198,7 @@ class CalculatorTest {
 
         Calculator calculator = new Calculator();
         int maxFromTwo = calculator.maxOfThreeNumbers(firstNumber, secondNumber, thirdNumber);
-        if (maxFromTwo == secondNumber && maxFromTwo == firstNumber && maxFromTwo > thirdNumber) {
+        if (maxFromTwo == secondNumber) {
             System.out.println("first/second number are equal and bigger than third - TEST OK");
         } else {
             System.out.println("TEST FAILED");
