@@ -1,8 +1,6 @@
-package student_yevgeniy_tolks.lesson_6.level_5;
+package student_yevgeniy_tolks.lesson_6.level_5_6;
 
-import java.util.Arrays;
-
-public class TicTacToe {
+class TicTacToe {
 
     public boolean isWinPositionForHorizontals(int[][] field, int playerToCheck) {
         boolean winPosForHorizontals = false;

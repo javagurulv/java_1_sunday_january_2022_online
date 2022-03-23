@@ -2,7 +2,7 @@ package student_yevgeniy_tolks.lesson_6.level_4.task_21;
 
 import java.util.Random;
 
-public class TwoDimArray {
+class TwoDimArray {
 
     //1st step - creating new two dim array, returning int [][] array, input with two parameters
     public int[][] twoDimArray(int firstArrayLength, int secondArrayLength) {
