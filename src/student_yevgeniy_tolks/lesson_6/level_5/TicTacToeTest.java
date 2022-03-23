@@ -7,6 +7,7 @@ public class TicTacToeTest {
         ticTacToeTest.verticalWinTest();
         ticTacToeTest.diagonalWinTest();
         ticTacToeTest.isWinPositionTest();
+        ticTacToeTest.isDrawTest();
     }
 
     public void horizontalWinTest() {
@@ -57,15 +58,31 @@ public class TicTacToeTest {
     public void isWinPositionTest() {
         int[][] gameArray = {
                 {1, 0, 0},
-                {1, 1, 0},
+                {1, 0, 0},
                 {0, 1, 1}};
 
         TicTacToe ticTacToe = new TicTacToe();
-        boolean resultIsWin = ticTacToe.isWinPositionForDiagonals(gameArray, 1);
+        boolean resultIsWin = ticTacToe.isWinPosition(gameArray, 0);
         if (resultIsWin) {
             System.out.println("Win in one of three positions  - TEST OK");
         } else {
             System.out.println("Win in one of three position - FAILED");
         }
     }
+
+    public void isDrawTest() {
+        int[][] gameArray = {
+                {0, 0, 1},
+                {1, 1, 0},
+                {0, 0, 1}};
+
+        TicTacToe ticTacToe = new TicTacToe();
+        boolean resultIsWin = ticTacToe.isDrawPosition(gameArray);
+        if (resultIsWin) {
+            System.out.println("Draw between two players  - TEST OK");
+        } else {
+            System.out.println("One is a winner - FAILED");
+        }
+    }
+
 }

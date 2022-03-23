@@ -52,4 +52,23 @@ public class TicTacToe {
         }
         return winPosition;
     }
+
+    public boolean isAllCellsEmpty(int[][] field) {
+        boolean isEmpty = true;
+        for (int i = 0; i < field.length; i++) {
+            for (int j = 0; j < field.length; j++) {
+                isEmpty = false;
+            }
+        }
+        return isEmpty;
+    }
+
+    public boolean isDrawPosition(int[][] field) {
+        boolean isDraw = false;
+        if (!isWinPosition(field, 0) && !isWinPosition(field, 1) && !isAllCellsEmpty(field)) {
+            isDraw = true;
+        }
+        return isDraw;
+    }
+
 }
