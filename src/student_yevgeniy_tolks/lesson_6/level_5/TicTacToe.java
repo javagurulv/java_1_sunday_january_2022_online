@@ -79,7 +79,6 @@ public class TicTacToe {
                 field[i][j] = -1;
             }
         }
-        System.out.println(Arrays.deepToString(field));
         return field;
     }
 
