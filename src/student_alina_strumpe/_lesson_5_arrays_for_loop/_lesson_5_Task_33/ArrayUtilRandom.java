@@ -8,8 +8,9 @@ import java.util.Random;
     public void fillArrayRandomNumbers(int[] array){
         Random random = new Random();
         for(int i=0; i< array.length; i++){
-        int arrayNumbers = random.nextInt(50);
-        array[i] = arrayNumbers;
+     //   int arrayNumbers = random.nextInt(50);
+     //   array[i] = arrayNumbers;
+            array[i] = random.nextInt(50);  // 2 verhnii na odnu
     }
     }
 
