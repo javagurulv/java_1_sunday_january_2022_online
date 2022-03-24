@@ -7,6 +7,4 @@ public class Task2 {
         int[] numbers = new int[10];
     }
 
-
-
 }
