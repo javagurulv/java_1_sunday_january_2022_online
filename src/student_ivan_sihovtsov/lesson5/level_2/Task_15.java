@@ -13,17 +13,14 @@ public class Task_15 {
         for (int a = 0; a < randomNumbers.length; a++) {
             int randomNumber = random.nextInt(100);
             randomNumbers[a] = randomNumber;
+            System.out.println(randomNumbers[a] );
         }
-        System.out.println(randomNumbers[0]);
-        System.out.println(randomNumbers[1]);
-        System.out.println(randomNumbers[2]);
+        System.out.println("--");
 
-        System.out.println();
-
-        System.out.println(randomNumbers[0] + 2);
-        System.out.println(randomNumbers[1] + 2);
-        System.out.println(randomNumbers[2] + 2);
+        for (int a = 0; a < randomNumbers.length; a++) {
+            randomNumbers[a] = randomNumbers[a] + 2;
+            System.out.println(randomNumbers[a]);
+        }
 
     }
-
 }
