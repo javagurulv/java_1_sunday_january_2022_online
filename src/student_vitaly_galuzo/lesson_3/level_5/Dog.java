@@ -13,14 +13,10 @@ class Dog {
         this.nickName = nickName;
         this.age = age;
         this.color = color;
-        //
-
-
-
     }
+
     public void dogVoice(){
         System.out.println("Woof Woof Woof "+"my color is "+ this.color);
-
     }
     public void dogNickName(){
         System.out.println("Argo");
@@ -38,7 +34,5 @@ class Dog {
         this.color = newColor;
         System.out.println("My new color is "+this.color);
 
-
     }
-
 }

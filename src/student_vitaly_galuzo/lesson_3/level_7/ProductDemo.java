@@ -15,30 +15,7 @@ package student_vitaly_galuzo.lesson_3.level_7;
         double price = product.actualPrice(850);
         System.out.println("Actual product price is "+price+" Eur");
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
        }
-
-
-
-
 
     }
 
