@@ -1,6 +1,4 @@
-package student_yevgeniy_tolks.lesson_4.level_7;
-
-import java.util.Objects;
+package student_yevgeniy_tolks.lesson_6.level_7;
 
 class FizzBuzzTest {
 
