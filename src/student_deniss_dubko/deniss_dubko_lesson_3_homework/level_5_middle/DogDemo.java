@@ -25,11 +25,11 @@ class DogDemo {
         System.out.println("Task 21: ");
         dog.voiceYourName();
         dog.voiceYourAge();
-        dog.voiceYourColour();
+        dog.voiceYourColor();
 
         System.out.println();
         System.out.println("Task 22: ");
-        dog.voiceYourColour();
+        dog.voiceYourColor();
         dog.changeColor("White");
     }
 
