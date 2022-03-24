@@ -8,7 +8,5 @@ package student_vitaly_galuzo.lesson_3.level_2;
 
         System.out.println("Hi "+name+ "!");
 
-
     }
-
 }

@@ -1,6 +1,6 @@
 package student_vitaly_galuzo.lesson_3.level_4;
 
- class Book {
+class Book {
 
     String title;
 
@@ -21,10 +21,5 @@ class BookDemo {
         String bookTitle = myBook.getTitle();
         System.out.println("Book title = " + bookTitle);
     }
-
-
-
-
-
 
 }

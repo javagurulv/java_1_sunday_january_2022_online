@@ -1,21 +1,21 @@
 package student_vitaly_galuzo.lesson_3.level_7;
 
- class Dog {
+class Dog {
 
-  String name;
-  double age;
-  double weight;
-  String animal;
-
-
-  public Dog(String name, double age, double weight,String animal){
-      this.name = name;
-      this.age = age;
-      this.weight = weight;
-      this.animal = animal;
+    String name;
+    double age;
+    double weight;
+    String animal;
 
 
-  }
+    public Dog(String name, double age, double weight,String animal){
+        this.name = name;
+        this.age = age;
+        this.weight = weight;
+        this.animal = animal;
+
+
+    }
 
     public String getName() {
         return name;
@@ -29,11 +29,11 @@ package student_vitaly_galuzo.lesson_3.level_7;
         return weight;
     }
     public double setWeight(double newWeight){
-      this.weight = newWeight;
-      return newWeight;
+        this.weight = newWeight;
+        return newWeight;
     }
 
-    }
+}
 
 
 
