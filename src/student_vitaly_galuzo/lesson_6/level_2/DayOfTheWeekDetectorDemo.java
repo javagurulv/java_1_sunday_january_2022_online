@@ -1,4 +1,4 @@
-package student_vitaly_galuzo.lesson_6.level_1.level_2;
+package student_vitaly_galuzo.lesson_6.level_2;
 
 public class DayOfTheWeekDetectorDemo {
 
