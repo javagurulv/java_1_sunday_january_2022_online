@@ -1,4 +1,4 @@
-package student_vitaly_galuzo.lesson_6;
+package student_vitaly_galuzo.lesson_6.level_1;
 
 public class Task4 {
 
