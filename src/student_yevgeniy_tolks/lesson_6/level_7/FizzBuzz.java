@@ -1,4 +1,4 @@
-package student_yevgeniy_tolks.lesson_4.level_7;
+package student_yevgeniy_tolks.lesson_6.level_7;
 
 class FizzBuzz {
 

@@ -2,7 +2,7 @@ package student_yevgeniy_tolks.lesson_6.level_4.task_21;
 
 import java.util.Arrays;
 
-public class TwoDimArrayDemo {
+class TwoDimArrayDemo {
 
     public static void main(String[] args) {
         TwoDimArray dimArray = new TwoDimArray();

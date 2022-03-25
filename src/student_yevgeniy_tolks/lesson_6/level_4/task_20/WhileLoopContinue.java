@@ -1,6 +1,6 @@
 package student_yevgeniy_tolks.lesson_6.level_4.task_20;
 
-public class WhileLoopContinue {
+class WhileLoopContinue {
     public static void main(String[] args) {
 
         int number = 10;
