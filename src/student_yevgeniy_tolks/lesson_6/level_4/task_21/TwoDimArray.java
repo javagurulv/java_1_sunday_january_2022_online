@@ -14,7 +14,7 @@ class TwoDimArray {
 
         for (int i = 0; i < arr.length; i++) {
             System.out.println();
-            for (int j = 0; j < arr.length; j++) {
+            for (int j = 0; j < arr[i].length; j++) {
                 arr[i][j] = (int) (Math.random() * 20);
                 System.out.print(arr[i][j] + " ");
 
@@ -26,7 +26,7 @@ class TwoDimArray {
     public int sumTwoDimArray(int[][] arr) {
         int sum = 0;
         for (int i = 0; i < arr.length; i++) {
-            for (int j = 0; j < arr.length; j++) {
+            for (int j = 0; j < arr[i].length; j++) {
                 sum += arr[i][j];
             }
         }
