@@ -57,7 +57,7 @@ class TicTacToe {
     public boolean isAllCellsEmpty(int[][] field) {
 
         for (int i = 0; i < field.length; i++) {
-            for (int j = 0; j < field.length; j++) {
+            for (int j = 0; j < field[i].length; j++) {
                 if (field[i][j] == -1) {
                     return true;
                 }
@@ -76,7 +76,7 @@ class TicTacToe {
 
         int[][] field = new int[3][3];
         for (int i = 0; i < field.length; i++) {
-            for (int j = 0; j < field.length; j++) {
+            for (int j = 0; j < field[i].length; j++) {
                 field[i][j] = -1;
             }
         }
