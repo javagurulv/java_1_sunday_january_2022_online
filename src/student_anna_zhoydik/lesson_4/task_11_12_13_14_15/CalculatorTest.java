@@ -1,4 +1,4 @@
-package student_anna_zhoydik.lesson_4.task_11_12;
+package student_anna_zhoydik.lesson_4.task_11_12_13_14_15;
 
 public class CalculatorTest {
 
@@ -8,6 +8,8 @@ public class CalculatorTest {
     calculatorTest.diffTest();
     calculatorTest.divTest();
     calculatorTest.multipTest();
+    calculatorTest.maxOfTwoNumbersTest();
+
   }
 
   public void sumTest() {
@@ -61,4 +63,30 @@ public class CalculatorTest {
       System.out.println("Multip test = FAIL");
     }
   }
+
+  public void maxOfTwoNumbersTest() {
+    Calculator calculator = new Calculator();
+    int maxNumber = calculator.maxOfTwoNumbers(5, 6);
+    if (maxNumber == 6) {
+      System.out.println("MaxOfTwoNumbers = OK");
+    } else {
+      System.out.println("MaxOfTest = FAIL");
+    }
+    maxNumber = calculator.maxOfTwoNumbers(7, 1);
+    if (maxNumber == 7) {
+      System.out.println("MaxOfTest = OK");
+    } else {
+      System.out.println("MaxOfTest = FAIL");
+
+    }
+    maxNumber=calculator.maxOfTwoNumbers(8,8);
+    if(maxNumber==8){
+      System.out.println("MaxOfTest = OK");
+    } else {
+      System.out.println("MaxOfTest = FAIL");
+
+    }
+  }
 }
+
+
