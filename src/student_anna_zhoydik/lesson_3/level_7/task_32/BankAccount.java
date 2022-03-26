@@ -3,9 +3,9 @@ package student_anna_zhoydik.lesson_3.level_7.task_32;
 class BankAccount {
 
   String owner;
-  int money;
+  String money;
 
-  BankAccount(int moneyAmount,String owner) {
+  BankAccount(String moneyAmount,String owner) {
     this.owner = owner;
     this.money=moneyAmount;
   }
@@ -14,7 +14,7 @@ class BankAccount {
     return this.owner;
   }
 
-  int getMoney() {
+  String getMoney() {
     return this.money;
   }
 
@@ -23,9 +23,9 @@ class BankAccount {
 class BankAccountDemo {
 
   public static void main(String[] args) {
-    BankAccount bankAccount = new BankAccount(100000, "Victor");
+    BankAccount bankAccount = new BankAccount("100000", "Victor");
     String ownerFirstName = bankAccount.getOwner();
-    int moneyAmount = bankAccount.getMoney();
+   String moneyAmount = bankAccount.getMoney();
     System.out.println("Owner = " + ownerFirstName);
     System.out.println("Money = " + moneyAmount);
   }

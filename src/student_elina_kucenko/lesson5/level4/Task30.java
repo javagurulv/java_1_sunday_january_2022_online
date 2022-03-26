@@ -1,6 +1,7 @@
 package student_elina_kucenko.lesson5.level4;
 
 import java.util.Arrays;
+import java.util.Random;
 
 class Task30 {
 

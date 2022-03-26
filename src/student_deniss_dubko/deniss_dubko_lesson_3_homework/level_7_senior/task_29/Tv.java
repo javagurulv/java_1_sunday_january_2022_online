@@ -5,31 +5,29 @@ import java.util.Random;
 class Tv {
 
     String tvBrand;
-    int tvVolume;
-    int tvChannel;
+    boolean isTvOn;
+    int currentTvChannel;
 
-    public Tv (String tvBrand, int tvVolume, int tvChannel) {
+    public Tv (String tvBrand) {
 
         this.tvBrand = tvBrand;
-        this.tvVolume = tvVolume;
-        this.tvChannel = tvChannel;
+        this.isTvOn = false;
+        this.currentTvChannel = 0;
     }
 
     public void showTvBrand() {
         System.out.println("TV Brand: " + this.tvBrand);
     }
 
-    public void showTvVolume() {
-        System.out.println("Volume: " + this.tvVolume);
+    public void isTvOnOff() {
+        isTvOn = !isTvOn;
         }
 
     public void showTvChannel() {
-        System.out.println("Channel: " + this.tvChannel);
+        System.out.println("Channel: " + this.currentTvChannel);
     }
 
-    public void changeTvVolume() {
-
-    }
+    // To be continued
 
 
 }

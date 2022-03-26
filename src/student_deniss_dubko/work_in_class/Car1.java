@@ -28,7 +28,7 @@ public class Car1 {
 
     public void decelerate() {
         if (currentSpeed > 0 && isEngineOn) {
-            currentSpeed--; // currentSpeed = currentspeed = 1
+            currentSpeed--; // currentSpeed = currentSpeed = 1
         } else {
             System.out.println("Current speed is already 0 OOR Engine is off");
         }

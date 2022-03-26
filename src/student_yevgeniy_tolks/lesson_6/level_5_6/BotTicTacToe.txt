@@ -1,0 +1,21 @@
+ Defensive bot
+
+ public boolean botDefenceInHorizontals(int[][] field, int opponentMove, int botMove){
+ // if at least 2 opponent values in any of three horizontals and 3rd cell empty,
+  defence to be established
+ }
+ public boolean botDefenceInVerticals(int[][] field, int opponentMove, int botMove){
+ // if at least 2 opponent values in any of three verticals  and 3rd cell empty,
+  defence to be established
+ }
+  public boolean botDefenceInDiagonals(int[][] field, int opponentMove, int botMove){
+  // if at least 2 opponent values in any of three horizontals and 3rd cell empty,
+   defence to be established
+ }
+ public boolean botDefencePosition(int [][] field) {
+ // return that bot is ready for any opponent offensive moves
+ }
+-------------
+Offensive bot
+
+under construction...
