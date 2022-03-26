@@ -76,39 +76,178 @@ class TicTacToe {
 
         int[][] field = new int[3][3];
         for (int i = 0; i < field.length; i++) {
-            for (int j = 0; j < field[i].length; j++) {
+            for (int j = 0; j < field.length; j++) {
                 field[i][j] = -1;
             }
         }
         return field;
     }
 
-
     public Move getNextMove() {
         Scanner coordinates = new Scanner(System.in);
         System.out.println("Enter X: ");
         int getX = coordinates.nextInt();
+        while (getX > 2) {
+            System.out.println("X out of bounds :\n" + "Enter X: ");
+            getX = coordinates.nextInt();
+        }
         System.out.println("Enter Y: ");
         int getY = coordinates.nextInt();
+        while (getY > 2) {
+            System.out.println("Y out of bounds :\n" + "Enter Y: ");
+            getY = coordinates.nextInt();
+        }
 
         return new Move(getX, getY);
 
     }
 
+    public BotMove getNextMoveByBot(int[][] field) {
+        int xBot = (int) (Math.random() * 3);
+        int yBot = (int) (Math.random() * 3);
+        if (canMove(field)) {
+            while (field[xBot][yBot] == 1 || field[xBot][yBot] == 0) {
+                xBot = (int) (Math.random() * 3);
+                yBot = (int) (Math.random() * 3);
+            }
+        }
+        return new BotMove(xBot, yBot);
+    }
+
+    public boolean canMove(int[][] field) {
+        boolean freeCellToChoose = false;
+        for (int i = 0; i < field.length; i++) {
+            for (int j = 0; j < field.length; j++) {
+                if (field[i][j] == -1) {
+                    freeCellToChoose = true;
+                    break;
+                }
+            }
+            if (freeCellToChoose) {
+                break;
+            }
+        }
+        return freeCellToChoose;
+    }
+
+    public boolean botDefenceInHorizontals(int[][] field, int opponentMove, int botMove) {
+        boolean defenceInHorizontals = false;
+        if (field[0][0] == opponentMove && field[0][1] == opponentMove && field[0][2] == -1) {
+            field[0][2] = botMove;
+            defenceInHorizontals = true;
+        } else if (field[0][0] == opponentMove && field[0][2] == opponentMove && field[0][1] == -1) {
+            field[0][1] = botMove;
+            defenceInHorizontals = true;
+        } else if (field[0][1] == opponentMove && field[0][2] == opponentMove && field[0][0] == -1) {
+            field[0][0] = botMove;
+            defenceInHorizontals = true;
+        } else if (field[1][0] == opponentMove && field[1][1] == opponentMove && field[1][2] == -1) {
+            field[1][2] = botMove;
+            defenceInHorizontals = true;
+        } else if (field[1][0] == opponentMove && field[1][2] == opponentMove && field[1][1] == -1) {
+            field[1][1] = botMove;
+            defenceInHorizontals = true;
+        } else if (field[1][1] == opponentMove && field[1][2] == opponentMove && field[1][0] == -1) {
+            field[1][0] = botMove;
+            defenceInHorizontals = true;
+        } else if (field[2][0] == opponentMove && field[2][1] == opponentMove && field[2][2] == -1) {
+            field[2][2] = botMove;
+            defenceInHorizontals = true;
+        } else if (field[2][1] == opponentMove && field[2][2] == opponentMove && field[2][0] == -1) {
+            field[2][0] = botMove;
+            defenceInHorizontals = true;
+        } else if (field[2][0] == opponentMove && field[2][2] == opponentMove && field[2][1] == -1) {
+            field[2][1] = botMove;
+            defenceInHorizontals = true;
+        }
+        return defenceInHorizontals;
+    }
+
+
+    public boolean botDefenceInVerticals(int[][] field, int opponentMove, int botMove) {
+        boolean defenceInVerticals = false;
+        if (field[0][0] == opponentMove && field[1][0] == opponentMove && field[2][0] == -1) {
+            field[2][0] = botMove;
+            defenceInVerticals = true;
+        } else if (field[0][0] == opponentMove && field[2][0] == opponentMove && field[1][0] == -1) {
+            field[1][0] = botMove;
+            defenceInVerticals = true;
+        } else if (field[1][0] == opponentMove && field[2][0] == opponentMove && field[0][0] == -1) {
+            field[0][0] = botMove;
+            defenceInVerticals = true;
+        } else if (field[0][1] == opponentMove && field[1][1] == opponentMove && field[2][1] == -1) {
+            field[2][1] = botMove;
+            defenceInVerticals = true;
+        } else if (field[0][1] == opponentMove && field[2][1] == opponentMove && field[1][1] == -1) {
+            field[1][1] = botMove;
+            defenceInVerticals = true;
+        } else if (field[1][1] == opponentMove && field[2][1] == opponentMove && field[0][1] == -1) {
+            field[0][1] = botMove;
+            defenceInVerticals = true;
+        } else if (field[0][2] == opponentMove && field[1][2] == opponentMove && field[2][2] == -1) {
+            field[2][2] = botMove;
+            defenceInVerticals = true;
+        } else if (field[1][2] == opponentMove && field[2][2] == opponentMove && field[0][2] == -1) {
+            field[0][2] = botMove;
+            defenceInVerticals = true;
+        } else if (field[0][2] == opponentMove && field[2][2] == opponentMove && field[1][2] == -1) {
+            field[1][2] = botMove;
+            defenceInVerticals = true;
+        }
+        return defenceInVerticals;
+    }
+
+
+    public boolean botDefenceInDiagonals(int[][] field, int opponentMove, int botMove) {
+        boolean winPosForDiagonals = false;
+        if (field[0][0] == opponentMove && field[1][1] == opponentMove && field[2][2] == -1) {
+            field[2][2] = botMove;
+            winPosForDiagonals = true;
+        } else if (field[1][1] == opponentMove && field[2][2] == opponentMove && field[0][0] == -1) {
+            field[0][0] = botMove;
+            winPosForDiagonals = true;
+        } else if (field[0][0] == opponentMove && field[2][2] == opponentMove && field[1][1] == -1) {
+            field[1][1] = botMove;
+            winPosForDiagonals = true;
+        } else if (field[0][2] == opponentMove && field[2][0] == opponentMove && field[1][1] == -1) {
+            field[1][1] = botMove;
+            winPosForDiagonals = true;
+        } else if (field[1][1] == opponentMove && field[2][0] == opponentMove && field[0][2] == -1) {
+            field[0][2] = botMove;
+            winPosForDiagonals = true;
+        } else if (field[0][2] == opponentMove && field[1][1] == opponentMove && field[2][0] == -1) {
+            field[2][0] = botMove;
+            winPosForDiagonals = true;
+        }
+        return winPosForDiagonals;
+    }
+
+    public boolean botDefencePosition(int[][] field) {
+        boolean botInDefence = false;
+        if (botDefenceInDiagonals(field, 0, 1)
+                || botDefenceInHorizontals(field, 0, 1)
+                || botDefenceInVerticals(field, 0, 1)) {
+            botInDefence = true;
+        }
+        return botInDefence;
+    }
+
+
     public void printFieldToConsole(int[][] field) {
         System.out.println(Arrays.deepToString(field));
-        System.out.println();
+        System.out.println("------------------------");
     }
 
     public void play() {
         int[][] field = createField();
         while (true) {
             printFieldToConsole(field);
+
             Move move0 = getNextMove();
             field[move0.getX()][move0.getY()] = 0;
             printFieldToConsole(field);
             if (isWinPosition(field, 0)) {
-                System.out.println("Player 0 Win!!!");
+                System.out.println("You Win!!!");
                 break;
             }
             if (isDrawPosition(field)) {
@@ -116,19 +255,21 @@ class TicTacToe {
                 break;
             }
             printFieldToConsole(field);
-            Move move1 = getNextMove();
-            field[move1.getX()][move1.getY()] = 1;
+            BotMove move1 = getNextMoveByBot(field);
+            if (botDefencePosition(field)) {
+            } else {
+                field[move1.getXBot()][move1.getYBot()] = 1;
+            }
             printFieldToConsole(field);
             if (isWinPosition(field, 1)) {
-                System.out.println("Player 1 Win!!!");
+                System.out.println("Bot Win!!!");
                 break;
             }
             if (isDrawPosition(field)) {
                 System.out.println("Draw in the game!!!");
                 break;
             }
-
         }
-
     }
 }
+
