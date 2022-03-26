@@ -22,7 +22,7 @@ public class Task_29 {
 
         for(int i = 0;i < marks.length; i++)
         {
-            if(marks[i] % 2 == 0)
+            if((marks[i] % 2) == 0)
             {
                 System.out.println("Mark:[" + (i+1) + "]; Number: " + marks[i]);
             }
