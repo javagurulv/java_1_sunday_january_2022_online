@@ -1,6 +1,6 @@
 package student_vitaly_galuzo.lesson_3.level_7;
 
- class BankAccount {
+class BankAccount {
 
     String owner;
     int money;
@@ -17,7 +17,6 @@ package student_vitaly_galuzo.lesson_3.level_7;
     int getMoney() {
         return this.money;
     }
-
 }
 
 class BankAccountDemo {
@@ -31,7 +30,4 @@ class BankAccountDemo {
         System.out.println("Owner = " + ownerFirstName);
         System.out.println("Money = " + moneyAmount);
     }
-
-
-
 }

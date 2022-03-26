@@ -10,9 +10,9 @@ class Task_9 {
         int number = numb.nextInt();
 
         for(int N=0; N<10 ;N++) {
-          System.out.println(number +" x "+(N+1)+" = "+ (number*(N+1)));
+            System.out.println(number +" x "+(N+1)+" = "+ (number*(N+1)));
 
         }
 
     }
-    }
+}

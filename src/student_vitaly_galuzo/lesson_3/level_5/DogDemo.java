@@ -20,10 +20,5 @@ class DogDemo {
         System.out.println("I'm now "+birthDay+" "+"y.o"+"!");
         dog.changeColor("Grey");
 
-
-
-
     }
-
-
 }

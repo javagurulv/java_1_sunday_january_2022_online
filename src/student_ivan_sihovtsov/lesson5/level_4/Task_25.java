@@ -12,6 +12,7 @@ public class Task_25 {
         System.out.println("Array length is: " + arrayLength);
 
         int[] array = new int[arrayLength];
+
         for (int i = 0; i < arrayLength; i++) {
             System.out.print("Enter the " + (i + 1) + "nd number of the array: ");
             array[i] = scanner.nextInt();

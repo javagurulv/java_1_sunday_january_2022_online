@@ -7,6 +7,4 @@ public class Task7 {
         int[] numbers = new int[2];
         System.out.println(numbers[0]);
     }
-
-
 }

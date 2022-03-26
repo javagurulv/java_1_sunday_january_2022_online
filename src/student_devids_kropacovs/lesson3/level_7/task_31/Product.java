@@ -8,7 +8,7 @@ class Product {
     double discount;
 
 
-    double actualPrice(double normalPrice , double discount){
+    double actualPrice(double normalPrice, double discount) {
 /*        Scanner scannerPrice = new Scanner(System.in);
           Scanner scannerdisscount = new Scanner(System.in);
           System.out.print("What is the price of the product? ");
@@ -25,13 +25,13 @@ class Product {
         return this.discount + this.standartPrice;
     }
 
-    void printInformation(){
+    void printInformation() {
         double actualPrice;
         actualPrice = this.standartPrice * (1 - this.discount / 100);
         System.out.println("The actual price for " + productName + " is " + actualPrice);
     }
 
-    public Product(String name){
+    public Product(String name) {
         this.productName = name;
     }
 

@@ -1,6 +1,6 @@
 package student_vitaly_galuzo.lesson_3.level_4;
 
- class BankAccount {
+class BankAccount {
     String ownerFirstName;
     String ownerLastName;
     int moneyAmount;
@@ -22,6 +22,5 @@ package student_vitaly_galuzo.lesson_3.level_4;
     int getMoneyAmount() {
         return moneyAmount;
     }
-
 
 }

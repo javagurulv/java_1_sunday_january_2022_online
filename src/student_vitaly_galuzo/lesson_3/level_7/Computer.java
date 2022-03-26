@@ -1,6 +1,6 @@
 package student_vitaly_galuzo.lesson_3.level_7;
 
- class Computer {
+class Computer {
 
     String manufacturer;
     String model;
@@ -18,8 +18,6 @@ package student_vitaly_galuzo.lesson_3.level_7;
         return model;
     }
 
-
-
 }
 
 class ComputerDemo {
@@ -33,6 +31,5 @@ class ComputerDemo {
         System.out.println("Computer manufacturer = " + manufacturer);
         System.out.println("Computer model = " + model);
     }
-
 
 }

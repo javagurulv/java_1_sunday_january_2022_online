@@ -21,7 +21,7 @@ class ArrayOfData {
             String name;
             int age;
             int height;
-            System.out.println("Please, write the information of the person No. " + (x+1));
+            System.out.println("Please, write the information of the person No. " + (x + 1));
             Scanner scannerForName = new Scanner(System.in);
             Scanner scannerForAge = new Scanner(System.in);
             Scanner scannerForHeight = new Scanner(System.in);
@@ -35,27 +35,27 @@ class ArrayOfData {
         }
 
     }
-    public void print_out_info(){
+
+    public void print_out_info() {
         System.out.println("Would you like to print out the names? Press 1 if you want to press any other button to teminate the programm");
         int num;
         int x = 0;
         Scanner scanner = new Scanner(System.in);
         num = scanner.nextInt();
 
-        if (num == 1){
-            while(x < arraySize){
+        if (num == 1) {
+            while (x < arraySize) {
                 System.out.println(names[x] + " " + ages[x] + " " + heights[x]);
-                x = x+1;
+                x = x + 1;
             }
-        }else{
+        } else {
             System.out.println("Bye");
         }
     }
 
-        public int number(){
-            return arraySize;
-        }
-
+    public int number() {
+        return arraySize;
+    }
 
 
 }

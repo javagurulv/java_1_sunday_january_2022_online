@@ -15,15 +15,15 @@ class Task2 {
         double secondNumber = scanner2.nextDouble();
 
         double sum = firstNumber + secondNumber;
-        System.out.println(firstNumber+" + " + secondNumber + " = " + sum);
+        System.out.println(firstNumber + " + " + secondNumber + " = " + sum);
 
         double sub = firstNumber - secondNumber;
-        System.out.println(firstNumber+" - " + secondNumber + " = " + sub);
+        System.out.println(firstNumber + " - " + secondNumber + " = " + sub);
 
         double div = firstNumber / secondNumber;
-        System.out.println(firstNumber+" / " + secondNumber + " = " + div);
+        System.out.println(firstNumber + " / " + secondNumber + " = " + div);
 
         double mul = firstNumber * secondNumber;
-        System.out.println(firstNumber+" * " + secondNumber + " = " + mul);
+        System.out.println(firstNumber + " * " + secondNumber + " = " + mul);
     }
 }

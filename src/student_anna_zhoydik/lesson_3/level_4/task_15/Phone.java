@@ -8,7 +8,7 @@ class Phone {
       this.model = newModel;
     }
 
-    String getModel() {
+    String newModel() {
       return this.model;
     }
 
@@ -18,7 +18,7 @@ class Phone {
 
     public static void main(String[] args) {
       Phone myPhone = new Phone("Huawei");
-      String phoneModel = myPhone.getModel();
+      String phoneModel = myPhone.newModel();
       System.out.println("Phone model = " + phoneModel);
     }
 

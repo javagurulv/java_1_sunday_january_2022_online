@@ -1,9 +1,9 @@
 package student_devids_kropacovs.lesson_4.level_5;
 
- class LightColorDetectorTest {
+class LightColorDetectorTest {
 
     public static void main(String[] args) {
-        LightColorDetectorTest l =new LightColorDetectorTest();
+        LightColorDetectorTest l = new LightColorDetectorTest();
         l.violetTest();
         l.blueTest();
         l.greenTest();
@@ -13,86 +13,86 @@ package student_devids_kropacovs.lesson_4.level_5;
         l.invisibleTest();
     }
 
-    public void violetTest(){
+    public void violetTest() {
         int light = 380;
         String expectedResult = "Violet";
         LightColorDetector l = new LightColorDetector();
         String actualResult = l.detect(light);
-        if (expectedResult.equals(actualResult)){
+        if (expectedResult.equals(actualResult)) {
             System.out.println("Violet Test Pass");
-        }else{
+        } else {
             System.out.println("Violet Test Fail");
         }
     }
 
-    public void blueTest(){
+    public void blueTest() {
         int light = 450;
         String expectedResult = "Blue";
         LightColorDetector l = new LightColorDetector();
         String actualResult = l.detect(light);
-        if (expectedResult.equals(actualResult)){
+        if (expectedResult.equals(actualResult)) {
             System.out.println("Blue Test Pass");
-        }else{
+        } else {
             System.out.println("Blue Test Fail");
         }
     }
 
-    public void greenTest(){
+    public void greenTest() {
         int light = 495;
         String expectedResult = "Green";
         LightColorDetector l = new LightColorDetector();
         String actualResult = l.detect(light);
-        if (expectedResult.equals(actualResult)){
+        if (expectedResult.equals(actualResult)) {
             System.out.println("Green Test Pass");
-        }else{
+        } else {
             System.out.println("Green Test Fail");
         }
     }
 
-    public void yellowTest(){
+    public void yellowTest() {
         int light = 570;
         String expectedResult = "Yellow";
         LightColorDetector l = new LightColorDetector();
         String actualResult = l.detect(light);
-        if (expectedResult.equals(actualResult)){
+        if (expectedResult.equals(actualResult)) {
             System.out.println("Yellow Test Pass");
-        }else{
+        } else {
             System.out.println("Yellow Test Fail");
         }
     }
 
-    public void orangeTest(){
+    public void orangeTest() {
         int light = 590;
         String expectedResult = "Orange";
         LightColorDetector l = new LightColorDetector();
         String actualResult = l.detect(light);
-        if (expectedResult.equals(actualResult)){
+        if (expectedResult.equals(actualResult)) {
             System.out.println("Orange Test Pass");
-        }else{
+        } else {
             System.out.println("Orange Test Fail");
         }
     }
 
-    public void redTest(){
+    public void redTest() {
         int light = 620;
         String expectedResult = "Red";
         LightColorDetector l = new LightColorDetector();
         String actualResult = l.detect(light);
-        if (expectedResult.equals(actualResult)){
+        if (expectedResult.equals(actualResult)) {
             System.out.println("Red Test Pass");
-        }else{
+        } else {
             System.out.println("Red Test Fail");
         }
     }
 
-    public void invisibleTest(){
+    public void invisibleTest() {
         int light = 751;
         String expectedResult = "Invisible light";
         LightColorDetector l = new LightColorDetector();
         String actualResult = l.detect(light);
-        if (expectedResult.equals(actualResult)){
+        if (expectedResult.equals(actualResult)) {
             System.out.println("Invisible Test Pass");
-        }else{
+        } else {
             System.out.println("Invisible Test Fail");
         }
     }

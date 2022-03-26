@@ -4,12 +4,12 @@ class Dog {
 
     String dogName;
     int dogAge;
-    String dogColour;
+    String dogColor;
 
-    public Dog (String dogName, int dogAge, String dogColour) {
+    public Dog (String dogName, int dogAge, String dogColor) {
         this.dogName = dogName;
         this.dogAge = dogAge;
-        this.dogColour = dogColour;
+        this.dogColor = dogColor;
     }
 
     public void voiceYourName() {
@@ -20,8 +20,8 @@ class Dog {
         System.out.println("Age: " + this.dogAge);
     }
 
-    public void voiceYourColour() {
-        System.out.println("Colour: " + this.dogColour);
+    public void voiceYourColor() {
+        System.out.println("Colour: " + this.dogColor);
     }
 
     public void happyBirthday() {
@@ -30,8 +30,8 @@ class Dog {
     }
 
     public void changeColor(String newColor) {
-        this.dogColour = newColor;
-        System.out.println("New Colour: " + this.dogColour);
+        this.dogColor = newColor;
+        System.out.println("New Color: " + this.dogColor);
     }
 
 

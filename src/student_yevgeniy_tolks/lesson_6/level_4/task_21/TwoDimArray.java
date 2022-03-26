@@ -2,7 +2,7 @@ package student_yevgeniy_tolks.lesson_6.level_4.task_21;
 
 import java.util.Random;
 
-public class TwoDimArray {
+class TwoDimArray {
 
     //1st step - creating new two dim array, returning int [][] array, input with two parameters
     public int[][] twoDimArray(int firstArrayLength, int secondArrayLength) {
@@ -14,7 +14,7 @@ public class TwoDimArray {
 
         for (int i = 0; i < arr.length; i++) {
             System.out.println();
-            for (int j = 0; j < arr.length; j++) {
+            for (int j = 0; j < arr[i].length; j++) {
                 arr[i][j] = (int) (Math.random() * 20);
                 System.out.print(arr[i][j] + " ");
 
@@ -26,7 +26,7 @@ public class TwoDimArray {
     public int sumTwoDimArray(int[][] arr) {
         int sum = 0;
         for (int i = 0; i < arr.length; i++) {
-            for (int j = 0; j < arr.length; j++) {
+            for (int j = 0; j < arr[i].length; j++) {
                 sum += arr[i][j];
             }
         }

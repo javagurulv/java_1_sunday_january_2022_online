@@ -17,7 +17,7 @@ class Task11 {
         Scanner scanner3 = new Scanner(System.in);
         int numberThree = scanner3.nextInt();
 
-        double result = (numberOne + numberTwo + numberThree)/3.0;
+        double result = (numberOne + numberTwo + numberThree) / 3.0;
         System.out.println("Average is " + result);
     }
 }
