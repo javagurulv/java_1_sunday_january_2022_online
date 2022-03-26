@@ -4,12 +4,14 @@ class TvDemo {
 
     public static void main(String[] args) {
 
-        Tv tv = new Tv("LG", 20, 10);
+        Tv tv = new Tv("LG");
 
         tv.showTvBrand();
-        tv.showTvVolume();
+        tv.isTvOnOff();
         tv.showTvChannel();
     }
+
+    // To be continued
 
 
 }
