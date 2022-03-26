@@ -2,14 +2,14 @@ package student_vitaly_galuzo.lesson_3.level_1;
 
 import student_vitaly_galuzo.lesson_3.level_1.Robot;
 
- class RobotDemo {
+class RobotDemo {
 
     public static void main(String[] args) {
 
-             Robot robocop = new Robot("robocop");
+        Robot robocop = new Robot("robocop");
         robocop.sayHello();
         robocop.sayYourName();
-             Robot wally = new Robot("wally");
+        Robot wally = new Robot("wally");
         wally.sayHello();
         wally.sayYourName();
         Robot tom = new Robot("tom");

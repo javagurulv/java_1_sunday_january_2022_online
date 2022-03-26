@@ -24,7 +24,6 @@ package student_vitaly_galuzo.lesson_3.level_7;
             this.name = name;
             return name;
 
-
         }
 
     public double getRegularPrice() {
@@ -33,17 +32,12 @@ package student_vitaly_galuzo.lesson_3.level_7;
 
     public double getDiscount(){
             return discount;
-
     }
+
     public double actualPrice(double price){
           price = regularPrice - (regularPrice * discount/100);
           return price;
 
     }
-
-
-
-
-
 
 }

@@ -10,7 +10,5 @@ import java.util.Scanner;
         System.out.println("What is your name ?");
         String name = scr.nextLine();
         System.out.println("Hello "+name+"!");
-
     }
-
 }

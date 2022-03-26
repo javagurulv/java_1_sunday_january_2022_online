@@ -7,5 +7,4 @@ public class Task5 {
         int [] numbers = {1, 2, 3};
     }
 
-
 }

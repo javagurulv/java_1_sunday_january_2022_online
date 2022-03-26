@@ -10,7 +10,7 @@ class Architect_task {
         System.out.print("Please, press 1 if you are Mr, press 2 if you are MS ");
         Scanner scannerGender = new Scanner(System.in);
         int gender = scannerGender.nextInt();
-        if (gender ==1 || gender == 2) {
+        if (gender == 1 || gender == 2) {
 
             System.out.print("Please, write your name: ");
             Scanner scannerName = new Scanner(System.in);
@@ -33,7 +33,7 @@ class Architect_task {
                     System.out.println("Hello! Ms. " + name + " You are adult");
                 }
             }
-        }else{
+        } else {
             System.out.println("You pressed invalid number, start program again");
         }
 

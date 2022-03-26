@@ -2,7 +2,7 @@ package student_deniss_dubko.deniss_dubko_lesson_1_homework.level_4_junior;
 
 import java.util.Scanner;
 
-public class Task11Sum {
+class Task11Sum {
 
     public static void main(String[] args) {
 
