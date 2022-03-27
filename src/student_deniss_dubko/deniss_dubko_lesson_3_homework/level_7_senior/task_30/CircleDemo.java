@@ -6,7 +6,9 @@ class CircleDemo {
 
         Circle circle = new Circle(10);
 
+        System.out.println(circle.showOnConsoleRadiusIs());
         circle.calculateCircleArea();
+        System.out.println(circle.calculateCircleArea());
     }
 
 
