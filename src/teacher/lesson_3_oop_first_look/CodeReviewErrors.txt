@@ -90,9 +90,10 @@ WARNING: ставьте дополнительные скобки, показы�
 приоритет выполнения операций.
 
 if (number % 2 == 0)
-
+if (firstNumber == secondNumber && firstNumber == thirdNumber)
 
 Лучше: if ((number % 2) == 0)
+if ((firstNumber == secondNumber) && (firstNumber == thirdNumber))
 
 Если в одной строке записано выражение состоящее из нескольких
 операций, то добавляйте дополнительные скобки, которые покажут
@@ -104,3 +105,139 @@ if (number % 2 == 0)
 напрягать свой мозг вспоминая приоритет операций и порядок
 их выполнения. Просто расставьте дополнительные скобки!
 
+-----------------------------------------------------------
+
+WARNING: не усложняйте код за счёт лишнего if оператора.
+
+    public boolean isEven(int number) {
+        if (number % 2 == 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+В данном случае метод возвращает boolean и отвечает на вопрос
+чётное число или нет. Проверка чётное число или нет
+number % 2 == 0. Так почему же результат этой проверки сразу не
+вернуть в качестве результата метода?
+
+Лучше:
+
+    public boolean isEven(int number) {
+        return (number % 2) == 0;
+    }
+
+-----------------------------------------------------------
+
+WARNING: упрощайте код методов используя приём рефакторинга
+вынесения части кода в отдельный метод и его использование повторно.
+
+    public int maxOfThreeNumbers(int firstNumber, int secondNumber, int thirdNumber) {
+
+        if (firstNumber > secondNumber && firstNumber > thirdNumber) {
+            return firstNumber;
+        } else if (secondNumber > firstNumber && secondNumber > thirdNumber) {
+            return secondNumber;
+        } else if (firstNumber == secondNumber && firstNumber > thirdNumber) {
+            return firstNumber; //or return secondNumber
+        } else if (firstNumber == thirdNumber && firstNumber > secondNumber) {
+            return firstNumber; //or return  thirdNumber
+        } else if (secondNumber == thirdNumber && secondNumber > firstNumber) {
+            return secondNumber; // or return thirdNumber
+        } else if (firstNumber == secondNumber && secondNumber == thirdNumber) {
+            return secondNumber; //return any
+        } else {
+            return thirdNumber;
+        }
+    }
+
+Что такое максимальное из трёх чисел? Ответить на такой вопрос в лоб
+не просто, надо начинать описывать сложные условия (первое число
+больше второго и больше третьего и так далее). Перед нами очевидно
+задача, которая требует упрощения! Попробуйте поделить ее на более
+мелкие подзадачи. Более простой задачей кажется нахождение
+максимального числа из двух. Найдя максимальное из первых двух
+и сравнив его с третьим числом мы и найдём максимальное число из трёх.
+
+Лучше:
+
+    public int maxOfTwoNumbers(int firstNumber, int secondNumber) {
+        return Math.max(firstNumber, secondNumber);
+    }
+
+    public int maxOfThreeNumbers(int firstNumber, int secondNumber, int thirdNumber) {
+        int max = maxOfTwoNumbers(firstNumber, secondNumber);
+        return maxOfTwoNumbers(max, thirdNumber);
+    }
+
+-----------------------------------------------------------
+
+WARNING: давайте названиям тестов названия, которые говорят о том,
+что проверяется в тесте.
+
+    public void sumTest()
+
+    public void mulTest()
+
+Лучше:
+
+    public void shouldSumTwoNumbers()
+
+    public void shouldMultiplyTwoNumbers()
+
+-----------------------------------------------------------
+
+WARNING: пример запутанной (сложной) реализации бизнес логики.
+Плюс пример не корректной реализации бизнес логики.
+
+class Stock {
+    String companyName;
+    int currentPrice;
+    int minPrice;
+    int maxPrice;
+
+    public Stock(String companyName, int currentPrice) {
+        this.companyName = companyName;
+        this.currentPrice = currentPrice;
+        this.minPrice = currentPrice;
+        this.maxPrice = currentPrice;
+    }
+
+    public void updatePrice(int price) {
+        if (maxPrice > currentPrice && minPrice < currentPrice) {
+            this.currentPrice = price;
+        } else if (price > currentPrice) {
+            this.maxPrice = price;
+        } else if (price < currentPrice) {
+            this.minPrice = price;
+        }
+    }
+
+Когда будет меняться минимальная или максимальная цена акции?
+Просто ли это понять из программного кода? Мне кажется нет.
+Проблема этого кода заключается в том, что изменение максимальной
+или минимальной цены зависят от первого условия
+maxPrice > currentPrice && minPrice < currentPrice, условия,
+которое определяет изменение текущей стоимости акции.
+
+А правильно ли меняется текущая цена? Что произойдёт если текущая
+цена станет больше чем максимальная? Изменится ли в этом случае
+текущая цена?
+
+Проблема этого кода в том, что изменения максимальной, минимальной
+и текущей цен зависят друг от друга. Хотя в реальной жизни
+определение максимальной, минимальной и текущей цены никак друг
+с другом не связаны.
+
+Лучше:
+
+    public void updatePrice(int price) {
+        this.currentPrice = price;
+        if (price > maxPrice) {
+            this.maxPrice = price;
+        }
+        if (price < minPrice) {
+            this.minPrice = price;
+        }
+    }
