@@ -38,7 +38,7 @@ class Calculator {
     }
 
     public int maxOfThreeNumbers(int firstNumber, int secondNumber, int thirdNumber) {
-        int maxNumber = Math.max(Math.max(firstNumber, secondNumber), thirdNumber);
-        return maxNumber;
+        int maxNumber = Math.max(firstNumber,secondNumber);
+        return Math.max(maxNumber,thirdNumber);
     }
 }
