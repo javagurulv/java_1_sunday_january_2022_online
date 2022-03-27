@@ -13,8 +13,13 @@ public class DogDemo {
         pupsik.voice();
 
         sharik.voiceYourName();
+        sharik.voiceYourName();
+        sharik.voiceYourName();
 
         pupsik.voiceYourName();
+        pupsik.voiceYourName();
+        pupsik.voiceYourName();
+
 
 
         sharik.voiceYourAge();
