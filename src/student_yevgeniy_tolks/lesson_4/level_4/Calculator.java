@@ -26,7 +26,7 @@ class Calculator {
     }
 
     public boolean isEven(int number) {
-        if (number % 2 == 0) {
+        if ((number % 2) == 0) {
             return true;
         } else {
             return false;
@@ -38,21 +38,7 @@ class Calculator {
     }
 
     public int maxOfThreeNumbers(int firstNumber, int secondNumber, int thirdNumber) {
-
-        if (firstNumber > secondNumber && firstNumber > thirdNumber) {
-            return firstNumber;
-        } else if (secondNumber > firstNumber && secondNumber > thirdNumber) {
-            return secondNumber;
-        } else if (firstNumber == secondNumber && firstNumber > thirdNumber) {
-            return firstNumber; //or return secondNumber
-        } else if (firstNumber == thirdNumber && firstNumber > secondNumber) {
-            return firstNumber; //or return  thirdNumber
-        } else if (secondNumber == thirdNumber && secondNumber > firstNumber) {
-            return secondNumber; // or return thirdNumber
-        } else if (firstNumber == secondNumber && secondNumber == thirdNumber) {
-            return secondNumber; //return any
-        } else {
-            return thirdNumber;
-        }
+        int maxNumber = Math.max(Math.max(firstNumber, secondNumber), thirdNumber);
+        return maxNumber;
     }
 }
