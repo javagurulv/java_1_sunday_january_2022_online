@@ -18,11 +18,11 @@ public class Dog {
 
     public void voiceYourName() {
 
-        System.out.println("My name is" + this.name);
+        System.out.println("Dog name is" + this.name);
     }
 
     public void voiceYourAge() {
 
-        System.out.println("My age is" + this.age);
+        System.out.println("Dog age is" + this.age);
     }
 }
