@@ -241,3 +241,167 @@ maxPrice > currentPrice && minPrice < currentPrice, условия,
             this.minPrice = price;
         }
     }
+
+
+-----------------------------------------------------------
+
+WARNING: не правильные имена свойств класса (объекта).
+
+class Robot {
+
+    private String sayYourName;
+
+    public Robot(String robotName) {
+        this.sayYourName = robotName;
+    }
+
+Свойства класса (объекта) не должны быть глаголами, они должны
+быть существительными. Глаголы выражают действия, они должны
+присутствовать в названии методов.
+
+Лучше:
+
+class Robot {
+
+    private String robotName;
+
+    public Robot(String robotName) {
+        this.robotName = robotName;
+    }
+
+-----------------------------------------------------------
+
+WARNING: не используемое свойство класса.
+
+class Robot {
+
+    private String sayHello;
+
+Не оставляйте в классах свойства, которые не используются.
+Если свойство класса не используется, то оно будет написано
+серым цветом в среде разработки и его смело можно удалять.
+
+-----------------------------------------------------------
+
+WARNING: названия методов начинаются с большой буквы.
+
+class Dog {
+
+    void HappyBirthday() {
+        System.out.println("Happy birthday to me!");
+    }
+
+Хотя в Java это и разрешено (с точки зрения синтаксиса языка),
+но так делать не стоит. В Java принято с большой буквы писать
+названия классов и интерфейсов. Если в коде программы будут
+встречаться и другие конструкции начинающиеся с большой буквы,
+то это сильно ухудшит восприятие и читаемость кода.
+
+-----------------------------------------------------------
+
+WARNING: не логичное название метода класса.
+
+class Computer {
+
+    private String brand;
+    private boolean computerOn;
+
+    public Computer(String brand, boolean computer){
+        this.brand = brand;
+        this.computerOn = computerOn;
+    }
+
+    public void command() {
+        System.out.println("My brand is - " + this.brand);
+    }
+
+Какой смысл вложен в название метода command()?
+Представьте себя на месте человека, который читает ваш код.
+Что он сможет понять по названию метода command()?
+Будет ли ему понятен смысл этого метода?
+В идеале по названию метода должно быть понятно, что он делает.
+Иначе в сложных программах придётся вникать в реализацию
+каждого метода, читать и изучать каждую строчку программы.
+А на это нужно очень много времени!
+
+Лучше:
+
+class Computer {
+
+    private String brand;
+    private boolean computerOn;
+
+    public Computer(String brand, boolean computer){
+        this.brand = brand;
+        this.computerOn = computerOn;
+    }
+
+    public void printBrandToConsole() {
+        System.out.println("My brand is - " + this.brand);
+    }
+
+-----------------------------------------------------------
+
+WARNING: не используемое свойство класса.
+
+class Papagoi {
+
+    private String talk;
+    private int age;
+    private String newColor;
+
+    public Papagoi (int age, String color) {
+        this.newColor = color;
+        this.age = age;
+        this.talk = talk;
+    }
+
+Свойство talk не используется, такие свойства нужно удалять из кода!
+
+-----------------------------------------------------------
+
+WARNING: вычисляемое (из других свойств) свойство класса.
+
+class Circle {
+
+    private double radius;
+    private double calculateArea;
+
+    public Circle(double radius) {
+        this.radius = radius;
+        this.calculateArea = 0;
+    }
+
+    void calculateArea(){
+        this.calculateArea = (Math.PI*radius*radius);
+        System.out.println("Square is " + this.calculateArea);
+    }
+
+}
+
+Свойство calculateArea является вычисляемым, его значение рассчитывается
+на основе другого свойств (радиуса). Если формула расчёта не является
+слишком большой и сложной, то лучше такие свойства отдельно не хранить
+как свойства класса. Лучше создать для их вычисления отдельный метод,
+который можно всегда вызвать и получить нужное значение. Бонус еще
+и в том, что этот метод можно будет еще и протестировать!
+
+Лучше:
+
+class Circle {
+
+    private double radius;
+
+    public Circle(double radius) {
+        this.radius = radius;
+    }
+
+    void printAreaToConsole(){
+        System.out.println("Square is " + calculateArea());
+    }
+
+    double calculateArea() {
+        return Math.PI * radius * radius;
+    }
+
+}
