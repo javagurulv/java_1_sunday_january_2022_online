@@ -9,6 +9,9 @@ class ContinueExample {
 				{4, 5, 9},
 				{7, 8, 0}};
 		for(int i = 0; i < arr.length; i++) {
+			if (i == 0) {
+				continue;
+			}
 			for(int j = 0; j < arr[i].length; j++) {
 				int number = arr[i][j];
 				if (j == 1) {
