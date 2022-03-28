@@ -42,7 +42,7 @@ class Stock {
 
         public String printValueInformation(){
         return stockValueInfo = "Company: " + companyName + " Current value of the stock - "+
-                currentValue + ", Min stock value:  " + minValue + ", Max value: " + maxValue + "Date: "+ date;
+                currentValue + ", Min stock value:  " + minValue + ", Max value: " + maxValue + " Date: "+ date;
         }
          /*System.out.println("Company name: "+ companyName + "\n" + "Stock price: " + currentValue + "\n" + "Max value: "
                  + maxValue + "\n" + "Min value: "+ minValue + "\n" + date);*/

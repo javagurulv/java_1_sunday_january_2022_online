@@ -12,7 +12,7 @@ public class StockTest {
         stockTest.stockCurrentValueTest();
         stockTest.stockMinValueTest();
         stockTest.stockMaxValueTest();
-        stockTest.stockUpdateInfoOfValueTest();
+        stockTest.checkUpdateInfoOfValueTest();
     }
 
     public void stockCurrentValueTest() {
@@ -45,15 +45,15 @@ public class StockTest {
         }
     }
 
-    public void stockUpdateInfoOfValueTest() {
+    public void checkUpdateInfoOfValueTest() {
         Stock stock = new Stock("Update", 12.00, 16.00, 19.00);
         String stockInformation = stock.printValueInformation();
-        System.out.println(stockInformation);
+        System.out.println(" Start period info: " + stockInformation);
         stock.upDateCurrentValue(10.00);
         stock.upDateMinValue(9.00);
         stock.upDateMaxValue(9.50);
         stockInformation = stock.printValueInformation();
-        System.out.println(stockInformation);
+        System.out.println("At the and of the period info: " + stockInformation);
        }
     }
 
