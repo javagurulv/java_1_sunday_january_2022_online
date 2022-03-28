@@ -5,7 +5,6 @@ import java.util.Scanner;
 
 class UserArray {
 
-
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
@@ -22,6 +21,5 @@ class UserArray {
 
         System.out.println(Arrays.toString(numbers));
 
-}
-
+    }
 }
