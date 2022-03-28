@@ -5,7 +5,7 @@ class WhileLoopContinue {
 
         int number = 10;
         while (number < 20) {
-            if (number % 3 == 0) {
+            if ((number % 3) == 0) {
                 number++;
                 continue;
 

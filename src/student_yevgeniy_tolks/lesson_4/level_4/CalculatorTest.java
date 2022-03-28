@@ -25,6 +25,7 @@ class CalculatorTest {
         calculator.testFirstThirdEqualAndMax();
         calculator.testSecondThirdEqualAndMax();
         calculator.testFirstSecondThirdEqual();
+        calculator.testMaxOfThreeNumbers();
 
     }
 
@@ -240,10 +241,25 @@ class CalculatorTest {
 
         Calculator calculator = new Calculator();
         int allEqual = calculator.maxOfThreeNumbers(firstNumber, secondNumber, thirdNumber);
-        if (allEqual == secondNumber && allEqual == thirdNumber) {
+        if (allEqual == secondNumber && allEqual == thirdNumber && allEqual == firstNumber) {
             System.out.println("All three numbers are equal - TEST OK");
         } else {
             System.out.println("TEST FAILED");
+        }
+    }
+
+    public void testMaxOfThreeNumbers() {
+
+        int firstNumber = 30;
+        int secondNumber = 31;
+        int thirdNumber = 5;
+
+        Calculator calculator = new Calculator();
+        int maxNumber = calculator.maxOfThreeNumbers(firstNumber, secondNumber, thirdNumber);
+        if (maxNumber == secondNumber) {
+            System.out.println("Max number  - Test Ok");
+        } else {
+            System.out.println("Max number - FAILED");
         }
     }
 

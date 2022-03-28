@@ -7,7 +7,7 @@ public class CircleTest {
     public static void main(String[] args) {
         CircleTest circleTest = new CircleTest();
         circleTest.shouldShowOnConsoleRadius();
-        circleTest.shouldCalculateCircleArea();
+        // circleTest.shouldCalculateCircleArea();
         circleTest.shouldShowOnConsoleArea();
     }
 
@@ -21,10 +21,9 @@ public class CircleTest {
         }
     }
 
-    public void shouldCalculateCircleArea() {
-        Circle circle = new Circle(10);
+    // add circleTest.shouldCalculateCircleArea();
 
-    }
+    // To change
 
     public void shouldShowOnConsoleArea() {
         Circle circle = new Circle(10);
