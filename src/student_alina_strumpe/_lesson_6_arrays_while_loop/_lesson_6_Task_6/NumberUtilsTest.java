@@ -1,4 +1,4 @@
-package student_alina_strumpe._lesson_6_Task_6;
+package student_alina_strumpe._lesson_6_arrays_while_loop._lesson_6_Task_6;
 
  class NumberUtilsTest {
 
@@ -24,6 +24,8 @@ package student_alina_strumpe._lesson_6_Task_6;
         boolean isEven = numberUtils.isEven(0,0);
         check(true,"isEven TEST 2");
     }
+// Viktor, ja ne smogla etot test osuschestvitj v takom vide.
+     //on u menja posledii, i zapolnen metodom, kotorij mi izuchili v nachale
 
  /*   public void isEvenTest4(){
         NumberUtils numberUtils = new NumberUtils();
@@ -46,9 +48,9 @@ package student_alina_strumpe._lesson_6_Task_6;
         NumberUtils numberUtils = new NumberUtils();
         boolean isEven = numberUtils.isEven(1,5);
         if (isEven == false){
-            System.out.println("isEven 3 TEST HAS PASSED");
+            System.out.println("isEven TEST 3 HAS PASSED");
         } else {
-            System.out.println("isEven 3 TEST HAS FAILED");
+            System.out.println("isEven TEST 3 HAS FAILED");
         }
 
     }
