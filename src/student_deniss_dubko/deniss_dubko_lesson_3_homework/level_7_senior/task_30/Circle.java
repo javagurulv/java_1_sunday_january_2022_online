@@ -9,12 +9,16 @@ class Circle {
         this.circleRadius = circleRadius;
     }
 
-    public void calculateCircleArea() {
+    public String showOnConsoleRadiusIs() {
 
-        double area = Math.PI * circleRadius * circleRadius;
+        return "Radius is: " + this.circleRadius;
+    }
 
-        System.out.println("Radius is = " + this.circleRadius);
-        System.out.println("Area is = " + area);
+    public String calculateCircleArea() {
+
+        double circleArea = Math.PI * circleRadius * circleRadius;
+
+        return "Area is: " + circleArea;
     }
 
 

@@ -6,20 +6,13 @@ public class DogDemo {
     public static void main(String[] args) {
         Dog sharik = new Dog("Sharik", 10);
 
-        Dog pupsik = new Dog("Pupsik", 9);
-
         sharik.voice();
 
-        pupsik.voice();
-
+        sharik.voiceYourName();
+        sharik.voiceYourName();
         sharik.voiceYourName();
 
-        pupsik.voiceYourName();
-
-
         sharik.voiceYourAge();
-
-        pupsik.voiceYourAge();
 
 
     }

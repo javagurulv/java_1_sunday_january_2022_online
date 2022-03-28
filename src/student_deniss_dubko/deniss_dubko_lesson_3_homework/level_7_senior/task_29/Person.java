@@ -8,7 +8,9 @@ class Person {
     int personAge;
     String personHairColor;
 
-    public Person (String personName, int personAge, String personHairColor) {
+    public Person (String personName,
+                   int personAge,
+                   String personHairColor) {
 
         this.personName = personName;
         this.personAge = personAge;
