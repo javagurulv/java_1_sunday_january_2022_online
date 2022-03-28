@@ -5,10 +5,12 @@ import java.util.Date;
 class Stock {
 
     Date date = new Date();
-    public String companyName;
-    public double currentValue;
-    public double minValue;
-    public double maxValue;
+    private String companyName;
+    private double currentValue;
+    private double minValue;
+    private double maxValue;
+    private double newValue;
+    private String stockValueInfo;
 
 
     public Stock(String companyName, double currentValue, double minValue, double maxValue) {
@@ -19,25 +21,34 @@ class Stock {
 
     }
 
-
-    public double upDatePrice(double newValue) {
-        currentValue = newValue;
-        if (newValue < minValue) {
-            minValue = newValue;
-        } else if (newValue > maxValue) {
-            maxValue = newValue;
-
+    public void upDateCurrentValue(double currentValue) {
+        if (currentValue == currentValue);
+            this.currentValue = currentValue;
         }
-        return newValue;
-    }
+    public void upDateMinValue(double minValue){
+            if (newValue < minValue);
+                this.minValue = minValue;
+            }
+        public void upDateMaxValue(double maxValue) {
+        if (newValue > maxValue);
+            this.maxValue = maxValue;
+        }
 
-     public void getPriceInformation(){
-         System.out.println("Company name: "+ companyName + "\n" + "Stock price: " + currentValue + "\n" + "Max value: "
-                 + maxValue + "\n" + "Min value: "+ minValue + "\n" + date);
+    public String getCompanyName(String companyName) {return companyName;}
+    public double getCurrentValue(double currentValue) {return currentValue;}
+    public double getMinValue(double minValue) {return minValue;}
+    public double getMaxValue(double maxValue) {return maxValue;}
 
-     }
+
+        public String printValueInformation(){
+        return stockValueInfo = "Company: " + companyName + " Current value of the stock - "+
+                currentValue + ", Min stock value:  " + minValue + ", Max value: " + maxValue + "Date: "+ date;
+        }
+         /*System.out.println("Company name: "+ companyName + "\n" + "Stock price: " + currentValue + "\n" + "Max value: "
+                 + maxValue + "\n" + "Min value: "+ minValue + "\n" + date);*/
 
 }
+
 
 
 //
