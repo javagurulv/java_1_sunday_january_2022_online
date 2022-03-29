@@ -1,6 +1,6 @@
 package student_sergei_klunkov.lesson_5.level_2;
 
-class Array1 {
+class Array {
 
     public static void main(String[] args) {
 
@@ -14,5 +14,4 @@ class Array1 {
             System.out.println(number);
 
     }
-
 }
