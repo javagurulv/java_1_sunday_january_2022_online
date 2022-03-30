@@ -257,7 +257,6 @@ class TicTacToe {
             printFieldToConsole(field);
             BotMove move1 = getNextMoveByBot(field);
             if (botDefencePosition(field)) {
-                botDefencePosition(field);
             } else {
                 field[move1.getXBot()][move1.getYBot()] = 1;
             }

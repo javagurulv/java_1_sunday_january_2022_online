@@ -181,9 +181,23 @@ class ArrayServiceTest {
         arr[4] = 1;
         arr[5] = 21;
 
+        int[] arrTurned = new int[6];
+        arrTurned[0] = 21;
+        arrTurned[1] = 1;
+        arrTurned[2] = 16;
+        arrTurned[3] = 13;
+        arrTurned[4] = 2;
+        arrTurned[5] = 19;
+
         ArrayService arrayService = new ArrayService();
         arrayService.turnOverArray(arr);
         System.out.println(Arrays.toString(arr));
+        if (Arrays.equals(arr, arrTurned)) {
+            System.out.println("Array reversed  - TEST OK");
+
+        } else {
+            System.out.println("Array not reversed - FAILED ");
+        }
     }
 
     public void sortArrayTest() {   //ascending sorting of array
@@ -195,9 +209,21 @@ class ArrayServiceTest {
         arr[4] = 1;
         arr[5] = 21;
 
+        int[] arrSortAscend = new int[6];
+        arrSortAscend[0] = 1;
+        arrSortAscend[1] = 2;
+        arrSortAscend[2] = 13;
+        arrSortAscend[3] = 16;
+        arrSortAscend[4] = 19;
+        arrSortAscend[5] = 21;
+
         ArrayService arrayService = new ArrayService();
         arrayService.sortArray(arr);
-        System.out.println(Arrays.toString(arr));
+        if (Arrays.equals(arr, arrSortAscend)) {
+            System.out.println("Array ascending sort - TEST OK");
+        } else {
+            System.out.println("Array ascending sort - FAILED ");
+        }
     }
 
 
