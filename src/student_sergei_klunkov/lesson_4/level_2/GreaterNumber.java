@@ -5,7 +5,9 @@ import java.util.Scanner;
 class GreaterNumber {
 
     public static void main(String[] args) {
+
         Scanner scanner = new Scanner(System.in);
+
         System.out.println("Type the number one...");
         int number1 = scanner.nextInt();
         System.out.println("Type the number two...");
@@ -13,15 +15,12 @@ class GreaterNumber {
 
         if(number1 > number2) {
             System.out.println("Number one is greater!");
-        } else
-            if (number1 < number2){
-                System.out.println("Number two is greater!");
-            } else
-                if(number1 == number2){
-                    System.out.println("Numbers are similar!");
-                }
-
+        }
+        if(number1 < number2) {
+            System.out.println("Number two is greater!");
+        }
+        if (number1 == number2) {
+            System.out.println("Numbers are similar!");
+        }
     }
-
-
 }

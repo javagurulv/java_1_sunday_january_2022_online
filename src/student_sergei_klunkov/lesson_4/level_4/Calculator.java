@@ -1,6 +1,6 @@
 package student_sergei_klunkov.lesson_4.level_4;
 
-class                            Calculator {
+class  Calculator {
 
     public int sum(int firstNumber, int secondNumber) {
         return firstNumber + secondNumber;
