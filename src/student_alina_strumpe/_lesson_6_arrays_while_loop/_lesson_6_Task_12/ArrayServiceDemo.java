@@ -1,0 +1,25 @@
+package student_alina_strumpe._lesson_6_arrays_while_loop._lesson_6_Task_12;
+
+import java.util.Arrays;
+
+class ArrayServiceDemo {
+
+    public static void main(String[] args) {
+
+        ArrayService contains = new ArrayService();
+        int[] array = {1,2,3,4,5,6,7,8,9,10};
+        int numberToSearch = 11;
+        contains.containsInArrayTheNumber(array,numberToSearch);
+        System.out.println("Array: "+ Arrays.toString(array)+"  the searching number = "+numberToSearch);
+
+
+//        int[] mas1 = new int[3];
+  //      mas1[0] = 1;
+    //    mas1[1] = 2;
+      //  mas1[2] = 3;
+        //System.out.print(mas1[1]);
+
+    }
+}
+
+
