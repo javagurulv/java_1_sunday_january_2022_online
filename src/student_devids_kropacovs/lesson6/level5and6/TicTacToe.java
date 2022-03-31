@@ -1,5 +1,6 @@
 package student_devids_kropacovs.lesson6.level5and6;
 
+import java.util.Random;
 import java.util.Scanner;
 
 class TicTacToe {
@@ -72,7 +73,7 @@ class TicTacToe {
                 }
             }
         }
-        if(ticTacToe.isWinPosition(field,0) == false && ticTacToe.isWinPosition(field,1) == false){
+        if(!ticTacToe.isWinPosition(field, 0) && !ticTacToe.isWinPosition(field, 1)){
             return true;
         }
         return false;
@@ -87,22 +88,51 @@ class TicTacToe {
         }
     }
 
-    public Move getNextMove() {
+    public Move getNextMove(int[][]filed) {
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Please enter 2 coordinates");
+        System.out.print("Please enter X coordinate: ");
         int x = scanner.nextInt();
+        System.out.print("Please enter Y coordinate: ");
         int y = scanner.nextInt();
-        Move move = new Move(x,y);
-        return move;
+        if (filed[x][y] != -1) {
+            while (filed[x][y] != -1) {
+                System.out.println("The filed is taken, choose another coordinates");
+                System.out.print("Please enter X coordinate: ");
+                x = scanner.nextInt();
+                System.out.print("Please enter Y coordinate: ");
+                y = scanner.nextInt();
+            }
+        }
+            Move move = new Move(x, y);
+            return move;
     }
 
+    public Move getMoveFromAI(int [][]field ) {
+        int x;
+        int y;
+        Random random = new Random();
+        x = random.nextInt(3);
+        y = random.nextInt(3);
+        if (field[x][y] != -1) {
+            while (field[x][y] != -1) {
+                x = random.nextInt(3);
+                y = random.nextInt(3);
+            }
+        }
+            Move move = new Move(x, y);
+            return move;
+    }
     public void play() {
         int[][] field = createField();
+        printFieldToConsole(field);
         while(true) {
-            printFieldToConsole(field);
-            Move move0 = getNextMove();
+            Move move0 = getNextMove(field);
             field[move0.getX()][move0.getY()] = 0;
+
+            System.out.println("_______________________");
             printFieldToConsole(field);
+            System.out.println("_______________________");
+
             if (isWinPosition(field, 0)) {
                 System.out.println("Player 0 WIN!");
                 break;
@@ -112,10 +142,51 @@ class TicTacToe {
                 break;
             }
 
-            printFieldToConsole(field);
-            Move move1 = getNextMove();
+            Move move1 = getNextMove(field);
             field[move1.getX()][move1.getY()] = 1;
+
+            System.out.println("_______________________");
             printFieldToConsole(field);
+            System.out.println("_______________________");
+
+            if (isWinPosition(field, 1)) {
+                System.out.println("Player 1 WIN!");
+                break;
+            }
+            if (isDrawPosition(field)) {
+                System.out.println("DRAW!");
+                break;
+            }
+        }
+    }
+
+    public void playWithAI() {
+        int[][] field = createField();
+        printFieldToConsole(field);
+        while(true) {
+            Move move0 = getNextMove(field);
+            field[move0.getX()][move0.getY()] = 0;
+
+            System.out.println("_______________________");
+            printFieldToConsole(field);
+            System.out.println("_______________________");
+
+            if (isWinPosition(field, 0)) {
+                System.out.println("Player 0 WIN!");
+                break;
+            }
+            if (isDrawPosition(field)) {
+                System.out.println("DRAW!");
+                break;
+            }
+
+            Move move1 = getMoveFromAI(field);
+            field[move1.getX()][move1.getY()] = 1;
+
+            System.out.println("_______________________");
+            printFieldToConsole(field);
+            System.out.println("_______________________");
+
             if (isWinPosition(field, 1)) {
                 System.out.println("Player 1 WIN!");
                 break;
