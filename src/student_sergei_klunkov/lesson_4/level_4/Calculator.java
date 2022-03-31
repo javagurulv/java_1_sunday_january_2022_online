@@ -24,31 +24,13 @@ class  Calculator {
     }
 
     public int maxOfTwoNumbers(int firstNumber, int secondNumber) {
-
-        if (firstNumber>secondNumber){
-            return firstNumber;
-        }
-        if (secondNumber>firstNumber){
-            return secondNumber;
-        } else {
-            return firstNumber;
-        }
+        return Math.max(firstNumber, secondNumber);
 
     }
 
-    public int threeNumbers(int firstNum, int secondNum, int thirdNum){
-
-        if(firstNum > secondNum && firstNum > thirdNum){
-            return firstNum;}
-
-        if(secondNum>firstNum && secondNum>thirdNum){
-            return secondNum;}
-
-        if(thirdNum>firstNum && thirdNum>secondNum){
-            return thirdNum;}
-
-        if(firstNum>thirdNum && secondNum>thirdNum && firstNum==secondNum);
-        return firstNum;
+    public int maxOfThreeNumbers(int firstNum, int secondNum, int thirdNum){
+        int max = maxOfTwoNumbers(firstNum, secondNum);
+        return maxOfTwoNumbers(max, thirdNum);
     }
 
 

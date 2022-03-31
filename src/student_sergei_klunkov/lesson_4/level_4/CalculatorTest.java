@@ -120,7 +120,7 @@ class CalculatorTest {
         int thirdNum = 7;
         int expectedResult = 10;
         Calculator calculator = new Calculator();
-        int realResult = calculator.threeNumbers(firstNum, secondNum, thirdNum);
+        int realResult = calculator.maxOfThreeNumbers(firstNum, secondNum, thirdNum);
         if (realResult == expectedResult){
             System.out.println("First number are greater then Second and Third number");
         } else {
@@ -134,7 +134,7 @@ class CalculatorTest {
         int thirdNum = 7;
         int expectedResult = 15;
         Calculator calculator = new Calculator();
-        int realResult = calculator.threeNumbers(firstNum, secondNum, thirdNum);
+        int realResult = calculator.maxOfThreeNumbers(firstNum, secondNum, thirdNum);
         if (realResult == expectedResult){
             System.out.println("Second number are greater then First and Third number");
         } else {
@@ -148,7 +148,7 @@ class CalculatorTest {
         int thirdNum = 20;
         int expectedResult = 20;
         Calculator calculator = new Calculator();
-        int realResult = calculator.threeNumbers(firstNum, secondNum, thirdNum);
+        int realResult = calculator.maxOfThreeNumbers(firstNum, secondNum, thirdNum);
         if (realResult == expectedResult){
             System.out.println("Third number are greater then First and Second number");
         } else {
@@ -162,7 +162,7 @@ class CalculatorTest {
             int thirdNum = 5;
             int expectedResult = 10;
             Calculator calculator = new Calculator();
-            int realResult = calculator.threeNumbers(firstNum, secondNum, thirdNum);
+            int realResult = calculator.maxOfThreeNumbers(firstNum, secondNum, thirdNum);
             if (realResult == expectedResult){
                 System.out.println("First and Second numbers are equal, but  greater then Third number");
             } else {
@@ -176,7 +176,7 @@ class CalculatorTest {
         int thirdNum = 10;
         int expectedResult = 10;
         Calculator calculator = new Calculator();
-        int realResult = calculator.threeNumbers(firstNum, secondNum, thirdNum);
+        int realResult = calculator.maxOfThreeNumbers(firstNum, secondNum, thirdNum);
         if (realResult == expectedResult){
             System.out.println("First, Second and Third numbers are equal");
         } else {
