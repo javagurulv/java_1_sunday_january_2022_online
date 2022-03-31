@@ -4,9 +4,6 @@ import java.util.Scanner;
 
 class PositiveOrNegative {
 
-    int number = 0;
-    boolean numberPositive = false;
-
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -16,10 +13,7 @@ class PositiveOrNegative {
 
         if (number > 0) {
             System.out.println("Your number is positive!");
-
         } else {
-
-            if (number < 0) {
                 System.out.println("You number is negative!");
             }
 
@@ -30,6 +24,4 @@ class PositiveOrNegative {
 
 
     }
-}
-
 }

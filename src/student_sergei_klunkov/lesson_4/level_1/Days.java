@@ -12,7 +12,6 @@ class Days {
     int friday;
     int saturday;
     int sunday;
-    int numberOfTheDay;
 
     public Days (){
 
@@ -24,16 +23,14 @@ class Days {
         this.saturday = 6;
         this.sunday = 7;
 
-
     }
 
     public static void main(String[] args) {
+
         Scanner scanner = new Scanner(System.in);
         System.out.println("Type the number from 1 to 7!");
 
-
         int numberOfTheDay = scanner.nextInt();
-
 
         if (numberOfTheDay == 1){
             System.out.println("Its Monday!");
