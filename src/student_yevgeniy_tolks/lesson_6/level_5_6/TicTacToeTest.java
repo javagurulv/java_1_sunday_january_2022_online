@@ -16,11 +16,11 @@ class TicTacToeTest {
     public void horizontalWinTest() {
         int[][] gameArray = {
                 {0, 1, 0},
-                {1, 1, 1},
-                {0, 0, 0}};
+                {0, 0, 0},
+                {0, 1, 1}};
 
         TicTacToe ticTacToe = new TicTacToe();
-        boolean resultHorizontalWin = ticTacToe.isWinPositionForHorizontals(gameArray, 1);
+        boolean resultHorizontalWin = ticTacToe.isWinPositionForHorizontals(gameArray, 0);
         if (resultHorizontalWin) {
             System.out.println("Horizontal win  - TEST OK");
         } else {
@@ -30,12 +30,12 @@ class TicTacToeTest {
 
     public void verticalWinTest() {
         int[][] gameArray = {
-                {0, 1, 0},
-                {0, 1, 0},
-                {1, 0, 0}};
+                {0, 0, 0},
+                {1, 1, 0},
+                {0, 0, 0}};
 
         TicTacToe ticTacToe = new TicTacToe();
-        boolean resultVerticalWin = ticTacToe.isWinPositionForVerticals(gameArray, 0);
+        boolean resultVerticalWin = ticTacToe.isWinPositionForVerticals(gameArray,0);
         if (resultVerticalWin) {
             System.out.println("Vertical win  - TEST OK");
         } else {
