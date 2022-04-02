@@ -6,9 +6,6 @@ public class TwoDimensionalArray {
 
     public static void main(String[] args) {
 
-        //- создайте двумерный массив;
-        //- заполните двумерный массив случайными числами;
-        //- посчитайте сумму всех чисел в двумерном массиве.
         Random random = new Random();
 
         int[][] arr = new int[2][2];
@@ -25,14 +22,5 @@ public class TwoDimensionalArray {
             }
         }
         System.out.println("The sum of the numbers in a two-dimensional array is: " + sum);
-
     }
-
 }
-
-
-//for (int i = 0; i < array.length; i++) {
-//            for (int j = 0; j < array[i].length; j++) {
-//                sum += array[i][j];
-//            }
-//        }
