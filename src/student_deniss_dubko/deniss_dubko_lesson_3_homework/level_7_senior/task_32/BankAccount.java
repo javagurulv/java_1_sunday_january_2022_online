@@ -2,10 +2,12 @@ package student_deniss_dubko.deniss_dubko_lesson_3_homework.level_7_senior.task_
 
 class BankAccount {
 
-    /* Найти логическую ошибку в коде.
+    /*
+    Найти логическую ошибку в коде.
     Исправить и запустить программу так, что бы она выводила
     на консоль владельца банковского счёта и количество денег.
-    Менять можно только класс BankAccount. */
+    Менять можно только класс BankAccount.
+    */
 
     String ownerName;
     int moneyAmount;

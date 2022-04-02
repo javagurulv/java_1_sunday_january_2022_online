@@ -7,38 +7,94 @@ class TicTacToe {
 
     public boolean isWinPositionForHorizontals(int[][] field, int playerToCheck) {
         boolean winPosForHorizontals = false;
-
-        if (field[0][0] == playerToCheck && field[0][1] == playerToCheck && field[0][2] == playerToCheck) {
-            winPosForHorizontals = true;
-        } else if (field[1][0] == playerToCheck && field[1][1] == playerToCheck && field[1][2] == playerToCheck) {
-            winPosForHorizontals = true;
-        } else if (field[2][0] == playerToCheck && field[2][1] == playerToCheck && field[2][2] == playerToCheck) {
-            winPosForHorizontals = true;
+        int countPlayerToCheckInHorizontal = 0;
+        for (int i = 0; i < field.length; i++) {
+            for (int j = 0; j < field[i].length; j++) {
+                if (field[i][j] == playerToCheck) {
+                    countPlayerToCheckInHorizontal++;
+                }
+            }
+            if (countPlayerToCheckInHorizontal == 3) {
+                winPosForHorizontals = true;
+                break;
+            } else if (countPlayerToCheckInHorizontal == 1) {
+                countPlayerToCheckInHorizontal--;
+            } else {
+                countPlayerToCheckInHorizontal -= 2;
+            }
         }
         return winPosForHorizontals;
-
     }
 
     public boolean isWinPositionForVerticals(int[][] field, int playerToCheck) {
         boolean winPosForVerticals = false;
-
-        if (field[0][0] == playerToCheck && field[1][0] == playerToCheck && field[2][0] == playerToCheck) {
-            winPosForVerticals = true;
-        } else if (field[0][1] == playerToCheck && field[1][1] == playerToCheck && field[2][1] == playerToCheck) {
-            winPosForVerticals = true;
-        } else if (field[0][2] == playerToCheck && field[1][2] == playerToCheck && field[2][2] == playerToCheck) {
+        if (isWinFirstColCount(field, playerToCheck) || isWinSecondColCount(field, playerToCheck)
+                || isWinThirdColCount(field, playerToCheck)) {
             winPosForVerticals = true;
         }
         return winPosForVerticals;
-
     }
+
+    public boolean isWinFirstColCount(int[][] field, int playerToCheck) {
+        boolean isWinFirstCol = false;
+        int countPlayerToCheckInVerticalFirstCol = 0;
+        for (int i = 0; i < field.length; i++) {
+            for (int j = 0; j < field[i].length; j++) {
+                if (field[i][0] == playerToCheck) {
+                    countPlayerToCheckInVerticalFirstCol++;
+                    break;
+                }
+            }
+            if (countPlayerToCheckInVerticalFirstCol == 3) {
+                isWinFirstCol = true;
+                break;
+            }
+        }
+        return isWinFirstCol;
+    }
+
+    public boolean isWinSecondColCount(int[][] field, int playerToCheck) {
+        boolean isWinSecondCol = false;
+        int countPlayerToCheckInVerticalSecondCol = 0;
+        for (int i = 0; i < field.length; i++) {
+            for (int j = 0; j < field[i].length; j++) {
+                if (field[i][1] == playerToCheck) {
+                    countPlayerToCheckInVerticalSecondCol++;
+                    break;
+                }
+            }
+        }
+        if (countPlayerToCheckInVerticalSecondCol == 3) {
+            isWinSecondCol = true;
+
+        }
+        return isWinSecondCol;
+    }
+
+    public boolean isWinThirdColCount(int[][] field, int playerToCheck) {
+        boolean isWinThirdCol = false;
+        int countPlayerToCheckInVerticalThirdCol = 0;
+        for (int i = 0; i < field.length; i++) {
+            for (int j = 0; j < field[i].length; j++) {
+                if (field[i][2] == playerToCheck) {
+                    countPlayerToCheckInVerticalThirdCol++;
+                    break;
+                }
+            }
+        }
+        if (countPlayerToCheckInVerticalThirdCol == 3) {
+            isWinThirdCol = true;
+        }
+        return isWinThirdCol;
+    }
+
 
     public boolean isWinPositionForDiagonals(int[][] field, int playerToCheck) {
         boolean winPosForDiagonals = false;
 
-        if (field[0][0] == playerToCheck && field[1][1] == playerToCheck && field[2][2] == playerToCheck) {
+        if ((field[0][0] == playerToCheck) && (field[1][1] == playerToCheck) && (field[2][2] == playerToCheck)) {
             winPosForDiagonals = true;
-        } else if (field[0][2] == playerToCheck && field[1][1] == playerToCheck && field[2][0] == playerToCheck) {
+        } else if ((field[0][2] == playerToCheck) && (field[1][1] == playerToCheck) && (field[2][0] == playerToCheck)) {
             winPosForDiagonals = true;
         }
         return winPosForDiagonals;
@@ -97,7 +153,6 @@ class TicTacToe {
             System.out.println("Y out of bounds :\n" + "Enter Y: ");
             getY = coordinates.nextInt();
         }
-
         return new Move(getX, getY);
 
     }
@@ -132,31 +187,31 @@ class TicTacToe {
 
     public boolean botDefenceInHorizontals(int[][] field, int opponentMove, int botMove) {
         boolean defenceInHorizontals = false;
-        if (field[0][0] == opponentMove && field[0][1] == opponentMove && field[0][2] == -1) {
+        if ((field[0][0] == opponentMove) && (field[0][1] == opponentMove) && (field[0][2] == -1)) {
             field[0][2] = botMove;
             defenceInHorizontals = true;
-        } else if (field[0][0] == opponentMove && field[0][2] == opponentMove && field[0][1] == -1) {
+        } else if ((field[0][0] == opponentMove) && (field[0][2] == opponentMove) && (field[0][1] == -1)) {
             field[0][1] = botMove;
             defenceInHorizontals = true;
-        } else if (field[0][1] == opponentMove && field[0][2] == opponentMove && field[0][0] == -1) {
+        } else if ((field[0][1] == opponentMove) && (field[0][2] == opponentMove) && (field[0][0] == -1)) {
             field[0][0] = botMove;
             defenceInHorizontals = true;
-        } else if (field[1][0] == opponentMove && field[1][1] == opponentMove && field[1][2] == -1) {
+        } else if ((field[1][0] == opponentMove) && (field[1][1] == opponentMove) && (field[1][2] == -1)) {
             field[1][2] = botMove;
             defenceInHorizontals = true;
-        } else if (field[1][0] == opponentMove && field[1][2] == opponentMove && field[1][1] == -1) {
+        } else if ((field[1][0] == opponentMove) && (field[1][2] == opponentMove) && (field[1][1] == -1)) {
             field[1][1] = botMove;
             defenceInHorizontals = true;
-        } else if (field[1][1] == opponentMove && field[1][2] == opponentMove && field[1][0] == -1) {
+        } else if ((field[1][1] == opponentMove) && (field[1][2] == opponentMove) && (field[1][0] == -1)) {
             field[1][0] = botMove;
             defenceInHorizontals = true;
-        } else if (field[2][0] == opponentMove && field[2][1] == opponentMove && field[2][2] == -1) {
+        } else if ((field[2][0] == opponentMove) && (field[2][1] == opponentMove) && (field[2][2] == -1)) {
             field[2][2] = botMove;
             defenceInHorizontals = true;
-        } else if (field[2][1] == opponentMove && field[2][2] == opponentMove && field[2][0] == -1) {
+        } else if ((field[2][1] == opponentMove) && (field[2][2] == opponentMove) && (field[2][0] == -1)) {
             field[2][0] = botMove;
             defenceInHorizontals = true;
-        } else if (field[2][0] == opponentMove && field[2][2] == opponentMove && field[2][1] == -1) {
+        } else if ((field[2][0] == opponentMove) && (field[2][2] == opponentMove) && (field[2][1] == -1)) {
             field[2][1] = botMove;
             defenceInHorizontals = true;
         }
@@ -166,31 +221,31 @@ class TicTacToe {
 
     public boolean botDefenceInVerticals(int[][] field, int opponentMove, int botMove) {
         boolean defenceInVerticals = false;
-        if (field[0][0] == opponentMove && field[1][0] == opponentMove && field[2][0] == -1) {
+        if ((field[0][0] == opponentMove) && (field[1][0] == opponentMove) && (field[2][0] == -1)) {
             field[2][0] = botMove;
             defenceInVerticals = true;
-        } else if (field[0][0] == opponentMove && field[2][0] == opponentMove && field[1][0] == -1) {
+        } else if ((field[0][0] == opponentMove) && (field[2][0] == opponentMove) && (field[1][0] == -1)) {
             field[1][0] = botMove;
             defenceInVerticals = true;
-        } else if (field[1][0] == opponentMove && field[2][0] == opponentMove && field[0][0] == -1) {
+        } else if ((field[1][0] == opponentMove) && (field[2][0] == opponentMove) && (field[0][0] == -1)) {
             field[0][0] = botMove;
             defenceInVerticals = true;
-        } else if (field[0][1] == opponentMove && field[1][1] == opponentMove && field[2][1] == -1) {
+        } else if ((field[0][1] == opponentMove) && (field[1][1] == opponentMove) && (field[2][1] == -1)) {
             field[2][1] = botMove;
             defenceInVerticals = true;
-        } else if (field[0][1] == opponentMove && field[2][1] == opponentMove && field[1][1] == -1) {
+        } else if ((field[0][1] == opponentMove) && (field[2][1] == opponentMove) && (field[1][1] == -1)) {
             field[1][1] = botMove;
             defenceInVerticals = true;
-        } else if (field[1][1] == opponentMove && field[2][1] == opponentMove && field[0][1] == -1) {
+        } else if ((field[1][1] == opponentMove) && (field[2][1] == opponentMove) && (field[0][1] == -1)) {
             field[0][1] = botMove;
             defenceInVerticals = true;
-        } else if (field[0][2] == opponentMove && field[1][2] == opponentMove && field[2][2] == -1) {
+        } else if ((field[0][2] == opponentMove) && (field[1][2] == opponentMove) && (field[2][2] == -1)) {
             field[2][2] = botMove;
             defenceInVerticals = true;
-        } else if (field[1][2] == opponentMove && field[2][2] == opponentMove && field[0][2] == -1) {
+        } else if ((field[1][2] == opponentMove) && (field[2][2] == opponentMove) && (field[0][2] == -1)) {
             field[0][2] = botMove;
             defenceInVerticals = true;
-        } else if (field[0][2] == opponentMove && field[2][2] == opponentMove && field[1][2] == -1) {
+        } else if ((field[0][2] == opponentMove) && (field[2][2] == opponentMove) && (field[1][2] == -1)) {
             field[1][2] = botMove;
             defenceInVerticals = true;
         }
@@ -200,22 +255,22 @@ class TicTacToe {
 
     public boolean botDefenceInDiagonals(int[][] field, int opponentMove, int botMove) {
         boolean winPosForDiagonals = false;
-        if (field[0][0] == opponentMove && field[1][1] == opponentMove && field[2][2] == -1) {
+        if ((field[0][0] == opponentMove) && (field[1][1] == opponentMove) && (field[2][2] == -1)) {
             field[2][2] = botMove;
             winPosForDiagonals = true;
-        } else if (field[1][1] == opponentMove && field[2][2] == opponentMove && field[0][0] == -1) {
+        } else if ((field[1][1] == opponentMove) && (field[2][2] == opponentMove) && (field[0][0] == -1)) {
             field[0][0] = botMove;
             winPosForDiagonals = true;
-        } else if (field[0][0] == opponentMove && field[2][2] == opponentMove && field[1][1] == -1) {
+        } else if ((field[0][0] == opponentMove) && (field[2][2] == opponentMove) && (field[1][1] == -1)) {
             field[1][1] = botMove;
             winPosForDiagonals = true;
-        } else if (field[0][2] == opponentMove && field[2][0] == opponentMove && field[1][1] == -1) {
+        } else if ((field[0][2] == opponentMove) && (field[2][0] == opponentMove) && (field[1][1] == -1)) {
             field[1][1] = botMove;
             winPosForDiagonals = true;
-        } else if (field[1][1] == opponentMove && field[2][0] == opponentMove && field[0][2] == -1) {
+        } else if ((field[1][1] == opponentMove) && (field[2][0] == opponentMove) && (field[0][2] == -1)) {
             field[0][2] = botMove;
             winPosForDiagonals = true;
-        } else if (field[0][2] == opponentMove && field[1][1] == opponentMove && field[2][0] == -1) {
+        } else if ((field[0][2] == opponentMove) && (field[1][1] == opponentMove) && (field[2][0] == -1)) {
             field[2][0] = botMove;
             winPosForDiagonals = true;
         }
@@ -256,9 +311,10 @@ class TicTacToe {
             }
             printFieldToConsole(field);
             BotMove move1 = getNextMoveByBot(field);
-            if (botDefencePosition(field)) {
-            } else {
+            if (!botDefencePosition(field)) {
                 field[move1.getXBot()][move1.getYBot()] = 1;
+            } else {
+                botDefencePosition(field);
             }
             printFieldToConsole(field);
             if (isWinPosition(field, 1)) {
