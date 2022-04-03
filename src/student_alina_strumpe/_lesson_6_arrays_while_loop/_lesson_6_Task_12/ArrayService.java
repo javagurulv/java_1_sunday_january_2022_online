@@ -1,6 +1,8 @@
 package student_alina_strumpe._lesson_6_arrays_while_loop._lesson_6_Task_12;
 
-public class ArrayService {
+import java.util.Arrays;
+
+ class ArrayService {
 
 
     public boolean containsInArrayTheNumber(int[] array, int numberToSearch) {
@@ -13,5 +15,9 @@ public class ArrayService {
         }
         System.out.println(found);
         return found;
+    }
+
+    public void printArray(int[] array, int numberToSearch){
+        System.out.println("Array: "+ Arrays.toString(array)+",  the searching number = "+numberToSearch);
     }
 }
