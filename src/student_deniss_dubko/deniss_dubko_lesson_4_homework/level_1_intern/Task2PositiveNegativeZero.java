@@ -2,7 +2,7 @@ package student_deniss_dubko.deniss_dubko_lesson_4_homework.level_1_intern;
 
 import java.util.Scanner;
 
-class Task1PositiveOrNegativeNumber {
+class Task2PositiveNegativeZero {
 
     public static void main(String[] args) {
 
@@ -13,6 +13,8 @@ class Task1PositiveOrNegativeNumber {
 
         if (number > 0) {
             System.out.println("Number is Positive");
+            } else if (number == 0) {
+            System.out.println("Number = 0");
             } else {
             System.out.println("Number is Negative");
         }
