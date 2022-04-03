@@ -1,6 +1,5 @@
 package student_yevgeniy_tolks.lesson_7.level_1;
 
-import java.util.Scanner;
 
 public class WordServiceTest {
     public static void main(String[] args) {
@@ -10,7 +9,7 @@ public class WordServiceTest {
     }
 
     public void firstMostFrequentWordTest() {
-        String expectedWord = "black";
+        String expectedWord = "big";
 
         WordService wordService = new WordService();
         String resultWord = wordService.findMostFrequentWords("");

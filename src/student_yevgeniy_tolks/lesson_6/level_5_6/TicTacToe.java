@@ -123,9 +123,8 @@ class TicTacToe {
     }
 
     public boolean isDrawPosition(int[][] field) {
-        boolean isDraw = !isWinPosition(field, 0) && !isWinPosition(field, 1)
+        return !isWinPosition(field, 0) && !isWinPosition(field, 1)
                 && !isAllCellsEmpty(field);
-        return isDraw;
     }
 
     public int[][] createField() {
