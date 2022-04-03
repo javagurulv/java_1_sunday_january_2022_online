@@ -16,6 +16,8 @@ class ArrayServiceTest {
         arrayServiceTest.notReplaceFirstTest();
         arrayServiceTest.replaceAllTest();
         arrayServiceTest.notReplaceAllTest();
+        arrayServiceTest.revertTest();
+        arrayServiceTest.sortingTest();
 
 
     }
@@ -136,6 +138,27 @@ class ArrayServiceTest {
             System.out.println(" TEST PASSED! ");
         } else {
             System.out.println(" TEST FAILED! ");
+        }
+    }
+
+    public void revertTest(){
+
+        int[] array = {1, 2, 3, 4, 5};
+        arrayService.revert(array);
+        if(array[0] == 5 && array[1] == 4 && array[2] == 3 && array[3] == 2 && array[4] == 1){
+            System.out.println(" Test passed! ");
+        } else {
+            System.out.println(" Test failed! ");
+        }
+    }
+
+    public void sortingTest(){
+        int[] array = { 3, 2, 5, 11, 9 };
+        arrayService.sorting(array);
+        if(array[0] == 2 && array[1] == 3 && array[2] == 5 && array[3] == 9 && array[4] == 11){
+            System.out.println(" Test passed! ");
+        } else {
+            System.out.println(" Test failed! ");
         }
     }
 }

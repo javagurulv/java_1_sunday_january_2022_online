@@ -1,5 +1,7 @@
 package student_sergei_klunkov.lesson_6.level_3;
 
+import java.util.Arrays;
+
 class ArrayService {
 
     public boolean contains(int[] array, int numbersToSearch){
@@ -60,5 +62,21 @@ class ArrayService {
         }
         return replace;
     }
+
+    public void revert(int[] array){
+        for (int left = 0, right = array.length - 1; left < right; left ++, right --){
+            int temp = array[left];
+            array[left] = array[right];
+            array[right] = temp;
+
+        }
+    }
+
+    public void sorting(int[] array){
+        Arrays.sort(array);
+        for( int i = 0; i<array.length; i++);
+
+    }
+
 }
 
