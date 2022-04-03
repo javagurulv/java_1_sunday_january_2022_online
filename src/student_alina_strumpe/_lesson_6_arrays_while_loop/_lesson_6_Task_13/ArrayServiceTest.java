@@ -1,6 +1,6 @@
 package student_alina_strumpe._lesson_6_arrays_while_loop._lesson_6_Task_13;
 
-public class ArrayServiceTest {
+ class ArrayServiceTest {
 
     public static void main(String[] args) {
 
