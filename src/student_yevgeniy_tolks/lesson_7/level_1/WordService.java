@@ -13,7 +13,7 @@ class WordService {
 
     public String findMostFrequentWords(String text) {
         String[] textWords = stringSplitInArray(createString());
-        int maxCount=0;
+        int maxCount = 0;
         for (String word : textWords) {
             int count = 1;
             for (String nextWord : textWords) {
