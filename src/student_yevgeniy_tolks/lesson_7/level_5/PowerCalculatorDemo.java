@@ -10,8 +10,8 @@ public class PowerCalculatorDemo {
         System.out.println("Enter the number : ");
         int number = scan.nextInt();
         System.out.println("Enter value of power : ");
-        int powerNumber = scan.nextInt();
+        int powerOfNumber = scan.nextInt();
 
-        System.out.println("Result = " + power.calculatePowerOfNumber(number,powerNumber));
+        System.out.println("Result = " + power.calculatePowerOfNumber(number,powerOfNumber));
     }
 }
