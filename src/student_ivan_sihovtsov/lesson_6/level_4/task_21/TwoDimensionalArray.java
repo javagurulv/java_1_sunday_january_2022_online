@@ -8,9 +8,9 @@ public class TwoDimensionalArray {
 
         Random random = new Random();
 
-        int[][] arr = MethodsForArrays.createArray(4,4);
-        MethodsForArrays.fillingArrayWithRandomNumbers(random, arr);
-        int sum = MethodsForArrays.calculatingTheSumOfArrays(arr);
-        MethodsForArrays.OutputSumOnConsole(sum);
+        int[][] arr = MethodsForArrays.creatingDoubleArray(4,4);
+        MethodsForArrays.fillingDoubleArrayWithRandomNumbers(random, arr, 50);
+        int sum = MethodsForArrays.calculatingTheSumOfDoubleArrays(arr);
+        MethodsForArrays.outputSumOnConsole(sum);
     }
 }
