@@ -10,7 +10,7 @@ class ArrayServiceDemo {
         int[] array = {1,2,3,4,5,6,7,8,9,10};
         int numberToSearch = 11;
         contains.containsInArrayTheNumber(array,numberToSearch);
-        System.out.println("Array: "+ Arrays.toString(array)+",  the searching number = "+numberToSearch);
+        contains.printArray(array,numberToSearch);
 
     }
 }

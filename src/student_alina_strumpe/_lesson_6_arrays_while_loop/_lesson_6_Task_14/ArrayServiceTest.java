@@ -11,31 +11,33 @@ class ArrayServiceTest {
 
     public void shouldReplaceFirstElement() {
         ArrayService arrayService = new ArrayService();
-        int[] testArray = new int [3];
+        int[] testArray = new int[3];
         boolean replace = true;
         arrayService.fillArray(testArray, 1);
         boolean actualResult = arrayService.replaceFirstElementInArray(testArray, 1, 13);
-        if (actualResult == replace){
+        if (actualResult == replace) {
             System.out.println("Test is OK");
         } else {
             System.out.println("Test is FAIL");
         }
     }
 
-    public  void shouldNotReplaceFirstElement() {
+
+    public void shouldNotReplaceFirstElement() {
         ArrayService arrayService = new ArrayService();
-        int[] testArray = new int [4];
+        int[] testArray = new int[4];
         boolean replace = true;
-        arrayService.fillArray(testArray,100);
-        boolean actualResult = arrayService.replaceFirstElementInArray(testArray,200,10);
-        if (actualResult != replace){
+        arrayService.fillArray(testArray, 100);
+        boolean actualResult = arrayService.replaceFirstElementInArray(testArray, 200, 10);
+        if (actualResult != replace) {
             System.out.println("Test is OK");
-        } else  {
+        } else {
             System.out.println("Test is FAIL");
         }
     }
+}
 
-    }
+
 
 
 
