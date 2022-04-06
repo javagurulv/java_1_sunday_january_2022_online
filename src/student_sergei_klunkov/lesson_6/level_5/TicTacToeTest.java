@@ -1,5 +1,7 @@
 package student_sergei_klunkov.lesson_6.level_5;
 
+import java.util.Arrays;
+
 class TicTacToeTest {
 
     public static void main(String[] args) {
@@ -8,7 +10,8 @@ class TicTacToeTest {
         ticTacToeTest.verticalWinTest();
         ticTacToeTest.diagonalWinTest();
         ticTacToeTest.isWinTest();
-        ticTacToeTest.isDrawPosition();
+        ticTacToeTest.isDrawPositionTest();
+        ticTacToeTest.createFieldTest();
 
     }
 
@@ -26,7 +29,9 @@ class TicTacToeTest {
 
     public void verticalWinTest() {
         TicTacToe ticTacToe = new TicTacToe();
-        int [][] gameArray = { {0, 1, 0} , {0, 1, 0} , {1, 0, 0} };
+        int [][] gameArray = { {0, 1, 0} ,
+                               {0, 1, 0} ,
+                               {1, 0, 0} };
         boolean VerticalWin = ticTacToe.isWinPositionForVerticals(gameArray, 0);
         if (VerticalWin) {
             System.out.println("Vertical win test - PASSED!");
@@ -38,7 +43,9 @@ class TicTacToeTest {
 
     public void diagonalWinTest() {
         TicTacToe ticTacToe = new TicTacToe();
-        int [][] gameArray = { {1, 1, 0} , {0, 1, 0} , {0, 0, 1} };
+        int [][] gameArray = { {1, 1, 0} ,
+                               {0, 1, 0} ,
+                               {0, 0, 1} };
         boolean DiagonalWin = ticTacToe.isWinPositionForDiagonals(gameArray, 1);
         if (DiagonalWin) {
             System.out.println("Diagonal win test - PASSED!");
@@ -50,7 +57,9 @@ class TicTacToeTest {
 
     public void isWinTest() {
         TicTacToe ticTacToe = new TicTacToe();
-        int [][] gameArray = { {1, 1, 1} , {0, 1, 0} , {0, 0, 1} };
+        int [][] gameArray = { {1, 1, 1} ,
+                               {0, 1, 0} ,
+                               {0, 0, 1} };
         boolean WinWinTest = ticTacToe.isWinPosition(gameArray, 1);
         if (WinWinTest) {
             System.out.println("IsWin win test - PASSED!");
@@ -60,9 +69,11 @@ class TicTacToeTest {
     }
 
 
-    public void isDrawPosition() {
+    public void isDrawPositionTest() {
         TicTacToe ticTacToe = new TicTacToe();
-        int [][] gameArray = { {-1, -1, -1} , {0, -1, 0} , {0, 0, -1} };
+        int [][] gameArray = { {0, 1, 0} ,
+                               {1, 1, 0} ,
+                               {0, 0, 1} };
         boolean DrawTest = ticTacToe.isDrawPosition(gameArray);
         if (DrawTest) {
             System.out.println("Draw win test - PASSED!");
@@ -70,4 +81,21 @@ class TicTacToeTest {
             System.out.println("Draw win test - FAILED!");
         }
     }
+
+    public void createFieldTest() {
+        TicTacToe ticTacToe = new TicTacToe();
+        int [][] gameArray = {{-1, -1, -1 },
+                              {-1, -1, -1 },
+                              {-1, -1, -1 }};
+
+        int [][] resultFieldCreated = ticTacToe.createField();
+        if(Arrays.deepEquals(gameArray, resultFieldCreated)){
+            System.out.println("Create Field test - PASSED!");
+        } else {
+            System.out.println("Create Field test - FAILED!");
+        }
+
+
+    }
+
 }
