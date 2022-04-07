@@ -54,6 +54,9 @@ public class CreditCard {
         System.out.println("Your Credit that needs to be payed is: " + this.creditToPay);
     }
 
+    public void unblockCard(){
+        this.cardIsBlocked = false;
+    }
 
     public double depositMoney(){
         boolean pinCode = enterPin();
@@ -75,6 +78,15 @@ public class CreditCard {
         }
     }
 
+    /*
+    Требования к снятию средств:
+- При снятии средств с карты необходимо указывать пин-код и желаемую сумму;
+- Если пин-коды не совпадают, операция по снятию денег должна быть отклонена;
+- Деньги снимаются с карточного баланса. В случае, если их не хватает, остаток суммы нужно брать за счет задолженности по кредиту;
+- Если сумма задолженности превышает кредитный лимит, операция по снятию денег должна быть отклонена;
+
+     */
+
     public double withdrawMoney(){
         boolean pinCode = enterPin();
         if (pinCode == false || this.cardIsBlocked == true){
@@ -82,7 +94,7 @@ public class CreditCard {
             return 0;
         }
         Scanner scanner = new Scanner(System.in);
-        if(this.balance <=0){
+        if(this.balance <=0 && this.creditToPay == this.creditLimit){
             System.out.println("You do not have money to withdraw.");
             return 0;
         }
@@ -93,7 +105,7 @@ public class CreditCard {
             return 0;
         }else{
             if(withdraw >= balance){
-                this.creditToPay = this.creditToPay + this.balance - withdraw;
+                this.creditToPay = this.creditToPay - (this.balance - withdraw);
                 this.balance = 0;
             }else{
                 this.balance = this.balance - withdraw;
@@ -101,6 +113,26 @@ public class CreditCard {
             return  withdraw;
         }
     }
+
+  /*  public void cardOperations(){
+        CreditCard creditCard = new CreditCard();
+        while(true){
+            System.out.println("Please, choose an operation by entering a number of that operation.");
+            System.out.println("Press 1 to see your balance.");
+            System.out.println("Press 2 to see Credit that you need to pay.");
+            System.out.println("Press 3 to make a deposit.");
+            System.out.println("Press 4 to withdraw money.");
+            System.out.println("Press 5 to unblock your card.");
+            Scanner scanner = new Scanner(System.in);
+            int operation = scanner.nextInt();
+            switch (operation){
+                case 1:
+            }
+
+        }
+    }*/
+
+
 
 }
 /*

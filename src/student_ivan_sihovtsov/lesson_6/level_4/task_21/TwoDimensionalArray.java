@@ -8,19 +8,9 @@ public class TwoDimensionalArray {
 
         Random random = new Random();
 
-        int[][] arr = new int[2][2];
-        int sum = 0;
-        for (int i = 0; i < arr.length; i++){
-            for (int j = 0; j < arr[i].length; j++){
-                arr[i][j] = random.nextInt(50);
-            }
-        }
-        for (int i = 0;i < arr.length; i++){
-            for (int j = 0; j < arr[i].length; j++){
-                System.out.println(arr[i][j]);
-                sum += arr[i][j];
-            }
-        }
-        System.out.println("The sum of the numbers in a two-dimensional array is: " + sum);
+        int[][] arr = MethodsForArrays.creatingDoubleArray(4,4);
+        MethodsForArrays.fillingDoubleArrayWithRandomNumbers(random, arr, 50);
+        int sum = MethodsForArrays.calculatingTheSumOfDoubleArrays(arr);
+        MethodsForArrays.outputSumOnConsole(sum);
     }
 }
