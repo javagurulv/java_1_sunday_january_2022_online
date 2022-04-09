@@ -9,10 +9,10 @@ class CreditCard {
     private double loanDebt;
     private double moneyAmount;
 
-    public CreditCard(long cardNumber, int pinCode, double creditLimit) {
+    public CreditCard(long cardNumber, int pinCode) {
         this.cardNumber = cardNumber;
         this.pinCode = pinCode;
-        this.creditLimit = creditLimit;
+        this.creditLimit =0;
         this.balance = 0;
         this.loanDebt = 0;
         this.moneyAmount = 0;
@@ -32,7 +32,7 @@ class CreditCard {
 
     public boolean depositMoney() {
         if (this.pinCode == getPinCode()) {
-            this.balance += getMoneyAmount() + this.creditLimit;
+            this.balance += getMoneyAmount() ;
             return true;
         } else {
             return false;
@@ -41,7 +41,7 @@ class CreditCard {
 
     public boolean withdrawMoney() {
         if (this.pinCode == getPinCode() && this.creditLimit >= getMoneyAmount()) {
-            this.balance -= getMoneyAmount() + this.creditLimit;
+            this.balance -= getMoneyAmount();
             return true;
         } else {
             return false;
@@ -66,6 +66,7 @@ class CreditCard {
     }
 
     public void printBalanceOnConsole() {
+
         System.out.println("Account balance = " + this.balance);
         System.out.println("Credit Limit = " + this.creditLimit);
     }

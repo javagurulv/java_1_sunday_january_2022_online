@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class CreditCardDemo {
     public static void main(String[] args) {
 
-        CreditCard creditCard = new CreditCard(1234123412341234L, 1111,1400);
+        CreditCard creditCard = new CreditCard(1234123412341234L, 1111);
 
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter pin code: ");
