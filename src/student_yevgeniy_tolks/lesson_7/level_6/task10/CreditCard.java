@@ -48,8 +48,26 @@ class CreditCard {
         }
     }
 
+    public double getCreditLimit() {
+        return creditLimit;
+    }
+
+    public void setCreditLimit(double creditLimit) {
+        this.creditLimit = creditLimit;
+    }
+
+    public boolean cardIsCreated(CreditCard newCreditCard) {
+        if (newCreditCard != null) {
+            this.creditLimit = getCreditLimit();
+            return true;
+        } else {
+            return false;
+        }
+    }
+
     public void printBalanceOnConsole() {
         System.out.println("Account balance = " + this.balance);
+        System.out.println("Credit Limit = " + this.creditLimit);
     }
 
 }

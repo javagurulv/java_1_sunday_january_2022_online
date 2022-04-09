@@ -20,7 +20,8 @@ public class CreditCardDemo {
             System.out.println("1 - Money amount to deposit");
             System.out.println("2 - Money amount to withdraw");
             System.out.println("3 - Check account balance");
-            System.out.println("4 - Exit");
+            System.out.println("4 - Change credit limit");
+            System.out.println("5 - Exit");
             int chooseDepositOrWithdrawal = scanner.nextInt();
             switch (chooseDepositOrWithdrawal) {
                 case 1:
@@ -46,6 +47,16 @@ public class CreditCardDemo {
                     creditCard.printBalanceOnConsole();
                     break;
                 case 4:
+                    System.out.println("Enter wanted Credit Limit: ");
+                    double enterNewCreditLimitValue = scanner.nextDouble();
+                    if(creditCard.cardIsCreated(creditCard)){
+                    creditCard.setCreditLimit(enterNewCreditLimitValue);
+                        System.out.println("New Credit Limit created");
+                    } else {
+                        System.out.println("Card is not created");
+                    }
+                    break;
+case 5:
                     break;
             }
         }
