@@ -66,8 +66,8 @@ class CreditCard {
     }
 
     public void printBalanceOnConsole() {
-
-        System.out.println("Account balance = " + this.balance);
+        double accountCredit = this.balance + this.creditLimit;
+        System.out.println("ACCOUNT BALANCE = " + accountCredit);
         System.out.println("Credit Limit = " + this.creditLimit);
     }
 
