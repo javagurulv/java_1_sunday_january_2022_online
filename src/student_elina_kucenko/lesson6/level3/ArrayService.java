@@ -1,5 +1,7 @@
 package student_elina_kucenko.lesson6.level3;
 
+import java.util.Arrays;
+
 public class ArrayService {
 
     public boolean checkIfNumberIsInArray(int numberToCheck, int[] array) {
@@ -66,6 +68,13 @@ public class ArrayService {
             array[position] = array[i];
             array[i] = temporary;
         }
+    }
+
+    // array.sort function
+    public int[] sortingArrayAuto(int[] array) {
+        Arrays.sort(array);
+        System.out.println("Sorted array is " + Arrays.toString(array));
+        return array;
     }
 }
 

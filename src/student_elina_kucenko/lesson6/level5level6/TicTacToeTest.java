@@ -1,4 +1,6 @@
-package student_elina_kucenko.lesson6.level5.task22;
+package student_elina_kucenko.lesson6.level5level6;
+
+import java.util.Arrays;
 
 class TicTacToeTest {
 
@@ -9,6 +11,9 @@ class TicTacToeTest {
         ticTacToeTest.diagonalWinTest();
         ticTacToeTest.verticalWinTest();
         ticTacToeTest.anyWinPositionTest();
+        ticTacToeTest.nobodyWin();
+        ticTacToeTest.emptyArrayTest();
+
     }
 
     public void horizontalWinTest() {
@@ -71,5 +76,39 @@ class TicTacToeTest {
             System.out.println("Any position win failed");
         }
     }
+
+    public void nobodyWin() {
+        TicTacToe ticTacToe = new TicTacToe();
+        int[][] gameArray = {
+                {1, 1, 0},
+                {0, 0, 1},
+                {1, 0, 1}};
+
+        if (ticTacToe.isDrawPosition(gameArray)) {
+            System.out.println("Nobody win Test - OK");
+        } else {
+            System.out.println("Nobody win test - Failed");
+        }
+
+    }
+
+    public void emptyArrayTest() {
+        TicTacToe ticTacToe = new TicTacToe();
+        int[][] gameArray = {
+                {-1, -1, -1},
+                {-1, -1, -1},
+                {-1, -1, -1}
+        };
+        int[][] newField = ticTacToe.createField();
+        if (Arrays.deepEquals(newField, gameArray)) {
+            System.out.println("Array is empty - OK");
+        } else {
+            System.out.println("Array is empty - failed");
+        }
+    }
+
+
 }
+
+
 
