@@ -1,6 +1,6 @@
 package student_elina_kucenko.lesson6.level7;
 
-public class FizzBuzz {
+class FizzBuzz {
 
     public String detect(int number) {
         if ((number % 3 == 0) && (number % 5 == 0)) return "FizzBuzz";

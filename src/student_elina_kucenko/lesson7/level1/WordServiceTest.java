@@ -1,6 +1,6 @@
 package student_elina_kucenko.lesson7.level1;
 
-public class WordServiceTest {
+class WordServiceTest {
 
     public static void main(String[] args) {
         WordServiceTest test = new WordServiceTest();
