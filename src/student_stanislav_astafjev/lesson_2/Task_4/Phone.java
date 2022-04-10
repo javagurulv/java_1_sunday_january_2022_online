@@ -1,4 +1,4 @@
-package student_stanislav_astafjev.lesson_2;
+package student_stanislav_astafjev.lesson_2.Task_4;
 
 public class Phone {
         String model;

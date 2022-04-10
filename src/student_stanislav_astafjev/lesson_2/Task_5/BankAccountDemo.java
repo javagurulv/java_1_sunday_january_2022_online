@@ -1,4 +1,6 @@
-package student_stanislav_astafjev.lesson_2;
+package student_stanislav_astafjev.lesson_2.Task_5;
+
+import student_stanislav_astafjev.lesson_2.Task_5.BankAccount;
 
 public class BankAccountDemo {
     public static void main(String[] args) {
