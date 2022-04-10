@@ -18,5 +18,13 @@ class Calculator {
         return firstNumber / secondNumber;
     }
 
+    public boolean isEven(double result) {
+        if (result % 2 == 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
 
 }

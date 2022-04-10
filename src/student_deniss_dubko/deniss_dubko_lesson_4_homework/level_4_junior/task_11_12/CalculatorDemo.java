@@ -15,9 +15,16 @@ class CalculatorDemo {
         int secondNumber = scanner.nextInt();
 
         System.out.println(firstNumber + " + " + secondNumber + " = " + calculator.sum(firstNumber, secondNumber));
+        System.out.println("Result is Even = " + calculator.isEven(calculator.sum(firstNumber,secondNumber)));
+        System.out.println();
         System.out.println(firstNumber + " - " + secondNumber + " = " + calculator.difference(firstNumber, secondNumber));
+        System.out.println("Result is Even = " + calculator.isEven(calculator.difference(firstNumber,secondNumber)));
+        System.out.println();
         System.out.println(firstNumber + " * " + secondNumber + " = " + calculator.multiplication(firstNumber, secondNumber));
+        System.out.println("Result is Even = " + calculator.isEven(calculator.multiplication(firstNumber,secondNumber)));
+        System.out.println();
         System.out.println(firstNumber + " / " + secondNumber + " = " + calculator.division(firstNumber, secondNumber));
+        System.out.println("Result is Even = " + calculator.isEven(calculator.division(firstNumber,secondNumber)));
     }
 
 
