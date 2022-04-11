@@ -1,5 +1,7 @@
 package student_elina_kucenko.lesson6.level3;
 
+import java.util.Arrays;
+
 class ArrayServiceTest {
     ArrayService arrayService = new ArrayService();
 
@@ -15,6 +17,7 @@ class ArrayServiceTest {
         arrayServiceTest.noOccurenceToChangeTest();
         arrayServiceTest.revertedArrayTest();
         arrayServiceTest.sortArrayTest();
+        arrayServiceTest.sortArraySystemTest();
 
     }
 
@@ -99,7 +102,6 @@ class ArrayServiceTest {
             System.out.println("Reverted array - OK");
         } else {
             System.out.println("Reverted array - failed");
-
         }
     }
 
@@ -110,7 +112,19 @@ class ArrayServiceTest {
             System.out.println("Array sorted - OK");
         } else {
             System.out.println("Array sorted - failed");
+        }
+    }
 
+    public void sortArraySystemTest() {
+        int[] arrayForSorting = {13, 4, 5, 6, 7};
+        int[] arrayExpectedAfterSorting = {4, 5, 6, 7, 13};
+        System.out.println();
+        if (Arrays.equals(arrayExpectedAfterSorting, arrayService.sortingArrayAuto(arrayForSorting))) {
+            System.out.println("Sorted array system Test - OK");
+
+        } else {
+            System.out.println("Sorted array system Test - OK");
         }
     }
 }
+

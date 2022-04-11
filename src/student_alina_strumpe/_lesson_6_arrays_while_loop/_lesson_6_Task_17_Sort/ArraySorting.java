@@ -36,7 +36,7 @@ class ArraySorting {
         while (swapped);
     }
 
-    public void bubbleSort2(int[] array) {
+    /*public void bubbleSort2(int[] array) {
         for (int i = array.length - 1; i > 0; i--) {
             for (int j = 0; j < i; j++) {
                 if (array[j] > array[j + 1]) {
@@ -47,6 +47,7 @@ class ArraySorting {
             }
         }
     }
+*/
 
     public void reversArray(int[] array) {
         for (int i = 0; i < array.length / 2; i++) {
@@ -84,6 +85,22 @@ class ArraySorting {
             // System.out.println(arr[i]);
         }
     }
+
+    public void sortArrayAscending1FromIndexToIndex(int[] array) {
+        for (int i = 3; i < 6; i++) {
+            for (int j = i + 1; j < 6; j++) {
+                int tmp = 0;
+                if (array[i] > array[j]) {
+                    tmp = array[i];
+                    array[i] = array[j];
+                    array[j] = tmp;
+                }
+            }
+            // System.out.println(arr[i]);
+        }
+    }
+
+
 
     public void sortArrayAscending2(int[] array) {
         for (int i = 1; i < array.length; i++) {

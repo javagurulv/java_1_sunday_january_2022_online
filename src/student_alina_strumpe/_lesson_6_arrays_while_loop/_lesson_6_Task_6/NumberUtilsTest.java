@@ -4,7 +4,7 @@ package student_alina_strumpe._lesson_6_arrays_while_loop._lesson_6_Task_6;
 
     public static void main(String[] args){
         NumberUtils numberUtils = new NumberUtils();
-        boolean isEven = numberUtils.isEven(0,11);
+        boolean isEven = numberUtils.isEven(0,2);
 
         NumberUtilsTest numberUtilsTest = new NumberUtilsTest();
         numberUtilsTest.isEvenTest1();
@@ -15,42 +15,33 @@ package student_alina_strumpe._lesson_6_arrays_while_loop._lesson_6_Task_6;
 
     public void isEvenTest1(){
         NumberUtils numberUtils = new NumberUtils();
-        boolean result = numberUtils.isEven(0,4);
+        boolean result = numberUtils.isEven(4,8);
         check(true,"isEven TEST 1" );
     }
-    public void isEvenTest2(){
 
+    public void isEvenTest2(){
         NumberUtils numberUtils = new NumberUtils();
-        boolean isEven = numberUtils.isEven(0,0);
+        boolean isEven = numberUtils.isEven(2,4);
         check(true,"isEven TEST 2");
     }
-// Viktor, ja ne smogla etot test osuschestvitj v takom vide.
-     //on u menja posledii, i zapolnen metodom, kotorij mi izuchili v nachale
 
- /*   public void isEvenTest4(){
-        NumberUtils numberUtils = new NumberUtils();
-        boolean isNotEven = numberUtils.isEven(1,9);
-        check(false,"isNotEven TEST 4");
-    }*/
-
-
-    public void check(boolean result, String name){
-        if ( result == true){
+    public void check(boolean isEven, String name){
+        if ( isEven == true){
             System.out.println(name+" test HAS  PASSED");
         } else {
             System.out.println(name+" test has FAILED");
             System.out.println("Expected result: "+true+"; actual result: "+ false);
-
         }
     }
 
              public void isEvenTest3(){
         NumberUtils numberUtils = new NumberUtils();
-        boolean isEven = numberUtils.isEven(1,5);
-        if (isEven == false){
-            System.out.println("isEven TEST 3 HAS PASSED");
+        boolean isEven = true;
+        boolean expectedResult = numberUtils.isEven2(11);
+        if (expectedResult == true){
+            System.out.println(" Not Even TEST 3 HAS PASSED");
         } else {
-            System.out.println("isEven TEST 3 HAS FAILED");
+            System.out.println("Not Even TEST 3 HAS FAILED");
         }
 
     }

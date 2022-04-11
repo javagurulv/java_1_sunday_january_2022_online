@@ -1,15 +1,17 @@
 package student_elina_kucenko.lesson6.level3;
 
-public class ArrayService {
+import java.util.Arrays;
 
-    public boolean checkIfNumberIsInArray(int numberToCheck, int[] array) {
-        for (int i = 0; i < array.length; i++) {
-            if (array[i] == numberToCheck) {
-                return true;
-            }
-        }
-        return false;
-    }
+ class ArrayService {
+
+     public boolean checkIfNumberIsInArray(int numberToCheck, int[] array) {
+         for (int i = 0; i < array.length; i++) {
+             if (array[i] == numberToCheck) {
+                 return true;
+             }
+         }
+         return false;
+     }
 
     public int checkHowManyTimesNumberIsInArray(int numberToCheck, int[] array) {
         int repeatTimes = 0;
@@ -66,6 +68,13 @@ public class ArrayService {
             array[position] = array[i];
             array[i] = temporary;
         }
+    }
+
+    // array.sort function
+    public int[] sortingArrayAuto(int[] array) {
+        Arrays.sort(array);
+        System.out.println("Sorted array is " + Arrays.toString(array));
+        return array;
     }
 }
 

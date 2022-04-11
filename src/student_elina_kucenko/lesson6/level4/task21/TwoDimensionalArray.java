@@ -9,7 +9,6 @@ class TwoDimensionalArray {
         TwoDimensionalArray twoDimArray = new TwoDimensionalArray();
 
         int[][] twoDimensionalArray = new int[4][];
-
         for (int i = 0; i < twoDimensionalArray.length; i++) {
             twoDimensionalArray[i] = twoDimArray.createInnerArray();
         }
@@ -34,12 +33,12 @@ class TwoDimensionalArray {
 
     public int sum(int[][] twoDimArray) {
         int sum = 0;
-        for (int i = 0; i < twoDimArray.length; i++) {
-            int[] innerArray = twoDimArray[i];
-            for (int j = 0; j < innerArray.length; j++) {
-                sum = sum + innerArray[j];
+        for (int[] ints : twoDimArray) {
+            for (int number : ints) {
+                sum = sum + number;
             }
         }
         return sum;
     }
 }
+

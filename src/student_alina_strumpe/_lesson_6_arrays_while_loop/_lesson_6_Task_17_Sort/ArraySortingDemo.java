@@ -32,6 +32,9 @@ public class ArraySortingDemo {
         arraySorting.sortArrayDescending(array);
         arraySorting.printSortedArray2(array);
 
+        arraySorting.sortArrayAscending1FromIndexToIndex(array);
+        arraySorting.printSortedArray2(array);
+
       /*  ArraySorting arraySorting1 = new ArraySorting();
         int[] da = arraySorting1.createArray(5);
         arraySorting1.fillArrayRandomV(da);
