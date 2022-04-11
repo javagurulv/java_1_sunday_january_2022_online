@@ -1,54 +1,40 @@
 package student_sergei_klunkov.lesson_7.level_1;
 
 
-import java.util.*;
-
 
 class WordService {
 
-    public void howManyWordsInText() {
-        Scanner sc = new Scanner(System.in);
-        System.out.println(" Print the text or words: ");
-        String input = sc.nextLine();
-        int wordsAmount = 0;
-        if(input.length() != 0){
-            wordsAmount++;
-            for (int i = 0; i < input.length(); i++) {
-                if(input.charAt(i) == ' '){
-                    wordsAmount++;
-                }
-            }
-        }
-        System.out.println(" Amount of words: " + wordsAmount);
+    public String findMostFrequentWord(String text){
+        String maxWord = null;
+        int maxRepeat = 0;
+        String[] words = text.split(" ");
+        maxWord = getMaxWord(maxWord, maxRepeat, words);
+        return maxWord;
+
+
     }
 
-    static void amountOfFrequentWordsInText() {
-        Scanner sc = new Scanner(System.in);
-        System.out.println(" Print the text or words: ");
-        String input = sc.nextLine();
-        Map<String,Integer> mp=new TreeMap<>();
-
-        String arr[]=input.split(" ");
-
-        for(int i=0;i<arr.length;i++) {
-            if(mp.containsKey(arr[i])) {
-                mp.put(arr[i], mp.get(arr[i])+1);
-            } else {
-                mp.put(arr[i],1);
+    private String getMaxWord(String maxWord, int maxRepeat, String[] words) {
+        for (String currentWord : words) {
+            int counter = getHowManyWordsRepeat(words, currentWord);
+            if(counter > maxRepeat) {
+                maxRepeat = counter;
+                maxWord = currentWord;
             }
         }
-
-        for(Map.Entry<String,Integer> entry:
-                mp.entrySet()) {
-            System.out.println(entry.getKey()+
-                    " - "+entry.getValue());
-        }
-        for (int i = 0; i < input.length(); i++) {
-            if(input.charAt(i) == ' '){
-                i++;
-            }
-        }
+        return maxWord;
     }
+
+    private int getHowManyWordsRepeat(String[] words, String wordToSearch) {
+        int counter = 0;
+        for (int i = 0; i < words.length; i ++){
+            if (words[i].equals(wordToSearch)){
+                counter++;
+            }
+        }
+        return counter;
+    }
+
 
 }
 
