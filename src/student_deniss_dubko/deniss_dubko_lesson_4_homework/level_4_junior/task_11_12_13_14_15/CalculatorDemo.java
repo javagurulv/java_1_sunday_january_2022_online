@@ -1,4 +1,4 @@
-package student_deniss_dubko.deniss_dubko_lesson_4_homework.level_4_junior.task_11_12;
+package student_deniss_dubko.deniss_dubko_lesson_4_homework.level_4_junior.task_11_12_13_14_15;
 
 import java.util.Scanner;
 
@@ -27,6 +27,10 @@ class CalculatorDemo {
         System.out.println();
         System.out.println(firstNumber + " / " + secondNumber + " = " + calculator.division(firstNumber, secondNumber));
         System.out.println("Result is Even = " + calculator.isEven(calculator.division(firstNumber,secondNumber)));
+        System.out.println();
+        System.out.println("Enter third integer number: ");
+        int thirdNumber = scanner.nextInt();
+        System.out.println("Larger number is: " + calculator.maxOfThreeNumbers(firstNumber,secondNumber,thirdNumber));
     }
 
 

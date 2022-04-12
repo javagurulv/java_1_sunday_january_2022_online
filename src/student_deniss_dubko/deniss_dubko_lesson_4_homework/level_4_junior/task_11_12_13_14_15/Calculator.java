@@ -1,4 +1,4 @@
-package student_deniss_dubko.deniss_dubko_lesson_4_homework.level_4_junior.task_11_12;
+package student_deniss_dubko.deniss_dubko_lesson_4_homework.level_4_junior.task_11_12_13_14_15;
 
 class Calculator {
 
@@ -35,6 +35,26 @@ class Calculator {
         if (firstNumber > secondNumber){
             return firstNumber;
         } else if (firstNumber < secondNumber) {
+            return secondNumber;
+        } else {
+            return firstNumber;
+        }
+    }
+
+    public int maxOfThreeNumbers(int firstNumber,
+                                 int secondNumber,
+                                 int thirdNumber) {
+        if (firstNumber > secondNumber && firstNumber > thirdNumber) {
+            return firstNumber;
+        } else if (secondNumber > firstNumber && secondNumber > thirdNumber) {
+            return secondNumber;
+        } else if (thirdNumber > firstNumber && thirdNumber > secondNumber) {
+            return thirdNumber;
+        } else if (firstNumber == secondNumber && firstNumber > thirdNumber) {
+            return firstNumber;
+        } else if (firstNumber == thirdNumber && firstNumber > secondNumber) {
+            return firstNumber;
+        } else if (secondNumber == thirdNumber && secondNumber > firstNumber) {
             return secondNumber;
         } else {
             return firstNumber;

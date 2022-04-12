@@ -1,4 +1,4 @@
-package student_deniss_dubko.deniss_dubko_lesson_4_homework.level_4_junior.task_11_12;
+package student_deniss_dubko.deniss_dubko_lesson_4_homework.level_4_junior.task_11_12_13_14_15;
 
 class CalculatorTest {
 
