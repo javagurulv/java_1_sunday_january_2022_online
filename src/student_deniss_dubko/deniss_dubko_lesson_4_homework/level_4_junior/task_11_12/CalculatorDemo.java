@@ -14,6 +14,8 @@ class CalculatorDemo {
         int firstNumber = scanner.nextInt();
         int secondNumber = scanner.nextInt();
 
+        System.out.println("Larger number is: " + calculator.maxOfTwoNumbers(firstNumber, secondNumber));
+        System.out.println();
         System.out.println(firstNumber + " + " + secondNumber + " = " + calculator.sum(firstNumber, secondNumber));
         System.out.println("Result is Even = " + calculator.isEven(calculator.sum(firstNumber,secondNumber)));
         System.out.println();

@@ -2,19 +2,23 @@ package student_deniss_dubko.deniss_dubko_lesson_4_homework.level_4_junior.task_
 
 class Calculator {
 
-    public int sum(int firstNumber, int secondNumber) {
+    public int sum(int firstNumber,
+                   int secondNumber) {
         return firstNumber + secondNumber;
     }
 
-    public int difference(int firstNumber, int secondNumber) {
+    public int difference(int firstNumber,
+                          int secondNumber) {
         return firstNumber - secondNumber;
     }
 
-    public int multiplication(int firstNumber, int secondNumber) {
+    public int multiplication(int firstNumber,
+                              int secondNumber) {
         return firstNumber * secondNumber;
     }
 
-    public double division(double firstNumber, double secondNumber) {
+    public double division(double firstNumber,
+                           double secondNumber) {
         return firstNumber / secondNumber;
     }
 
@@ -23,6 +27,17 @@ class Calculator {
             return true;
         } else {
             return false;
+        }
+    }
+
+    public int maxOfTwoNumbers(int firstNumber,
+                               int secondNumber) {
+        if (firstNumber > secondNumber){
+            return firstNumber;
+        } else if (firstNumber < secondNumber) {
+            return secondNumber;
+        } else {
+            return firstNumber;
         }
     }
 
