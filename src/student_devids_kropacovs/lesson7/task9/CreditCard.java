@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class CreditCard {
 
     private int cardNumber;
-    private int pinCode;
+    private final int pinCode;
     private double balance;
     private int creditLimit;
     private double creditToPay;
@@ -58,23 +58,22 @@ public class CreditCard {
         this.cardIsBlocked = false;
     }
 
-    public double depositMoney(){
+    public void depositMoney(){
         boolean pinCode = enterPin();
-        if (pinCode == false || this.cardIsBlocked == true){
+        if (!pinCode || this.cardIsBlocked){
             System.out.println("Your card is currently blocked, operations are not possible.");
-            return 0;
+            return;
         }
         Scanner scanner = new Scanner(System.in);
         System.out.println("How much would you like to deposit ?");
         double deposit = scanner.nextDouble();
         if(deposit >= this.creditToPay){
-            this.creditToPay = 0;
             deposit = deposit - this.creditToPay;
+            this.creditToPay = 0;
             this.balance = this.balance + deposit;
-            return deposit;
+
         }else{
             this.creditToPay = this.creditToPay - deposit;
-            return deposit;
         }
     }
 
@@ -87,22 +86,21 @@ public class CreditCard {
 
      */
 
-    public double withdrawMoney(){
+    public void withdrawMoney(){
         boolean pinCode = enterPin();
-        if (pinCode == false || this.cardIsBlocked == true){
+        if (!pinCode || this.cardIsBlocked){
             System.out.println("Your card is currently blocked, operations are not possible.");
-            return 0;
+            return;
         }
         Scanner scanner = new Scanner(System.in);
         if(this.balance <=0 && this.creditToPay == this.creditLimit){
             System.out.println("You do not have money to withdraw.");
-            return 0;
+            return;
         }
         System.out.println("How much would you like to withdraw?");
         double withdraw = scanner.nextDouble();
         if (withdraw > this.balance + (creditLimit - creditToPay)){
             System.out.println("You cannot withdraw that much");
-            return 0;
         }else{
             if(withdraw >= balance){
                 this.creditToPay = this.creditToPay - (this.balance - withdraw);
@@ -110,52 +108,7 @@ public class CreditCard {
             }else{
                 this.balance = this.balance - withdraw;
             }
-            return  withdraw;
         }
     }
-
-  /*  public void cardOperations(){
-        CreditCard creditCard = new CreditCard();
-        while(true){
-            System.out.println("Please, choose an operation by entering a number of that operation.");
-            System.out.println("Press 1 to see your balance.");
-            System.out.println("Press 2 to see Credit that you need to pay.");
-            System.out.println("Press 3 to make a deposit.");
-            System.out.println("Press 4 to withdraw money.");
-            System.out.println("Press 5 to unblock your card.");
-            Scanner scanner = new Scanner(System.in);
-            int operation = scanner.nextInt();
-            switch (operation){
-                case 1:
-            }
-
-        }
-    }*/
-
-
 
 }
-/*
- boolean pinCode = enterPin();
-        if (pinCode == false || this.cardIsBlocked == true){
-            System.out.println("Your card is currently blocked, operations are not possible.");
-            return 0;
-        }
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("How much would you like to deposit ?");
-        double deposit = scanner.nextInt();
-        if(deposit >= this.creditToPay){
-            this.creditToPay = 0;
-            deposit = deposit - this.creditToPay;
-            double balance = this.balance + deposit;
-            return balance;
-        }else{
-            this.creditToPay = this.creditToPay - deposit;
-        }
-
-
-
-        System.out.print("Your credit limit is now");
-        return balance;
-    }
- */
