@@ -1,0 +1,218 @@
+WARNING: ошибки в написании английских слов.
+
+int arrayLenght
+
+Лучше: int arrayLength
+
+---------------------------------------------------------
+
+WARNING: не оставляйте в коде закомментированные кусочки кода.
+
+    public void printArrayToConsole(int[] array) {
+        for(int printArray: array){
+            System.out.print(printArray + " " );
+        }
+//        System.out.println(Arrays.toString(array));
+    }
+
+Лучше:
+
+    public void printArrayToConsole(int[] array) {
+        for(int printArray: array){
+            System.out.print(printArray + " " );
+        }
+    }
+
+---------------------------------------------------------
+
+WARNING: тесты должны тестировать разные варианты (а не только один).
+
+    public int findMinNumber(int[] array) {
+        int min = array[0];
+        for(int i=0;i< array.length;i++){
+            if(array[i]<min){
+                min=array[i];
+            }
+        }
+        return min;
+    }
+
+    public void shouldFindMaxNumber() {
+        int[] array = new int[5];
+        array[0] = 10;
+        array[1] = 15;
+        array[2] = 2;
+        array[3] = 3;
+        array[4] = 13;
+
+        ArrayUtil arrayUtil = new ArrayUtil();
+        int maxNumber = arrayUtil.findMaxNumber(array);
+        if (maxNumber == array[1]) {
+            System.out.println("Max number in array - Test OK!");
+        } else {
+            System.out.println("Test for max number FAILED!");
+        }
+    }
+
+Лучше:
+
+    public void shouldFindMaxNumberV1() {
+        int[] array = new int[5];
+        array[0] = 10;
+        array[1] = 15;
+        array[2] = 2;
+        array[3] = 3;
+        array[4] = 13;
+
+        ArrayUtil arrayUtil = new ArrayUtil();
+        int maxNumber = arrayUtil.findMaxNumber(array);
+        if (maxNumber == array[1]) {
+            System.out.println("Max number in array - Test OK!");
+        } else {
+            System.out.println("Test for max number FAILED!");
+        }
+    }
+
+    public void shouldFindMaxNumberV2() {
+        int[] array = new int[5];
+        array[0] = 10;
+        array[1] = 10;
+
+        ArrayUtil arrayUtil = new ArrayUtil();
+        int maxNumber = arrayUtil.findMaxNumber(array);
+        if (maxNumber == 10) {
+            System.out.println("Max number in array - Test OK!");
+        } else {
+            System.out.println("Test for max number FAILED!");
+        }
+    }
+
+    public void shouldFindMaxNumberV3() {
+        int[] array = new int[5];
+
+        ArrayUtil arrayUtil = new ArrayUtil();
+        int maxNumber = arrayUtil.findMaxNumber(array);
+        if (maxNumber == 0) {
+            System.out.println("Max number in array - Test OK!");
+        } else {
+            System.out.println("Test for max number FAILED!");
+        }
+    }
+
+-----------------------------------------------------
+
+WARNING: Что делает этот метод?
+
+public double calculate (int arrayCount) {   //code refactoring
+    int[] array = createArray(arrayCount);
+    fillArrayWithRandomNumbers(array);
+    printArrayToConsole(array);
+    return array[arrayCount];
+}
+
+-----------------------------------------------------
+
+WARNING: почему random объявлено как свойство класса?
+
+class ArrayUtil {
+
+    Random random = new Random();
+
+    public void fillArrayWithRandomNumbers(int[] array){
+
+        for (int i = 0; i < array.length; i++) {
+            array[i] = random.nextInt(3);
+        }
+    }
+
+}
+
+Лучше:
+
+class ArrayUtil {
+
+    public void fillArrayWithRandomNumbers(int[] array){
+        Random random = new Random();
+        for (int i = 0; i < array.length; i++) {
+            array[i] = random.nextInt(3);
+        }
+    }
+
+}
+
+--------------------------------------------------------
+
+WARNING: можно не создавать переменную если она тут же
+возвращается из метода. Дайте более чёткое название методу,
+которое поясняет, что этот метод делает и что будет возвращать.
+
+    public int enterSizeLength() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Please enter size of array");
+        int arrayLength = scanner.nextInt();
+        return arrayLength;
+    }
+
+Лучше:
+
+    public int getArraySizeFromUser() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Please enter size of array");
+        return scanner.nextInt();
+    }
+
+-------------------------------------------------------------
+
+WARNING: плохое название метода! В названии метода должен
+присутствовать глагол. Метод - это описание действия, а
+действие описывается глаголом.
+
+    public void arrayWithRandomNumbers(int[] array) {
+        for (int i = 0; i < array.length; i++) {
+            array[i] = (int) (Math.random() * 100);
+        }
+    }
+
+Лучше:
+
+    public void fillArrayWithRandomNumbers(int[] array) {
+        for (int i = 0; i < array.length; i++) {
+            array[i] = (int) (Math.random() * 100);
+        }
+    }
+
+----------------------------------------------------------
+
+WARNING: что делает метод fillArrayWithRandomNumbers()
+и почему он работает с двумя разными массивами?
+
+public class ArrayUtil {
+    int[] numbers;
+
+    public int[] createArray(int arraySize) {
+        return this.numbers = new int[arraySize];
+    }
+
+    public void fillArrayWithRandomNumbers(int[] array) {
+        for (int i = 0; i < array.length; i++) {
+            numbers[i] = (int) (Math.random() * 10 + 1);
+        }
+    }
+
+}
+
+Лучше:
+
+public class ArrayUtil {
+
+    public int[] createArray(int arraySize) {
+        return new int[arraySize];
+    }
+
+    public void fillArrayWithRandomNumbers(int[] array) {
+        for (int i = 0; i < array.length; i++) {
+            array[i] = (int) (Math.random() * 10 + 1);
+        }
+    }
+
+}
