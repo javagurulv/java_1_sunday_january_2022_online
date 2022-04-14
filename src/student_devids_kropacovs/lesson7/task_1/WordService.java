@@ -16,20 +16,29 @@ package student_devids_kropacovs.lesson7.task_1;
 
 class WordService {
 
+    public String findMostFrequentWord(String text) {
+        String[] textArray;
+        int[] wordCountArray;
+        textArray = text.split(" ");
+        wordCountArray = new int[textArray.length];
 
-        public String findMostFrequentWord(String text) {
-            // напишите решение тут
-            // если это необходимо то
-            // смело создавайте дополнительные методы
-            int howManySymbolsInText = text.length();
-            int howManySpaces = 0;
-       //     for (int i = 0; i<text.length(); i++){
-
-         //   }
-
-            return text;
+        int wordCounter = 0;
+        for (int wordCount = 0; wordCount < textArray.length; wordCount++) {
+            for (String s : textArray) {
+                if (textArray[wordCount].equals(s)) {
+                    wordCounter++;
+                }
+            }
+            wordCountArray[wordCount] = wordCounter;
+            wordCounter = 0;
         }
 
-
-
+        int max = 0;
+        for (int count =0; count < wordCountArray.length; count++) {
+            if (wordCountArray[count] > max) {
+                max = count;
+            }
+        }
+        return textArray[max];
+    }
 }
