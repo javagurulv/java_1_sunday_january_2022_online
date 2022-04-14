@@ -1,4 +1,4 @@
-package student_devids_kropacovs.lesson7.task9;
+package student_devids_kropacovs.lesson7.creditCardtask;
 
 import java.util.Scanner;
 
