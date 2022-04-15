@@ -14,6 +14,7 @@ class ArrayDefinition6 {
  */
 
 class ArrayDefinition6 {
+
     public static void main(String[] args) {
         int[] numbers = new int[3];
     }
