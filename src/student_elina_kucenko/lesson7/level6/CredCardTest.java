@@ -1,6 +1,6 @@
 package student_elina_kucenko.lesson7.level6;
 
-public class CredCardTest {
+class CredCardTest {
 
 
     public static void main(String[] args) {

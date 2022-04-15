@@ -1,6 +1,6 @@
 package student_elina_kucenko.lesson7.level6;
 
-public class PalindromeTest {
+class PalindromeTest {
 
     public static void main(String[] args) {
         PalindromeTest palindromeTest = new PalindromeTest();

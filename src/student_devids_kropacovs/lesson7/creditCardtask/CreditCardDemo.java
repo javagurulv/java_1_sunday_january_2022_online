@@ -1,4 +1,4 @@
-package student_devids_kropacovs.lesson7.task9;
+package student_devids_kropacovs.lesson7.creditCardtask;
 
 import java.util.Scanner;
 
@@ -16,13 +16,15 @@ public class CreditCardDemo {
             System.out.println("Press 6 to stop operations");
             Scanner scanner = new Scanner(System.in);
             int operation = scanner.nextInt();
+            if(operation == 6){
+                break;
+            }
             switch (operation){
-                case 1: creditCard.printBalance();
-                case 2: creditCard.printCreditToPay();
-                case 3: creditCard.depositMoney();
-                case 4: creditCard.withdrawMoney();
-                case 5: creditCard.unblockCard();
-                case 6: break;
+                case 1: creditCard.printBalance();break;
+                case 2: creditCard.printCreditToPay();break;
+                case 3: creditCard.depositMoney();break;
+                case 4: creditCard.withdrawMoney();break;
+                case 5: creditCard.unblockCard();break;
             }
         }
     }

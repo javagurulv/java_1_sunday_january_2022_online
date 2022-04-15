@@ -2,16 +2,16 @@ package student_elina_kucenko.lesson6.level3;
 
 import java.util.Arrays;
 
-public class ArrayService {
+ class ArrayService {
 
-    public boolean checkIfNumberIsInArray(int numberToCheck, int[] array) {
-        for (int i = 0; i < array.length; i++) {
-            if (array[i] == numberToCheck) {
-                return true;
-            }
-        }
-        return false;
-    }
+     public boolean checkIfNumberIsInArray(int numberToCheck, int[] array) {
+         for (int i = 0; i < array.length; i++) {
+             if (array[i] == numberToCheck) {
+                 return true;
+             }
+         }
+         return false;
+     }
 
     public int checkHowManyTimesNumberIsInArray(int numberToCheck, int[] array) {
         int repeatTimes = 0;
