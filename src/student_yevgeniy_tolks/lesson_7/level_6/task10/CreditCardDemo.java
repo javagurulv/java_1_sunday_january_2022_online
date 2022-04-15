@@ -28,35 +28,45 @@ public class CreditCardDemo {
                     System.out.println("Enter money amount to deposit: ");
                     double moneyAmountToDeposit = scanner.nextDouble();
                     creditCard.setMoneyAmount(moneyAmountToDeposit);
-                    if (creditCard.depositMoney()) {
+                    if (creditCard.depositMoney(creditCard.getPinCode(),moneyAmountToDeposit)) {
                         System.out.println("Money added to account");
+                    }
+                    if (creditCard.accountHasDebt(creditCard.getCreditLimit())) {
+                        System.out.println("Account in Credit Limit");
+                    } else if (creditCard.accountHasNoDebt()){
+                        System.out.println("Account out of Credit Limit");
                     }
                     break;
                 case 2:
                     System.out.println("Enter money amount to withdraw: ");
                     double moneyAmountToWithdraw = scanner.nextDouble();
                     creditCard.setMoneyAmount(moneyAmountToWithdraw);
-                    if (creditCard.withdrawMoney()) {
+
+                    if (creditCard.withdrawMoney(creditCard.getPinCode(), moneyAmountToWithdraw, creditCard.getCreditLimit())) {
                         System.out.println("Money withdrawed from account");
-                    }
-                    else {
+                    } else {
                         System.out.println("Not enough money on account");
                     }
-                    break;
+                    if (creditCard.accountHasDebt(creditCard.getCreditLimit())) {
+                        System.out.println("Account in Credit Limit");
+                    } else if (creditCard.accountHasNoDebt()){
+                        System.out.println("Account out of Credit Limit");
+                    }
+                     break;
                 case 3:
                     creditCard.printBalanceOnConsole();
                     break;
                 case 4:
                     System.out.println("Enter wanted Credit Limit: ");
                     double enterNewCreditLimitValue = scanner.nextDouble();
-                    if(creditCard.cardIsCreated(creditCard)){
-                    creditCard.setCreditLimit(enterNewCreditLimitValue);
+                    if (creditCard.cardIsCreated(creditCard)) {
+                        creditCard.setCreditLimit(enterNewCreditLimitValue);
                         System.out.println("New Credit Limit created");
                     } else {
                         System.out.println("Card is not created");
                     }
                     break;
-case 5:
+                case 5:
                     break;
             }
         }
