@@ -36,6 +36,7 @@ class CreditCard {
     }
 
     public boolean creditCardDeposit(int moneyToDeposit, int cardPinCode) {
+
         if (isPinCodeCorrect(cardPinCode)){
             if (cardCreditDebt > 0) {
                 if (moneyToDeposit <= cardCreditDebt){
@@ -45,7 +46,6 @@ class CreditCard {
                     cardCreditDebt = 0;
                 }
                 return true;
-
             }
         }
         return false;
