@@ -16,8 +16,8 @@ class Task13SumOfThreeRandomArrayNumbers {
         }
 
         int sumOfArrayNumbers = 0;
-        for( int i : randomMarks) {
-            sumOfArrayNumbers += i;
+        for (int i = 0; i < randomMarks.length; i++) {
+            sumOfArrayNumbers = sumOfArrayNumbers + randomMarks[i];
             System.out.println("Sum of array numbers: " + sumOfArrayNumbers);
         }
     }
