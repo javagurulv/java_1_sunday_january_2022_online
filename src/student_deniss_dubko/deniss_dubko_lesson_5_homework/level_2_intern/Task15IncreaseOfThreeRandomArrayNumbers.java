@@ -2,7 +2,7 @@ package student_deniss_dubko.deniss_dubko_lesson_5_homework.level_2_intern;
 
 import java.util.Random;
 
-class Task14AverageOfThreeRandomArrayNumbers {
+class Task15IncreaseOfThreeRandomArrayNumbers {
 
     public static void main(String[] args) {
 
@@ -10,18 +10,18 @@ class Task14AverageOfThreeRandomArrayNumbers {
 
         int[] randomMarks = new int[3];
         for (int i = 0; i < randomMarks.length; i++) {
-            int randomMark = random.nextInt();
+            int randomMark = random.nextInt(10);
             randomMarks[i] = randomMark;
             System.out.println(randomMarks[i]);
         }
 
-        int sumOfArrayNumbers = 0;
-        for (int i : randomMarks) {
-            sumOfArrayNumbers += i;
-        }
+        System.out.println();
 
-        int averageOfArrayNumbers = sumOfArrayNumbers / randomMarks.length;
-            System.out.println("Average of array numbers: " + averageOfArrayNumbers);
+        int increaseOfArrayNumbers = 0;
+        for (int i = 0; i < randomMarks.length; i++) {
+            increaseOfArrayNumbers = randomMarks[i] + 2;
+            System.out.println(increaseOfArrayNumbers);
+        }
     }
 
 }
