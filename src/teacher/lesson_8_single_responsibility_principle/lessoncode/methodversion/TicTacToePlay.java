@@ -2,7 +2,7 @@ package teacher.lesson_8_single_responsibility_principle.lessoncode.methodversio
 
 class TicTacToePlay {
     public static void main(String[] args) {
-        TicTacToe ticTacToe = new TicTacToe();
+        TicTacToeGame ticTacToe = new TicTacToeGame();
         ticTacToe.play();
     }
 }

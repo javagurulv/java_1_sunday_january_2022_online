@@ -4,19 +4,25 @@ class Move {
 
     private int x;
     private int y;
+	private Player player;
 
-    Move(int x, int y) {
-        this.x = x;
-        this.y = y;
-    }
+	public Move(int x, int y, Player player) {
+		this.x = x;
+		this.y = y;
+		this.player = player;
+	}
 
-    public int getX() {
+	public int getX() {
         return x;
     }
 
     public int getY() {
         return y;
     }
+
+	public Player getPlayer() {
+		return player;
+	}
 }
 
 
