@@ -1,0 +1,196 @@
+WARNING: не достаточное количество тестов!
+Тесты должны проверять как позитивный сценарий, так и негативный.
+Помните, что тесты являются подтверждением правильности
+работы вашего кода. Если тест проверяет только позитивный сценарий,
+то как вы можете быть уверены в том, что в случае негативного
+сценария ваш код сработает правильно?
+
+class Task6NumberUtils {
+
+    public boolean isEven(int number) {
+        return number % 2 == 0;
+    }
+}
+
+class Task6NumberUtilsTest {
+
+    public static void main(String[] args) {
+        Task6NumberUtilsTest numberUtilsTest = new Task6NumberUtilsTest();
+        numberUtilsTest.isEvenTest();
+    }
+
+    public void isEvenTest() {
+        Task6NumberUtils numberUtils = new Task6NumberUtils();
+        boolean isEvenNumber = numberUtils.isEven(122);
+        if (isEvenNumber) {
+            System.out.println("Number is even - Test OK");
+        } else {
+            System.out.println("Number is not even - Test FAILED");
+
+        }
+
+    }
+
+}
+
+------------------------------------------------------------
+
+WARNING: не проверяется в тестах негативный сценарий!
+
+    public String findDayOfTheWeek(int dayNumber) {
+        String day = "";
+        switch (dayNumber) {
+            case 1:
+                day = "Monday";
+                break;
+            case 2:
+                day = "Tuesday";
+                break;
+            case 3:
+                day = "Wednesday";
+                break;
+            case 4:
+                day = "Thursday";
+                break;
+            case 5:
+                day = "Friday";
+                break;
+            case 6:
+                day = "Saturday";
+                break;
+            case 7:
+                day = "Sunday";
+                break;
+            default:
+                day = "Day not found";
+                break;
+        }
+        return day;
+    }
+
+    public static void main(String[] args) {
+        DayOfTheWeekDetectorTest weekDetectorTest = new DayOfTheWeekDetectorTest();
+        weekDetectorTest.dayOfTheWeekMonday();
+        weekDetectorTest.dayOfTheWeekTuesday();
+        weekDetectorTest.dayOfTheWeekWednesday();
+        weekDetectorTest.dayOfTheWeekThursday();
+        weekDetectorTest.dayOfTheWeekFriday();
+        weekDetectorTest.dayOfTheWeekSaturday();
+        weekDetectorTest.dayOfTheWeekSunday();
+        //weekDetectorTest.dayOfTheWeekNotExist(); - закоментирован и не написан!
+    }
+
+ЗАПОМНИТЕ, НЕГАТИВНЫЙ СЦЕНАРИЙ - ЭТО ТОЧНО ТАКОЙ ЖЕ СЦЕНАРИЙ КАК И ВСЕ
+ОСТАЛЬНЫЕ! ЕГО НАДО ПРОВЕРЯТЬ В ПЕРВУЮ ОЧЕРЕДЬ! ОТ ЭТОГО ЗАВИСИТ
+УСТОЙЧИВОСТЬ ВАШЕГО КОДА.
+
+------------------------------------------------------------------
+
+WARNING: не выразительное название параметра метода.
+
+int changeFirstArrayNumber(int[] array, int firstArrayNumber, int newNumber)
+
+int changeAll(int[] array, int currentNumber, int newNumber)
+
+firstArrayNumber, currentNumber - не очень выразительные названия параметров.
+
+ЛУЧШЕ:
+
+firstArrayNumber -> numberToChange
+currentNumber -> numberToChange
+
+-----------------------------------------------------------------
+
+WARNING: название метода всегда должно содержать глагол указывающий
+на то, что этот метод делает!
+
+    int[][] twoDimArray(int firstArrayLength, int secondArrayLength) {
+        return new int[firstArrayLength][secondArrayLength];
+    }
+
+ЛУЧШЕ:
+
+    int[][] createTwoDimensionalArray(int firstArrayLength, int secondArrayLength) {
+        return new int[firstArrayLength][secondArrayLength];
+    }
+
+------------------------------------------------------------------
+
+WARNING: не правильное использование циклов!
+Циклы используются для повторяющихся действий.
+Для написания условий применяется if или switch.
+
+    public String findDayOfTheWeek(int dayNumber) {
+        while (dayNumber == 1) {
+            return ("Monday");
+        }
+        while (dayNumber == 2) {
+            return ("Tuesday");
+        }
+        while (dayNumber == 3) {
+            return ("Wednesday");
+        }
+        while (dayNumber == 4) {
+            return ("Thursday");
+        }
+        while (dayNumber == 5) {
+            return ("Friday");
+        }
+        while (dayNumber == 6) {
+            return ("Saturday");
+        }
+        while (dayNumber == 7) {
+            return ("Sunday");
+        }
+
+        return "Not correct day number";
+    }
+
+
+ЛУЧШЕ:
+
+    public String findDayOfTheWeek(int dayNumber) {
+        if (dayNumber == 1) {
+            return ("Monday");
+        }
+        if (dayNumber == 2) {
+            return ("Tuesday");
+        }
+        if (dayNumber == 3) {
+            return ("Wednesday");
+        }
+        if (dayNumber == 4) {
+            return ("Thursday");
+        }
+        if (dayNumber == 5) {
+            return ("Friday");
+        }
+        if (dayNumber == 6) {
+            return ("Saturday");
+        }
+        if (dayNumber == 7) {
+            return ("Sunday");
+        }
+
+        return "Not correct day number";
+    }
+
+------------------------------------------------------------------
+
+WARNING: не выразительное название метода.
+
+boolean checkIfNumberIsInArray(int numberToCheck, int[] array)
+
+ЛУЧШЕ:
+
+boolean containsInArray(int numberToCheck, int[] array)
+
+------------------------------------------------------------------
+
+WARNING: не выразительное название метода.
+
+int checkHowManyTimesNumberIsInArray(int numberToCheck, int[] array)
+
+ЛУЧШЕ:
+
+int countNumberEntryInArray(int numberToCheck, int[] array)
