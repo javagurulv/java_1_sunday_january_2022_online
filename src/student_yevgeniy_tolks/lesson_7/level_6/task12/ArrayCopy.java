@@ -13,11 +13,7 @@ class ArrayCopy {
         return out;
     }
 
-
     public int[] newCopiedArray(int arrayLength) {
         return new int[arrayLength];
     }
-
-
 }
-// 1-
