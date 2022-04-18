@@ -6,17 +6,23 @@ class WorldServiceTest {
         WorldServiceTest worldServiceTest = new WorldServiceTest();
         worldServiceTest.findMostFrequentWordTest();
     }
-        public void findMostFrequentWordTest(){
+
+    public void findMostFrequentWordTest() {
         String text = "race by race mace by mace face by face mace to mace ";
         String expectedFrequentWord = "mace";
 
         WorldService worldService = new WorldService();
         String resultEqualWordsInArray = worldService.findMostFrequentWord(text);
         worldService.printFoundMostFrequentWordFromTextToConsole(text);
-        if(resultEqualWordsInArray.equals(expectedFrequentWord)){
+        if (resultEqualWordsInArray.equals(expectedFrequentWord)) {
             System.out.println("Most met word in text found - TEST OK");
-        }else{
+        } else {
             System.out.println("This word is not most met in text - TEST FAILED");
         }
     }
+
+    public void equalWordCounterMostMetInTextArrayTest() {
+
+    }
+
 }

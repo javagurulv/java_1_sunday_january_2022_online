@@ -1,7 +1,5 @@
 package student_yevgeniy_tolks.lesson_7.level_7.task13;
 
-import java.util.Arrays;
-
 class WorldService {
 
     public String[] splitTextToArray(String text) {
