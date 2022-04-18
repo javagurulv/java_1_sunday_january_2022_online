@@ -9,9 +9,9 @@ class Task25ArrayOfUsersData {
 
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter array length: ");
-        int length = scanner.nextInt();
+        int lengthOfArray = scanner.nextInt();
 
-        int[] userMarks = new int[length];
+        int[] userMarks = new int[lengthOfArray];
         for (int i = 0; i < userMarks.length; i++) {
             System.out.println("Enter array numbers: ");
             userMarks[i] = scanner.nextInt();
