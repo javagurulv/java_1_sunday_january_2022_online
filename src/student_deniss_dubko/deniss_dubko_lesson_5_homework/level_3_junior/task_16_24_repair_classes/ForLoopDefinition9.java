@@ -4,7 +4,7 @@ package student_deniss_dubko.deniss_dubko_lesson_5_homework.level_3_junior.task_
 Исправьте код таким образом, что бы программа
 выводила на консоль числа от 0 до 100:
 
-class ForLoopDefinition8 {
+class ForLoopDefinition9 {
 
     public static void main(String[] args) {
         for ( ; ; ) {
