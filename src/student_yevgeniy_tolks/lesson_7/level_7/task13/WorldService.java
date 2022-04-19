@@ -10,7 +10,7 @@ class WorldService {
         return new int[splitTextToArray(text).length];
     }
 
-    public int[] equalWordCounterMostMetInTextArray(String text) {
+    public int[] equalWordCounterMetInTextArray(String text) {
         String[] textArray = splitTextToArray(text);
         int[] countSameWordsInTextArray = createTextArrayWordCountArray(text);
 
@@ -27,7 +27,7 @@ class WorldService {
     }
 
     public String wordWithMaxOccurenceInArray(String text) {
-        int[] wordCountArray = equalWordCounterMostMetInTextArray(text);
+        int[] wordCountArray = equalWordCounterMetInTextArray(text);
         int max = 0;
         for (int count = 0; count < wordCountArray.length; count++) {
             if (wordCountArray[count] > max) {
