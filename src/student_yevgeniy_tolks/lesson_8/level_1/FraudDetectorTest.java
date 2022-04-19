@@ -9,6 +9,8 @@ class FraudDetectorTest {
         fraud.isNotOtherFraudAttemptTest();
         fraud.isFraudTraderCityTest();
         fraud.isNotFraudTraderCityTest();
+        fraud.isFraudTraderCountryTest();
+        fraud.isNotFraudTraderCountryTest();
     }
 
     public void isFraudTraderTest() {
@@ -82,6 +84,27 @@ class FraudDetectorTest {
             System.out.println("Fraud from trader city - TEST FAILED");
         }
     }
+    public void isFraudTraderCountryTest() {
+        Transaction transaction = new Transaction(new Trader("Jamaica"), 1000);
+        FraudDetector fraud = new FraudDetector();
+        boolean resultFraudTraderCountry = fraud.isFraudTraderCountry(transaction);
+        if (resultFraudTraderCountry) {
+            System.out.println("Fraud from trader country - TEST OK ");
+        } else {
+            System.out.println("No fraud from trader country - TEST FAILED");
+        }
+    }
+        public void isNotFraudTraderCountryTest(){
+        Transaction transaction = new Transaction(new Trader("Latvia"),1000);
+        FraudDetector fraud = new FraudDetector();
+        boolean resultFraudTraderCountry = fraud.isFraudTraderCountry(transaction);
+        if(!resultFraudTraderCountry){
+            System.out.println("No fraud from trader country - TEST OK ");
+        }else{
+            System.out.println("Fraud from trader country - TEST FAILED");
+        }
+    }
+
 }
 
 
