@@ -9,4 +9,12 @@ class Trader {
         this.fullName = fullName;
         this.city = city;
     }
+
+    public String getFullName() {
+        return fullName;
+    }
+
+    public String getCity() {
+        return city;
+    }
 }
