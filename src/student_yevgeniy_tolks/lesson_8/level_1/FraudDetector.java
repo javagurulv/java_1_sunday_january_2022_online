@@ -2,11 +2,17 @@ package student_yevgeniy_tolks.lesson_8.level_1;
 
 class FraudDetector {
 
-    boolean isFraud(Transaction transaction,Trader trader) {
-        return transaction != null && trader.getFullName().equals("Pokemon");
+    boolean isFraudTrader(Transaction transaction) {
+        Trader trader = transaction.getTrader();
+        return trader.getFullName().equals("Pokemon");
     }
 
-    boolean isFraudAttempt(Transaction transaction){
+    boolean isFraudTransactionAmount(Transaction transaction){
         return transaction.getAmount() > 100000;
+    }
+    boolean isFraudTraderCity(Transaction transaction){
+        Trader trader = transaction.getTrader();
+        return  trader.getCity().equals("Sydney");
+
     }
 }
