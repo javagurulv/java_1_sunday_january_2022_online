@@ -11,10 +11,10 @@ class Trader {
     }
 
     public String getFullName() {
-        return fullName;
+        return this.fullName;
     }
 
     public String getCity() {
-        return city;
+        return this.city;
     }
 }

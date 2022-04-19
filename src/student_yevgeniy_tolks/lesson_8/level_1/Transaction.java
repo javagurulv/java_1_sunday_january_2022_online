@@ -11,10 +11,10 @@ class Transaction {
     }
 
     public Trader getTrader() {
-        return trader;
+        return this.trader;
     }
 
     public int getAmount() {
-        return amount;
+        return this.amount;
     }
 }
