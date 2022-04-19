@@ -5,6 +5,8 @@ class FraudDetectorTest {
         FraudDetectorTest fraud = new FraudDetectorTest();
         fraud.isFraudTest();
         fraud.isNotFraudTest();
+        fraud.isOtherFraudAttemptTest();
+        fraud.isNotOtherFraudAttemptTest();
     }
 
     public void isFraudTest() {
@@ -32,4 +34,31 @@ class FraudDetectorTest {
             System.out.println("Trader is fraud - TEST FAILED");
         }
     }
+    public void isOtherFraudAttemptTest(){
+
+        Transaction transaction = new Transaction(new Trader("Pokemon", "Riga"), 1000001);
+        FraudDetector fraud = new FraudDetector();
+        boolean resultOfOtherFraudAttempt = fraud.isFraudAttempt(transaction);
+        if (resultOfOtherFraudAttempt){
+            System.out.println("Transaction amount too high, fraud suspected - TEST OK ");
+        }
+        else {
+            System.out.println("Transaction amount has no fraud suspect - TEST FAILED");
+        }
+    }
+    public void isNotOtherFraudAttemptTest(){
+
+        Transaction transaction = new Transaction(new Trader("Pokemon", "Riga"), 999999);
+        FraudDetector fraud = new FraudDetector();
+        boolean resultOfOtherFraudAttempt = fraud.isFraudAttempt(transaction);
+        if (resultOfOtherFraudAttempt){
+            System.out.println("Transaction amount has no fraud suspect - TEST OK");
+
+        }
+        else {
+            System.out.println("Transaction amount too high, fraud suspected - TEST FAILED ");
+
+        }
+    }
 }
+
