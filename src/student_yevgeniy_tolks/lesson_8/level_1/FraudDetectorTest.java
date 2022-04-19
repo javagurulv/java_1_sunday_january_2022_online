@@ -7,6 +7,8 @@ class FraudDetectorTest {
         fraud.isNotFraudTraderTest();
         fraud.isOtherFraudAttemptTest();
         fraud.isNotOtherFraudAttemptTest();
+        fraud.isFraudTraderCityTest();
+        fraud.isNotFraudTraderCityTest();
     }
 
     public void isFraudTraderTest() {
@@ -60,5 +62,26 @@ class FraudDetectorTest {
 
         }
     }
+    public void isFraudTraderCityTest(){
+        Transaction transaction = new Transaction(new Trader("Pokemon", "Sydney"), 999999);
+        FraudDetector fraud = new FraudDetector();
+        boolean resultOfFraudTradeCity = fraud.isFraudTraderCity(transaction);
+        if(resultOfFraudTradeCity){
+            System.out.println("Fraud from trader city - TEST OK");
+        }else{
+            System.out.println("No fraud from trader city - TEST FAILED");
+        }
+    }
+    public void isNotFraudTraderCityTest(){
+        Transaction transaction = new Transaction(new Trader("Pokemon", "Riga"), 999999);
+        FraudDetector fraud = new FraudDetector();
+        boolean resultOfFraudTradeCity = fraud.isFraudTraderCity(transaction);
+        if(!resultOfFraudTradeCity){
+            System.out.println("No fraud from trader city - TEST OK");
+        }else{
+            System.out.println("Fraud from trader city - TEST FAILED");
+        }
+    }
 }
+
 
