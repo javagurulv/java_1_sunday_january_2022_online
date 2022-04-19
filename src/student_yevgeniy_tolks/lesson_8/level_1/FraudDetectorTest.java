@@ -11,6 +11,8 @@ class FraudDetectorTest {
         fraud.isNotFraudTraderCityTest();
         fraud.isFraudTraderCountryTest();
         fraud.isNotFraudTraderCountryTest();
+        fraud.isFraudTraderCountryWithIncreasedTransactionAmountTest();
+        fraud.isNotFraudTraderCountryWithIncreasedTransactionAmountTest();
     }
 
     public void isFraudTraderTest() {
@@ -38,70 +40,96 @@ class FraudDetectorTest {
             System.out.println("Trader is fraud - TEST FAILED");
         }
     }
-    public void isOtherFraudAttemptTest(){
+
+    public void isOtherFraudAttemptTest() {
 
         Transaction transaction = new Transaction(new Trader("Pokemon", "Riga"), 1000001);
         FraudDetector fraud = new FraudDetector();
         boolean resultOfOtherFraudAttempt = fraud.isFraudTransactionAmount(transaction);
-        if (resultOfOtherFraudAttempt){
+        if (resultOfOtherFraudAttempt) {
             System.out.println("Transaction amount too high, fraud suspected - TEST OK ");
-        }
-        else {
+        } else {
             System.out.println("Transaction amount has no fraud suspect - TEST FAILED");
         }
     }
-    public void isNotOtherFraudAttemptTest(){
+
+    public void isNotOtherFraudAttemptTest() {
 
         Transaction transaction = new Transaction(new Trader("Pokemon", "Riga"), 999999);
         FraudDetector fraud = new FraudDetector();
         boolean resultOfOtherFraudAttempt = fraud.isFraudTransactionAmount(transaction);
-        if (resultOfOtherFraudAttempt){
+        if (resultOfOtherFraudAttempt) {
             System.out.println("Transaction amount has no fraud suspect - TEST OK");
 
-        }
-        else {
+        } else {
             System.out.println("Transaction amount too high, fraud suspected - TEST FAILED ");
 
         }
     }
-    public void isFraudTraderCityTest(){
+
+    public void isFraudTraderCityTest() {
         Transaction transaction = new Transaction(new Trader("Pokemon", "Sydney"), 999999);
         FraudDetector fraud = new FraudDetector();
         boolean resultOfFraudTradeCity = fraud.isFraudTraderCity(transaction);
-        if(resultOfFraudTradeCity){
-            System.out.println("Fraud from trader city - TEST OK");
-        }else{
-            System.out.println("No fraud from trader city - TEST FAILED");
+        if (resultOfFraudTradeCity) {
+            System.out.println("Fraud trader city - TEST OK");
+        } else {
+            System.out.println("Not a fraud trader city - TEST FAILED");
         }
     }
-    public void isNotFraudTraderCityTest(){
+
+    public void isNotFraudTraderCityTest() {
         Transaction transaction = new Transaction(new Trader("Pokemon", "Riga"), 999999);
         FraudDetector fraud = new FraudDetector();
         boolean resultOfFraudTradeCity = fraud.isFraudTraderCity(transaction);
-        if(!resultOfFraudTradeCity){
-            System.out.println("No fraud from trader city - TEST OK");
-        }else{
-            System.out.println("Fraud from trader city - TEST FAILED");
+        if (!resultOfFraudTradeCity) {
+            System.out.println("Not a fraud trader city - TEST OK");
+        } else {
+            System.out.println("Fraud trader city - TEST FAILED");
         }
     }
+
     public void isFraudTraderCountryTest() {
         Transaction transaction = new Transaction(new Trader("Jamaica"), 1000);
         FraudDetector fraud = new FraudDetector();
         boolean resultFraudTraderCountry = fraud.isFraudTraderCountry(transaction);
         if (resultFraudTraderCountry) {
-            System.out.println("Fraud from trader country - TEST OK ");
+            System.out.println("Fraud trader country - TEST OK ");
         } else {
-            System.out.println("No fraud from trader country - TEST FAILED");
+            System.out.println("Not a fraud from trader country - TEST FAILED");
         }
     }
-        public void isNotFraudTraderCountryTest(){
-        Transaction transaction = new Transaction(new Trader("Latvia"),1000);
+
+    public void isNotFraudTraderCountryTest() {
+        Transaction transaction = new Transaction(new Trader("Latvia"), 1000);
         FraudDetector fraud = new FraudDetector();
         boolean resultFraudTraderCountry = fraud.isFraudTraderCountry(transaction);
-        if(!resultFraudTraderCountry){
-            System.out.println("No fraud from trader country - TEST OK ");
-        }else{
-            System.out.println("Fraud from trader country - TEST FAILED");
+        if (!resultFraudTraderCountry) {
+            System.out.println("Not a fraud trader country - TEST OK ");
+        } else {
+            System.out.println("Fraud trader country - TEST FAILED");
+        }
+    }
+
+    public void isFraudTraderCountryWithIncreasedTransactionAmountTest() {
+        Transaction transaction = new Transaction(new Trader("Germany"), 1001);
+        FraudDetector fraud = new FraudDetector();
+        boolean resultOfFraudTraderCountry = fraud.isFraudTraderCountryWithIncreasedTransactionAmount(transaction);
+        if (resultOfFraudTraderCountry) {
+            System.out.println("Fraud trader country with increased transaction amount - TEST OK");
+        } else {
+            System.out.println("Not a fraud trader country, with increase of transaction amount - TEST FAILED");
+        }
+    }
+
+    public void isNotFraudTraderCountryWithIncreasedTransactionAmountTest() {
+        Transaction transaction = new Transaction(new Trader("Latvia"), 1001);
+        FraudDetector fraud = new FraudDetector();
+        boolean resultOfFraudTraderCountry = fraud.isFraudTraderCountryWithIncreasedTransactionAmount(transaction);
+        if (!resultOfFraudTraderCountry) {
+            System.out.println("Not a fraud trader country, with increase of transaction amount  - TEST OK");
+        } else {
+            System.out.println("Fraud trader country with increased transaction amount - TEST FAILED");
         }
     }
 
