@@ -1,10 +1,10 @@
-package student_yevgeniy_tolks.lesson_8.level_1;
+package student_yevgeniy_tolks.lesson_8.level_1_to_6;
 
 class FraudDetectorTest {
     public static void main(String[] args) {
         FraudDetectorTest fraud = new FraudDetectorTest();
-        fraud.isFraudTraderTest();
-        fraud.isNotFraudTraderTest();
+        fraud.isFraudTraderNameTest();
+        fraud.isNotFraudTraderNameTest();
         fraud.isOtherFraudAttemptTest();
         fraud.isNotOtherFraudAttemptTest();
         fraud.isFraudTraderCityTest();
@@ -15,7 +15,7 @@ class FraudDetectorTest {
         fraud.isNotFraudTraderCountryWithIncreasedTransactionAmountTest();
     }
 
-    public void isFraudTraderTest() {
+    public void isFraudTraderNameTest() {
 
         Trader trader = new Trader("Pokemon", "Riga");
         Transaction transaction = new Transaction(trader, 1000);
@@ -28,7 +28,7 @@ class FraudDetectorTest {
         }
     }
 
-    public void isNotFraudTraderTest() {
+    public void isNotFraudTraderNameTest() {
 
         Trader trader = new Trader("Pokemono", "Riga");
         Transaction transaction = new Transaction(trader, 1000);

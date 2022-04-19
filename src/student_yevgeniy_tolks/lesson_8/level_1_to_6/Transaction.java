@@ -1,4 +1,4 @@
-package student_yevgeniy_tolks.lesson_8.level_1;
+package student_yevgeniy_tolks.lesson_8.level_1_to_6;
 
 class Transaction {
 
