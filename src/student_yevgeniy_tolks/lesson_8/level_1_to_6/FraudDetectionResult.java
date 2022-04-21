@@ -11,15 +11,11 @@ class FraudDetectionResult {
     }
 
     public boolean isFraud() {
-        return fraud;
-    }
-
-    public void setFraud(boolean fraud) {
-        this.fraud = fraud;
+        return this.fraud;
     }
 
     public String getRuleName() {
-        return ruleName;
+        return this.ruleName;
     }
 
     public void setRuleName(String ruleName) {
