@@ -9,7 +9,7 @@ public class FraudRule2Test {
     }
 
     public void isFraudTransactionAmountTest() {
-        Transaction transaction = new Transaction(new Trader("Pokemon", "Riga"), 1000001);
+        Transaction transaction = new Transaction(new Trader("Pokemon", "Riga","Sydney"), 1000001);
         FraudRule fraud = new FraudRule2("Transaction amount high");
         boolean resultOfHighTransactionAmount = fraud.isFraud(transaction);
         if (resultOfHighTransactionAmount) {
@@ -20,7 +20,7 @@ public class FraudRule2Test {
     }
 
     public void isNotFraudTransactionAmountTest() {
-        Transaction transaction = new Transaction(new Trader("Pokemon", "Riga"), 10000);
+        Transaction transaction = new Transaction(new Trader("Pokemon", "Riga","Sydney"), 10000);
         FraudRule fraud = new FraudRule2("Transaction amount high");
         boolean resultOfTransactionAmount = fraud.isFraud(transaction);
         if (!resultOfTransactionAmount) {

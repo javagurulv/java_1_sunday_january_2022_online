@@ -8,7 +8,7 @@ class FraudRule4Test {
     }
 
     public void isFraudTraderCountryTest() {
-        Transaction transaction = new Transaction(new Trader("Jamaica"), 1000);
+        Transaction transaction = new Transaction(new Trader("Pokemon", "Riga","Jamaica"), 1000);
         FraudRule fraud = new FraudRule4("Fraud trader country");
         boolean resultFraudTraderCountry = fraud.isFraud(transaction);
         if (resultFraudTraderCountry) {
@@ -19,7 +19,7 @@ class FraudRule4Test {
     }
 
     public void isNotFraudTraderCountryTest() {
-        Transaction transaction = new Transaction(new Trader("Latvia"), 1000);
+        Transaction transaction = new Transaction(new Trader("Pokemon", "Riga","Sydney"), 1000);
         FraudRule fraud = new FraudRule4("Not a fraud trader country");
 
         boolean resultFraudTraderCountry = fraud.isFraud(transaction);

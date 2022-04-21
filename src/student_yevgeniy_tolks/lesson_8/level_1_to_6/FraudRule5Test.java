@@ -8,7 +8,7 @@ class FraudRule5Test {
     }
 
     public void isFraudTraderCountryWithIncreasedTransactionAmountTest() {
-        Transaction transaction = new Transaction(new Trader("Germany"), 1001);
+        Transaction transaction = new Transaction(new Trader("Pokemon", "Riga","Germany"), 1001);
         FraudRule fraud = new FraudRule5("Fraud trader country with increased transaction amount");
         boolean resultOfFraudTraderCountry = fraud.isFraud(transaction);
         if (resultOfFraudTraderCountry) {
@@ -19,7 +19,7 @@ class FraudRule5Test {
     }
 
     public void isNotFraudTraderCountryWithIncreasedTransactionAmountTest() {
-        Transaction transaction = new Transaction(new Trader("Latvia"), 1001);
+        Transaction transaction = new Transaction(new Trader("Pokemon", "Riga","Germany"), 1001);
         FraudRule fraud = new FraudRule5("Not a fraud trader country, with increased of transaction amount");
         boolean resultOfFraudTraderCountry = fraud.isFraud(transaction);
         if (!resultOfFraudTraderCountry) {

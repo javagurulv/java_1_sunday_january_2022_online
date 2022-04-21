@@ -7,7 +7,7 @@ class FraudRule3Test {
         fraud.isNotFraudTraderCityTest();
     }
     public void isFraudTraderCityTest() {
-        Transaction transaction = new Transaction(new Trader("Pokemon", "Sydney"), 999999);
+        Transaction transaction = new Transaction(new Trader("Pokemon", "Riga","Sydney"), 999999);
         FraudRule fraud = new FraudRule3("Fraud trader city");
         boolean resultOfFraudTradeCity = fraud.isFraud(transaction);
         if (resultOfFraudTradeCity) {
@@ -17,7 +17,7 @@ class FraudRule3Test {
         }
     }
     public void isNotFraudTraderCityTest() {
-        Transaction transaction = new Transaction(new Trader("Pokemon", "Riga"), 999999);
+        Transaction transaction = new Transaction(new Trader("Pokemon", "Riga","Sydney"), 999999);
         FraudRule fraud = new FraudRule3("Not a fraud trader city");
         boolean resultOfFraudTradeCity = fraud.isFraud(transaction);
         if (!resultOfFraudTradeCity) {

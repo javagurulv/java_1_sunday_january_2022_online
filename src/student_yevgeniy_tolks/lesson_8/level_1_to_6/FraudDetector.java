@@ -1,29 +1,26 @@
 package student_yevgeniy_tolks.lesson_8.level_1_to_6;
 
+import java.util.List;
+
 class FraudDetector {
 
-    boolean isFraudTrader(Transaction transaction) {
-        Trader trader = transaction.getTrader();
-        return trader.getFullName().equals("Pokemon");
-    }
+    private List<FraudRule> fraudRules;
 
-    boolean isFraudTransactionAmount(Transaction transaction) {
-        return transaction.getAmount() > 100000;
-    }
-
-    boolean isFraudTraderCity(Transaction transaction) {
-        Trader trader = transaction.getTrader();
-        return trader.getCity().equals("Sydney");
+    public FraudDetector(List<FraudRule> fraudRules) {
+        this.fraudRules = fraudRules;
 
     }
 
-    boolean isFraudTraderCountry(Transaction transaction) {
-        Trader trader = transaction.getTrader();
-        return trader.getCountry().equals("Jamaica");
-    }
+    public boolean isFraud(Transaction transaction) {
 
-    boolean isFraudTraderCountryWithIncreasedTransactionAmount(Transaction transaction) {
-        Trader trader = transaction.getTrader();
-        return trader.getCountry().equals("Germany") && transaction.getAmount() > 1000;
+        boolean isFraud = false;
+        for (FraudRule rule : fraudRules) {
+            if (rule.isFraud(transaction)) {
+                isFraud = true;
+                break;
+
+            }
+        }
+        return isFraud;
     }
 }

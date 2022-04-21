@@ -6,11 +6,9 @@ class Trader {
     private String country;
     private String city;
 
-    public Trader(String fullName, String city) {
+    public Trader(String fullName, String city,String country) {
         this.fullName = fullName;
         this.city = city;
-    }
-    public Trader(String country){
         this.country = country;
     }
 
