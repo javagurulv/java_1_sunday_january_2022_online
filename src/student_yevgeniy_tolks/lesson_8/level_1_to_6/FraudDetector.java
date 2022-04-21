@@ -17,6 +17,7 @@ class FraudDetector {
         for (FraudRule rule : fraudRules) {
             if (rule.isFraud(transaction)) {
                 ruleName = rule.getRuleName();
+                System.out.println(transaction.toString());
                 isFraud = true;
                             }
         }
