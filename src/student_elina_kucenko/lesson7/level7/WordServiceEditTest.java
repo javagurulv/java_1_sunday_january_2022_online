@@ -1,7 +1,7 @@
 package student_elina_kucenko.lesson7.level7;
 
 
-public class WordServiceEditTest {
+class WordServiceEditTest {
     public static void main(String[] args) {
         WordServiceEditTest test = new WordServiceEditTest();
 
@@ -24,7 +24,7 @@ public class WordServiceEditTest {
     private void testTwo() {
         WordServiceEdit service = new WordServiceEdit();
         String expected = "one";
-        String result = service.findMostFrequentWord("one one two two three");
+        String result = service.findMostFrequentWord("one one two two one three");
         if (expected.equals(result)) {
             System.out.println("Test two - OK");
         } else {
