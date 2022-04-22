@@ -7,26 +7,32 @@ class WordService {
         return someText.toLowerCase();
     }
 
-    public String[] stringSplitInArray(String textSplitInWords) {
+    public String[] splitStringToArrayOfWords(String textSplitInWords) {
         return textSplitInWords.split(" ");
     }
 
+	private int countWordAppearances(String[] words, String wordToFind) {
+		int count = 0;
+		for (String word : words) {
+			if (word.equals(wordToFind)) {
+				count++;
+			}
+		}
+		return count;
+	}
+
     public String findMostFrequentWords(String text) {
-        String[] textWords = stringSplitInArray(createString());
-        int maxCount = 0;
+        String[] textWords = splitStringToArrayOfWords(text);
+        int wordMaxAppearanceCount = 0;
+		String mostFrequentWord = textWords[0];
         for (String word : textWords) {
-            int count = 1;
-            for (String nextWord : textWords) {
-                if (word.equals(nextWord)) {
-                    count++;
-                }
-            }
-            if (count > maxCount) {
-                maxCount = count;
-                text = word;
+            int wordAppearanceCount = countWordAppearances(textWords, word);
+            if (wordAppearanceCount > wordMaxAppearanceCount) {
+				wordMaxAppearanceCount = wordAppearanceCount;
+                mostFrequentWord = word;
             }
         }
-        return text;
+        return mostFrequentWord;
     }
 }
 

@@ -1,0 +1,102 @@
+WARNING: сложный и длинный метод. Такие методы стоит делить
+на более мелкие методы.
+
+    public String findMostFrequentWords(String text) {
+        String[] textWords = stringSplitInArray(createString());
+        int maxCount = 0;
+        for (String word : textWords) {
+            int count = 1;
+            for (String nextWord : textWords) {
+                if (word.equals(nextWord)) {
+                    count++;
+                }
+            }
+            if (count > maxCount) {
+                maxCount = count;
+                text = word;
+            }
+        }
+        return text;
+    }
+
+Лучше:
+
+	private int countWordAppearances(String[] words, String wordToFind) {
+		int count = 0;
+		for (String word : words) {
+			if (word.equals(wordToFind)) {
+				count++;
+			}
+		}
+		return count;
+	}
+
+    public String findMostFrequentWords(String text) {
+        String[] textWords = splitStringToArrayOfWords(text);
+        int wordMaxAppearanceCount = 0;
+		String mostFrequentWord = textWords[0];
+        for (String word : textWords) {
+            int wordAppearanceCount = countWordAppearances(textWords, word);
+            if (wordAppearanceCount > wordMaxAppearanceCount) {
+				wordMaxAppearanceCount = wordAppearanceCount;
+                mostFrequentWord = word;
+            }
+        }
+        return mostFrequentWord;
+    }
+
+------------------------------------------------------------------
+
+WARNING: не объявляйте переменную до цикла если она используется
+только внутри цикла.
+
+        int source;
+        for (int i = 0; i < in.length; i++) {
+            source = in[i];
+            if (in[i] >= numberFrom && in[i] <= numberTo) {
+                out[i] = source;
+            }
+        }
+
+Лучше:
+
+        for (int i = 0; i < in.length; i++) {
+            int source = in[i];
+            if (in[i] >= numberFrom && in[i] <= numberTo) {
+                out[i] = source;
+            }
+        }
+
+----------------------------------------------------------------------
+
+WARNING: плохая практика - менять значения параметров метода
+присваивая туда новые значения. В идеале метод должен принимать
+входные параметры, вычислять по ним результат, возвращать результат
+и не менять значения входных параметров (считайте, что входные
+параметры являются неизменяемыми величинами).
+
+    private String getMaxWord(String maxWord, int maxRepeat, String[] words) {
+        for (String currentWord : words) {
+            int counter = getHowManyWordsRepeat(words, currentWord);
+            if(counter > maxRepeat) {
+                maxRepeat = counter;
+                maxWord = currentWord;
+            }
+        }
+        return maxWord;
+    }
+
+Лучше:
+
+    private String getMaxWord(String[] words) {
+        String maxWord = words[0];
+        int maxRepeat = getHowManyWordsRepeat(words, maxWord);
+        for (String currentWord : words) {
+            int counter = getHowManyWordsRepeat(words, currentWord);
+            if(counter > maxRepeat) {
+                maxRepeat = counter;
+                maxWord = currentWord;
+            }
+        }
+        return maxWord;
+    }
