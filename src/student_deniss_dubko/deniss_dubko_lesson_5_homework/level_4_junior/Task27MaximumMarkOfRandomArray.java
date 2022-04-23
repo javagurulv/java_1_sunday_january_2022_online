@@ -16,7 +16,7 @@ class Task27MaximumMarkOfRandomArray {
         }
 
         int maxMarkOfArray = randomMarks[0];
-        for (int i = 1; i < randomMarks.length; i++) {
+        for (int i = 0; i < randomMarks.length; i++) {
             if (randomMarks[i] > maxMarkOfArray) {
                 maxMarkOfArray = randomMarks[i];
                 System.out.println();

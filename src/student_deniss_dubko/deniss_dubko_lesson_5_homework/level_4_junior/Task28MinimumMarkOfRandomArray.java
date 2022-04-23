@@ -16,7 +16,7 @@ class Task28MinimumMarkOfRandomArray {
         }
 
         int minMarkOfArray = randomMarks[0];
-        for (int i = 1; i < randomMarks.length; i++) {
+        for (int i = 0; i < randomMarks.length; i++) {
             if (randomMarks[i] < minMarkOfArray) {
                 minMarkOfArray = randomMarks[i];
                 System.out.println();
