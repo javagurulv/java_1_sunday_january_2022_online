@@ -1,6 +1,6 @@
 package student_yevgeniy_tolks.lesson_9.level_3.Task_13;
 
-class ElectricCar extends Car{
+class ElectricCar extends Car {
 
     private int batteryCharge;
 
