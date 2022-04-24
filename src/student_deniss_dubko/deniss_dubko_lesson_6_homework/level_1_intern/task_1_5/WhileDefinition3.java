@@ -1,4 +1,4 @@
-package student_deniss_dubko.deniss_dubko_lesson_6_homework.level_1_intern.task_1;
+package student_deniss_dubko.deniss_dubko_lesson_6_homework.level_1_intern.task_1_5;
 
 /*
 Найдите ошибку в программе и исправить её:
