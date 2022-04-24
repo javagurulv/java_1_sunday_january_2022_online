@@ -1,4 +1,4 @@
-package student_yevgeniy_tolks.lesson_9.level_4.task_14_19;
+package student_yevgeniy_tolks.lesson_9.level_4_5.task_14_27;
 
 class Triangle extends Shape {
     private double perpendicularHeight;
@@ -7,14 +7,9 @@ class Triangle extends Shape {
     private double sideB;
 
     public Triangle(String title, double perpendicularHeight,
-                    double baseLength) {
+                    double baseLength,double sideA, double sideB) {
         super(title);
         this.perpendicularHeight = perpendicularHeight;
-        this.baseLength = baseLength;
-    }
-
-    public Triangle(String title, double baseLength, double sideA, double sideB) {
-        super(title);
         this.baseLength = baseLength;
         this.sideA = sideA;
         this.sideB = sideB;
