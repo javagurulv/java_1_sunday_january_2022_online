@@ -16,29 +16,31 @@ package student_devids_kropacovs.lesson7.task_1;
 
 class WordService {
 
+	private int calculateWordApparenceCount(String wordToSearch,
+											String[] words) {
+		int apparanceCount = 0;
+		for (String word : words) {
+			if (word.equals(wordToSearch)) {
+				apparanceCount++;
+			}
+		}
+		return apparanceCount;
+	}
+
     public String findMostFrequentWord(String text) {
-        String[] textArray;
-        int[] wordCountArray;
-        textArray = text.split(" ");
-        wordCountArray = new int[textArray.length];
+        String[] wordsArray = text.split(" ");
 
-        int wordCounter = 0;
-        for (int wordCount = 0; wordCount < textArray.length; wordCount++) {
-            for (String s : textArray) {
-                if (textArray[wordCount].equals(s)) {
-                    wordCounter++;
-                }
-            }
-            wordCountArray[wordCount] = wordCounter;
-            wordCounter = 0;
-        }
+		String maxApperanceWord = wordsArray[0];
+		int maxApparenceCount = calculateWordApparenceCount(maxApperanceWord, wordsArray);
 
-        int max = 0;
-        for (int count =0; count < wordCountArray.length; count++) {
-            if (wordCountArray[count] > max) {
-                max = count;
-            }
-        }
-        return textArray[max];
+		for (String word : wordsArray) {
+			int apparenceCount = calculateWordApparenceCount(word, wordsArray);
+			if (apparenceCount > maxApparenceCount) {
+				maxApperanceWord = word;
+				maxApparenceCount = apparenceCount;
+			}
+		}
+
+        return maxApperanceWord;
     }
 }
