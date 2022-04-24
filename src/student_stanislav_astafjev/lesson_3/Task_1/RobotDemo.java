@@ -1,6 +1,6 @@
-package student_stanislav_astafjev.lesson_3;
+package student_stanislav_astafjev.lesson_3.Task_1;
 
-import teacher.lesson_3_oop_first_look.lessoncode.Dog;
+import student_stanislav_astafjev.lesson_3.Task_1.Robot;
 
 public class RobotDemo {
     public static void main(String[] args) {

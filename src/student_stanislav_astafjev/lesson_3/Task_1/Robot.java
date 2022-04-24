@@ -1,10 +1,20 @@
 package student_stanislav_astafjev.lesson_3.Task_1;
 
 public class Robot {
-    public void sayHello(){
+    private String name;
 
+    public Robot(String robotName) {
+
+        this.name = robotName;
     }
-    public static void main(String[] args) {
-        System.out.println("Hello!");
+
+    public void sayHello() {
+        System.out.print("Hello ");
     }
+
+    public void voiceYourName() {
+        System.out.println("my name is " + this.name + "!");
+    }
+
+
 }
