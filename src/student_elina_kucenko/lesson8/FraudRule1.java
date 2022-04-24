@@ -1,9 +1,12 @@
 package student_elina_kucenko.lesson8;
 
-class FraudDetectorRule1 {
+class FraudRule1 extends FraudRule {
 
-    boolean isFraud(Transaction t) {
+    public FraudRule1(String ruleName) {
+        super(ruleName);
+    }
 
+    public boolean isFraud(Transaction t) {
         if (t.getTrader().getFullName().equals("Pokemon")) {
             return true;
         } else {
