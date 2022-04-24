@@ -1,4 +1,4 @@
-package student_stanislav_astafjev.lesson_1.Task_11;
+package student_sergei_klunkov.lesson_1.Task_11;
 
 public class SumTwoNum {
     public static void main(String[] args) {

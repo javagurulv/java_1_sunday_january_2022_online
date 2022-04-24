@@ -1,4 +1,4 @@
-package student_stanislav_astafjev.lesson_1.Task_12;
+package student_sergei_klunkov.lesson_1.Task_12;
 
 import student_alina_strumpe._lesson_2_level_2_Task_4.Main;
 
