@@ -16,4 +16,10 @@ public class PetrolCar extends Car {
 		System.out.println("Stop Petrol Engine!");
 	}
 
+	@Override
+	public boolean updateComputerSystem() {
+		System.out.println("Update Computer System!");
+		return true;
+	}
+
 }
