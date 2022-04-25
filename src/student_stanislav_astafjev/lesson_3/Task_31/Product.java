@@ -23,5 +23,4 @@ class Product {
         price = regularPrice = (regularPrice * discount/100);
         return price;
     }
-
 }
