@@ -1,4 +1,4 @@
-package student_stanislav_astafjev.lesson_4.Task_5;
+package student_stanislav_astafjev.lesson_4.Task_7;
 
 import java.util.Scanner;
 
@@ -11,14 +11,10 @@ public class TwoIntegers {
         num1 = input.nextInt();
         System.out.println("Enter second number: ");
         num2 = input.nextInt();
-        if (num1 > num2){
-            System.out.println("The first number is greater than the second");
-        }
-        else if (num1 < num2){
-            System.out.println("The second number is greater than the first");
-        }
-        else{
-            System.out.println("the numbers are equal");
+        if (num1 == num2) {
+            System.out.println("Numbers are equals");
+        } else {
+            System.out.println("Numbers are different");
         }
     }
 }
