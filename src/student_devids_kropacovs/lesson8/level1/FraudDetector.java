@@ -1,32 +1,22 @@
 package student_devids_kropacovs.lesson8.level1;
 
+import java.util.List;
+
 public class FraudDetector {
 
-    boolean isFraud(Transaction t) {
-        return true;
+    private List <FraudRule> fraudRules;
+    public FraudDetector (List <FraudRule> fraudRules){
+        this.fraudRules = fraudRules;
     }
 
-    public boolean isFraudRule1(Transaction t){
-        Trader trader = t.getTrader();
-        return trader.getFullName().equals("Pokemon");
+    boolean isFraud(Transaction t)
+    {
+     for (FraudRule fraudRule : fraudRules){
+           if (fraudRule.isFraud(t)){
+               return true;
+           }
+     }
+     return false;
     }
 
-    public boolean isFraudRule2(int amount){
-        return amount >= 1000000;
-    }
-
-    public  boolean isFraudRule3(Transaction t){
-        Trader trader = t.getTrader();
-        return trader.getCity().equals("Sidney");
-    }
-
-    public  boolean isFraudRule4(Transaction t){
-        Trader trader = t.getTrader();
-        return trader.getCountry().equals("Jamaica");
-    }
-
-    public  boolean isFraudRule5(Transaction t){
-        Trader trader = t.getTrader();
-        return trader.getCountry().equals("Germany") && t.getAmount() >= 1000;
-    }
 }
