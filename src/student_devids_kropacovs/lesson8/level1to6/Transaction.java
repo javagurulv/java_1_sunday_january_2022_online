@@ -1,6 +1,4 @@
-package student_devids_kropacovs.lesson8.level1;
-
-import student_devids_kropacovs.lesson8.level1.Trader;
+package student_devids_kropacovs.lesson8.level1to6;
 
 class Transaction {
 

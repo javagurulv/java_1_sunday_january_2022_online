@@ -1,4 +1,4 @@
-package student_devids_kropacovs.lesson8.level1;
+package student_devids_kropacovs.lesson8.level1to6;
 
 class FraudRule3 extends FraudRule{
 
