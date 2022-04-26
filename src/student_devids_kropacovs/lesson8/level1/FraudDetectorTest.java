@@ -34,7 +34,8 @@ public class FraudDetectorTest {
         Trader trader = new Trader("Pokemon", "Riga", "Latvia");
         Transaction transaction = new Transaction(trader, 100);
         FraudDetector fraudDetector = new FraudDetector(fraudRules);
-        if(fraudDetector.isFraud(transaction)){
+        FraudDetectionResult fraudDetectionResult = fraudDetector.isFraud(transaction);
+        if(fraudDetectionResult.getFraudResult()){
             System.out.println("Rule 1 is fraud test PASS");
         }else{
             System.out.println("Rule 1 is fraud test FAIL");
@@ -46,7 +47,8 @@ public class FraudDetectorTest {
         Trader trader = new Trader("Jonny", "New York", "US");
         Transaction transaction = new Transaction(trader, 100);
         FraudDetector fraudDetector = new FraudDetector(fraudRules);
-        if(!fraudDetector.isFraud(transaction)){
+        FraudDetectionResult fraudDetectionResult = fraudDetector.isFraud(transaction);
+        if(!fraudDetectionResult.getFraudResult()){
             System.out.println("Rule 1 is not Fraud test PASS");
         }else{
             System.out.println("Rule 1 is not Fraud test FAIL");
@@ -58,7 +60,8 @@ public class FraudDetectorTest {
         Trader trader = new Trader("John", "Mexico", "Mexico");
         Transaction transaction = new Transaction(trader, 1000001);
         FraudDetector fraudDetector = new FraudDetector(fraudRules);
-        if(fraudDetector.isFraud(transaction)){
+        FraudDetectionResult fraudDetectionResult = fraudDetector.isFraud(transaction);
+        if(fraudDetectionResult.getFraudResult()){
             System.out.println("Rule 2 is fraud test PASS");
         }else{
             System.out.println("Rule 2 is fraud test FAIL");
@@ -70,7 +73,8 @@ public class FraudDetectorTest {
         Trader trader = new Trader("John", "Mexico", "Mexico");
         Transaction transaction = new Transaction(trader, 999999);
         FraudDetector fraudDetector = new FraudDetector(fraudRules);
-        if(!fraudDetector.isFraud(transaction)){
+        FraudDetectionResult fraudDetectionResult = fraudDetector.isFraud(transaction);
+        if(!fraudDetectionResult.getFraudResult()){
             System.out.println("Rule 2 is not fraud test PASS");
         }else{
             System.out.println("Rule 2 is not fraud test FAIL");
@@ -82,7 +86,8 @@ public class FraudDetectorTest {
         Trader trader = new Trader("Igor", "Sidney", "Australia");
         Transaction transaction = new Transaction(trader, 100);
         FraudDetector fraudDetector = new FraudDetector(fraudRules);
-        if(fraudDetector.isFraud(transaction)){
+        FraudDetectionResult fraudDetectionResult = fraudDetector.isFraud(transaction);
+        if(fraudDetectionResult.getFraudResult()){
             System.out.println("Rule 3 is fraud test PASS");
         }else{
             System.out.println("Rule 3 is fraud test FAIL");
@@ -94,7 +99,8 @@ public class FraudDetectorTest {
         Trader trader = new Trader("Vasja", "Moscow", "Russia");
         Transaction transaction = new Transaction(trader, 100);
         FraudDetector fraudDetector = new FraudDetector(fraudRules);
-        if(!fraudDetector.isFraud(transaction)){
+        FraudDetectionResult fraudDetectionResult = fraudDetector.isFraud(transaction);
+        if(!fraudDetectionResult.getFraudResult()){
             System.out.println("Rule 3 is not fraud test PASS");
         }else{
             System.out.println("Rule 3 is not fraud test FAIL");
@@ -106,7 +112,8 @@ public class FraudDetectorTest {
         Trader trader = new Trader("Vasja", "IDK", "Jamaica");
         Transaction transaction = new Transaction(trader, 100);
         FraudDetector fraudDetector = new FraudDetector(fraudRules);
-        if(fraudDetector.isFraud(transaction)){
+        FraudDetectionResult fraudDetectionResult = fraudDetector.isFraud(transaction);
+        if(fraudDetectionResult.getFraudResult()){
             System.out.println("Rule 4 is fraud test PASS");
         }else{
             System.out.println("Rule 4 is fraud test FAIL");
@@ -118,7 +125,8 @@ public class FraudDetectorTest {
         Trader trader = new Trader("Vasja", "Moscow", "Russia");
         Transaction transaction = new Transaction(trader, 100);
         FraudDetector fraudDetector = new FraudDetector(fraudRules);
-        if(!fraudDetector.isFraud(transaction)){
+        FraudDetectionResult fraudDetectionResult = fraudDetector.isFraud(transaction);
+        if(!fraudDetectionResult.getFraudResult()){
             System.out.println("Rule 4 is not fraud test PASS");
         }else{
             System.out.println("Rule 4 is not fraud test FAIL");
@@ -130,7 +138,8 @@ public class FraudDetectorTest {
         Trader trader = new Trader("Vasja", "Berlin", "Germany");
         Transaction transaction = new Transaction(trader, 1001);
         FraudDetector fraudDetector = new FraudDetector(fraudRules);
-        if(fraudDetector.isFraud(transaction)){
+        FraudDetectionResult fraudDetectionResult = fraudDetector.isFraud(transaction);
+        if(fraudDetectionResult.getFraudResult()){
             System.out.println("Rule 5 is fraud test PASS");
         }else{
             System.out.println("Rule 5 is fraud test FAIL");
@@ -142,7 +151,8 @@ public class FraudDetectorTest {
         Trader trader = new Trader("Vasja", "Berlin", "Germany");
         Transaction transaction = new Transaction(trader, 999);
         FraudDetector fraudDetector = new FraudDetector(fraudRules);
-        if(!fraudDetector.isFraud(transaction)){
+        FraudDetectionResult fraudDetectionResult = fraudDetector.isFraud(transaction);
+        if(!fraudDetectionResult.getFraudResult()){
             System.out.println("Rule 5 is not fraud test PASS");
         }else{
             System.out.println("Rule 5 is not fraud test FAIL");

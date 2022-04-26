@@ -9,14 +9,20 @@ public class FraudDetector {
         this.fraudRules = fraudRules;
     }
 
-    boolean isFraud(Transaction t)
+    FraudDetectionResult isFraud(Transaction t)
     {
+
+        Trader trader = t.getTrader();
      for (FraudRule fraudRule : fraudRules){
            if (fraudRule.isFraud(t)){
-               return true;
+               System.out.println("Transaction is false: rule: " + fraudRule.getRuleName());
+               System.out.println("All the information about that transaction: Trader name: " + trader.getFullName());
+               System.out.println("Trader country: " + trader.getCountry() + " Trader city: " + trader.getCity());
+               System.out.println(trader.getFullName() + " wanted to make a transaction of " + t.getAmount());
+               return new FraudDetectionResult(fraudRule.isFraud(t), fraudRule.getRuleName());
            }
      }
-     return false;
+     return new FraudDetectionResult(false, null);
     }
 
 }
