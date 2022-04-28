@@ -12,6 +12,13 @@ class Transaction {
 
     }
 
+    public String toString() {
+        return "Transaction{" +
+                "trader=" + trader +
+                ", amount=" + amount +
+                '}';
+    }
+
     public Trader getTrader() {
         return this.trader;
     }

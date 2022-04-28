@@ -11,16 +11,19 @@ class FraudDetector {
 
     }
 
-    public boolean isFraud(Transaction transaction) {
+    public FraudDetectionResult isFraud(Transaction transaction) {
 
+        String ruleName = null;
         boolean isFraud = false;
+
         for (FraudRule rule : fraudRules) {
             if (rule.isFraud(transaction)) {
+                ruleName = rule.getRuleName();
+                System.out.println();
+                System.out.println(ruleName + " - " + transaction.toString());
                 isFraud = true;
-                break;
-
             }
         }
-        return isFraud;
+        return new FraudDetectionResult(isFraud, ruleName);
     }
 }

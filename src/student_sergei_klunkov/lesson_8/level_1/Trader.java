@@ -12,6 +12,13 @@ class Trader {
 
     }
 
+    public String toString() {
+        return "Trader{" +
+                "fullName='" + fullName + '\'' +
+                ", city='" + city + '\'' +
+                '}';
+    }
+
     public String getFullName() {
         return this.fullName;
     }

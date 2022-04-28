@@ -16,7 +16,7 @@ class FirstFraudRuleTest {
 
         boolean isNameOfTraderFraud = fraudRule.isFraud(transaction);
         if (isNameOfTraderFraud) {
-            System.out.println(fraudRule.getNameOfTheRule() + "  - TEST PASSED! ");
+            System.out.println(fraudRule.getRuleName() + "  - TEST PASSED! ");
         } else {
             System.out.println(" Trader is not a fraud - TEST FAILED! ");
         }
@@ -29,7 +29,7 @@ class FirstFraudRuleTest {
         FraudRule fraud = new FirstFraudRule ("Traders name is not a fraud");
         boolean isNameOfTraderNotFraud = fraud.isFraud(transaction);
         if(!isNameOfTraderNotFraud) {
-            System.out.println(fraud.getNameOfTheRule() + " - TEST PASSED! ");
+            System.out.println(fraud.getRuleName() + " - TEST PASSED! ");
         } else {
             System.out.println(" Traders name - TEST FAILED! ");
         }
