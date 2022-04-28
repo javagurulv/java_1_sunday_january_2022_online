@@ -15,10 +15,13 @@ class Calculator {
     }
     public boolean isEven(int number) {
         if (number % 2 == 0) {
-        return true;
-    }
+            return true;
+        }
         else {
             return false;
         }
+    }
+    public int maxOfTwoNumbers(int firstNumber, int secondNumber) {
+        return Math.max(firstNumber,secondNumber);
     }
 }
