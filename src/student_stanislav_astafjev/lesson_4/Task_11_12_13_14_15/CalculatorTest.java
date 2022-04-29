@@ -1,7 +1,5 @@
 package student_stanislav_astafjev.lesson_4.Task_11_12_13_14_15;
 
-import java.util.concurrent.Callable;
-
 class CalculatorTest {
     public static void main(String[] args) {
         sumTest();
@@ -12,6 +10,7 @@ class CalculatorTest {
         maxOfTwoNumbersTestOne();
         maxOfTwoNumbersTestTwo();
         maxOfTwoNumbersTestThree();
+        maxOfThreeNumbersTestOne();
     }
     public static void sumTest() {
         int firstNumber = 10;
@@ -80,45 +79,25 @@ class CalculatorTest {
         int firstNumber = 10;
         int secondNumber = 5;
         Calculator calculator = new Calculator();
-        int maxOfTwoNumbers = calculator.maxOfTwoNumbers(firstNumber,secondNumber);
-        if (firstNumber > secondNumber) {
-            System.out.println(firstNumber + " greater then " + secondNumber);
-        }
-        else if (firstNumber < secondNumber) {
-            System.out.println(secondNumber + " less than " + firstNumber);
-        }
-        else {
-            System.out.println(secondNumber + " both numbers are equal " + firstNumber);
-        }
+        calculator.maxOfTwoNumbers(firstNumber, secondNumber);
+        System.out.println(firstNumber + " greater then " + secondNumber);
     }
     public static void maxOfTwoNumbersTestTwo() {
         int firstNumber = 42;
         int secondNumber = 15;
         Calculator calculator = new Calculator();
-        int minOfTwoNumbers = calculator.maxOfTwoNumbers(firstNumber,secondNumber);
-        if (firstNumber > secondNumber) {
-            System.out.println(secondNumber + " less than " + firstNumber);
-        }
-        else if (firstNumber < secondNumber) {
-            System.out.println(firstNumber + " greater then " + secondNumber);
-        }
-        else {
-            System.out.println(firstNumber + " both numbers are equal " +secondNumber);
-        }
+        calculator.maxOfTwoNumbers(firstNumber, secondNumber);
+        System.out.println(secondNumber + " less than " + firstNumber);
     }
     public static void maxOfTwoNumbersTestThree() {
         int firstNumber = 15;
         int secondNumber = 15;
         Calculator calculator = new Calculator();
-        int twoNumbersEqual = calculator.maxOfTwoNumbers(firstNumber,secondNumber);
-        if (firstNumber > secondNumber) {
-            System.out.println(firstNumber + " greater then " + secondNumber);
-        }
-        else if (firstNumber < secondNumber) {
-            System.out.println(firstNumber + " less than " + secondNumber);
-        }
-        else {
-            System.out.println(firstNumber + " equal " + secondNumber);
-        }
+        calculator.maxOfTwoNumbers(firstNumber, secondNumber);
+        System.out.println(firstNumber + " equal " + secondNumber);
     }
+    public static void maxOfThreeNumbersTestOne() {
+
+    }
+
 }
