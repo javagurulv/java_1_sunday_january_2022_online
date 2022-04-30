@@ -42,7 +42,7 @@ class Calculator {
         else if (firstNumber == thirdNumber && firstNumber > secondNumber) {
             return firstNumber;
         }
-        else if (secondNumber == thirdNumber && secondNumber > firstNumber) {
+        else if (secondNumber == firstNumber && secondNumber > thirdNumber) {
             return secondNumber;
         }
         else if (firstNumber == secondNumber && secondNumber == thirdNumber) {

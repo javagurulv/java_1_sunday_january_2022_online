@@ -54,8 +54,6 @@ package student_vitaly_galuzo.lesson_4.level_4;
         } else {
             return num3;
         }
-
-
     }
 }
 
