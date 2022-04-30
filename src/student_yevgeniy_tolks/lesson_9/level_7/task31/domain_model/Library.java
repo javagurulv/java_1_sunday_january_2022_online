@@ -4,19 +4,16 @@ import java.util.ArrayList;
 import java.util.List;
 
 class Library {
-    private String libraryName;
+
     private List<Client> clients = new ArrayList<>();
     private List<Book> books = new ArrayList<>();
-
-    public Library(String libraryName) {
-        this.libraryName = libraryName;
-    }
+    private List<Book> absentBooks = new ArrayList<>();
 
     public void addClientInTheList(Client client) {
         this.clients.add(client);
     }
 
-    public void addBookInTheList(Book book){
+    public void addBookInTheList(Book book) {
         this.books.add(book);
     }
 
@@ -26,5 +23,21 @@ class Library {
 
     public List<Book> getBooks() {
         return this.books;
+    }
+
+    public List<Book> getAbsentBooks() {
+        return this.absentBooks;
+    }
+
+    public void takeABookFromLibrary(Book book) {
+        if (book.isBookFoundInLibrary()) {
+            this.absentBooks.add(book);
+            this.books.remove(book);
+        }
+    }
+
+    public void returnBookToLibrary(Book book){
+        this.absentBooks.remove(book);
+        this.books.add(book);
     }
 }
