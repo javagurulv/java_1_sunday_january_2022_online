@@ -1,4 +1,4 @@
-package student_yevgeniy_tolks.lesson_9.level_7.task31;
+package student_yevgeniy_tolks.lesson_9.level_7.task31.domain_model;
 
 class AbsentBook extends Book{
 

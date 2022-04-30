@@ -1,4 +1,4 @@
-package student_yevgeniy_tolks.lesson_9.level_7.task31;
+package student_yevgeniy_tolks.lesson_9.level_7.task31.domain_model;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,12 +11,11 @@ class LibraryDemo {
         Book book1 = new Book("Tolstoy","War and Peace");
 
 
-        List<Client> clientList = new ArrayList<>();
         List<Book> bookList = new ArrayList<>();
 
-        library.addClientInTheList(clientList, client1);
-        library.addClientInTheList(clientList, client2);
-        library.addBookInTheList(bookList,book1);
+        library.addClientInTheList(client1);
+        library.addClientInTheList(client2);
+        library.addBookInTheList(book1);
 
         book1.takeABookFromLibrary(bookList,book1);
 
