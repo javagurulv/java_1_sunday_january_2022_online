@@ -1,18 +1,18 @@
 package student_sergei_klunkov.lesson_8.level_1;
 
-class SecondFraudRuleTest {
+class FraudSecondRuleTest {
 
     public static void main(String[] args) {
-        SecondFraudRuleTest test = new SecondFraudRuleTest();
+        FraudSecondRuleTest test = new FraudSecondRuleTest();
         test.secondFraudRuleTestWhenAmountHigher();
         test.secondFraudRuleTestWhenAmountLower();
 
     }
 
     public void secondFraudRuleTestWhenAmountHigher() {
-        Trader trader = new Trader("Biba", "Tallinn");
+        Trader trader = new Trader("Biba", "Tallinn", "Estonia");
         Transaction transaction = new Transaction(trader,100000);
-        FraudRule fraudRule = new SecondFraudRule("Second Fraud Rule");
+        FraudRule fraudRule = new FraudSecondRule("Second Fraud Rule");
 
         boolean isAmountBiggerThenInFraudRule = fraudRule.isFraud(transaction);
         if (isAmountBiggerThenInFraudRule) {
@@ -23,9 +23,9 @@ class SecondFraudRuleTest {
     }
 
     public void secondFraudRuleTestWhenAmountLower() {
-        Trader trader = new Trader("Biba", "Tallinn");
+        Trader trader = new Trader("Biba", "Tallinn", "Estonia");
         Transaction transaction = new Transaction(trader, 1000);
-        FraudRule fraudRule = new SecondFraudRule("Second Fraud Rule");
+        FraudRule fraudRule = new FraudSecondRule("Second Fraud Rule");
 
         boolean isAmountLowerThenInSecondFraudRule = fraudRule.isFraud(transaction);
         if (!isAmountLowerThenInSecondFraudRule) {
