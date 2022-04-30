@@ -11,6 +11,12 @@ class CalculatorTest {
         maxOfTwoNumbersTestTwo();
         maxOfTwoNumbersTestThree();
         maxOfThreeNumbersTestOne();
+        maxOfThreeNumbersTestTwo();
+        maxOfThreeNumbersTestThree();
+        maxOfThreeNumbersTestFour();
+        maxOfThreeNumbersTestFive();
+        maxOfThreeNumbersTestSix();
+        maxOfThreeNumbersTestSeven();
     }
     public static void sumTest() {
         int firstNumber = 10;
@@ -97,7 +103,73 @@ class CalculatorTest {
         System.out.println(firstNumber + " equal " + secondNumber);
     }
     public static void maxOfThreeNumbersTestOne() {
-
+        int firstNumber = 55;
+        int secondNumber = 33;
+        int thirdNumber = 44;
+        Calculator calculator = new Calculator();
+        calculator.maxOfThreeNumbers(firstNumber,secondNumber,thirdNumber);
+        if (firstNumber > secondNumber && firstNumber > thirdNumber) {
+            System.out.println("the first number is greater than the second and third");
+        }
     }
-
+    public static void maxOfThreeNumbersTestTwo() {
+        int firstNumber = 33;
+        int secondNumber = 44;
+        int thirdNumber = 23;
+        Calculator calculator = new Calculator();
+        calculator.maxOfThreeNumbers(firstNumber,secondNumber,thirdNumber);
+        if (secondNumber > firstNumber && firstNumber > thirdNumber) {
+            System.out.println("the second number is greater than the first and the third");
+        }
+    }
+    public static void maxOfThreeNumbersTestThree() {
+        int firstNumber = 33;
+        int secondNumber = 44;
+        int thirdNumber = 55;
+        Calculator calculator = new Calculator();
+        calculator.maxOfThreeNumbers(firstNumber, secondNumber, thirdNumber);
+        if (thirdNumber > firstNumber && thirdNumber > secondNumber) {
+            System.out.println("the third number is greater than the first and second");
+        }
+    }
+    public static void maxOfThreeNumbersTestFour() {
+        int firstNumber = 44;
+        int secondNumber = 44;
+        int thirdNumber = 22;
+        Calculator calculator = new Calculator();
+        calculator.maxOfThreeNumbers(firstNumber,secondNumber,thirdNumber);
+        if (firstNumber == secondNumber && firstNumber > thirdNumber) {
+            System.out.println("the first two are equal and greater than the third");
+        }
+    }
+    public static void maxOfThreeNumbersTestFive() {
+        int firstNumber = 32;
+        int secondNumber = 44;
+        int thirdNumber = 44;
+        Calculator calculator = new Calculator();
+        calculator.maxOfThreeNumbers(firstNumber,secondNumber,thirdNumber);
+        if (secondNumber == thirdNumber && secondNumber > firstNumber) {
+            System.out.println("the second and third numbers are equal and greater than the first");
+        }
+    }
+    public static void maxOfThreeNumbersTestSix() {
+        int firstNumber = 44;
+        int secondNumber = 34;
+        int thirdNumber = 44;
+        Calculator calculator = new Calculator();
+        calculator.maxOfThreeNumbers(firstNumber, secondNumber, thirdNumber);
+        if (thirdNumber == firstNumber && thirdNumber > secondNumber) {
+            System.out.println("The third and first number are equal and greater than the second");
+        }
+    }
+    public static void maxOfThreeNumbersTestSeven() {
+        int firstNumber = 44;
+        int secondNumber = 44;
+        int thirdNumber = 44;
+        Calculator calculator = new Calculator();
+        calculator.maxOfThreeNumbers(firstNumber, secondNumber, thirdNumber);
+        if (firstNumber == secondNumber && firstNumber == thirdNumber) {
+            System.out.println("All numbers equal");
+        }
+    }
 }

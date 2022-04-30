@@ -2,7 +2,7 @@ package student_stanislav_astafjev.lesson_4.Task_10;
 
 import java.util.Scanner;
 
-public class ThreeIntegers {
+class ThreeIntegers {
     public static void main(String[] args) {
         int num1 = 0;
         int num2 = 0;
