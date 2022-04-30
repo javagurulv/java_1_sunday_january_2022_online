@@ -1,7 +1,8 @@
-package student_sergei_klunkov.lesson_8.level_1;
+package student_sergei_klunkov.lesson_8.level_1_to_6;
 
-class FraudFirstRule extends FraudRule {
-    public FraudFirstRule(String ruleName) {
+class FraudRule_1 extends FraudRule {
+
+    public FraudRule_1(String ruleName) {
         super(ruleName);
     }
 
