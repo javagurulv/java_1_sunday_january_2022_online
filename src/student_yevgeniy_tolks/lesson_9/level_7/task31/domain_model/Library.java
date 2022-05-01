@@ -4,27 +4,45 @@ import java.util.ArrayList;
 import java.util.List;
 
 class Library {
-    private String libraryName;
-    private List<Client> clients = new ArrayList<>();
-    private List<Book> books = new ArrayList<>();
 
-    public Library(String libraryName) {
-        this.libraryName = libraryName;
+    private List<Reader> readers = new ArrayList<>();
+    private List<Book> allBooks = new ArrayList<>();
+    private List<Book> presentBooks = new ArrayList<>();
+    private List<Book> absentBooks = new ArrayList<>();
+
+    public void addReaderInTheList(Reader reader) {
+        this.readers.add(reader);
     }
 
-    public void addClientInTheList(Client client) {
-        this.clients.add(client);
+    public void addNewBookInTheList(Book book) {
+        this.allBooks.add(book);
     }
 
-    public void addBookInTheList(Book book){
-        this.books.add(book);
+    public List<Reader> getReaders() {
+        return this.readers;
     }
 
-    public List<Client> getClients() {
-        return this.clients;
+    public List<Book> getAllBooks() {
+        return this.allBooks;
     }
 
-    public List<Book> getBooks() {
-        return this.books;
+    public List<Book> getPresentBooks() {
+        return this.presentBooks;
+    }
+
+    public List<Book> getAbsentBooks() {
+        return this.absentBooks;
+    }
+
+    public void takeABookFromLibrary(Book book) {
+        if (book.isBookFoundInLibrary()) {
+            this.absentBooks.add(book);
+            this.presentBooks.remove(book);
+        }
+    }
+
+    public void returnBookToLibrary(Book book) {
+        this.absentBooks.remove(book);
+        this.presentBooks.add(book);
     }
 }
