@@ -1,6 +1,6 @@
 package student_devids_kropacovs.lesson9.level1;
 
-public class DefaultConstructorV3 {
+class DefaultConstructorV3 {
 
     private String fullName;
     private int age;
