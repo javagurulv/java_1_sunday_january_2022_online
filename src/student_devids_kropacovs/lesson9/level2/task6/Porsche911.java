@@ -1,4 +1,4 @@
-package student_devids_kropacovs.lesson9.level2.level6;
+package student_devids_kropacovs.lesson9.level2.task6;
 
 class Porsche911 extends Car{
 

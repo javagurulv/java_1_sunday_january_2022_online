@@ -1,4 +1,4 @@
-package student_devids_kropacovs.lesson9.level1;
+package student_devids_kropacovs.lesson9.level1.task3;
 
 class DefaultConstructorV3Demo {
 
