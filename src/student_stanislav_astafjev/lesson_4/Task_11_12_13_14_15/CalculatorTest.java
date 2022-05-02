@@ -4,8 +4,8 @@ class CalculatorTest {
     public static void main(String[] args) {
         sumTest();
         subTest();
-        divisionTest();
-        multiplicationTest();
+        divTest();
+        mulTest();
         evenTest();
         maxOfTwoNumbersTestOne();
         maxOfTwoNumbersTestTwo();
@@ -17,7 +17,12 @@ class CalculatorTest {
         maxOfThreeNumbersTestFive();
         maxOfThreeNumbersTestSix();
         maxOfThreeNumbersTestSeven();
+        isEvenTest(40);
+        isEvenTest1();
+        isEvenTest2();
     }
+
+
     public static void sumTest() {
         int firstNumber = 10;
         int secondNumber = 5;
@@ -42,7 +47,7 @@ class CalculatorTest {
             System.out.println("Sub test = FAIL");
         }
     }
-    public static void divisionTest() {
+    public static void divTest() {
         int firstNumber = 10;
         int secondNumber = 5;
         int expectedResult = 2;
@@ -55,7 +60,7 @@ class CalculatorTest {
             System.out.println("Division test = FAIL");
         }
     }
-    public static void multiplicationTest() {
+    public static void mulTest() {
         int firstNumber = 10;
         int secondNumber = 5;
         int expectedResult = 50;
@@ -170,6 +175,39 @@ class CalculatorTest {
         calculator.maxOfThreeNumbers(firstNumber, secondNumber, thirdNumber);
         if (firstNumber == secondNumber && firstNumber == thirdNumber) {
             System.out.println("All numbers equal");
+        }
+    }
+    public static void isEvenTest1() {
+        Calculator calculator = new Calculator();
+        boolean result = calculator.isEven(40);
+        if(result) {
+            System.out.println("isEven test = OK");
+        }
+        else {
+            System.out.println("isEven test = FAIL");
+        }
+    }
+    public static void isEvenTest2() {
+        Calculator calculator = new Calculator();
+        boolean result = calculator.isEven(41);
+        if(result == false) {
+            System.out.println("isEven Test = OK");
+        }
+        else {
+            System.out.println("isEven Test = FAIL");
+        }
+    }
+    public static void isEvenTest(int testValue) {
+        Calculator calculator = new Calculator();
+        boolean result = calculator.isEven(testValue);
+        checkResults(result, "isEven test");
+    }
+
+    private static void checkResults(boolean condition, String testName) {
+        if (condition) {
+            System.out.println(testName + " = OK");
+        } else {
+            System.out.println(testName + " = FAIL");
         }
     }
 }
