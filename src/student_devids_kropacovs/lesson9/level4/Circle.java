@@ -10,6 +10,10 @@ class Circle extends Shape{
         this.radius = radius;
     }
 
+    public double getRadius() {
+        return radius;
+    }
+
     @Override
     double calculateArea() {
         return this.radius * this.radius * this.pi;
