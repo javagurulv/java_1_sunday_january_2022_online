@@ -17,6 +17,7 @@ class CalculatorTest {
         maxOfThreeNumbersTestFive();
         maxOfThreeNumbersTestSix();
         maxOfThreeNumbersTestSeven();
+        isEvenTest(40);
         isEvenTest1();
         isEvenTest2();
     }
@@ -194,6 +195,19 @@ class CalculatorTest {
         }
         else {
             System.out.println("isEven Test = FAIL");
+        }
+    }
+    public static void isEvenTest(int testValue) {
+        Calculator calculator = new Calculator();
+        boolean result = calculator.isEven(testValue);
+        checkResults(result, "isEven test");
+    }
+
+    private static void checkResults(boolean condition, String testName) {
+        if (condition) {
+            System.out.println(testName + " = OK");
+        } else {
+            System.out.println(testName + " = FAIL");
         }
     }
 }
