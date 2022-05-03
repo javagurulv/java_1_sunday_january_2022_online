@@ -1,4 +1,4 @@
-package student_yevgeniy_tolks.lesson_11_interfaces.level_2.task4;
+package student_yevgeniy_tolks.lesson_11_interfaces.level_2.task4_5;
 
 class DayOfTheWeekDetectorIfVersion implements DayOfTheWeekDetector {
     public String detectDayName(int number) {
