@@ -29,10 +29,10 @@ class DayOfTheWeekDetectorDemo {
         DayOfTheWeekDetectorDemo dayOfTheWeekDetectorDemo2 = new DayOfTheWeekDetectorDemo
                 (new DayOfTheWeekDetectorArrayVersion());
         dayOfTheWeekDetectorDemo.run();
-        System.out.println("If implementation completed");
+        System.out.println("If algorithm implementation completed");
         dayOfTheWeekDetectorDemo1.run();
-        System.out.println("Switch implementation completed");
+        System.out.println("Switch algorithm implementation completed");
         dayOfTheWeekDetectorDemo2.run();
-        System.out.println("Array implementation completed");
+        System.out.println("Array algorithm implementation completed");
     }
 }
