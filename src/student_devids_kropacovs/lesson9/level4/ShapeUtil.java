@@ -2,7 +2,7 @@ package student_devids_kropacovs.lesson9.level4;
 
 import java.util.Random;
 
-public class ShapeUtil {
+class ShapeUtil {
 
     public Circle createRandomCircle(){
         Random random = new Random();
@@ -28,5 +28,21 @@ public class ShapeUtil {
         Random random = new Random();
         double randomSide = random.nextDouble(10);
         return new Triangle("Triangle", randomSide);
+    }
+
+    double calculatePerimeter(Shape[] shapes){
+        double perimeterOfAllFigures = 0;
+        for (int i = 0; i < shapes.length; i++){
+            perimeterOfAllFigures = shapes[i].calculatePerimeter() + perimeterOfAllFigures;
+        }
+        return perimeterOfAllFigures;
+    }
+
+    double calculateArea(Shape shape) {
+        return shape.calculateArea();
+    }
+
+    double calculatePerimeter(Shape shape) {
+        return shape.calculatePerimeter();
     }
 }
