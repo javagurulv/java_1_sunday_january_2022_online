@@ -9,7 +9,7 @@ class DayOfTheWeekDetectorTest {
     }
 
     public void dayOfTheWeekDetectorIfImplTest() {
-        int number = 10;
+        int number = 2;
         String expectedDayOfTheWeek = "Tuesday";
 
         DayOfTheWeekDetectorIfVersion dayOfTheWeekDetectorIfVersion =
