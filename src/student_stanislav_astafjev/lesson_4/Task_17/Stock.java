@@ -1,10 +1,10 @@
 package student_stanislav_astafjev.lesson_4.Task_17;
 
 class Stock {
-    String company;
-    int currentPrice;
-    int minPrice;
-    int maxPrice;
+    private final String company;
+    public int currentPrice;
+    private int minPrice;
+    private int maxPrice;
 
     public Stock(String company, int currentPrice) {
         this.company = company;
@@ -14,17 +14,17 @@ class Stock {
     }
 
     public int updatePrice(int newPrice) {
-        if (newPrice > maxPrice) {
-            maxPrice = newPrice;
+        if (maxPrice > currentPrice && minPrice < currentPrice) {
+            this.currentPrice = newPrice;
+        } else if (newPrice > currentPrice) {
+            this.maxPrice = newPrice;
+        } else if (newPrice < currentPrice) {
+            this.minPrice = newPrice;
         }
-        if (newPrice < minPrice) {
-            minPrice = newPrice;
-        }
-        return currentPrice = newPrice;
+        return newPrice;
     }
 
     public String getPriceInformation() {
         return "Company" + this.company + ", Current Price " + this.currentPrice + ", Min price " + this.minPrice + ", Max Price " + this.maxPrice;
     }
-
 }
