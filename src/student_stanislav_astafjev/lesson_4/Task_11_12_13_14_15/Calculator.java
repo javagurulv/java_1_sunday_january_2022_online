@@ -18,7 +18,7 @@ class Calculator {
         return firstNumber / secondNumber;
     }
 
-    public int Multiplication(int firstNumber, int secondNumber) {
+    public int multiplication(int firstNumber, int secondNumber) {
 
         return firstNumber * secondNumber;
     }
@@ -32,29 +32,7 @@ class Calculator {
         return Math.max(firstNumber, secondNumber);
     }
     public int maxOfThreeNumbers(int firstNumber,int secondNumber,int thirdNumber) {
-        if (firstNumber > secondNumber && firstNumber > thirdNumber){
-            return firstNumber;
-        }
-        else if (secondNumber > firstNumber && secondNumber > thirdNumber) {
-            return secondNumber;
-        }
-        else if (thirdNumber > firstNumber && thirdNumber > secondNumber) {
-            return thirdNumber;
-        }
-        else if (firstNumber == secondNumber && firstNumber > thirdNumber) {
-            return firstNumber;
-        }
-        else if (firstNumber == thirdNumber && firstNumber > secondNumber) {
-            return firstNumber;
-        }
-        else if (secondNumber == firstNumber && secondNumber > thirdNumber) {
-            return secondNumber;
-        }
-        else if (firstNumber == secondNumber && secondNumber == thirdNumber) {
-            return secondNumber;
-        }
-        else {
-            return thirdNumber;
-        }
+        int maxNumber = Math.max(firstNumber,secondNumber);
+        return Math.max(maxNumber,thirdNumber);
     }
 }
