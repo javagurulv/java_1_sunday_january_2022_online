@@ -38,6 +38,14 @@ class ShapeUtil {
         return perimeterOfAllFigures;
     }
 
+    double calculateArea(Shape[] shapes){
+        double areaOfAllFigures = 0;
+        for (int i = 0; i < shapes.length; i++){
+            areaOfAllFigures = shapes[i].calculateArea() + areaOfAllFigures;
+        }
+        return areaOfAllFigures;
+    }
+
     double calculateArea(Shape shape) {
         return shape.calculateArea();
     }
