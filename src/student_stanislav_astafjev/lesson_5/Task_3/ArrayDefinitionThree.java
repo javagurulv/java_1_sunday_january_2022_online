@@ -1,8 +1,8 @@
 package student_stanislav_astafjev.lesson_5.Task_3;
 
-public class ArrayDefinitionThree {
+class ArrayDefinitionThree {
     public static void main(String[] args) {
 
-        Boolean[] numbers = new Boolean[10];
+        int[] numbers = new int[10];
     }
 }
