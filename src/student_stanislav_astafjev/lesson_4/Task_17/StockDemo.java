@@ -1,6 +1,6 @@
 package student_stanislav_astafjev.lesson_4.Task_17;
 
-public class StockDemo {
+class StockDemo {
     public static void main(String[] args) {
         Stock google = new Stock("Google",10);
         String priceInformation = google.getPriceInformation();

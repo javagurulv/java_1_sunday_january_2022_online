@@ -65,7 +65,7 @@ class CalculatorTest {
         int secondNumber = 5;
         int expectedResult = 50;
         Calculator calculator = new Calculator();
-        int realResult = calculator.Multiplication(firstNumber,secondNumber);
+        int realResult = calculator.multiplication(firstNumber,secondNumber);
         if (realResult == expectedResult) {
             System.out.println("Multiplication test = OK");
         }
@@ -83,7 +83,7 @@ class CalculatorTest {
             System.out.println("Sub result : " + subTest);
         boolean divisionTest = calculator.isEven(calculator.division(numberOne,numberTwo));
             System.out.println("Division result : " + divisionTest);
-        boolean multiplicationTest = calculator.isEven(calculator.Multiplication(numberOne,numberTwo));
+        boolean multiplicationTest = calculator.isEven(calculator.multiplication(numberOne,numberTwo));
             System.out.println("Multiplication result : " + multiplicationTest);
     }
     public static void maxOfTwoNumbersTestOne() {
