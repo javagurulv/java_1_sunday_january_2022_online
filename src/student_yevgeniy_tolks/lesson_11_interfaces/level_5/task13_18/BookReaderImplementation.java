@@ -10,7 +10,7 @@ public class BookReaderImplementation implements BookReader {
     @Override
     public boolean searchForDuplicate(Book book) {
         boolean duplicateSearch = false;
-          for (Book bookSearch : books) {
+        for (Book bookSearch : books) {
             duplicateSearch = bookSearch.equals(book);
             break;
         }
@@ -20,11 +20,16 @@ public class BookReaderImplementation implements BookReader {
     @Override
     public boolean add(Book book) {
         boolean foundBook = false;
-        if (!searchForDuplicate(book)) {
+        if (!searchForDuplicate(book) && isAuthorAndTitlePresent(book)) {
             books.add(book);
             foundBook = true;
         }
         return foundBook;
+    }
+
+    @Override
+    public boolean isAuthorAndTitlePresent(Book book) {
+        return book.getAuthor() != null && book.getTitle() != null;
     }
 
     public void printListOfBooks() {

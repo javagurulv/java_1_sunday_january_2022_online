@@ -6,14 +6,14 @@ class BookReaderTest {
         BookReaderTest test = new BookReaderTest();
         test.searchForNoDuplicateTest();
         test.addTest();
+        test.titleAndAuthorPresenceTest();
     }
 
     public void searchForNoDuplicateTest() {
-        Book book = new Book("Tolstoy", "War and Peace vol1");
+        Book book = new Book("Tolstoy", "null");
 
         BookReaderImplementation bookReader = new BookReaderImplementation();
         boolean resultOfSearch = bookReader.searchForDuplicate(book);
-
         bookReader.printListOfBooks();
         if (!resultOfSearch) {
             System.out.println("Duplicate not found - TEST OK");
@@ -29,11 +29,22 @@ class BookReaderTest {
         BookReaderImplementation bookReader = new BookReaderImplementation();
         boolean resultBookAdded = bookReader.add(book);
         bookReader.printListOfBooks();
-
         if (resultBookAdded) {
             System.out.println("Book is added - TEST OK");
         } else {
             System.out.println("Book is not added - TEST FAILED");
+        }
+    }
+
+    public void titleAndAuthorPresenceTest() {
+        Book book = new Book("Bulhakov", "Master and Margaritta");
+
+        BookReaderImplementation bookReader = new BookReaderImplementation();
+        boolean titleAndAuthorPresent = bookReader.isAuthorAndTitlePresent(book);
+        if (titleAndAuthorPresent) {
+            System.out.println("Author and title of the book present - TEST OK");
+        } else {
+            System.out.println("Check presence of author and title - TEST FAILED");
         }
     }
 }
