@@ -10,8 +10,7 @@ public class BookReaderImplementation implements BookReader {
     @Override
     public boolean searchForDuplicate(Book book) {
         boolean duplicateSearch = false;
-        //books.add(new Book("Tolstoy", "War and Peace vol2"));
-        for (Book bookSearch : books) {
+          for (Book bookSearch : books) {
             duplicateSearch = bookSearch.equals(book);
             break;
         }

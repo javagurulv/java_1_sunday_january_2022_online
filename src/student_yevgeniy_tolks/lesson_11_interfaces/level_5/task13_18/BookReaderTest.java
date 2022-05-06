@@ -4,11 +4,11 @@ package student_yevgeniy_tolks.lesson_11_interfaces.level_5.task13_18;
 class BookReaderTest {
     public static void main(String[] args) {
         BookReaderTest test = new BookReaderTest();
-        test.searchForDuplicateTest();
+        test.searchForNoDuplicateTest();
         test.addTest();
     }
 
-    public void searchForDuplicateTest() {
+    public void searchForNoDuplicateTest() {
         Book book = new Book("Tolstoy", "War and Peace vol1");
 
         BookReaderImplementation bookReader = new BookReaderImplementation();
