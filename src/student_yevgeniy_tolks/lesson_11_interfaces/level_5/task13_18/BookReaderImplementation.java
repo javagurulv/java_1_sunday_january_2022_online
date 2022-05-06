@@ -32,6 +32,11 @@ public class BookReaderImplementation implements BookReader {
         return book.getAuthor() != null && book.getTitle() != null;
     }
 
+    @Override
+    public boolean deleteBook(Book book) {   //to be continued (task15)....
+        return false;
+    }
+
     public void printListOfBooks() {
         System.out.println(books.size());
 
