@@ -5,5 +5,6 @@ interface BookReader {
     boolean searchForDuplicate(Book book);
     boolean add (Book book);
     boolean isAuthorAndTitlePresent(Book book);
+    boolean searchForBook(Book book);
     boolean deleteBook(Book book);
 }

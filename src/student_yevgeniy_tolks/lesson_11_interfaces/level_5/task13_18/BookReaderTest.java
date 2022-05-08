@@ -1,6 +1,5 @@
 package student_yevgeniy_tolks.lesson_11_interfaces.level_5.task13_18;
 
-
 class BookReaderTest {
     public static void main(String[] args) {
         BookReaderTest test = new BookReaderTest();
@@ -8,6 +7,7 @@ class BookReaderTest {
         test.addTest();
         test.titleAndAuthorPresenceTest();
         test.noTitleAndNoAuthorPresenceTest();
+        test.deleteBookTest();
     }
 
     public void searchForNoDuplicateTest() {
@@ -58,6 +58,20 @@ class BookReaderTest {
             System.out.println("Check presence of author and title - TEST OK");
         } else {
             System.out.println("Author and title of the book present - TEST FAILED");
+        }
+    }
+
+    public void deleteBookTest() {
+
+        Book book = new Book("Bulhakov", "Master and Margaritta");
+
+        BookReaderImplementation bookReader = new BookReaderImplementation();
+        boolean isBookDeleted = bookReader.deleteBook(book);
+        bookReader.printListOfBooks();
+        if (isBookDeleted) {
+            System.out.println("Book deleted - TEST OK");
+        } else {
+            System.out.println("Book is not deleted - TEST FAILED");
         }
     }
 }

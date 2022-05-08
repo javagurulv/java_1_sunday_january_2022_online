@@ -33,12 +33,27 @@ public class BookReaderImplementation implements BookReader {
     }
 
     @Override
-    public boolean deleteBook(Book book) {   //to be continued (task15)....
-        return false;
+    public boolean searchForBook(Book book) {
+        boolean bookFound = false;
+        if (add(book)) {
+            for (Book bookSearch : books) {
+                bookFound = bookSearch.equals(book);
+                break;
+            }
+        }
+        return bookFound;
+    }
+
+    public boolean deleteBook(Book book) {
+        if (searchForBook(book)) {
+            books.remove(book);
+            return true;
+        } else {
+            return false;
+        }
     }
 
     public void printListOfBooks() {
         System.out.println(books.size());
-
     }
 }
