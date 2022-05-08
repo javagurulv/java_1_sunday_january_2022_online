@@ -27,4 +27,10 @@ class Book {
         Book book = (Book) o;
         return Objects.equals(author, book.author) && Objects.equals(title, book.title);
     }
+
+    @Override
+    public String toString() {
+        return title +
+                " [" + author + "]";
+    }
 }

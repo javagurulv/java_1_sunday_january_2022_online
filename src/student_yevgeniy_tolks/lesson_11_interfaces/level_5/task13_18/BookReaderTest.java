@@ -1,6 +1,10 @@
 package student_yevgeniy_tolks.lesson_11_interfaces.level_5.task13_18;
 
+import java.util.Arrays;
+import java.util.List;
+
 class BookReaderTest {
+
     public static void main(String[] args) {
         BookReaderTest test = new BookReaderTest();
         test.searchForNoDuplicateTest();
@@ -8,6 +12,8 @@ class BookReaderTest {
         test.titleAndAuthorPresenceTest();
         test.noTitleAndNoAuthorPresenceTest();
         test.deleteBookTest();
+        test.printListOfBooksToConsoleTest();
+        test.printListOfBooksToConsoleTest();
     }
 
     public void searchForNoDuplicateTest() {
@@ -72,6 +78,30 @@ class BookReaderTest {
             System.out.println("Book deleted - TEST OK");
         } else {
             System.out.println("Book is not deleted - TEST FAILED");
+        }
+    }
+
+    public void printListOfBooksToConsoleTest() {
+        List<Book> listOfBooks = List.of(
+                new Book("Bulhakov", "Master and Margaritta"),
+                new Book("Tolstoy", "War and Peace vol1"),
+                new Book("Tolstoy", "War and Peace vol2"),
+                new Book("Tolstoy", "War and Peace vol3")
+        );
+
+        String[] expectedArray = new String[]{
+                "Master and Margaritta [Bulhakov]",
+                "War and Peace vol1 [Tolstoy]",
+                "War and Peace vol2 [Tolstoy]",
+                "War and Peace vol3 [Tolstoy]"};
+
+        BookReaderImplementation bookReaderImplementation = new BookReaderImplementation();
+        String[] resultArray = bookReaderImplementation.provideListOfBooksToUser(listOfBooks);
+
+        if (Arrays.equals(expectedArray, resultArray)) {
+            System.out.println("List is provided - TEST OK");
+        } else {
+            System.out.println("Something went wrong - TEST FAILED");
         }
     }
 }

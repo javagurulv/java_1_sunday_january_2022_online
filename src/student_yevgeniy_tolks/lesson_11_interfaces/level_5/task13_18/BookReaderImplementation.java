@@ -1,11 +1,13 @@
 package student_yevgeniy_tolks.lesson_11_interfaces.level_5.task13_18;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class BookReaderImplementation implements BookReader {
 
     private final List<Book> books = new ArrayList<>();
+    private String[] array;
 
     @Override
     public boolean searchForDuplicate(Book book) {
@@ -51,6 +53,15 @@ public class BookReaderImplementation implements BookReader {
         } else {
             return false;
         }
+    }
+
+    @Override
+    public String[] provideListOfBooksToUser(List<Book> listOfBooks) {
+        array = new String[listOfBooks.size()];
+        for (int i = 0; i < array.length; i++) {
+            array[i] = listOfBooks.get(i).toString();
+        }
+        return array;
     }
 
     public void printListOfBooks() {
