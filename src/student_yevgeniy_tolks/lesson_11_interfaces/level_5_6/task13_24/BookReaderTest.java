@@ -18,6 +18,7 @@ class BookReaderTest {
         test.provideAllBooksByAuthorV2Test();
         test.provideAllBooksByTitleTest();
         test.provideAllBooksByTitleV2Test();
+        test.bookStatusRead();
     }
 
     public void searchForDuplicateTest() {
@@ -222,6 +223,24 @@ class BookReaderTest {
         } else {
             System.out.println("Books not found - TEST FAILED");
         }
+    }
+
+    public void bookStatusRead(){
+        List<Book> books = List.of(
+                new Book("Bulhakov", "Master and Margaritta"),
+                new Book("Tolstoy", "War and Peace")
+        );
+        Book book = new Book("Bulhakov", "Master and Margaritta");
+        BookStatus expectedStatus = BookStatus.READ;
+
+        BookReaderImplementation bookReaderImplementation = new BookReaderImplementation();
+        BookStatus resultStatus = bookReaderImplementation.giveBookStatusRead(book,books);
+        if(expectedStatus.equals(resultStatus)){
+            System.out.println("Book marked as READ - TEST OK");
+        }else{
+            System.out.println("Book wasn't found - TEST FAILED");
+        }
+
     }
 
 }

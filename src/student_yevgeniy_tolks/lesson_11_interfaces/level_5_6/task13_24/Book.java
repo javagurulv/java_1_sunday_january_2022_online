@@ -4,10 +4,18 @@ class Book {
 
     private String author;
     private String title;
-
+private BookStatus status;
     public Book(String author, String title) {
         this.author = author;
         this.title = title;
+    }
+
+    public BookStatus getStatus() {
+        return status;
+    }
+
+    public void setStatus(BookStatus status) {
+        this.status = status;
     }
 
     public String getAuthor() {

@@ -5,6 +5,7 @@ import java.util.List;
 
 public class BookReaderImplementation implements BookReader {
 
+
     @Override
     public boolean searchForDuplicate(Book book, List<Book> books) {
         boolean duplicateSearch = false;
@@ -105,6 +106,15 @@ public class BookReaderImplementation implements BookReader {
             }
         }
         return booksByTitleV2;
+    }
+
+    @Override
+    public BookStatus giveBookStatusRead(Book book, List<Book> books) {
+        BookStatus read = BookStatus.UNREAD;
+        if (searchForBook(book, books)) {
+            read = BookStatus.READ;
+        }
+        return read;
     }
 
     public void printListOfBooks(List<Book> books) {
