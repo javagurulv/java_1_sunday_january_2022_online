@@ -1,4 +1,4 @@
-package student_yevgeniy_tolks.lesson_11_interfaces.level_5.task13_18;
+package student_yevgeniy_tolks.lesson_11_interfaces.level_5_6.task13_24;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -16,6 +16,7 @@ class BookReaderTest {
         test.provideListOfBooksTest();
         test.provideAllBooksByAuthorTest();
         test.provideAllBooksByAuthorV2Test();
+        test.provideAllBooksByTitleTest();
     }
 
     public void searchForDuplicateTest() {
@@ -106,7 +107,6 @@ class BookReaderTest {
                 new Book("Tolstoy", "War and Peace vol2"),
                 new Book("Tolstoy", "War and Peace vol3")
         );
-
         String[] expectedArray = new String[]{
                 "Master and Margaritta [Bulhakov]",
                 "War and Peace vol1 [Tolstoy]",
@@ -115,7 +115,6 @@ class BookReaderTest {
 
         BookReaderImplementation bookReaderImplementation = new BookReaderImplementation();
         String[] resultArray = bookReaderImplementation.provideListOfBooks(listOfBooks);
-
         if (Arrays.equals(expectedArray, resultArray)) {
             System.out.println("List is provided - TEST OK");
         } else {
@@ -135,7 +134,6 @@ class BookReaderTest {
 
         Book book = new Book("Bulhakov", "Master and Margaritta Vol1");
         String bookAuthor = book.getAuthor();
-
         List<Book> expectedList = List.of(
                 new Book("Bulhakov", "Master and Margaritta Vol1"),
                 new Book("Bulhakov", "Master and Margaritta Vol2")
@@ -143,7 +141,6 @@ class BookReaderTest {
 
         BookReaderImplementation bookReaderImplementation = new BookReaderImplementation();
         List<Book> booksByAuthor = bookReaderImplementation.searchBooksByAuthor(bookAuthor, books);
-
         System.out.println(booksByAuthor.size());
         if (expectedList.equals(booksByAuthor)) {
             System.out.println("Books by same author found - TEST OK");
@@ -165,7 +162,6 @@ class BookReaderTest {
         Book book = new Book("Tolstoy", "War and Peace vol1");
         String bookAuthor = book.getAuthor();
         String query = "Tols";
-
         List<Book> expectedList = List.of(
                 new Book("Tolstoy", "War and Peace vol1"),
                 new Book("Tolstoy", "War and Peace vol2"),
@@ -174,10 +170,31 @@ class BookReaderTest {
 
         BookReaderImplementation bookReaderImplementation = new BookReaderImplementation();
         List<Book> booksByAuthor = bookReaderImplementation.searchBooksByAuthorV2(bookAuthor, query, books);
-
         System.out.println(booksByAuthor.size());
         if (expectedList.equals(booksByAuthor)) {
             System.out.println("Books by same author found - TEST OK");
+        } else {
+            System.out.println("Books not found - TEST FAILED");
+        }
+    }
+
+    public void provideAllBooksByTitleTest() {
+
+        List<Book> books = List.of(
+                new Book("Bulhakov", "Master and Margaritta Vol1"),
+                new Book("Tolstoy", "War and Peace vol2")
+        );
+        Book book = new Book("Bulhakov", "Master and Margaritta Vol1");
+        String bookTitle = book.getTitle();
+        List<Book> expectedList = List.of(
+                new Book("Bulhakov", "Master and Margaritta Vol1")
+        );
+
+        BookReaderImplementation bookReaderImplementation = new BookReaderImplementation();
+        List<Book> booksByAuthor = bookReaderImplementation.searchBooksByTitle(bookTitle, books);
+        System.out.println(booksByAuthor.size());
+        if (expectedList.equals(booksByAuthor)) {
+            System.out.println("Books by same title found - TEST OK");
         } else {
             System.out.println("Books not found - TEST FAILED");
         }

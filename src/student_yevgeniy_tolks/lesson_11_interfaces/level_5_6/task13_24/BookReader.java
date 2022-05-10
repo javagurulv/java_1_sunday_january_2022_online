@@ -1,4 +1,4 @@
-package student_yevgeniy_tolks.lesson_11_interfaces.level_5.task13_18;
+package student_yevgeniy_tolks.lesson_11_interfaces.level_5_6.task13_24;
 
 import java.util.List;
 
@@ -20,5 +20,5 @@ interface BookReader {
 
     List<Book> searchBooksByAuthorV2(String author,String query, List<Book> books);
 
-
+    List<Book> searchBooksByTitle(String title, List<Book> books);
 }

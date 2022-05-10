@@ -1,4 +1,4 @@
-package student_yevgeniy_tolks.lesson_11_interfaces.level_5.task13_18;
+package student_yevgeniy_tolks.lesson_11_interfaces.level_5_6.task13_24;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -80,6 +80,16 @@ public class BookReaderImplementation implements BookReader {
             }
         }
         return booksByAuthorV2;
+    }
+
+    public List<Book> searchBooksByTitle(String title, List<Book> books) {
+        List<Book> booksByTitle = new ArrayList<>();
+        for (Book bookByTitle : books) {
+            if (bookByTitle.getTitle().equals(title)) {
+                booksByTitle.add(bookByTitle);
+            }
+        }
+        return booksByTitle;
     }
 
     public void printListOfBooks(List<Book> books) {
