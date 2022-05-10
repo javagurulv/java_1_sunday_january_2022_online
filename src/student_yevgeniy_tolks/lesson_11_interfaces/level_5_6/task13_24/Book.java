@@ -4,7 +4,8 @@ class Book {
 
     private String author;
     private String title;
-private BookStatus status;
+    private BookStatus status;
+
     public Book(String author, String title) {
         this.author = author;
         this.title = title;

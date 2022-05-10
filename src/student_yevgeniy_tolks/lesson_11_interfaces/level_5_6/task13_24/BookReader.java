@@ -27,4 +27,6 @@ interface BookReader {
     BookStatus giveBookStatusRead(Book book, List<Book> books);
 
     BookStatus giveBookStatusUnRead(Book book, List<Book> books);
+
+    String[] provideListOfBooksStatusRead(Book book, List<Book> listOfBooks);
 }

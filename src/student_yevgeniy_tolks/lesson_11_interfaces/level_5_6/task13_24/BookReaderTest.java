@@ -20,6 +20,7 @@ class BookReaderTest {
         test.provideAllBooksByTitleV2Test();
         test.bookStatusReadTest();
         test.bookStatusUnReadTest();
+        test.provideAllReadBooks();
     }
 
     public void searchForDuplicateTest() {
@@ -249,7 +250,7 @@ class BookReaderTest {
                 new Book("Tolstoy", "War and Peace")
         );
         Book book = new Book("Bulhakov", "Master and Margaritta ");
-                BookStatus expectedStatus = BookStatus.UNREAD;
+        BookStatus expectedStatus = BookStatus.UNREAD;
 
         BookReaderImplementation bookReaderImplementation = new BookReaderImplementation();
         BookStatus resultStatus = bookReaderImplementation.giveBookStatusUnRead(book, books);
@@ -259,5 +260,24 @@ class BookReaderTest {
             System.out.println("Book was found - TEST FAILED");
         }
     }
+
+    public void provideAllReadBooks() {
+
+        Book book = new Book("Turgenev", "Father and Sons");
+        book.setStatus(BookStatus.READ);
+        List<Book> books = List.of(book);
+        String[] expectedReadBooksArray = {
+                "Father and Sons [Turgenev]"
+                };
+
+        BookReaderImplementation bookReaderImplementation = new BookReaderImplementation();
+        String[] resultOfReadBookArray = bookReaderImplementation.provideListOfBooksStatusRead(book, books);
+        if (Arrays.equals(expectedReadBooksArray, resultOfReadBookArray)) {
+            System.out.println("Array of READ books found - TEST OK");
+        } else {
+            System.out.println("Something went wrong, pls check - TEST FAILED");
+        }
+    }
+
 
 }

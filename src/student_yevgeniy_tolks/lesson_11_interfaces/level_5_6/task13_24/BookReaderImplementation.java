@@ -1,6 +1,7 @@
 package student_yevgeniy_tolks.lesson_11_interfaces.level_5_6.task13_24;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class BookReaderImplementation implements BookReader {
@@ -125,6 +126,19 @@ public class BookReaderImplementation implements BookReader {
         }
         return read;
     }
+
+    @Override
+    public String[] provideListOfBooksStatusRead(Book book, List<Book> listOfBooks) {
+        String[] array = new String[listOfBooks.size()];
+        for (int i = 0; i < array.length; i++) {
+            if (BookStatus.READ.equals(book.getStatus())) {
+                array[i] = listOfBooks.get(i).toString();
+            }
+        }
+        System.out.println(Arrays.toString(array));
+        return array;
+    }
+
 
     public void printListOfBooks(List<Book> books) {
         System.out.println(books.size());
