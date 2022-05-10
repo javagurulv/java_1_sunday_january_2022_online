@@ -18,7 +18,8 @@ class BookReaderTest {
         test.provideAllBooksByAuthorV2Test();
         test.provideAllBooksByTitleTest();
         test.provideAllBooksByTitleV2Test();
-        test.bookStatusRead();
+        test.bookStatusReadTest();
+        test.bookStatusUnReadTest();
     }
 
     public void searchForDuplicateTest() {
@@ -225,7 +226,7 @@ class BookReaderTest {
         }
     }
 
-    public void bookStatusRead(){
+    public void bookStatusReadTest() {
         List<Book> books = List.of(
                 new Book("Bulhakov", "Master and Margaritta"),
                 new Book("Tolstoy", "War and Peace")
@@ -234,13 +235,29 @@ class BookReaderTest {
         BookStatus expectedStatus = BookStatus.READ;
 
         BookReaderImplementation bookReaderImplementation = new BookReaderImplementation();
-        BookStatus resultStatus = bookReaderImplementation.giveBookStatusRead(book,books);
-        if(expectedStatus.equals(resultStatus)){
+        BookStatus resultStatus = bookReaderImplementation.giveBookStatusRead(book, books);
+        if (expectedStatus.equals(resultStatus)) {
             System.out.println("Book marked as READ - TEST OK");
-        }else{
+        } else {
             System.out.println("Book wasn't found - TEST FAILED");
         }
+    }
 
+    public void bookStatusUnReadTest() {
+        List<Book> books = List.of(
+                new Book("Bulhakov", "Master and Margaritta "),
+                new Book("Tolstoy", "War and Peace")
+        );
+        Book book = new Book("Bulhakov", "Master and Margaritta ");
+                BookStatus expectedStatus = BookStatus.UNREAD;
+
+        BookReaderImplementation bookReaderImplementation = new BookReaderImplementation();
+        BookStatus resultStatus = bookReaderImplementation.giveBookStatusUnRead(book, books);
+        if (expectedStatus.equals(resultStatus)) {
+            System.out.println("Book marked as UNREAD - TEST OK");
+        } else {
+            System.out.println("Book was found - TEST FAILED");
+        }
     }
 
 }

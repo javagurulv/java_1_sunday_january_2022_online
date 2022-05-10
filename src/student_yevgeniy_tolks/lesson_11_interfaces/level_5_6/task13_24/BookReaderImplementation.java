@@ -117,6 +117,15 @@ public class BookReaderImplementation implements BookReader {
         return read;
     }
 
+    @Override
+    public BookStatus giveBookStatusUnRead(Book book, List<Book> books) {
+        BookStatus read = BookStatus.READ;
+        if (searchForBook(book, books)) {
+            read = BookStatus.UNREAD;
+        }
+        return read;
+    }
+
     public void printListOfBooks(List<Book> books) {
         System.out.println(books.size());
     }

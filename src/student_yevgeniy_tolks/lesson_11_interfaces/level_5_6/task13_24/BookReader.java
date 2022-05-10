@@ -18,11 +18,13 @@ interface BookReader {
 
     List<Book> searchBooksByAuthor(String author, List<Book> books);
 
-    List<Book> searchBooksByAuthorV2(String author,String query, List<Book> books);
+    List<Book> searchBooksByAuthorV2(String author, String query, List<Book> books);
 
     List<Book> searchBooksByTitle(String title, List<Book> books);
 
     List<Book> searchBooksByTitleV2(String title, String query, List<Book> books);
 
     BookStatus giveBookStatusRead(Book book, List<Book> books);
+
+    BookStatus giveBookStatusUnRead(Book book, List<Book> books);
 }
