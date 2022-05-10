@@ -42,6 +42,7 @@ public class BookReaderImplementation implements BookReader {
         return bookFound;
     }
 
+    @Override
     public boolean deleteBook(Book book, List<Book> books) {
         if (searchForBook(book, books)) {
             books.remove(book);
@@ -60,6 +61,7 @@ public class BookReaderImplementation implements BookReader {
         return array;
     }
 
+    @Override
     public List<Book> searchBooksByAuthor(String author, List<Book> books) {
         List<Book> booksByAuthor = new ArrayList<>();
         for (Book bookByAuthor : books) {
@@ -82,6 +84,7 @@ public class BookReaderImplementation implements BookReader {
         return booksByAuthorV2;
     }
 
+    @Override
     public List<Book> searchBooksByTitle(String title, List<Book> books) {
         List<Book> booksByTitle = new ArrayList<>();
         for (Book bookByTitle : books) {
@@ -90,6 +93,18 @@ public class BookReaderImplementation implements BookReader {
             }
         }
         return booksByTitle;
+    }
+
+    @Override
+    public List<Book> searchBooksByTitleV2(String title, String query, List<Book> books) {
+        List<Book> booksByTitleV2 = new ArrayList<>();
+        for (Book bookByTitle : books) {
+            if (bookByTitle.getTitle().equals(title)
+                    && bookByTitle.getTitle().startsWith(query)) {
+                booksByTitleV2.add(bookByTitle);
+            }
+        }
+        return booksByTitleV2;
     }
 
     public void printListOfBooks(List<Book> books) {

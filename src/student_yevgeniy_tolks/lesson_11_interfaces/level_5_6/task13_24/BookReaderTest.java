@@ -17,6 +17,7 @@ class BookReaderTest {
         test.provideAllBooksByAuthorTest();
         test.provideAllBooksByAuthorV2Test();
         test.provideAllBooksByTitleTest();
+        test.provideAllBooksByTitleV2Test();
     }
 
     public void searchForDuplicateTest() {
@@ -194,6 +195,29 @@ class BookReaderTest {
         List<Book> booksByAuthor = bookReaderImplementation.searchBooksByTitle(bookTitle, books);
         System.out.println(booksByAuthor.size());
         if (expectedList.equals(booksByAuthor)) {
+            System.out.println("Books by same title found - TEST OK");
+        } else {
+            System.out.println("Books not found - TEST FAILED");
+        }
+    }
+
+    public void provideAllBooksByTitleV2Test() {
+
+        List<Book> books = List.of(
+                new Book("Bulhakov", "Master and Margaritta"),
+                new Book("Tolstoy", "War and Peace")
+        );
+        Book book = new Book("Bulhakov", "Master and Margaritta");
+        String bookTitle = book.getTitle();
+        String query = "Master ";
+        List<Book> expectedList = List.of(
+                new Book("Bulhakov", "Master and Margaritta")
+        );
+
+        BookReaderImplementation bookReaderImplementation = new BookReaderImplementation();
+        List<Book> booksByTitle = bookReaderImplementation.searchBooksByTitleV2(bookTitle, query, books);
+        System.out.println(booksByTitle.size());
+        if (expectedList.equals(booksByTitle)) {
             System.out.println("Books by same title found - TEST OK");
         } else {
             System.out.println("Books not found - TEST FAILED");
