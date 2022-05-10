@@ -4,15 +4,21 @@ import java.util.List;
 
 interface BookReader {
 
-    boolean searchForDuplicate(Book book);
+    boolean searchForDuplicate(Book book, List<Book> books);
 
-    boolean add(Book book);
+    boolean add(Book book, List<Book> books);
 
-    boolean isAuthorAndTitlePresent(Book book);
+    boolean isAuthorAndTitlePresent(Book book, List<Book> books);
 
-    boolean searchForBook(Book book);
+    boolean searchForBook(Book book, List<Book> books);
 
-    boolean deleteBook(Book book);
+    boolean deleteBook(Book book, List<Book> books);
 
-    String [] provideListOfBooksToUser(List<Book> listOfBooks);
+    String[] provideListOfBooks(List<Book> listOfBooks);
+
+    List<Book> searchBooksByAuthor(String author, List<Book> books);
+
+    List<Book> searchBooksByAuthorV2(String author, List<Book> books);
+
+
 }

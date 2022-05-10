@@ -1,7 +1,5 @@
 package student_yevgeniy_tolks.lesson_11_interfaces.level_5.task13_18;
 
-import java.util.Objects;
-
 class Book {
 
     private String author;
@@ -25,7 +23,7 @@ class Book {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Book book = (Book) o;
-        return Objects.equals(author, book.author) && Objects.equals(title, book.title);
+        return author.equals(book.author) && title.equals(book.title);
     }
 
     @Override

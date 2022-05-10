@@ -1,16 +1,12 @@
 package student_yevgeniy_tolks.lesson_11_interfaces.level_5.task13_18;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class BookReaderImplementation implements BookReader {
 
-    private final List<Book> books = new ArrayList<>();
-    private String[] array;
-
     @Override
-    public boolean searchForDuplicate(Book book) {
+    public boolean searchForDuplicate(Book book, List<Book> books) {
         boolean duplicateSearch = false;
         for (Book bookSearch : books) {
             duplicateSearch = bookSearch.equals(book);
@@ -20,9 +16,9 @@ public class BookReaderImplementation implements BookReader {
     }
 
     @Override
-    public boolean add(Book book) {
+    public boolean add(Book book, List<Book> books) {
         boolean foundBook = false;
-        if (!searchForDuplicate(book) && isAuthorAndTitlePresent(book)) {
+        if (!searchForDuplicate(book, books) && isAuthorAndTitlePresent(book, books)) {
             books.add(book);
             foundBook = true;
         }
@@ -30,24 +26,24 @@ public class BookReaderImplementation implements BookReader {
     }
 
     @Override
-    public boolean isAuthorAndTitlePresent(Book book) {
+    public boolean isAuthorAndTitlePresent(Book book, List<Book> books) {
         return book.getAuthor() != null && book.getTitle() != null;
     }
 
     @Override
-    public boolean searchForBook(Book book) {
+    public boolean searchForBook(Book book, List<Book> books) {
         boolean bookFound = false;
-        if (add(book)) {
-            for (Book bookSearch : books) {
-                bookFound = bookSearch.equals(book);
+        for (Book bookSearch : books) {
+            if (bookSearch.equals(book)) {
+                bookFound = true;
                 break;
             }
         }
         return bookFound;
     }
 
-    public boolean deleteBook(Book book) {
-        if (searchForBook(book)) {
+    public boolean deleteBook(Book book, List<Book> books) {
+        if (searchForBook(book, books)) {
             books.remove(book);
             return true;
         } else {
@@ -56,15 +52,30 @@ public class BookReaderImplementation implements BookReader {
     }
 
     @Override
-    public String[] provideListOfBooksToUser(List<Book> listOfBooks) {
-        array = new String[listOfBooks.size()];
+    public String[] provideListOfBooks(List<Book> listOfBooks) {
+        String[] array = new String[listOfBooks.size()];
         for (int i = 0; i < array.length; i++) {
             array[i] = listOfBooks.get(i).toString();
         }
         return array;
     }
 
-    public void printListOfBooks() {
+    public List<Book> searchBooksByAuthor(String author, List<Book> books) {
+        List<Book> booksByAuthor = new ArrayList<>();
+        for (Book bookByAuthor : books) {
+            if (bookByAuthor.getAuthor().equals(author)) {
+                booksByAuthor.add(bookByAuthor);
+            }
+        }
+        return booksByAuthor;
+    }
+
+    @Override
+    public List<Book> searchBooksByAuthorV2(String author, List<Book> books) {
+        return null;
+    }
+
+    public void printListOfBooks(List<Book> books) {
         System.out.println(books.size());
     }
 }
