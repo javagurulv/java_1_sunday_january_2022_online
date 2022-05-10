@@ -14,8 +14,8 @@ class BookReaderTest {
         test.noTitleAndOrNoAuthorPresenceTest();
         test.deleteBookTest();
         test.provideListOfBooksTest();
-        test.provideAllBooksByAuthorTest ();
-
+        test.provideAllBooksByAuthorTest();
+        test.provideAllBooksByAuthorV2Test();
     }
 
     public void searchForDuplicateTest() {
@@ -143,6 +143,37 @@ class BookReaderTest {
 
         BookReaderImplementation bookReaderImplementation = new BookReaderImplementation();
         List<Book> booksByAuthor = bookReaderImplementation.searchBooksByAuthor(bookAuthor, books);
+
+        System.out.println(booksByAuthor.size());
+        if (expectedList.equals(booksByAuthor)) {
+            System.out.println("Books by same author found - TEST OK");
+        } else {
+            System.out.println("Books not found - TEST FAILED");
+        }
+    }
+
+    public void provideAllBooksByAuthorV2Test() {
+
+        List<Book> books = List.of(
+                new Book("Bulhakov", "Master and Margaritta Vol1"),
+                new Book("Bulhakov", "Master and Margaritta Vol2"),
+                new Book("Tolstoy", "War and Peace vol1"),
+                new Book("Tolstoy", "War and Peace vol2"),
+                new Book("Tolstoy", "War and Peace vol3")
+        );
+
+        Book book = new Book("Tolstoy", "War and Peace vol1");
+        String bookAuthor = book.getAuthor();
+        String query = "Tols";
+
+        List<Book> expectedList = List.of(
+                new Book("Tolstoy", "War and Peace vol1"),
+                new Book("Tolstoy", "War and Peace vol2"),
+                new Book("Tolstoy", "War and Peace vol3")
+        );
+
+        BookReaderImplementation bookReaderImplementation = new BookReaderImplementation();
+        List<Book> booksByAuthor = bookReaderImplementation.searchBooksByAuthorV2(bookAuthor, query, books);
 
         System.out.println(booksByAuthor.size());
         if (expectedList.equals(booksByAuthor)) {

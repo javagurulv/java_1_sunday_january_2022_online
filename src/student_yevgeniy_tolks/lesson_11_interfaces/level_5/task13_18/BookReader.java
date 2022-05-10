@@ -18,7 +18,7 @@ interface BookReader {
 
     List<Book> searchBooksByAuthor(String author, List<Book> books);
 
-    List<Book> searchBooksByAuthorV2(String author, List<Book> books);
+    List<Book> searchBooksByAuthorV2(String author,String query, List<Book> books);
 
 
 }

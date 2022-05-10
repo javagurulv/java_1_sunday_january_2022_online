@@ -71,8 +71,15 @@ public class BookReaderImplementation implements BookReader {
     }
 
     @Override
-    public List<Book> searchBooksByAuthorV2(String author, List<Book> books) {
-        return null;
+    public List<Book> searchBooksByAuthorV2(String author, String query, List<Book> books) {
+        List<Book> booksByAuthorV2 = new ArrayList<>();
+        for (Book bookByAuthor : books) {
+            if (bookByAuthor.getAuthor().equals(author)
+                    && bookByAuthor.getAuthor().startsWith(query)) {
+                booksByAuthorV2.add(bookByAuthor);
+            }
+        }
+        return booksByAuthorV2;
     }
 
     public void printListOfBooks(List<Book> books) {
