@@ -21,6 +21,7 @@ class BookReaderTest {
         test.bookStatusReadTest();
         test.bookStatusUnReadTest();
         test.provideAllReadBooks();
+        test.provideAllUnReadBooks();
     }
 
     public void searchForDuplicateTest() {
@@ -91,7 +92,6 @@ class BookReaderTest {
         books.add(new Book("Bulhakov", "Master and Margaritta"));
         books.add(new Book("Tolstoy", "War and Peace vol1"));
         System.out.println(books.size());
-
         Book book = new Book("Tolstoy", "War and Peace vol1");
 
         BookReaderImplementation bookReader = new BookReaderImplementation();
@@ -135,7 +135,6 @@ class BookReaderTest {
                 new Book("Tolstoy", "War and Peace vol1"),
                 new Book("Tolstoy", "War and Peace vol2")
         );
-
         Book book = new Book("Bulhakov", "Master and Margaritta Vol1");
         String bookAuthor = book.getAuthor();
         List<Book> expectedList = List.of(
@@ -162,7 +161,6 @@ class BookReaderTest {
                 new Book("Tolstoy", "War and Peace vol2"),
                 new Book("Tolstoy", "War and Peace vol3")
         );
-
         Book book = new Book("Tolstoy", "War and Peace vol1");
         String bookAuthor = book.getAuthor();
         String query = "Tols";
@@ -278,6 +276,27 @@ class BookReaderTest {
         List<Book> resultOfReadBookArray = bookReaderImplementation.provideListOfBooksStatusRead(books);
         if (expectedReadBooksArray.equals(resultOfReadBookArray)) {
             System.out.println("Array of READ books found - TEST OK");
+        } else {
+            System.out.println("Something went wrong, pls check - TEST FAILED");
+        }
+    }
+    public void provideAllUnReadBooks() {
+
+        Book book = new Book("Turgenev", "Father and Sons");
+        book.setStatus(BookStatus.UNREAD);
+        Book book1 = new Book("Tolstoy", "War and Peace");
+        book1.setStatus(BookStatus.UNREAD);
+        List<Book> books = List.of(book,book1);
+
+        List<Book> expectedReadBooksArray = List.of(
+                new Book("Turgenev", "Father and Sons"),
+                new Book("Tolstoy", "War and Peace")
+                   );
+
+        BookReaderImplementation bookReaderImplementation = new BookReaderImplementation();
+        List<Book> resultOfReadBookArray = bookReaderImplementation.provideListOfBooksStatusUnRead(books);
+        if (expectedReadBooksArray.equals(resultOfReadBookArray)) {
+            System.out.println("Array of UNREAD books found - TEST OK");
         } else {
             System.out.println("Something went wrong, pls check - TEST FAILED");
         }

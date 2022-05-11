@@ -138,6 +138,17 @@ public class BookReaderImplementation implements BookReader {
         return arrayOfBooksRead;
     }
 
+    @Override
+    public List<Book> provideListOfBooksStatusUnRead(List<Book> listOfBooks) {
+        List<Book> arrayOfBooksUnRead = new ArrayList<>();
+        for (Book books: listOfBooks) {
+            if (books.getStatus().equals(BookStatus.UNREAD)) {
+                arrayOfBooksUnRead.add(books);
+            }
+        }
+        System.out.println(arrayOfBooksUnRead);
+        return arrayOfBooksUnRead;
+    }
 
     public void printListOfBooks(List<Book> books) {
         System.out.println(books.size());

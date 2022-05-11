@@ -29,4 +29,6 @@ interface BookReader {
     BookStatus giveBookStatusUnRead(Book book, List<Book> books);
 
     List<Book> provideListOfBooksStatusRead(List<Book> listOfBooks);
+
+    List<Book> provideListOfBooksStatusUnRead(List <Book> listOfBooks);
 }
