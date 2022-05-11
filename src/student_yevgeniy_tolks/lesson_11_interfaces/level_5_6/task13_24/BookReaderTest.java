@@ -265,19 +265,21 @@ class BookReaderTest {
 
         Book book = new Book("Turgenev", "Father and Sons");
         book.setStatus(BookStatus.READ);
-        List<Book> books = List.of(book);
-        String[] expectedReadBooksArray = {
-                "Father and Sons [Turgenev]"
-                };
+        Book book1 = new Book("Tolstoy", "War and Peace");
+        book1.setStatus(BookStatus.READ);
+        List<Book> books = List.of(book,book1);
+
+        List<Book> expectedReadBooksArray = List.of(
+                new Book("Turgenev", "Father and Sons"),
+                new Book("Tolstoy", "War and Peace")
+                   );
 
         BookReaderImplementation bookReaderImplementation = new BookReaderImplementation();
-        String[] resultOfReadBookArray = bookReaderImplementation.provideListOfBooksStatusRead(book, books);
-        if (Arrays.equals(expectedReadBooksArray, resultOfReadBookArray)) {
+        List<Book> resultOfReadBookArray = bookReaderImplementation.provideListOfBooksStatusRead(books);
+        if (expectedReadBooksArray.equals(resultOfReadBookArray)) {
             System.out.println("Array of READ books found - TEST OK");
         } else {
             System.out.println("Something went wrong, pls check - TEST FAILED");
         }
     }
-
-
 }

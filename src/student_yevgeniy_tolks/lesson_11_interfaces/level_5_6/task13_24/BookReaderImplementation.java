@@ -1,7 +1,6 @@
 package student_yevgeniy_tolks.lesson_11_interfaces.level_5_6.task13_24;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class BookReaderImplementation implements BookReader {
@@ -56,11 +55,11 @@ public class BookReaderImplementation implements BookReader {
 
     @Override
     public String[] provideListOfBooks(List<Book> listOfBooks) {
-        String[] array = new String[listOfBooks.size()];
-        for (int i = 0; i < array.length; i++) {
-            array[i] = listOfBooks.get(i).toString();
+        String[] arrayOfBookList = new String[listOfBooks.size()];
+        for (int i = 0; i < arrayOfBookList.length; i++) {
+            arrayOfBookList[i] = listOfBooks.get(i).toString();
         }
-        return array;
+        return arrayOfBookList;
     }
 
     @Override
@@ -128,15 +127,15 @@ public class BookReaderImplementation implements BookReader {
     }
 
     @Override
-    public String[] provideListOfBooksStatusRead(Book book, List<Book> listOfBooks) {
-        String[] array = new String[listOfBooks.size()];
-        for (int i = 0; i < array.length; i++) {
-            if (BookStatus.READ.equals(book.getStatus())) {
-                array[i] = listOfBooks.get(i).toString();
+    public List<Book> provideListOfBooksStatusRead(List <Book> listOfBooks) {
+        List<Book> arrayOfBooksRead = new ArrayList<>();
+        for (Book books: listOfBooks) {
+            if (books.getStatus().equals(BookStatus.READ)) {
+                 arrayOfBooksRead.add(books);
             }
         }
-        System.out.println(Arrays.toString(array));
-        return array;
+        System.out.println(arrayOfBooksRead);
+        return arrayOfBooksRead;
     }
 
 
