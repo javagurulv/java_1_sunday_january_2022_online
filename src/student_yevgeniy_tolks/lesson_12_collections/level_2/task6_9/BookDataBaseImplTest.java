@@ -12,6 +12,7 @@ class BookDataBaseImplTest {
         test.optionalFindByIdTest();
         test.findBookByAuthor();
         test.findBookByTitle();
+        test.countBooksInList();
     }
 
     public void saveTest() {
@@ -96,6 +97,7 @@ class BookDataBaseImplTest {
             System.out.println("Task10.TEST FAILED");
         }
     }
+
     public void findBookByTitle() {
         String title = "Father and Sons";
         Book book = new Book("Father and Sons", "Turgenev");
@@ -109,6 +111,26 @@ class BookDataBaseImplTest {
             System.out.println("Task11.TEST OK");
         } else {
             System.out.println("Task11.TEST FAILED");
+        }
+    }
+
+    public void countBooksInList() {
+        Book book = new Book("Father and Sons", "Turgenev");
+        Book book1 = new Book("Master and Margaritta", "Bulhakov");
+        Book book2 = new Book("War and peace", "Tolstoy");
+        int expectedBooksInTheList = 3;
+
+        BookDataBaseImpl impl = new BookDataBaseImpl();
+        List<Book> books = impl.getBooks();
+        books.add(book);
+        books.add(book1);
+        books.add(book2);
+
+        int resultBooksInTheList = impl.countAllBooks();
+        if (expectedBooksInTheList == resultBooksInTheList) {
+            System.out.println("Task12.TEST OK");
+        } else {
+            System.out.println("Task12.TEST FAILED");
         }
     }
 }

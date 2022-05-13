@@ -56,8 +56,8 @@ class BookDataBaseImpl implements BookDataBase {
     @Override
     public List<Book> findByAuthor(String author) {
         List<Book> findBookByAuthor = new ArrayList<>();
-        for (Book book: books){
-            if(author.equals(book.getAuthor())){
+        for (Book book : books) {
+            if (author.equals(book.getAuthor())) {
                 findBookByAuthor.add(book);
             }
         }
@@ -67,12 +67,23 @@ class BookDataBaseImpl implements BookDataBase {
     @Override
     public List<Book> findByTitle(String title) {
         List<Book> findBookByTitle = new ArrayList<>();
-        for (Book book: books){
-            if(title.equals(book.getTitle())){
+        for (Book book : books) {
+            if (title.equals(book.getTitle())) {
                 findBookByTitle.add(book);
             }
         }
         return findBookByTitle;
+    }
+
+    @Override
+    public int countAllBooks() {
+        int bookCounter = 0;
+        for (Book book : books) {
+            if (book != null) {
+                bookCounter++;
+            }
+        }
+        return bookCounter;
     }
 
     public List<Book> getBooks() {
