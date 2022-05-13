@@ -11,6 +11,7 @@ class BookDataBaseImplTest {
         test.deleteBookTest();
         test.optionalFindByIdTest();
         test.findBookByAuthor();
+        test.findBookByTitle();
     }
 
     public void saveTest() {
@@ -93,6 +94,21 @@ class BookDataBaseImplTest {
             System.out.println("Task10.TEST OK");
         } else {
             System.out.println("Task10.TEST FAILED");
+        }
+    }
+    public void findBookByTitle() {
+        String title = "Father and Sons";
+        Book book = new Book("Father and Sons", "Turgenev");
+
+        BookDataBaseImpl impl = new BookDataBaseImpl();
+        List<Book> books = impl.getBooks();
+        books.add(book);
+
+        List<Book> resultBookFoundByTitle = impl.findByTitle(title);
+        if (books.equals(resultBookFoundByTitle)) {
+            System.out.println("Task11.TEST OK");
+        } else {
+            System.out.println("Task11.TEST FAILED");
         }
     }
 }
