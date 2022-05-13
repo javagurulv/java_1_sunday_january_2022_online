@@ -1,0 +1,13 @@
+package student_yevgeniy_tolks.lesson_12_collections.level_2.task6_9;
+
+import java.util.Optional;
+
+interface BookDataBase {
+    Long save(Book book);
+
+    boolean delete(Long bookId);
+
+    boolean delete(Book book);
+
+    Optional<Book> findById(Long bookId);
+}

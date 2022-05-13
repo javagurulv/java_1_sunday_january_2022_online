@@ -1,5 +1,7 @@
-package student_yevgeniy_tolks.lesson_12_collections.level_2.task6;
+package student_yevgeniy_tolks.lesson_12_collections.level_2.task6_9;
+
 import java.util.List;
+import java.util.Optional;
 
 class BookDataBaseImplTest {
     public static void main(String[] args) {
@@ -7,6 +9,7 @@ class BookDataBaseImplTest {
         test.saveTest();
         test.deleteBookByIdTest();
         test.deleteBookTest();
+        test.optionalFindByIdTest();
     }
 
     public void saveTest() {
@@ -52,9 +55,27 @@ class BookDataBaseImplTest {
 
         boolean bookFoundToDelete = impl.delete(SearchBook);
         if (bookFoundToDelete) {
-            System.out.println("Task8.TEST - OK");
+            System.out.println("Task8.TEST OK");
         } else {
             System.out.println("Task8.TEST FAILED");
+        }
+    }
+
+    public void optionalFindByIdTest() {
+        Book book = new Book("Turgenev", "Father and Sons");
+        book.setId(1L);
+        BookDataBaseImpl impl = new BookDataBaseImpl();
+        List<Book> books = impl.getBooks();
+        books.add(book);
+        Long bookId = 1L;
+
+        Optional<Book> expectedToFindBookByID = Optional.of(book);
+        Optional<Book> resultOfBookFoundById = impl.findById(bookId);
+
+        if (expectedToFindBookByID.equals(resultOfBookFoundById)) {
+            System.out.println("Task9.TEST OK");
+        } else {
+            System.out.println("Task9.TEST FAILED");
         }
     }
 }

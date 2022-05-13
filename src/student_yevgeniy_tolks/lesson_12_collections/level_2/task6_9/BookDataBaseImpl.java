@@ -1,7 +1,8 @@
-package student_yevgeniy_tolks.lesson_12_collections.level_2.task6;
+package student_yevgeniy_tolks.lesson_12_collections.level_2.task6_9;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 class BookDataBaseImpl implements BookDataBase {
 
@@ -39,6 +40,17 @@ class BookDataBaseImpl implements BookDataBase {
             }
         }
         return deleteBook;
+    }
+
+    @Override
+    public Optional<Book> findById(Long bookId) {
+        Optional<Book> bookList = Optional.empty();
+        for (Book book : books) {
+            if (bookId.equals(book.getId())) {
+                bookList = Optional.of(book);
+            }
+        }
+        return bookList;
     }
 
     public List<Book> getBooks() {
