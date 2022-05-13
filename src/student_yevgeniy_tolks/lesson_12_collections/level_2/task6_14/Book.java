@@ -1,4 +1,4 @@
-package student_yevgeniy_tolks.lesson_12_collections.level_2.task6_9;
+package student_yevgeniy_tolks.lesson_12_collections.level_2.task6_14;
 
 import java.util.Objects;
 

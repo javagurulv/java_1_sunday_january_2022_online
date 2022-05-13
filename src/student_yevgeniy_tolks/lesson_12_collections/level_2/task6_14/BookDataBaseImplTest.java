@@ -1,4 +1,4 @@
-package student_yevgeniy_tolks.lesson_12_collections.level_2.task6_9;
+package student_yevgeniy_tolks.lesson_12_collections.level_2.task6_14;
 
 import java.util.List;
 import java.util.Optional;
@@ -13,6 +13,8 @@ class BookDataBaseImplTest {
         test.findBookByAuthor();
         test.findBookByTitle();
         test.countBooksInList();
+        test.deleteByAuthorTest();
+        test.deleteByTitleTest();
     }
 
     public void saveTest() {
@@ -131,6 +133,53 @@ class BookDataBaseImplTest {
             System.out.println("Task12.TEST OK");
         } else {
             System.out.println("Task12.TEST FAILED");
+        }
+    }
+
+    public void deleteByAuthorTest() {
+        Book book = new Book("Father and Sons", "Turgenev");
+        Book book1 = new Book("Master and Margaritta", "Bulhakov");
+        Book book2 = new Book("War and peace", "Tolstoy");
+        String author = "Tolstoy";
+
+        BookDataBaseImpl impl = new BookDataBaseImpl();
+        List<Book> books = impl.getBooks();
+        books.add(book);
+        books.add(book1);
+        books.add(book2);
+        books.add(book2);
+        int expectedListSize = 2;
+        impl.deleteByAuthor(author);
+
+        if (books.size() == expectedListSize) {
+            System.out.println("Task13.TEST OK");
+        } else {
+            System.out.println("Task13.TEST FAILED");
+        }
+    }
+
+    public void deleteByTitleTest() {
+        Book book = new Book("Father and Sons", "Turgenev");
+        Book book1 = new Book("Master and Margaritta", "Bulhakov");
+        Book book2 = new Book("War and peace", "Tolstoy");
+        String title = "Father and Sons";
+
+        BookDataBaseImpl impl = new BookDataBaseImpl();
+        List<Book> books = impl.getBooks();
+        books.add(book);
+        books.add(book);
+        books.add(book1);
+        books.add(book1);
+        books.add(book2);
+        books.add(book2);
+
+        int expectedListSize = 4;
+        impl.deleteByTitle(title);
+
+        if (books.size() == expectedListSize) {
+            System.out.println("Task14.TEST OK");
+        } else {
+            System.out.println("Task14.TEST FAILED");
         }
     }
 }

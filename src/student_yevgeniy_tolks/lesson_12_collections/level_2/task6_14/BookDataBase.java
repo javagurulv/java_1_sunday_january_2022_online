@@ -1,9 +1,10 @@
-package student_yevgeniy_tolks.lesson_12_collections.level_2.task6_9;
+package student_yevgeniy_tolks.lesson_12_collections.level_2.task6_14;
 
 import java.util.List;
 import java.util.Optional;
 
 interface BookDataBase {
+
     Long save(Book book);
 
     boolean delete(Long bookId);
@@ -18,4 +19,7 @@ interface BookDataBase {
 
     int countAllBooks();
 
+    void deleteByAuthor(String author);
+
+    void deleteByTitle(String title);
 }

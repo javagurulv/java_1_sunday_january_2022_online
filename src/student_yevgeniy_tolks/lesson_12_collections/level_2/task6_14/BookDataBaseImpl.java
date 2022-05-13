@@ -1,4 +1,4 @@
-package student_yevgeniy_tolks.lesson_12_collections.level_2.task6_9;
+package student_yevgeniy_tolks.lesson_12_collections.level_2.task6_14;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -84,6 +84,16 @@ class BookDataBaseImpl implements BookDataBase {
             }
         }
         return bookCounter;
+    }
+
+    @Override
+    public void deleteByAuthor(String author) {
+        books.removeIf(book -> author.equals(book.getAuthor()));
+    }
+
+    @Override
+    public void deleteByTitle(String title) {
+        books.removeIf(book -> title.equals(book.getTitle()));
     }
 
     public List<Book> getBooks() {
