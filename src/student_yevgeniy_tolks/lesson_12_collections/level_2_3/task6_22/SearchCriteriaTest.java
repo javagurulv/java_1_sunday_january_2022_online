@@ -8,6 +8,7 @@ class SearchCriteriaTest {
         test.matchByTitleTest();
         test.matchByYearOfIssueTest();
         test.matchAndSearchCriteriaTest();
+        test.matchOrSearchCriteriaTest();
     }
 
     public void matchByAuthorTest() {
@@ -48,6 +49,7 @@ class SearchCriteriaTest {
     }
 
     public void matchAndSearchCriteriaTest() {
+
         Book book = new Book("Zveroboi", "Kuper");
         AuthorSearchCriteria authorSearchCriteria = new AuthorSearchCriteria("Kuper");
         TitleSearchCriteria titleSearchCriteria = new TitleSearchCriteria("Zveroboi");
@@ -58,6 +60,21 @@ class SearchCriteriaTest {
             System.out.println("Task19.TEST OK");
         } else {
             System.out.println("Task19.TEST FAILED");
+        }
+    }
+
+    public void matchOrSearchCriteriaTest() {
+
+        Book book = new Book("Zveroboi", "Kuper");
+        AuthorSearchCriteria authorSearchCriteria = new AuthorSearchCriteria("Kuper");
+        TitleSearchCriteria titleSearchCriteria = new TitleSearchCriteria("Zveroboi");
+        OrSearchCriteria searchCriteria = new OrSearchCriteria(titleSearchCriteria, authorSearchCriteria);
+
+        boolean resultOfOrSearchCriteria = searchCriteria.match(book);
+        if (resultOfOrSearchCriteria) {
+            System.out.println("Task20.TEST OK");
+        } else {
+            System.out.println("Task20.TEST FAILED");
         }
     }
 }
