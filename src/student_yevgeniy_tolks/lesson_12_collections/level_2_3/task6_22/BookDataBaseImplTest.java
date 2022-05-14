@@ -15,6 +15,8 @@ class BookDataBaseImplTest {
         test.countBooksInList();
         test.deleteByAuthorTest();
         test.deleteByTitleTest();
+        test.findBookByOrCriteriaTest();
+        test.findBookByAndCriteriaTest();
     }
 
     public void saveTest() {
@@ -180,6 +182,45 @@ class BookDataBaseImplTest {
             System.out.println("Task14.TEST OK");
         } else {
             System.out.println("Task14.TEST FAILED");
+        }
+    }
+
+    public void findBookByOrCriteriaTest() {
+        Book book = new Book("Zveroboi", "Kuper");
+        book.setYearOfIssue("1890");
+        AuthorSearchCriteria authorSearchCriteria = new AuthorSearchCriteria("Kuper");
+        YearOfIssueSearchCriteria yearOfIssueCriteriaSearch = new YearOfIssueSearchCriteria("1890");
+        OrSearchCriteria orSearchCriteria = new OrSearchCriteria(authorSearchCriteria, yearOfIssueCriteriaSearch);
+
+        BookDataBaseImpl impl = new BookDataBaseImpl();
+        List<Book> books = impl.getBooks();
+        books.add(book);
+
+        List<Book> findBookByCriteria = impl.find(orSearchCriteria);
+        if (books.equals(findBookByCriteria)) {
+            System.out.println("Task22.TEST OK");
+        } else {
+            System.out.println("Task22.TEST FAILED");
+        }
+
+    }
+
+    public void findBookByAndCriteriaTest() {
+        Book book = new Book("Zveroboi", "Kuper");
+
+        AuthorSearchCriteria authorSearchCriteria = new AuthorSearchCriteria("Kuper");
+        TitleSearchCriteria titleSearchCriteria = new TitleSearchCriteria("Zveroboi");
+        AndSearchCriteria andSearchCriteria = new AndSearchCriteria(titleSearchCriteria, authorSearchCriteria);
+
+        BookDataBaseImpl impl = new BookDataBaseImpl();
+        List<Book> books = impl.getBooks();
+        books.add(book);
+
+        List<Book> findBookByCriteria = impl.find(andSearchCriteria);
+        if (books.equals(findBookByCriteria)) {
+            System.out.println("Task22.v2.TEST OK");
+        } else {
+            System.out.println("Task22.v2.TEST FAILED");
         }
     }
 }

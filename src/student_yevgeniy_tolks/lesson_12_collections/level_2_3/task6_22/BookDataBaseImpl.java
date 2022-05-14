@@ -96,6 +96,17 @@ class BookDataBaseImpl implements BookDataBase {
         books.removeIf(book -> title.equals(book.getTitle()));
     }
 
+    @Override
+    public List<Book> find(SearchCriteria searchCriteria) {
+        List<Book> findBooksByCriteria = new ArrayList<>();
+        for (Book book : books) {
+            if (searchCriteria.match(book)) {
+                findBooksByCriteria.add(book);
+            }
+        }
+        return findBooksByCriteria;
+    }
+
     public List<Book> getBooks() {
         return books;
     }
