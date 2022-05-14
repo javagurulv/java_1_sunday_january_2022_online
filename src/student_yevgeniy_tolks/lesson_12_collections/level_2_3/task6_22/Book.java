@@ -1,5 +1,6 @@
-package student_yevgeniy_tolks.lesson_12_collections.level_2.task6_14;
+package student_yevgeniy_tolks.lesson_12_collections.level_2_3.task6_22;
 
+import java.util.Date;
 import java.util.Objects;
 
 class Book {
@@ -7,6 +8,7 @@ class Book {
     private Long id;
     private String title;
     private String author;
+    private String yearOfIssue;
 
     public Book(String title, String author) {
         this.title = title;
@@ -27,6 +29,14 @@ class Book {
 
     public String getTitle() {
         return title;
+    }
+
+    public String getYearOfIssue() {
+        return yearOfIssue;
+    }
+
+    public void setYearOfIssue(String yearOfIssue) {
+        this.yearOfIssue = yearOfIssue;
     }
 
     @Override
