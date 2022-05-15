@@ -1,4 +1,4 @@
-package student_devids_kropacovs.lesson_4.level_4;
+package student_devids_kropacovs.lesson4.level_4;
 
 class Calculator {
 

@@ -1,4 +1,4 @@
-package student_devids_kropacovs.lesson_4.level_5;
+package student_devids_kropacovs.lesson4.level_5;
 
 /* 380 ... 449 - Фиолетовый ("Violet")
 450 ... 494 - Синий ("Blue")

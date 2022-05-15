@@ -13,5 +13,4 @@ abstract class FraudRule {
     }
 
     public abstract boolean isFraud(Transaction t);
-
 }
