@@ -19,6 +19,7 @@ class BookDataBaseImplTest {
         test.findBookByOrCriteriaTest();
         test.findBookByAndCriteriaTest();
         test.uniqueAuthorsFindTest();
+        test.uniqueTitleFindTest();
     }
 
     public void saveTest() {
@@ -242,7 +243,31 @@ class BookDataBaseImplTest {
         if (expectedUniqueAuthors.equals(resultOfFoundUniqueAuthors)) {
             System.out.println("Task23. Test OK");
         } else {
-            System.out.println("Task223.TEST FAILED");
+            System.out.println("Task23.TEST FAILED");
+        }
+    }
+
+    public void uniqueTitleFindTest() {
+
+        Book book = new Book("Zveroboi", "Kuper");
+        Book book1 = new Book("Zveroboi", "Kuper");
+        Book book2 = new Book("War and peace", "Tolstoy");
+        Book book3 = new Book("Master and Margaritta", "Bulgakov");
+        BookDataBaseImpl impl = new BookDataBaseImpl();
+        List<Book> books = impl.getBooks();
+        books.add(book);
+        books.add(book1);
+        books.add(book2);
+        books.add(book3);
+        Set<String> expectedUniqueTitle = Set.of(
+                "Zveroboi",
+                "War and peace",
+                "Master and Margaritta");
+        Set<String> resultOfFoundUniqueTitle = impl.findUniqueTitles();
+        if (expectedUniqueTitle.equals(resultOfFoundUniqueTitle)) {
+            System.out.println("Task24. Test OK");
+        } else {
+            System.out.println("Task24.TEST FAILED");
         }
     }
 }

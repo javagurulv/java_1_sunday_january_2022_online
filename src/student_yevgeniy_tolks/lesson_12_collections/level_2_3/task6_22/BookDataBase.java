@@ -27,4 +27,6 @@ interface BookDataBase {
     List<Book> find(SearchCriteria searchCriteria);
 
     Set<String> findUniqueAuthors();
+
+    Set<String> findUniqueTitles();
 }
