@@ -1,6 +1,5 @@
 package student_yevgeniy_tolks.lesson_12_collections.level_2_3.task6_22;
 
-import java.sql.SQLOutput;
 import java.util.List;
 import java.util.Optional;
 import java.util.Set;
@@ -22,6 +21,7 @@ class BookDataBaseImplTest {
         test.uniqueAuthorsFindTest();
         test.uniqueTitleFindTest();
         test.uniqueBookFindTest();
+        test.containsABookTest();
     }
 
     public void saveTest() {
@@ -296,6 +296,25 @@ class BookDataBaseImplTest {
             System.out.println("Task25.TEST OK");
         } else {
             System.out.println("Task25. TEST FAILED");
+        }
+    }
+
+    public void containsABookTest() {
+        Book book1 = new Book("Zveroboi", "Kuper");
+        Book book2 = new Book("War and peace", "Tolstoy");
+        Book book3 = new Book("Master and Margaritta", "Bulgakov");
+        BookDataBaseImpl impl = new BookDataBaseImpl();
+        List<Book> books = impl.getBooks();
+        books.add(book1);
+        books.add(book2);
+        books.add(book3);
+
+        Book containedBook = new Book("War and peace", "Tolstoy");
+        boolean resultOfContainedBook = impl.contains(containedBook);
+        if (resultOfContainedBook) {
+            System.out.println("Task26.TEST OK");
+        } else {
+            System.out.println("Task26.TEST FAILED");
         }
     }
 }
