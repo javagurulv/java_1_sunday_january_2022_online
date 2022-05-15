@@ -1,6 +1,5 @@
-package student_yevgeniy_tolks.lesson_12_collections.level_2_3.task6_22;
+package student_yevgeniy_tolks.lesson_12_collections.level_2_3_4.task6_26;
 
-import java.util.Date;
 import java.util.Objects;
 
 class Book {

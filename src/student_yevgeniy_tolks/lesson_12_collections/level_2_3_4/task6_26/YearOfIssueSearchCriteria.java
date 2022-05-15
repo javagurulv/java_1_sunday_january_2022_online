@@ -1,6 +1,4 @@
-package student_yevgeniy_tolks.lesson_12_collections.level_2_3.task6_22;
-
-import java.util.Objects;
+package student_yevgeniy_tolks.lesson_12_collections.level_2_3_4.task6_26;
 
 class YearOfIssueSearchCriteria implements SearchCriteria {
 
