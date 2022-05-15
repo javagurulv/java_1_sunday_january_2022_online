@@ -1,8 +1,6 @@
-package student_yevgeniy_tolks.lesson_12_collections.level_2.task6_14;
+package student_yevgeniy_tolks.lesson_12_collections.level_2_3.task6_22;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 
 class BookDataBaseImpl implements BookDataBase {
 
@@ -96,9 +94,39 @@ class BookDataBaseImpl implements BookDataBase {
         books.removeIf(book -> title.equals(book.getTitle()));
     }
 
+    @Override
+    public List<Book> find(SearchCriteria searchCriteria) {
+        List<Book> findBooksByCriteria = new ArrayList<>();
+        for (Book book : books) {
+            if (searchCriteria.match(book)) {
+                findBooksByCriteria.add(book);
+            }
+        }
+        return findBooksByCriteria;
+    }
+
+    @Override
+    public Set<String> findUniqueAuthors() {
+     Set<String> uniqueAuthor = new HashSet<>();
+     for(Book bookByAuthor: books){
+         uniqueAuthor.add(bookByAuthor.getAuthor());
+     }
+     return uniqueAuthor;
+    }
+
+    @Override
+    public Set<String> findUniqueTitles() {
+        Set<String> uniqueTitle = new HashSet<>();
+        for(Book bookByTitle: books){
+            uniqueTitle.add(bookByTitle.getTitle());
+        }
+        return uniqueTitle;
+    }
+
     public List<Book> getBooks() {
         return books;
     }
+
 }
 
 
