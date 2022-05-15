@@ -2,6 +2,7 @@ package student_yevgeniy_tolks.lesson_12_collections.level_2_3.task6_22;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.Set;
 
 class BookDataBaseImplTest {
     public static void main(String[] args) {
@@ -17,6 +18,7 @@ class BookDataBaseImplTest {
         test.deleteByTitleTest();
         test.findBookByOrCriteriaTest();
         test.findBookByAndCriteriaTest();
+        test.uniqueAuthorsFindTest();
     }
 
     public void saveTest() {
@@ -221,6 +223,26 @@ class BookDataBaseImplTest {
             System.out.println("Task22.v2.TEST OK");
         } else {
             System.out.println("Task22.v2.TEST FAILED");
+        }
+    }
+
+    public void uniqueAuthorsFindTest() {
+        Book book = new Book("Zveroboi", "Kuper");
+        Book book1 = new Book("Zveroboi", "Kuper");
+        Book book2 = new Book("War and peace", "Tolstoy");
+        Book book3 = new Book("Master an Margaritta", "Bulgakov");
+        BookDataBaseImpl impl = new BookDataBaseImpl();
+        List<Book> books = impl.getBooks();
+        books.add(book);
+        books.add(book1);
+        books.add(book2);
+        books.add(book3);
+        Set<String> expectedUniqueAuthors = Set.of("Kuper", "Tolstoy", "Bulgakov");
+        Set<String> resultOfFoundUniqueAuthors = impl.findUniqueAuthors();
+        if (expectedUniqueAuthors.equals(resultOfFoundUniqueAuthors)) {
+            System.out.println("Task23. Test OK");
+        } else {
+            System.out.println("Task223.TEST FAILED");
         }
     }
 }

@@ -1,8 +1,6 @@
 package student_yevgeniy_tolks.lesson_12_collections.level_2_3.task6_22;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 
 class BookDataBaseImpl implements BookDataBase {
 
@@ -105,6 +103,15 @@ class BookDataBaseImpl implements BookDataBase {
             }
         }
         return findBooksByCriteria;
+    }
+
+    @Override
+    public Set<String> findUniqueAuthors() {
+     Set<String> uniqueAuthor = new HashSet<>();
+     for(Book bookByAuthor: books){
+         uniqueAuthor.add(bookByAuthor.getAuthor());
+     }
+     return uniqueAuthor;
     }
 
     public List<Book> getBooks() {
