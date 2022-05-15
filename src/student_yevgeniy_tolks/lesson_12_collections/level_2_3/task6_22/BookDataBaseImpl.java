@@ -123,10 +123,14 @@ class BookDataBaseImpl implements BookDataBase {
         return uniqueTitle;
     }
 
+    @Override
+    public Set<Book> findUniqueBooks() {
+        return new HashSet<>(books);
+    }
+
     public List<Book> getBooks() {
         return books;
     }
-
 }
 
 

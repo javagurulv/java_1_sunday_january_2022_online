@@ -1,5 +1,6 @@
 package student_yevgeniy_tolks.lesson_12_collections.level_2_3.task6_22;
 
+import java.sql.SQLOutput;
 import java.util.List;
 import java.util.Optional;
 import java.util.Set;
@@ -20,6 +21,7 @@ class BookDataBaseImplTest {
         test.findBookByAndCriteriaTest();
         test.uniqueAuthorsFindTest();
         test.uniqueTitleFindTest();
+        test.uniqueBookFindTest();
     }
 
     public void saveTest() {
@@ -268,6 +270,32 @@ class BookDataBaseImplTest {
             System.out.println("Task24. Test OK");
         } else {
             System.out.println("Task24.TEST FAILED");
+        }
+    }
+
+    public void uniqueBookFindTest() {
+
+        Book book = new Book("Zveroboi", "Kuper");
+        Book book1 = new Book("Zveroboi", "Kuper");
+        Book book2 = new Book("War and peace", "Tolstoy");
+        Book book3 = new Book("Master and Margaritta", "Bulgakov");
+        BookDataBaseImpl impl = new BookDataBaseImpl();
+        List<Book> books = impl.getBooks();
+        books.add(book);
+        books.add(book1);
+        books.add(book2);
+        books.add(book3);
+
+        Set<Book> expectedUniqueBookFind = Set.of(
+                new Book("Zveroboi", "Kuper"),
+                new Book("War and peace", "Tolstoy"),
+                new Book("Master and Margaritta", "Bulgakov")
+        );
+        Set<Book> resultOfUniqueBookFind = impl.findUniqueBooks();
+        if (expectedUniqueBookFind.equals(resultOfUniqueBookFind)) {
+            System.out.println("Task25.TEST OK");
+        } else {
+            System.out.println("Task25. TEST FAILED");
         }
     }
 }
