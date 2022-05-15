@@ -1,4 +1,4 @@
-package student_devids_kropacovs.lesson9.level4;
+package student_devids_kropacovs.lesson9.level4_5;
 
 class RectangleTest {
 
