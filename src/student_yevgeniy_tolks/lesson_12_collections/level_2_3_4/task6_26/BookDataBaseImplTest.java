@@ -1,6 +1,7 @@
 package student_yevgeniy_tolks.lesson_12_collections.level_2_3_4.task6_26;
 
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 import java.util.Set;
 
@@ -22,6 +23,7 @@ class BookDataBaseImplTest {
         test.uniqueTitleFindTest();
         test.uniqueBookFindTest();
         test.containsABookTest();
+        test.mapBooksByAuthorTest();
     }
 
     public void saveTest() {
@@ -303,6 +305,7 @@ class BookDataBaseImplTest {
         Book book1 = new Book("Zveroboi", "Kuper");
         Book book2 = new Book("War and peace", "Tolstoy");
         Book book3 = new Book("Master and Margaritta", "Bulgakov");
+
         BookDataBaseImpl impl = new BookDataBaseImpl();
         List<Book> books = impl.getBooks();
         books.add(book1);
@@ -315,6 +318,39 @@ class BookDataBaseImplTest {
             System.out.println("Task26.TEST OK");
         } else {
             System.out.println("Task26.TEST FAILED");
+        }
+    }
+
+    public void mapBooksByAuthorTest() {
+
+        Book book1 = new Book("War and Peace Vol1", "Tolstoy");
+        Book book2 = new Book("War and Peace Vol2", "Tolstoy");
+        Book book3 = new Book("Zveroboi", "Kuper");
+        BookDataBaseImpl impl = new BookDataBaseImpl();
+        List<Book> books = impl.getBooks();
+        books.add(book1);
+        books.add(book2);
+        books.add(book3);
+
+
+        List<Book> bookList1 = List.of(
+                new Book("War and Peace Vol1", "Tolstoy"),
+                new Book("War and Peace Vol2", "Tolstoy")
+
+        );
+        List<Book> bookList2 = List.of(
+                new Book("Zveroboi", "Kuper")
+        );
+
+        Map<String, List<Book>> expectedBooksByAuthor = Map.of(
+                "Tolstoy", bookList1,
+                "Kuper", bookList2);
+
+        Map<String, List<Book>> resultBooksByAuthor = impl.getAuthorToBooksMap();
+        if (expectedBooksByAuthor.equals(resultBooksByAuthor)) {
+            System.out.println("Task28.TEST OK");
+        } else {
+            System.out.println("Task28.TEST FAILED");
         }
     }
 }

@@ -1,6 +1,7 @@
 package student_yevgeniy_tolks.lesson_12_collections.level_2_3_4.task6_26;
 
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 import java.util.Set;
 
@@ -33,5 +34,7 @@ interface BookDataBase {
     Set<Book> findUniqueBooks();
 
     boolean contains(Book book);
+
+    Map<String, List<Book>> getAuthorToBooksMap();
 
 }

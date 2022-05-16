@@ -1,10 +1,12 @@
 package student_yevgeniy_tolks.lesson_12_collections.level_2_3_4.task6_26;
 
 import java.util.*;
+import java.util.stream.Collectors;
+
 
 class BookDataBaseImpl implements BookDataBase {
 
-    private final List<Book> books = new ArrayList<>();
+    private List<Book> books = new ArrayList<>();
     private Long id = 0L;
 
     @Override
@@ -135,6 +137,17 @@ class BookDataBaseImpl implements BookDataBase {
 
     public List<Book> getBooks() {
         return books;
+    }
+
+    @Override
+    public Map<String, List<Book>> getAuthorToBooksMap() {
+        Map<String, List<Book>> booksByAuthor = new HashMap<>();
+        for (Book book : books) {
+            String author = book.getAuthor();
+            booksByAuthor.put(book.getAuthor(),findByAuthor(author));
+        }
+        System.out.println(booksByAuthor);
+        return booksByAuthor;
     }
 }
 
