@@ -24,6 +24,7 @@ class BookDataBaseImplTest {
         test.uniqueBookFindTest();
         test.containsABookTest();
         test.mapBooksByAuthorTest();
+        test.countBooksByAuthorTest();
     }
 
     public void saveTest() {
@@ -351,6 +352,29 @@ class BookDataBaseImplTest {
             System.out.println("Task28.TEST OK");
         } else {
             System.out.println("Task28.TEST FAILED");
+        }
+    }
+
+    public void countBooksByAuthorTest() {
+
+        Book book1 = new Book("War and Peace Vol1", "Tolstoy");
+        Book book2 = new Book("War and Peace Vol2", "Tolstoy");
+        Book book3 = new Book("Zveroboi", "Kuper");
+        BookDataBaseImpl impl = new BookDataBaseImpl();
+        List<Book> books = impl.getBooks();
+        books.add(book1);
+        books.add(book2);
+        books.add(book3);
+
+        Map<String, Integer> expectedCountOfBooksByAuthor = Map.of(
+                "Tolstoy", 2,
+                "Kuper", 1);
+
+        Map<String, Integer> resultCountOfBooksByAuthor = impl.getEachAuthorBookCount();
+        if (expectedCountOfBooksByAuthor.equals(resultCountOfBooksByAuthor)) {
+            System.out.println("Task29.TEST OK");
+        } else {
+            System.out.println("Task29.TEST FAILED");
         }
     }
 }
