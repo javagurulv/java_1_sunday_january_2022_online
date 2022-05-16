@@ -1,7 +1,6 @@
-package student_yevgeniy_tolks.lesson_12_collections.level_2_3_4_5.task6_29;
+package student_yevgeniy_tolks.lesson_12_collections.level_2_3_4_5_6.task6_37;
 
 import java.util.List;
-import java.util.Optional;
 import java.util.Scanner;
 
 class FindByAuthorUIAction implements UIAction{
