@@ -1,4 +1,4 @@
-package student_yevgeniy_tolks.lesson_12_collections.level_2_3.task6_22;
+package student_yevgeniy_tolks.lesson_12_collections.level_2_3_4.task6_26;
 
 import java.util.*;
 
@@ -107,17 +107,17 @@ class BookDataBaseImpl implements BookDataBase {
 
     @Override
     public Set<String> findUniqueAuthors() {
-     Set<String> uniqueAuthor = new HashSet<>();
-     for(Book bookByAuthor: books){
-         uniqueAuthor.add(bookByAuthor.getAuthor());
-     }
-     return uniqueAuthor;
+        Set<String> uniqueAuthor = new HashSet<>();
+        for (Book bookByAuthor : books) {
+            uniqueAuthor.add(bookByAuthor.getAuthor());
+        }
+        return uniqueAuthor;
     }
 
     @Override
     public Set<String> findUniqueTitles() {
         Set<String> uniqueTitle = new HashSet<>();
-        for(Book bookByTitle: books){
+        for (Book bookByTitle : books) {
             uniqueTitle.add(bookByTitle.getTitle());
         }
         return uniqueTitle;
@@ -126,6 +126,11 @@ class BookDataBaseImpl implements BookDataBase {
     @Override
     public Set<Book> findUniqueBooks() {
         return new HashSet<>(books);
+    }
+
+    @Override
+    public boolean contains(Book book) {
+        return books.contains(book);
     }
 
     public List<Book> getBooks() {
