@@ -89,7 +89,6 @@ class BookDataBaseImpl implements BookDataBase {
     public void deleteByAuthor(String author) {
         books.removeIf(book -> author.equals(book.getAuthor()));
     }
-
     @Override
     public void deleteByTitle(String title) {
         books.removeIf(book -> title.equals(book.getTitle()));
@@ -143,10 +142,9 @@ class BookDataBaseImpl implements BookDataBase {
     public Map<String, List<Book>> getAuthorToBooksMap() {
         Map<String, List<Book>> booksByAuthor = new HashMap<>();
         for (Book book : books) {
-            String author = book.getAuthor();
-            booksByAuthor.put(book.getAuthor(), findByAuthor(author));
+
+            booksByAuthor.put(book.getAuthor(), findByAuthor(book.getAuthor()));
         }
-        System.out.println(booksByAuthor);
         return booksByAuthor;
     }
 
@@ -164,11 +162,9 @@ class BookDataBaseImpl implements BookDataBase {
     public Map<String, Integer> getEachAuthorBookCount() {
         Map<String, Integer> countBooksByAuthor = new HashMap<>();
         for (Book book : books) {
-            String author = book.getAuthor();
-            countBooksByAuthor.put(author, countAllBooksByAuthor(author));
+            countBooksByAuthor.put(book.getAuthor(), countAllBooksByAuthor(book.getAuthor()));
         }
-        System.out.println(countBooksByAuthor);
-        return countBooksByAuthor;
+                return countBooksByAuthor;
     }
 }
 

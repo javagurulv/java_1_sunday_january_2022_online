@@ -159,6 +159,7 @@ class BookDataBaseImplTest {
         books.add(book2);
         books.add(book2);
         int expectedListSize = 2;
+
         impl.deleteByAuthor(author);
 
         if (books.size() == expectedListSize) {
