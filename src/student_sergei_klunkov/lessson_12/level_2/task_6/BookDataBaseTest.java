@@ -1,6 +1,5 @@
 package student_sergei_klunkov.lessson_12.level_2.task_6;
 
-import java.util.ArrayList;
 import java.util.List;
 
 class BookDataBaseTest {
@@ -9,6 +8,7 @@ class BookDataBaseTest {
         BookDataBaseTest test = new BookDataBaseTest();
         test.saveIdTest();
         test.deleteIdTest();
+        test.deleteBookTest();
 
     }
 
@@ -17,8 +17,8 @@ class BookDataBaseTest {
         Book book = new Book("A1", "B1");
         Long bookId = 1L;
 
-        BookDataBaseImpl impl = new BookDataBaseImpl();
-        Long expectedBookId = impl.save(book);
+        BookDataBaseImpl dataBase = new BookDataBaseImpl();
+        Long expectedBookId = dataBase.save(book);
         if (bookId.equals(expectedBookId)){
             System.out.println(" Save Book ID " + " - Test passed! ");
         } else {
@@ -30,12 +30,12 @@ class BookDataBaseTest {
         Book book = new Book("A1", "B1");
         book.setId(1L);
 
-        BookDataBaseImpl impl = new BookDataBaseImpl();
-        List<Book> books = impl.getBooks();
+        BookDataBaseImpl dataBase = new BookDataBaseImpl();
+        List<Book> books = dataBase.getBooks();
         books.add(book);
         Long bookId = 1L;
 
-        boolean bookToDeleteById = impl.delete(bookId);
+        boolean bookToDeleteById = dataBase.delete(bookId);
         if (bookToDeleteById){
             System.out.println(" Delete Book ID " + " - Test passed! ");
         } else {
@@ -43,4 +43,22 @@ class BookDataBaseTest {
         }
     }
 
+    public void deleteBookTest(){
+        Book SearchBook = new Book("A1", "B1");
+        Book book = new Book("A1", "B1");
+        Book book1 = new Book("A2", "B2");
+        Book book2 = new Book("A3", "B3");
+        BookDataBaseImpl dataBase = new BookDataBaseImpl();
+        List<Book> books = dataBase.getBooks();
+        books.add(book);
+        books.add(book1);
+        books.add(book2);
+
+        boolean bookFoundToDelete = dataBase.delete(SearchBook);
+        if (bookFoundToDelete) {
+            System.out.println(" Delete book " + " - Test passed! ");
+        } else {
+            System.out.println(" Delete book " + " - Test failed! ");
+        }
+    }
 }

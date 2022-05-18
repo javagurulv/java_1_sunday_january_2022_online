@@ -1,10 +1,16 @@
 package student_sergei_klunkov.lessson_12.level_2.task_6;
 
-public interface BookDataBase {
+import java.util.Optional;
+
+interface BookDataBase {
 
     Long save(Book book);
 
 
     boolean delete(Long bookId);
+
+    boolean delete(Book book);
+
+    Optional<Book> findById(Long bookId);
 
 }
