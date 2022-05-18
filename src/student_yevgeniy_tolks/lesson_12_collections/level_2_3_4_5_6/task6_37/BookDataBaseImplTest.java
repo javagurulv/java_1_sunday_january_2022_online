@@ -147,9 +147,11 @@ class BookDataBaseImplTest {
     }
 
     public void deleteByAuthorTest() {
+
         Book book = new Book("Father and Sons", "Turgenev");
         Book book1 = new Book("Master and Margaritta", "Bulhakov");
-        Book book2 = new Book("War and peace", "Tolstoy");
+        Book book2 = new Book("War and peace Vol2", "Tolstoy");
+        Book book3 = new Book("War and peace Vol1", "Tolstoy");
         String author = "Tolstoy";
 
         BookDataBaseImpl bookDataBase = new BookDataBaseImpl();
@@ -157,7 +159,7 @@ class BookDataBaseImplTest {
         books.add(book);
         books.add(book1);
         books.add(book2);
-        books.add(book2);
+        books.add(book3);
         int expectedListSize = 2;
 
         bookDataBase.deleteByAuthor(author);
@@ -172,19 +174,18 @@ class BookDataBaseImplTest {
     public void deleteByTitleTest() {
         Book book = new Book("Father and Sons", "Turgenev");
         Book book1 = new Book("Master and Margaritta", "Bulhakov");
-        Book book2 = new Book("War and peace", "Tolstoy");
-        String title = "Father and Sons";
+        Book book2 = new Book("War and peace", "Tolstoys");
+
+        String title = "War and peace";
 
         BookDataBaseImpl bookDataBase = new BookDataBaseImpl();
         List<Book> books = bookDataBase.getBooks();
         books.add(book);
-        books.add(book);
         books.add(book1);
-        books.add(book1);
-        books.add(book2);
         books.add(book2);
 
-        int expectedListSize = 4;
+
+        int expectedListSize = 2;
         bookDataBase.deleteByTitle(title);
 
         if (books.size() == expectedListSize) {
@@ -350,9 +351,9 @@ class BookDataBaseImplTest {
 
         Map<String, List<Book>> resultBooksByAuthor = bookDataBase.getAuthorToBooksMap();
         if (expectedBooksByAuthor.equals(resultBooksByAuthor)) {
-            System.out.println("Task28.TEST OK");
+            System.out.println("Task27.TEST OK");
         } else {
-            System.out.println("Task28.TEST FAILED");
+            System.out.println("Task27.TEST FAILED");
         }
     }
 
@@ -361,21 +362,23 @@ class BookDataBaseImplTest {
         Book book1 = new Book("War and Peace Vol1", "Tolstoy");
         Book book2 = new Book("War and Peace Vol2", "Tolstoy");
         Book book3 = new Book("Zveroboi", "Kuper");
+        Book book4 = new Book("Zveroboi", "Kuper");
         BookDataBaseImpl bookDataBase = new BookDataBaseImpl();
         List<Book> books = bookDataBase.getBooks();
         books.add(book1);
         books.add(book2);
         books.add(book3);
+        books.add(book4);
 
         Map<String, Integer> expectedCountOfBooksByAuthor = Map.of(
                 "Tolstoy", 2,
-                "Kuper", 1);
+                "Kuper", 2);
 
         Map<String, Integer> resultCountOfBooksByAuthor = bookDataBase.getEachAuthorBookCount();
         if (expectedCountOfBooksByAuthor.equals(resultCountOfBooksByAuthor)) {
-            System.out.println("Task29.TEST OK");
+            System.out.println("Task28.TEST OK");
         } else {
-            System.out.println("Task29.TEST FAILED");
+            System.out.println("Task28.TEST FAILED");
         }
     }
 }

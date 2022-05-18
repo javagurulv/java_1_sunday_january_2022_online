@@ -1,6 +1,7 @@
 package student_yevgeniy_tolks.lesson_12_collections.level_2_3_4_5_6.task6_37;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 
 class BookDataBaseImpl implements BookDataBase {
@@ -43,35 +44,23 @@ class BookDataBaseImpl implements BookDataBase {
 
     @Override
     public Optional<Book> findById(Long bookId) {
-        Optional<Book> bookList = Optional.empty();
-        for (Book book : books) {
-            if (bookId.equals(book.getId())) {
-                bookList = Optional.of(book);
-            }
-        }
-        return bookList;
+        return books.stream()
+                .filter(book -> bookId.equals(book.getId()))
+                .findAny();
     }
 
     @Override
     public List<Book> findByAuthor(String author) {
-        List<Book> findBookByAuthor = new ArrayList<>();
-        for (Book book : books) {
-            if (author.equals(book.getAuthor())) {
-                findBookByAuthor.add(book);
-            }
-        }
-        return findBookByAuthor;
+        return books.stream()
+                .filter(book -> author.equals(book.getAuthor()))
+                .collect(Collectors.toList());
     }
 
     @Override
     public List<Book> findByTitle(String title) {
-        List<Book> findBookByTitle = new ArrayList<>();
-        for (Book book : books) {
-            if (title.equals(book.getTitle())) {
-                findBookByTitle.add(book);
-            }
-        }
-        return findBookByTitle;
+        return books.stream()
+                .filter(book -> title.equals(book.getTitle()))
+                .collect(Collectors.toList());
     }
 
     @Override
@@ -89,6 +78,7 @@ class BookDataBaseImpl implements BookDataBase {
     public void deleteByAuthor(String author) {
         books.removeIf(book -> author.equals(book.getAuthor()));
     }
+
     @Override
     public void deleteByTitle(String title) {
         books.removeIf(book -> title.equals(book.getTitle()));
@@ -96,31 +86,23 @@ class BookDataBaseImpl implements BookDataBase {
 
     @Override
     public List<Book> find(SearchCriteria searchCriteria) {
-        List<Book> findBooksByCriteria = new ArrayList<>();
-        for (Book book : books) {
-            if (searchCriteria.match(book)) {
-                findBooksByCriteria.add(book);
-            }
-        }
-        return findBooksByCriteria;
+        return books.stream()
+                .filter(book -> searchCriteria.match(book))
+                .collect(Collectors.toList());
     }
 
     @Override
     public Set<String> findUniqueAuthors() {
-        Set<String> uniqueAuthor = new HashSet<>();
-        for (Book bookByAuthor : books) {
-            uniqueAuthor.add(bookByAuthor.getAuthor());
-        }
-        return uniqueAuthor;
+        return books.stream()
+                .map(book -> book.getAuthor())
+                .collect(Collectors.toSet());
     }
 
     @Override
     public Set<String> findUniqueTitles() {
-        Set<String> uniqueTitle = new HashSet<>();
-        for (Book bookByTitle : books) {
-            uniqueTitle.add(bookByTitle.getTitle());
-        }
-        return uniqueTitle;
+        return books.stream()
+                .map(book -> book.getTitle())
+                .collect(Collectors.toSet());
     }
 
     @Override
@@ -140,31 +122,25 @@ class BookDataBaseImpl implements BookDataBase {
 
     @Override
     public Map<String, List<Book>> getAuthorToBooksMap() {
-        Map<String, List<Book>> booksByAuthor = new HashMap<>();
-        for (Book book : books) {
-
-            booksByAuthor.put(book.getAuthor(), findByAuthor(book.getAuthor()));
-        }
-        return booksByAuthor;
+        return books.stream()
+                .collect(Collectors.toMap(book -> book.getAuthor()
+                        , book -> findByAuthor(book.getAuthor())
+                        , (books1, books2) -> books1));
     }
 
     public int countAllBooksByAuthor(String author) {
-        int bookCounter = 0;
-        for (Book book : books) {
-            if (author.equals(book.getAuthor())) {
-                bookCounter++;
-            }
-        }
-        return bookCounter;
+        return (int) books.stream()
+                .filter(book -> author.equals(book.getAuthor()))
+                .count();
     }
 
     @Override
     public Map<String, Integer> getEachAuthorBookCount() {
-        Map<String, Integer> countBooksByAuthor = new HashMap<>();
-        for (Book book : books) {
-            countBooksByAuthor.put(book.getAuthor(), countAllBooksByAuthor(book.getAuthor()));
-        }
-                return countBooksByAuthor;
+        return books.stream()
+                .collect(Collectors.toMap(book -> book.getAuthor()
+                        , book -> countAllBooksByAuthor(book.getAuthor())
+                        , (book1, book2) -> book1
+                ));
     }
 }
 
