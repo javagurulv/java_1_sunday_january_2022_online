@@ -1,6 +1,7 @@
 package student_sergei_klunkov.lessson_12.level_2.task_6;
 
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -14,6 +15,9 @@ class BookDataBaseTest {
         test.findBookByIdOptionalTest();
         test.findBookByAuthor();
         test.findBookByTitle();
+        test.countAllBooksInLibraryTest();
+        test.deleteAllBooksBySameAuthor();
+        test.deleteAllBooksWithSameTitle();
 
     }
 
@@ -117,6 +121,78 @@ class BookDataBaseTest {
         } else {
             System.out.println(" Book found by Title " + " - Test failed! ");
         }
+    }
+
+    public void countAllBooksInLibraryTest() {
+
+        Book book = new Book("A1", "B1");
+        Book book1 = new Book("A2","B2");
+        Book book2 = new Book("A3", "B3");
+        int expectedCountBooksInLibrary = 3;
+
+        BookDataBaseImpl dataBase = new BookDataBaseImpl();
+        List<Book> books = dataBase.getBooks();
+        books.add(book);
+        books.add(book1);
+        books.add(book2);
+
+        int actualResultOfCountingBooksInLibrary = dataBase.countAllBooks();
+
+        if(actualResultOfCountingBooksInLibrary == expectedCountBooksInLibrary){
+            System.out.println(" Counting books in library " + " - Test passed! ");
+        } else {
+            System.out.println(" Counting books in library " + " - Test failed! ");
+        }
+    }
+
+    public void deleteAllBooksBySameAuthor() {
+
+        Book book = new Book("A1", "B1");
+        Book book1 = new Book("A1", "B2");
+        Book book2 = new Book("A3", "B3");
+
+        String author = "A1";
+
+        BookDataBaseImpl dataBase = new BookDataBaseImpl();
+        List<Book> books = dataBase.getBooks();
+        books.add(book);
+        books.add(book1);
+        books.add(book2);
+        int expectedSizeOfBooksInLibrary = 1;
+
+        dataBase.deleteByAuthor(author);
+
+        if(expectedSizeOfBooksInLibrary == books.size()) {
+            System.out.println(" Delete all books by same Author " + " - Test passed! ");
+        } else {
+            System.out.println(" Delete all books by same Author " + " - Test failed! ");
+        }
+    }
+
+    public void deleteAllBooksWithSameTitle() {
+        Book book = new Book("A1", "B1");
+        Book book1 = new Book("A2", "B2");
+        Book book2 = new Book("A3", "B1");
+        Book book3 = new Book("A4", "B4");
+
+        String title = "B1";
+
+        BookDataBaseImpl dataBase = new BookDataBaseImpl();
+        List<Book> books = dataBase.getBooks();
+        books.add(book);
+        books.add(book1);
+        books.add(book2);
+        books.add(book3);
+        int expectedSizeOfBooksInLibrary = 2;
+
+        dataBase.deleteByTitle(title);
+
+        if(expectedSizeOfBooksInLibrary == books.size()) {
+            System.out.println(" Delete all books with same Title " + " - Test passed! ");
+        } else {
+            System.out.println(" Delete all books with same Title " + " - Test failed! ");
+        }
+
     }
 
 
