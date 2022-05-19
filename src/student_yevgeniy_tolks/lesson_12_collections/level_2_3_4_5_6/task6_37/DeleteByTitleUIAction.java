@@ -14,8 +14,7 @@ class DeleteByTitleUIAction implements UIAction{
     public void execute() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter title to delete a book:");
-        String title = scanner.nextLine().toLowerCase(Locale.ROOT);
-
+        String title = scanner.nextLine();
         bookDataBase.deleteByTitle(title);
     }
 }

@@ -130,13 +130,15 @@ class BookDataBaseImplTest {
         Book book = new Book("Father and Sons", "Turgenev");
         Book book1 = new Book("Master and Margaritta", "Bulhakov");
         Book book2 = new Book("War and peace", "Tolstoy");
-        int expectedBooksInTheList = 3;
+        Book book3 = new Book("War and peace", "Tolstoy");
+        int expectedBooksInTheList = 4;
 
         BookDataBaseImpl bookDataBase = new BookDataBaseImpl();
         List<Book> books = bookDataBase.getBooks();
         books.add(book);
         books.add(book1);
         books.add(book2);
+        books.add(book3);
 
         int resultBooksInTheList = bookDataBase.countAllBooks();
         if (expectedBooksInTheList == resultBooksInTheList) {
@@ -160,6 +162,7 @@ class BookDataBaseImplTest {
         books.add(book1);
         books.add(book2);
         books.add(book3);
+
         int expectedListSize = 2;
 
         bookDataBase.deleteByAuthor(author);

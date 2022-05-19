@@ -20,6 +20,7 @@ class BookLibrary {
         menuNumberToActionMap.put(7, new DeleteByTitleUIAction(bookDatabase));
         menuNumberToActionMap.put(8, new MapBooksByAuthor(bookDatabase));
         menuNumberToActionMap.put(9, new EachAuthorBookCount(bookDatabase));
+        menuNumberToActionMap.put(10, new CountAllBooksUIAction(bookDatabase));
 
     }
 
