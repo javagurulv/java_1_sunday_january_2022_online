@@ -13,6 +13,7 @@ public class Average {
         System.out.println("Enter third number: ");
         int thirdNumber = scanner.nextInt();
         Double average = Double.valueOf((firstNumber + secondNumber + thirdNumber) / 3);
+        System.out.println(average);
     }
 }
 

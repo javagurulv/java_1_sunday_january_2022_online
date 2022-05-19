@@ -34,6 +34,7 @@ public class MapExample {
 		Set<String> allKeys = wordToCountMap.keySet();
 		for (String key : wordToCountMap.keySet()) {
 			Integer value = wordToCountMap.get(key);
+
 			System.out.println("Key = " + key + " , value = " + value);
 		}
 

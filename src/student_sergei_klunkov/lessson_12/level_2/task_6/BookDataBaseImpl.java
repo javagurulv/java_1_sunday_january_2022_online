@@ -2,6 +2,8 @@ package student_sergei_klunkov.lessson_12.level_2.task_6;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
+import java.util.stream.Collectors;
 
 class BookDataBaseImpl implements BookDataBase {
 
@@ -26,6 +28,37 @@ class BookDataBaseImpl implements BookDataBase {
             }
         }
         return deleteBookByID;
+    }
+    public boolean delete(Book book){
+        boolean deleteBook = false;
+        for(Book bookList : books){
+            if(book.equals(bookList)){
+                books.remove(book);
+                deleteBook = true;
+                break;
+            }
+        }
+        return deleteBook;
+    }
+    @Override
+    public Optional<Book> findById(Long bookId) {
+       return books.stream()
+               .filter(book -> bookId.equals(book.getId()))
+               .findAny();
+
+    }
+
+    @Override
+    public List<Book> findByAuthor(String author) {
+        return books.stream()
+                .filter(book -> author.equals(book.getAuthor()))
+                .collect(Collectors.toList());
+    }
+
+    public List<Book> findByTitle(String title) {
+        return books.stream()
+                .filter(book -> title.equals(book.getTitle()))
+                .collect(Collectors.toList());
     }
 
     public List<Book> getBooks() {

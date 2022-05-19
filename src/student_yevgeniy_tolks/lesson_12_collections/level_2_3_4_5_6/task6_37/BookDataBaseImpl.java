@@ -1,10 +1,12 @@
-package student_yevgeniy_tolks.lesson_12_collections.level_2_3_4.task6_26;
+package student_yevgeniy_tolks.lesson_12_collections.level_2_3_4_5_6.task6_37;
 
 import java.util.*;
+import java.util.stream.Collectors;
+
 
 class BookDataBaseImpl implements BookDataBase {
 
-    private final List<Book> books = new ArrayList<>();
+    private List<Book> books = new ArrayList<>();
     private Long id = 0L;
 
     @Override
@@ -42,35 +44,23 @@ class BookDataBaseImpl implements BookDataBase {
 
     @Override
     public Optional<Book> findById(Long bookId) {
-        Optional<Book> bookList = Optional.empty();
-        for (Book book : books) {
-            if (bookId.equals(book.getId())) {
-                bookList = Optional.of(book);
-            }
-        }
-        return bookList;
+        return books.stream()
+                .filter(book -> bookId.equals(book.getId()))
+                .findAny();
     }
 
     @Override
     public List<Book> findByAuthor(String author) {
-        List<Book> findBookByAuthor = new ArrayList<>();
-        for (Book book : books) {
-            if (author.equals(book.getAuthor())) {
-                findBookByAuthor.add(book);
-            }
-        }
-        return findBookByAuthor;
+        return books.stream()
+                .filter(book -> author.equals(book.getAuthor()))
+                .collect(Collectors.toList());
     }
 
     @Override
     public List<Book> findByTitle(String title) {
-        List<Book> findBookByTitle = new ArrayList<>();
-        for (Book book : books) {
-            if (title.equals(book.getTitle())) {
-                findBookByTitle.add(book);
-            }
-        }
-        return findBookByTitle;
+        return books.stream()
+                .filter(book -> title.equals(book.getTitle()))
+                .collect(Collectors.toList());
     }
 
     @Override
@@ -96,31 +86,23 @@ class BookDataBaseImpl implements BookDataBase {
 
     @Override
     public List<Book> find(SearchCriteria searchCriteria) {
-        List<Book> findBooksByCriteria = new ArrayList<>();
-        for (Book book : books) {
-            if (searchCriteria.match(book)) {
-                findBooksByCriteria.add(book);
-            }
-        }
-        return findBooksByCriteria;
+        return books.stream()
+                .filter(book -> searchCriteria.match(book))
+                .collect(Collectors.toList());
     }
 
     @Override
     public Set<String> findUniqueAuthors() {
-        Set<String> uniqueAuthor = new HashSet<>();
-        for (Book bookByAuthor : books) {
-            uniqueAuthor.add(bookByAuthor.getAuthor());
-        }
-        return uniqueAuthor;
+        return books.stream()
+                .map(book -> book.getAuthor())
+                .collect(Collectors.toSet());
     }
 
     @Override
     public Set<String> findUniqueTitles() {
-        Set<String> uniqueTitle = new HashSet<>();
-        for (Book bookByTitle : books) {
-            uniqueTitle.add(bookByTitle.getTitle());
-        }
-        return uniqueTitle;
+        return books.stream()
+                .map(book -> book.getTitle())
+                .collect(Collectors.toSet());
     }
 
     @Override
@@ -135,6 +117,30 @@ class BookDataBaseImpl implements BookDataBase {
 
     public List<Book> getBooks() {
         return books;
+    }
+
+
+    @Override
+    public Map<String, List<Book>> getAuthorToBooksMap() {
+        return books.stream()
+                .collect(Collectors.toMap(book -> book.getAuthor()
+                        , book -> findByAuthor(book.getAuthor())
+                        , (books1, books2) -> books1));
+    }
+
+    public int countAllBooksByAuthor(String author) {
+        return (int) books.stream()
+                .filter(book -> author.equals(book.getAuthor()))
+                .count();
+    }
+
+    @Override
+    public Map<String, Integer> getEachAuthorBookCount() {
+        return books.stream()
+                .collect(Collectors.toMap(book -> book.getAuthor()
+                        , book -> countAllBooksByAuthor(book.getAuthor())
+                        , (book1, book2) -> book1
+                ));
     }
 }
 

@@ -1,4 +1,4 @@
-package student_yevgeniy_tolks.lesson_12_collections.level_2_3_4.task6_26;
+package student_yevgeniy_tolks.lesson_12_collections.level_2_3_4_5_6.task6_37;
 
 import java.util.Objects;
 
@@ -43,12 +43,15 @@ class Book {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Book book = (Book) o;
-        return Objects.equals(id, book.id) && Objects.equals(title, book.title) && Objects.equals(author, book.author);
+        return Objects.equals(id, book.id)
+                && Objects.equals(title, book.title)
+                && Objects.equals(author, book.author)
+                && Objects.equals(yearOfIssue, book.yearOfIssue);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, title, author);
+        return Objects.hash(id, title, author, yearOfIssue);
     }
 
     @Override
