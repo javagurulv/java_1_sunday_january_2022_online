@@ -1,6 +1,8 @@
 package student_sergei_klunkov.lessson_12.level_2.task_6;
 
+
 import java.util.List;
+import java.util.Optional;
 
 class BookDataBaseTest {
 
@@ -9,6 +11,9 @@ class BookDataBaseTest {
         test.saveIdTest();
         test.deleteIdTest();
         test.deleteBookTest();
+        test.findBookByIdOptionalTest();
+        test.findBookByAuthor();
+        test.findBookByTitle();
 
     }
 
@@ -61,4 +66,59 @@ class BookDataBaseTest {
             System.out.println(" Delete book " + " - Test failed! ");
         }
     }
+
+    public void findBookByIdOptionalTest() {
+        Book book = new Book("A1", "B1");
+        book.setId(1L);
+        BookDataBaseImpl database = new BookDataBaseImpl();
+        List<Book> books = database.getBooks();
+        books.add(book);
+        Long bookId = 1L;
+
+        Optional<Book> expectedResultToFindBookById = Optional.of(book);
+        Optional<Book> resultOfFindById = database.findById(bookId);
+
+        if (expectedResultToFindBookById.equals(resultOfFindById)){
+            System.out.println(" Optional: Book founded by ID " + " - Test passed! ");
+        } else {
+            System.out.println(" Optional: Book founded by ID " + " - Test failed! ");
+        }
+    }
+
+    public void findBookByAuthor() {
+
+        String author = "A1";
+        Book book = new Book("A1", "B1");
+
+        BookDataBaseImpl dataBase = new BookDataBaseImpl();
+        List<Book> books = dataBase.getBooks();
+        books.add(book);
+
+        List<Book> bookFoundByAuthorResult = dataBase.findByAuthor(author);
+        if(books.equals(bookFoundByAuthorResult)) {
+            System.out.println(" Book found by Author " + " - Test passed! ");
+        } else {
+            System.out.println(" Book found by Author " + " - Test failed! ");
+        }
+    }
+
+    public void findBookByTitle() {
+
+        String title = "B1";
+        Book book = new Book("A1", "B1");
+
+        BookDataBaseImpl dataBase = new BookDataBaseImpl();
+        List<Book> books = dataBase.getBooks();
+        books.add(book);
+
+        List<Book> bookFoundByTitleResult = dataBase.findByTitle(title);
+        if(books.equals(bookFoundByTitleResult)) {
+            System.out.println(" Book found by Title " + " - Test passed! ");
+        } else {
+            System.out.println(" Book found by Title " + " - Test failed! ");
+        }
+    }
+
+
+
 }
