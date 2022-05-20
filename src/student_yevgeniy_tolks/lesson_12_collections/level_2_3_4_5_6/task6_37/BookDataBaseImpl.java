@@ -65,13 +65,10 @@ class BookDataBaseImpl implements BookDataBase {
 
     @Override
     public int countAllBooks() {
-        int bookCounter = 0;
-        for (Book book : books) {
-            if (book != null) {
-                bookCounter++;
-            }
-        }
-        return bookCounter;
+        return (int)
+                books.stream()
+                        .map(book -> books.size())
+                        .count();
     }
 
     @Override
