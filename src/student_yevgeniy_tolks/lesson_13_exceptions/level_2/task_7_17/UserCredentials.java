@@ -1,4 +1,4 @@
-package student_yevgeniy_tolks.lesson_13_exceptions.level_2.task_7_14;
+package student_yevgeniy_tolks.lesson_13_exceptions.level_2.task_7_17;
 
 import java.util.List;
 import java.util.Objects;
@@ -6,6 +6,7 @@ import java.util.Objects;
 class UserCredentials {
 
     private List<Role> roles;
+    boolean role;
 
     public UserCredentials(List<Role> roles) {
         this.roles = roles;
@@ -13,6 +14,10 @@ class UserCredentials {
 
     public List<Role> getRoles() {
         return roles;
+    }
+
+    public boolean hasRole(Role role) {
+        return roles.contains(role);
     }
 
     @Override

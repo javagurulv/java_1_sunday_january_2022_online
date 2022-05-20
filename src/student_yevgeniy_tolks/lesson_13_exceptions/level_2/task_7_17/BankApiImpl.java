@@ -1,4 +1,4 @@
-package student_yevgeniy_tolks.lesson_13_exceptions.level_2.task_7_14;
+package student_yevgeniy_tolks.lesson_13_exceptions.level_2.task_7_17;
 
 import java.util.List;
 import java.util.Optional;
@@ -19,16 +19,15 @@ public class BankApiImpl implements BankApi {
     public Optional<BankClient> findById(UserCredentials userCredentials, String userID)
             throws AccessDeniedException {
 
-        if (userCredentials.getRoles().contains(Role.CAN_SEARCH_CLIENT)) {
+        if (userCredentials.hasRole(Role.CAN_SEARCH_CLIENT)) {
             throw new AccessDeniedException();
-        }
-        for (BankClient client : clients) {
-            if (userID.equals(client.getUserId())) {
-                System.out.println(client);
-                return Optional.of(client);
+        }else {
+            for (BankClient client : clients) {
+                if (userID.equals(client.getUserId())) {
+                    return Optional.of(client);
+                }
             }
         }
-
         return Optional.empty();
     }
 }
