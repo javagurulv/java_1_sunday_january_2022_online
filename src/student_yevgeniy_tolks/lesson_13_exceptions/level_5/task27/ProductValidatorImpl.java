@@ -4,10 +4,22 @@ import java.util.ArrayList;
 import java.util.List;
 
 class ProductValidatorImpl implements ProductValidator {
-    private final List<ValidationException> validationExceptionArrayList = new ArrayList<>();
+
+private ProductTitleValidationRule productTitleValidationRule;
+
+    public ProductValidatorImpl(ProductTitleValidationRule productTitleValidationRule) {
+        this.productTitleValidationRule = productTitleValidationRule;
+    }
 
     @Override
     public List<ValidationException> validate(Product product) {
-        return null;
+
+        List<ValidationException> exceptions = new ArrayList<>();
+        try {
+            productTitleValidationRule.validate(product);
+        } catch (ValidationException e){
+            exceptions.add(e);
+        }
+         return exceptions;
     }
 }
