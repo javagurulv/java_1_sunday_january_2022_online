@@ -1,7 +1,4 @@
-package student_yevgeniy_tolks.lesson_13_exceptions.level_4.task23_24.task25;
-
-import java.util.ArrayList;
-import java.util.List;
+package student_yevgeniy_tolks.lesson_13_exceptions.level_4.task23_26.task25;
 
 class OutOfMemoryTest {
 //    static Object obj = new Object();

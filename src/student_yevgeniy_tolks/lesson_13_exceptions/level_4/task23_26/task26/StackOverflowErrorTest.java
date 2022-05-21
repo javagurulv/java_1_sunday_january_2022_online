@@ -1,4 +1,4 @@
-package student_yevgeniy_tolks.lesson_13_exceptions.level_4.task23_24.task26;
+package student_yevgeniy_tolks.lesson_13_exceptions.level_4.task23_26.task26;
 
 class StackOverflowErrorTest {
 
