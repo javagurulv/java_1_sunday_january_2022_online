@@ -8,21 +8,17 @@ class WrongUserInputHandlingDemo {
 
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter a whole number : ");
-
-        try {
-            System.out.println("Entered number = " + scanner.nextInt());
-
-        } catch (InputMismatchException e) {
-            while (scanner.hasNextLine()) {
-                if (scanner.hasNextInt()) {
-                    System.out.println("Entered number = " + scanner.nextInt());
-                    break;
-                } else {
-                    System.out.println("Wrong input entry, try whole number");
-                    scanner.nextLine();
-                }
+        while (scanner.hasNextLine()) {
+            try {
+                scanner.nextInt();
+                break;
+            } catch (InputMismatchException e) {
+                System.out.println("Wrong input entry, try whole number");
             }
+            scanner.nextLine();
         }
+
     }
 }
+
 
