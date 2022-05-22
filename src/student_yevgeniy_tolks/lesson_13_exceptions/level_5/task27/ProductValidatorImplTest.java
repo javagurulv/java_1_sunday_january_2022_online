@@ -7,7 +7,8 @@ class ProductValidatorImplTest {
 
     private ProductValidator productValidator = new ProductValidatorImpl(
             new ProductTitleValidationRule(),
-            new ProductPriceValidationRule());
+            new ProductPriceValidationRule(),
+            new ProductDescriptionValidationRule());
 
     public static void main(String[] args) {
         ProductValidatorImplTest test = new ProductValidatorImplTest();
@@ -18,8 +19,8 @@ class ProductValidatorImplTest {
         test.Rule4ProductTitleSymbolsTest();
         test.Rule5ProductPriceIsNullTest();
         test.Rule6ProductPriceIsZeroTest();
-//        test.Rule7ProductDescriptionHasMoreThan2000SymbolsTest();
-//        test.Rule8ProductDescriptionSymbolsTest();
+        test.Rule7ProductDescriptionHasMoreThan2000SymbolsTest();
+        test.Rule8ProductDescriptionSymbolsTest();
     }
 
     public void Rule1ProductTitleIsNullTest() {
@@ -63,7 +64,6 @@ class ProductValidatorImplTest {
 
     }
 
-
     public void Rule5ProductPriceIsNullTest() {
         Product product = new Product("CylinderHead", null, "Some description");
         ValidationException rule5 = new ValidationException("RULE-5", "Price can not be Empty", "price");
@@ -78,31 +78,24 @@ class ProductValidatorImplTest {
         checkResults(exceptions.contains(rule6), "rule6");
     }
 
-//    public void Rule7ProductDescriptionHasMoreThan2000SymbolsTest() {
-//        Product product = new Product(
-//                "Cylinder head",
-//                new BigDecimal("1.00"),
-//                "Some description");
-//        List<ValidationException> exceptions = productValidator.validate(product);
-//        checkResults(exceptions.size() == 1, "rule7");
-//        checkResults(exceptions.get(1).getRuleName().equals("RULE-7"), "rule7");
-//        checkResults(exceptions.get(1).getFieldName().equals("description"), "rule7");
-//        checkResults(exceptions.get(1).getDescription().equals(
-//                        "Title can not be longer than 100 symbols"),
-//                "rule7");
-//    }
-//
-//    public void Rule8ProductDescriptionSymbolsTest() {
-//        Product product = new Product("Cylinder Head", null, "Some description");
-//        List<ValidationException> exceptions = productValidator.validate(product);
-//        checkResults(exceptions.size() == 1, "rule8");
-//        checkResults(exceptions.get(3).getRuleName().equals("RULE-8"), "rule8");
-//        checkResults(exceptions.get(3).getFieldName().equals("description"), "rule8");
-//        checkResults(exceptions.get(3).getDescription().equals(
-//                        "Description should have english letters and numbers"),
-//                "rule8");
-//    }
-//
+    public void Rule7ProductDescriptionHasMoreThan2000SymbolsTest() {
+        Product product = new Product(
+                "Cylinder head",
+                new BigDecimal("1.00"),
+                "Some description");
+        List<ValidationException> exceptions = productValidator.validate(product);
+        ValidationException rule7 = new ValidationException("RULE-7", "To long product description content", "description");
+        checkResults(exceptions.contains(rule7), "rule7");
+    }
+
+    public void Rule8ProductDescriptionSymbolsTest() {
+        Product product = new Product("Cylinder Head", new BigDecimal("1.00"), "Somedescription");
+        List<ValidationException> exceptions = productValidator.validate(product);
+        ValidationException rule8 = new ValidationException("RULE-8", "Description should have english " +
+                "letters and numbers", "description");
+        checkResults(exceptions.contains(rule8), "rule8");
+    }
+
     private void checkResults(boolean condition, String testName) {
         if (condition) {
             System.out.println(testName + " = OK");
