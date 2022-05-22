@@ -4,18 +4,18 @@ import java.util.Optional;
 
 public class BankApi {
 
-	public Optional<String> getClientFullName(String sequrityKey,
+	public Optional<String> getClientFullName(String seсurityKey,
 											  Long clientId)
 				throws AccessDeniedException {
-		if (sequrityKey == null || !sequrityKey.equals("abcd")) {
-			AccessDeniedException exception = new AccessDeniedException("Invalid sequrity key", sequrityKey);
-			throw exception;
-			// throw new AccessDeniedException("Invalid sequrity key", sequrityKey);
+		if (seсurityKey == null || !seсurityKey.equals("abcd")) {
+			//AccessDeniedException exception = new AccessDeniedException("Invalid sequrity key", seсurityKey);
+			//throw exception;
+			throw new AccessDeniedException("Invalid sequrity key", seсurityKey);
 		}
 		if (clientId == 1L) {
 			return Optional.of("Petja");
 		} else {
-			return Optional.empty();  // return "";
+			return Optional.empty();
 		}
 	}
 
