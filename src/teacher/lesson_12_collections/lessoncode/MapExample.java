@@ -22,6 +22,7 @@ public class MapExample {
 
 		wordToCountMap.put("cat", 5);
 		wordToCountMap.put("dog", 5);
+		wordToCountMap.put("dog", 6);
 		wordToCountMap.put("phone", 1);
 
 		wordToCountMap.put("cat", 8);

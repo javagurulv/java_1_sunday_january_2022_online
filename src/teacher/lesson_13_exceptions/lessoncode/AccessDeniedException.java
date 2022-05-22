@@ -2,14 +2,14 @@ package teacher.lesson_13_exceptions.lessoncode;
 
 public class AccessDeniedException extends Exception {
 
-	private String invalidSequrityKey;
+	private String invalidSecurityKey;
 
 	public AccessDeniedException(String message, String invalidSequrityKey) {
 		super(message);
-		this.invalidSequrityKey = invalidSequrityKey;
+		this.invalidSecurityKey = invalidSequrityKey;
 	}
 
-	public String getInvalidSequrityKey() {
-		return invalidSequrityKey;
+	public String getInvalidSecurityKey() {
+		return invalidSecurityKey;
 	}
 }

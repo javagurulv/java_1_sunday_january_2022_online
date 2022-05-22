@@ -2,9 +2,23 @@ package teacher.lesson_11_interfaces.lessoncode;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
+import java.util.Collection;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 public class PolicyCalculatorImpl implements PolicyCalculator {
+
+	private Set<RiskType> findUniqueRiskTypes(Policy policy) {
+		Set<RiskType> uniqueRiskTypes = new HashSet<>();
+		for (InsuredObject insuredObject : policy.getInsuredObjects()) {
+			List<InsuredSubObject> subObjects = insuredObject.getSubObjects();
+			for (InsuredSubObject subObject : subObjects) {
+				uniqueRiskTypes.add(subObject.getRiskType());
+			}
+		}
+		return uniqueRiskTypes;
+	}
 
 	@Override
 	public BigDecimal calculate(Policy policy) {
