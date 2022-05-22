@@ -1,0 +1,24 @@
+Является ли следующий интерфейс функциональным? Нет, так как у него больше одного метода и они оба не дефолные
+
+interface ProductDatabase {
+
+    void save(Product product);
+
+    Product findByTitle(String productTitle);
+
+}
+
+
+class Product {
+
+    private String title;
+
+    public Product(String title) {
+        this.title = title;
+    }
+
+    public String getTitle() {
+        return this.title;
+    }
+
+}
