@@ -30,7 +30,7 @@ public class BankApi {
 			}
 		} catch (AccessDeniedException exception) {
 			System.out.println(exception.getMessage());
-			System.out.println(exception.getInvalidSequrityKey());
+			System.out.println(exception.getInvalidSecurityKey());
 		} finally {
 			System.out.println("Finally");
 		}
