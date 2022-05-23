@@ -8,10 +8,12 @@ class Book {
     private Long id;
     private String title;
     private String author;
+    private String yearOfIssue;
 
     public Book(String author, String title) {
         this.author = author;
         this.title = title;
+
     }
 
     public void setId(Long id) {
@@ -29,6 +31,12 @@ class Book {
     public String getAuthor() {
         return this.author;
     }
+
+    public String getYearOfIssue() {
+        return yearOfIssue;
+    }
+
+    public void setYearOfIssue(String yearOfIssue) {  this.yearOfIssue = yearOfIssue; }
 
     @Override
     public boolean equals(Object o) {
