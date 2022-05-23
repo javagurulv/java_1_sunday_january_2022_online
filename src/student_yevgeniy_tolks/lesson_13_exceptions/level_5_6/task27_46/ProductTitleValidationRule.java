@@ -10,7 +10,7 @@ class ProductTitleValidationRule implements FieldValidationRules {
             throw new ValidationException("RULE-2", "Title can not be shorter than 3 symbols", "title");
         } else if (product.getProductTitle().length() > 100) {
             throw new ValidationException("RULE-3", "Title can not be longer than 100 symbols", "title");
-        } else if (!product.getProductTitle().matches("^[a-zA-Z0-9]+$")) {
+        } else if (!product.getProductTitle().matches("^[a-zA-Z0-9 ]+$")) {
             throw new ValidationException("RULE-4", "Title should have english letters and numbers", "title");
         }
     }
