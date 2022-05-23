@@ -1,4 +1,4 @@
-package student_yevgeniy_tolks.lesson_13_exceptions.level_5.task27;
+package student_yevgeniy_tolks.lesson_13_exceptions.level_5_6.task27_46;
 
 import java.math.BigDecimal;
 import java.util.List;
@@ -45,10 +45,8 @@ class ProductValidatorImplTest {
     }
 
     public void Rule3ProductTitleHasMoreThan100SymbolsTest() {
-        Product product = new Product("jkjhvbnf,nv l.vxmc. cvxzzcjkdhgndvkjn fbxn " +
-                "clkewjadldmwfsftdgsvavsffsfdsfsfsfsfsfsfjhgbadsjbsak dfssfsfsbndswfbn",
-                new BigDecimal("1.00"),
-                "Some description");
+        String productTitleLength = String.valueOf(new char[101]);
+        Product product = new Product(productTitleLength,new BigDecimal("1.00"),"Some description");
         ValidationException rule3 = new ValidationException("RULE-3", "Title can not be longer than 100 symbols", "title");
         List<ValidationException> exceptions = productValidator.validate(product);
         checkResults(exceptions.contains(rule3), "rule3");
@@ -61,7 +59,6 @@ class ProductValidatorImplTest {
                 "title");
         List<ValidationException> exceptions = productValidator.validate(product);
         checkResults(exceptions.contains(rule4), "rule4");
-
     }
 
     public void Rule5ProductPriceIsNullTest() {
@@ -79,17 +76,18 @@ class ProductValidatorImplTest {
     }
 
     public void Rule7ProductDescriptionHasMoreThan2000SymbolsTest() {
+        String descriptionLength = String.valueOf(new char[2001]);
         Product product = new Product(
                 "Cylinder head",
                 new BigDecimal("1.00"),
-                "Some description");
+                descriptionLength);
         List<ValidationException> exceptions = productValidator.validate(product);
         ValidationException rule7 = new ValidationException("RULE-7", "To long product description content", "description");
         checkResults(exceptions.contains(rule7), "rule7");
     }
 
     public void Rule8ProductDescriptionSymbolsTest() {
-        Product product = new Product("Cylinder Head", new BigDecimal("1.00"), "Somedescription");
+        Product product = new Product("Cylinder Head", new BigDecimal("1.00"), "Some description");
         List<ValidationException> exceptions = productValidator.validate(product);
         ValidationException rule8 = new ValidationException("RULE-8", "Description should have english " +
                 "letters and numbers", "description");

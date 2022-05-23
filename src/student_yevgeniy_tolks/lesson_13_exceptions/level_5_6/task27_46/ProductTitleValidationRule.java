@@ -1,6 +1,4 @@
-package student_yevgeniy_tolks.lesson_13_exceptions.level_5.task27;
-
-import java.nio.charset.StandardCharsets;
+package student_yevgeniy_tolks.lesson_13_exceptions.level_5_6.task27_46;
 
 class ProductTitleValidationRule implements FieldValidationRules {
 
