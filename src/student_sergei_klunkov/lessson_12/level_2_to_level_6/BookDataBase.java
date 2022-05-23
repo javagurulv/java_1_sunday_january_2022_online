@@ -1,7 +1,9 @@
-package student_sergei_klunkov.lessson_12.level_2.task_6;
+package student_sergei_klunkov.lessson_12.level_2_to_level_6;
 
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
+import java.util.Set;
 
 interface BookDataBase {
 
@@ -23,5 +25,18 @@ interface BookDataBase {
     void deleteByAuthor(String author);
 
     void deleteByTitle(String title);
+
+    List<Book> find(SearchCriteria searchCriteria);
+
+    Set<String> findUniqueAuthors();
+
+    Set<String> findUniqueTitles();
+
+    Set<Book> findUniqueBooks();
+    boolean contains(Book book);
+    Map<String, List<Book>> getAuthorToBooksMap();
+
+    Map<String, Integer> getEachAuthorBookCount();
+
 
 }
