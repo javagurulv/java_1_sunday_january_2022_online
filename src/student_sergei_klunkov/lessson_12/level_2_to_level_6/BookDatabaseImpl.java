@@ -3,7 +3,7 @@ package student_sergei_klunkov.lessson_12.level_2_to_level_6;
 import java.util.*;
 import java.util.stream.Collectors;
 
-class BookDataBaseImpl implements BookDataBase {
+class BookDatabaseImpl implements BookDatabase {
 
     private final List<Book> books = new ArrayList<>();
     private Long id = 0L;
