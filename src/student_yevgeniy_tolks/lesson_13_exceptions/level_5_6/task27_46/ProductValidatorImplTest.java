@@ -24,7 +24,7 @@ class ProductValidatorImplTest {
     }
 
     public void Rule1ProductTitleIsNullTest() {
-        Product product = new Product(null, new BigDecimal("1.00"), "Some description");
+        Product product = new Product(null, BigDecimal.ZERO, "Some description");
         List<ValidationException> exceptions = productValidator.validate(product);
         ValidationException rule1 = new ValidationException("RULE-1", "Title can not be Empty", "title");
         checkResults(exceptions.contains(rule1), "rule1_v2");
@@ -92,6 +92,7 @@ class ProductValidatorImplTest {
         ValidationException rule8 = new ValidationException("RULE-8", "Description should have english " +
                 "letters and numbers", "description");
         checkResults(exceptions.contains(rule8), "rule8");
+
     }
 
     private void checkResults(boolean condition, String testName) {
