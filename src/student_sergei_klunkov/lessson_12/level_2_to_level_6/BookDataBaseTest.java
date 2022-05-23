@@ -34,7 +34,7 @@ class BookDataBaseTest {
         Book book = new Book("A1", "B1");
         Long bookId = 1L;
 
-        BookDataBaseImpl dataBase = new BookDataBaseImpl();
+        BookDatabaseImpl dataBase = new BookDatabaseImpl();
         Long expectedBookId = dataBase.save(book);
         if (bookId.equals(expectedBookId)){
             System.out.println(" Save Book ID " + " - Test passed! ");
@@ -47,7 +47,7 @@ class BookDataBaseTest {
         Book book = new Book("A1", "B1");
         book.setId(1L);
 
-        BookDataBaseImpl dataBase = new BookDataBaseImpl();
+        BookDatabaseImpl dataBase = new BookDatabaseImpl();
         List<Book> books = dataBase.getBooks();
         books.add(book);
         Long bookId = 1L;
@@ -65,7 +65,7 @@ class BookDataBaseTest {
         Book book = new Book("A1", "B1");
         Book book1 = new Book("A2", "B2");
         Book book2 = new Book("A3", "B3");
-        BookDataBaseImpl dataBase = new BookDataBaseImpl();
+        BookDatabaseImpl dataBase = new BookDatabaseImpl();
         List<Book> books = dataBase.getBooks();
         books.add(book);
         books.add(book1);
@@ -82,7 +82,7 @@ class BookDataBaseTest {
     public void findBookByIdOptionalTest() {
         Book book = new Book("A1", "B1");
         book.setId(1L);
-        BookDataBaseImpl database = new BookDataBaseImpl();
+        BookDatabaseImpl database = new BookDatabaseImpl();
         List<Book> books = database.getBooks();
         books.add(book);
         Long bookId = 1L;
@@ -102,7 +102,7 @@ class BookDataBaseTest {
         String author = "A1";
         Book book = new Book("A1", "B1");
 
-        BookDataBaseImpl dataBase = new BookDataBaseImpl();
+        BookDatabaseImpl dataBase = new BookDatabaseImpl();
         List<Book> books = dataBase.getBooks();
         books.add(book);
 
@@ -119,7 +119,7 @@ class BookDataBaseTest {
         String title = "B1";
         Book book = new Book("A1", "B1");
 
-        BookDataBaseImpl dataBase = new BookDataBaseImpl();
+        BookDatabaseImpl dataBase = new BookDatabaseImpl();
         List<Book> books = dataBase.getBooks();
         books.add(book);
 
@@ -138,7 +138,7 @@ class BookDataBaseTest {
         Book book2 = new Book("A3", "B3");
         int expectedCountBooksInLibrary = 3;
 
-        BookDataBaseImpl dataBase = new BookDataBaseImpl();
+        BookDatabaseImpl dataBase = new BookDatabaseImpl();
         List<Book> books = dataBase.getBooks();
         books.add(book);
         books.add(book1);
@@ -161,7 +161,7 @@ class BookDataBaseTest {
 
         String author = "A1";
 
-        BookDataBaseImpl dataBase = new BookDataBaseImpl();
+        BookDatabaseImpl dataBase = new BookDatabaseImpl();
         List<Book> books = dataBase.getBooks();
         books.add(book);
         books.add(book1);
@@ -185,7 +185,7 @@ class BookDataBaseTest {
 
         String title = "B1";
 
-        BookDataBaseImpl dataBase = new BookDataBaseImpl();
+        BookDatabaseImpl dataBase = new BookDatabaseImpl();
         List<Book> books = dataBase.getBooks();
         books.add(book);
         books.add(book1);
@@ -209,7 +209,7 @@ class BookDataBaseTest {
         TitleSearchCriteria titleSearchCriteria = new TitleSearchCriteria("Zveroboi");
         AndSearchCriteria andSearchCriteria = new AndSearchCriteria(authorSearchCriteria, titleSearchCriteria);
 
-        BookDataBaseImpl dataBase = new BookDataBaseImpl();
+        BookDatabaseImpl dataBase = new BookDatabaseImpl();
         List<Book> books = dataBase.getBooks();
         books.add(book);
 
@@ -229,7 +229,7 @@ class BookDataBaseTest {
         YearOfIssueSearchCriteria yearOfIssueSearchCriteria = new YearOfIssueSearchCriteria("1890");
         OrSearchCriteria orSearchCriteria = new OrSearchCriteria(authorSearchCriteria, yearOfIssueSearchCriteria);
 
-        BookDataBaseImpl dataBase = new BookDataBaseImpl();
+        BookDatabaseImpl dataBase = new BookDatabaseImpl();
         List<Book> books = dataBase.getBooks();
         books.add(book);
 
@@ -246,7 +246,7 @@ class BookDataBaseTest {
         Book book1 = new Book("A1", "B1");
         Book book2 = new Book("A2", "B2");
         Book book3 = new Book("A3", "B3");
-        BookDataBaseImpl dataBase = new BookDataBaseImpl();
+        BookDatabaseImpl dataBase = new BookDatabaseImpl();
         List<Book> books = dataBase.getBooks();
         books.add(book);
         books.add(book1);
@@ -266,7 +266,7 @@ class BookDataBaseTest {
         Book book1 = new Book("A1", "B1");
         Book book2 = new Book("A2", "B2");
         Book book3 = new Book("A3", "B3");
-        BookDataBaseImpl dataBase = new BookDataBaseImpl();
+        BookDatabaseImpl dataBase = new BookDatabaseImpl();
         List<Book> books = dataBase.getBooks();
         books.add(book);
         books.add(book1);
@@ -287,7 +287,7 @@ class BookDataBaseTest {
         Book book1 = new Book("A2", "B2");
         Book book2 = new Book("A3", "B3");
 
-        BookDataBaseImpl dataBase = new BookDataBaseImpl();
+        BookDatabaseImpl dataBase = new BookDatabaseImpl();
         List<Book> books = dataBase.getBooks();
         books.add(book);
         books.add(book1);
@@ -312,7 +312,7 @@ class BookDataBaseTest {
         Book book1 = new Book("A2", "B2");
         Book book2 = new Book("A3", "B3");
 
-        BookDataBaseImpl dataBase = new BookDataBaseImpl();
+        BookDatabaseImpl dataBase = new BookDatabaseImpl();
         List<Book> books = dataBase.getBooks();
         books.add(book);
         books.add(book1);
@@ -332,7 +332,7 @@ class BookDataBaseTest {
         Book book = new Book("A1", "B1");
         Book book1 = new Book("A1", "B2");
         Book book2 = new Book("A3", "B3");
-        BookDataBaseImpl dataBase = new BookDataBaseImpl();
+        BookDatabaseImpl dataBase = new BookDatabaseImpl();
         List<Book> books = dataBase.getBooks();
         books.add(book);
         books.add(book1);
@@ -364,7 +364,7 @@ class BookDataBaseTest {
         Book book1 = new Book("A1", "B2");
         Book book2 = new Book("A2", "B3");
         Book book3 = new Book("A2", "B4");
-        BookDataBaseImpl dataBase = new BookDataBaseImpl();
+        BookDatabaseImpl dataBase = new BookDatabaseImpl();
         List<Book> books = dataBase.getBooks();
         books.add(book);
         books.add(book1);
