@@ -50,5 +50,11 @@ class Book {
         return Objects.hash(id, title, author);
     }
 
-
+    public String toString() {
+        return "Book{" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                ", author='" + author + '\'' +
+                '}';
+    }
 }
