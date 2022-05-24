@@ -5,10 +5,15 @@ import java.util.Objects;
 class Book {
     private String bookTitle;
     private String bookAuthor;
+    private boolean status = false;
 
     public Book(String bookTitle, String bookAuthor) {
         this.bookTitle = bookTitle;
         this.bookAuthor = bookAuthor;
+    }
+
+    public boolean isStatus() {
+        return status;
     }
 
     public String getBookTitle() {
@@ -32,5 +37,14 @@ class Book {
         return "Book: " +
                  bookTitle +
                 " [Author: " + bookAuthor + "]" ;
+    }
+
+    public void markBookAsRead(){
+        this.status = true;
+    }
+
+
+    public void markBookAsUnread(){
+        this.status = false;
     }
 }

@@ -7,4 +7,7 @@ interface BookReader {
     void showBookList();
     List<Book> findBookByAuthor(String authorName);
     List<Book> findBookByPartOfTheAuthorName(String authorName);
+    List<Book> findBookByBookName(String bookName);
+    List<Book> findBookByPartOfBookName(String bookName);
+    boolean markBookAsRead(Book book);
 }
