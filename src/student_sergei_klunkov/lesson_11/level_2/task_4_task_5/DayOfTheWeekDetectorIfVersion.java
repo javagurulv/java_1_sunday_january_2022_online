@@ -1,4 +1,4 @@
-package student_sergei_klunkov.lesson_11.level_2.task_4;
+package student_sergei_klunkov.lesson_11.level_2.task_4_task_5;
 
 class DayOfTheWeekDetectorIfVersion implements DayOfTheWeekDetector {
 
