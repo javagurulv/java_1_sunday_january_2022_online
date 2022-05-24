@@ -1,6 +1,5 @@
-package student_sergei_klunkov.lessson_12.level_2.task_6;
+package student_sergei_klunkov.lessson_12.level_2_to_level_6;
 
-import java.util.ArrayList;
 import java.util.Objects;
 
 class Book {
@@ -8,10 +7,12 @@ class Book {
     private Long id;
     private String title;
     private String author;
+    private String yearOfIssue;
 
     public Book(String author, String title) {
         this.author = author;
         this.title = title;
+
     }
 
     public void setId(Long id) {
@@ -30,6 +31,12 @@ class Book {
         return this.author;
     }
 
+    public String getYearOfIssue() {
+        return yearOfIssue;
+    }
+
+    public void setYearOfIssue(String yearOfIssue) {  this.yearOfIssue = yearOfIssue; }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -43,5 +50,11 @@ class Book {
         return Objects.hash(id, title, author);
     }
 
-
+    public String toString() {
+        return "Book{" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                ", author='" + author + '\'' +
+                '}';
+    }
 }

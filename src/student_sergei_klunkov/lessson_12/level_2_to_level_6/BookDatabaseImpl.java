@@ -1,11 +1,9 @@
-package student_sergei_klunkov.lessson_12.level_2.task_6;
+package student_sergei_klunkov.lessson_12.level_2_to_level_6;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 import java.util.stream.Collectors;
 
-class BookDataBaseImpl implements BookDataBase {
+class BookDatabaseImpl implements BookDatabase {
 
     private final List<Book> books = new ArrayList<>();
     private Long id = 0L;
@@ -84,5 +82,58 @@ class BookDataBaseImpl implements BookDataBase {
 
     public List<Book> getBooks() {
         return books;
+    }
+
+    @Override
+    public List<Book> find(SearchCriteria searchCriteria) {
+        return books.stream()
+                .filter(book -> searchCriteria.match(book))
+                .collect(Collectors.toList());
+    }
+
+    @Override
+    public Set<String> findUniqueAuthors() {
+        return books.stream()
+                .map(book -> book.getAuthor())
+                .collect(Collectors.toSet());
+    }
+
+    @Override
+    public Set<String> findUniqueTitles() {
+        return books.stream()
+                .map(book -> book.getTitle())
+                .collect(Collectors.toSet());
+    }
+    @Override
+    public Set<Book> findUniqueBooks() {
+        return new HashSet<>(books);
+    }
+
+    @Override
+    public boolean contains(Book book) {
+        return books.contains(book);
+
+    }
+
+    @Override
+    public Map<String, List<Book>> getAuthorToBooksMap() {
+        return books.stream()
+                .collect(Collectors.toMap(book -> book.getAuthor(),
+                         book -> findByAuthor(book.getAuthor()),
+                        (books1, books2) -> books1));
+    }
+
+    public int countAllBooksByAuthor(String author) {
+        return (int) books.stream()
+                .filter(book -> author.equals(book.getAuthor()))
+                .count();
+    }
+
+    @Override
+    public Map<String, Integer> getEachAuthorBookCount() {
+        return books.stream()
+                .collect(Collectors.toMap(book -> book.getAuthor()
+                , book -> countAllBooksByAuthor(book.getAuthor())
+                , (book1, book2) -> book1));
     }
 }
