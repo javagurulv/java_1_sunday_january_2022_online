@@ -198,6 +198,7 @@ public class BookReaderTest {
         BookReader bookReader = new BookReaderImpl();
         bookReader.addBookToLibrary(book1);
         bookReader.addBookToLibrary(book2);
+        book1.markBookAsRead();
         if(book1.isStatus()){
             System.out.println("Mark book as read test PASS");
         }else{
@@ -211,7 +212,8 @@ public class BookReaderTest {
         BookReader bookReader = new BookReaderImpl();
         bookReader.addBookToLibrary(book1);
         bookReader.addBookToLibrary(book2);
-
+        book1.markBookAsRead();
+        book2.markBookAsRead();
         if(book1.isStatus() && book2.isStatus()){
             System.out.println("Mark book as read test PASS");
         }else{
