@@ -5,7 +5,7 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class GameOfNextGenerationCalculatorTest {
-    GameOfNextGenerationCalculator generationCalculator = new GameOfNextGenerationCalculator();
+    GoLNextGenerationCalculator generationCalculator = new GoLNextGenerationCalculator();
 
     @Test
     public void rule1LifeCellIfFewerThan2NeighborsDiesTest() {
