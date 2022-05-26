@@ -1,4 +1,4 @@
-package student_stanislav_astafjev.lesson_2.Task_1;
+package main.java.student_stanislav_astafjev.lesson_2.Task_1;
 
 import java.util.Scanner;
 
