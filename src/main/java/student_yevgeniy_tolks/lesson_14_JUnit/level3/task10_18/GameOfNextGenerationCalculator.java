@@ -1,4 +1,4 @@
-package student_yevgeniy_tolks.lesson_14_JUnit.level3.task10;
+package student_yevgeniy_tolks.lesson_14_JUnit.level3.task10_18;
 
 class GameOfNextGenerationCalculator {
 
