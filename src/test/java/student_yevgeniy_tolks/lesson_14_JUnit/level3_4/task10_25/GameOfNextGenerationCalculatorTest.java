@@ -1,11 +1,11 @@
-package student_yevgeniy_tolks.lesson_14_JUnit.level3.task10_18;
+package student_yevgeniy_tolks.lesson_14_JUnit.level3_4.task10_25;
 
 import org.junit.Test;
 
 import static org.junit.Assert.*;
 
 public class GameOfNextGenerationCalculatorTest {
-    GoLNextGenerationCalculator generationCalculator = new GoLNextGenerationCalculator();
+    GameOfLifeNextGenerationCalculator generationCalculator = new GameOfLifeNextGenerationCalculator();
 
     @Test
     public void rule1LifeCellIfFewerThan2NeighborsDiesTest() {

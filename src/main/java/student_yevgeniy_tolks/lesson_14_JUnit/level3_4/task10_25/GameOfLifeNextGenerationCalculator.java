@@ -1,6 +1,6 @@
-package student_yevgeniy_tolks.lesson_14_JUnit.level3.task10_18;
+package student_yevgeniy_tolks.lesson_14_JUnit.level3_4.task10_25;
 
-class GoLNextGenerationCalculator {
+class GameOfLifeNextGenerationCalculator {
 
     public boolean[][] calculate(boolean[][] currentGeneration) {
         boolean[][] nextGeneration = new boolean[currentGeneration.length][currentGeneration[0].length];
