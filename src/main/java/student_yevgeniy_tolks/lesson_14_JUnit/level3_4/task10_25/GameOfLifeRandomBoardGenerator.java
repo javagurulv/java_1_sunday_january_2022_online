@@ -2,7 +2,7 @@ package student_yevgeniy_tolks.lesson_14_JUnit.level3_4.task10_25;
 
 import java.util.Random;
 
-public class GameOfLifeRandomBoardGenerator {
+class GameOfLifeRandomBoardGenerator {
 
     public boolean[][] generate(int boardWidth, int boardHeight) {
         Random random = new Random();
