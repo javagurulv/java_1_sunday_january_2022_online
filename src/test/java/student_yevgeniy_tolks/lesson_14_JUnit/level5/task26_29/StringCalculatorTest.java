@@ -6,12 +6,13 @@ import static org.junit.Assert.*;
 
 public class StringCalculatorTest {
     StringCalculator stringCalculator = new StringCalculator();
-@Test
-public void sumIsZeroInCaseOfEmptyStringTest() {
-    String numbers = "";
-    int expectedResult = stringCalculator.add(numbers);
-    assertEquals(expectedResult, 0);
-}
+
+    @Test
+    public void sumIsZeroInCaseOfEmptyStringTest() {
+        String numbers = "";
+        int expectedResult = stringCalculator.add(numbers);
+        assertEquals(expectedResult, 0);
+    }
 
     @Test
     public void sumWithOneNumberInStringTest() {
@@ -19,16 +20,25 @@ public void sumIsZeroInCaseOfEmptyStringTest() {
         int expectedResult = stringCalculator.add(numbers);
         assertEquals(expectedResult, 9);
     }
+
     @Test
     public void sumWithTwoNumbersInTheStringTest() {
         String numbers = "2,6";
         int expectedResult = stringCalculator.add(numbers);
         assertEquals(expectedResult, 8);
     }
+
     @Test
-    public void sumWithInfiniteAmountOfNumbersInStringTest() {
+    public void sumWithAnyAmountOfNumbersInStringTest() {
         String numbers = "2,6,4,5,7,3,2";
         int expectedResult = stringCalculator.add(numbers);
         assertEquals(expectedResult, 29);
+    }
+
+    @Test
+    public void sumOfNumbersInTheStringIgnoringSpecialSymbolsTest() {
+        String numbers = "2\n12,9";
+        int expectedResult = stringCalculator.add(numbers);
+        assertEquals(expectedResult, 14);
     }
 }
