@@ -1,4 +1,4 @@
-package student_yevgeniy_tolks.lesson_14_JUnit.level5.task26_29;
+package student_yevgeniy_tolks.lesson_14_JUnit.level5.task26_32;
 
 import org.junit.Test;
 
@@ -36,9 +36,22 @@ public class StringCalculatorTest {
     }
 
     @Test
-    public void sumOfNumbersInTheStringIgnoringSpecialSymbolsTest() {
+    public void sumOfNumbersInTheStringIgnoringSpecialSymbolsTestV1() {
         String numbers = "2\n12,9";
         int expectedResult = stringCalculator.add(numbers);
         assertEquals(expectedResult, 14);
+    }
+
+    @Test
+    public void sumOfNumbersInTheStringIgnoringSpecialSymbolsTestV2() {
+        String numbers = "//[;]\n5;5";
+        int expectedResult = stringCalculator.add(numbers);
+        assertEquals(expectedResult, 10);
+    }
+    @Test
+    public void sumOfNumbersInTheStringIgnoringSpecialSymbolsTestV3() {
+        String numbers = "//[;][&]\n1;2&3";
+        int expectedResult = stringCalculator.add(numbers);
+        assertEquals(expectedResult, 6);
     }
 }
