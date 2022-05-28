@@ -14,51 +14,63 @@ public class FruitStorageTest {
 
         List<Apple> inventory = fruitStorage.getAllApples();
         List<Apple> expectedGreenAppleList = fruitStorage.findGreenApplesInWarehouse(inventory);
-         assertEquals(expectedGreenAppleList.size(), 3);
+        assertEquals(expectedGreenAppleList.size(), 3);
     }
+
     @Test
-    public void findRedApplesTest(){
+    public void findRedApplesTest() {
         List<Apple> inventory = fruitStorage.getAllApples();
         List<Apple> expectedGreenAppleList = fruitStorage.findGreenApplesInWarehouse(inventory);
         assertEquals(expectedGreenAppleList.size(), 3);
     }
 
     @Test
-    public void findApplesByColorTest(){
+    public void findApplesByColorTest() {
         List<Apple> inventory = fruitStorage.getAllApples();
-        List<Apple> expectedAppleColor = fruitStorage.findApplesByColor(inventory,"yellow");
-        assertEquals(expectedAppleColor.size(),2);
-    }
-    @Test
-    public void findApplesByWeightTest(){
-        List<Apple> inventory = fruitStorage.getAllApples();
-        List<Apple> expectedAppleByWeight = fruitStorage.findApplesByWeight(inventory,80);
-        assertEquals(expectedAppleByWeight.size(),6);
-    }
-    @Test
-    public void findAppleGreenColorTest(){
-        List<Apple> inventory = fruitStorage.getAllApples();
-        List<Apple> expectedGreenApple = fruitStorage.findApples(inventory,new AppleGreenColorPredicate());
-        assertEquals(expectedGreenApple.size(),3);
-    }
-    @Test
-    public void findAppleRedColorTest(){
-        List<Apple> inventory = fruitStorage.getAllApples();
-        List<Apple> expectedRedApple = fruitStorage.findApples(inventory,new AppleRedColorPredicate());
-        assertEquals(expectedRedApple.size(),3);
+        List<Apple> expectedAppleColor = fruitStorage.findApplesByColor(inventory, "yellow");
+        assertEquals(expectedAppleColor.size(), 2);
     }
 
     @Test
-    public void findHeavyWeightAppleTest(){
+    public void findApplesByWeightTest() {
         List<Apple> inventory = fruitStorage.getAllApples();
-        List<Apple> expectedHeavyApple = fruitStorage.findApples(inventory,new AppleHeavyWeightPredicate());
-        assertEquals(expectedHeavyApple.size(),4);
+        List<Apple> expectedAppleByWeight = fruitStorage.findApplesByWeight(inventory, 80);
+        assertEquals(expectedAppleByWeight.size(), 6);
     }
 
     @Test
-    public void findLightWeightAppleTest(){
+    public void findAppleGreenColorTest() {
         List<Apple> inventory = fruitStorage.getAllApples();
-        List<Apple> expectedLightApple = fruitStorage.findApples(inventory,new AppleLightWeightPredicate());
-        assertEquals(expectedLightApple.size(),4);
+        List<Apple> expectedGreenApple = fruitStorage.findApples(inventory, new AppleGreenColorPredicate());
+        assertEquals(expectedGreenApple.size(), 3);
+    }
+
+    @Test
+    public void findAppleRedColorTest() {
+        List<Apple> inventory = fruitStorage.getAllApples();
+        List<Apple> expectedRedApple = fruitStorage.findApples(inventory, new AppleRedColorPredicate());
+        assertEquals(expectedRedApple.size(), 3);
+    }
+
+    @Test
+    public void findHeavyWeightAppleTest() {
+        List<Apple> inventory = fruitStorage.getAllApples();
+        List<Apple> expectedHeavyApple = fruitStorage.findApples(inventory, new AppleHeavyWeightPredicate());
+        assertEquals(expectedHeavyApple.size(), 4);
+    }
+
+    @Test
+    public void findLightWeightAppleTest() {
+        List<Apple> inventory = fruitStorage.getAllApples();
+        List<Apple> expectedLightApple = fruitStorage.findApples(inventory, new AppleLightWeightPredicate());
+        assertEquals(expectedLightApple.size(), 4);
+    }
+
+    @Test
+    public void appleGreenAndHeavyWeightPredicateTest() {
+        List<Apple> inventory = fruitStorage.getAllApples();
+        List<Apple> expectedAppleGreenAndHeavyWeightList = fruitStorage.findApples(
+                inventory, new AppleGreenAndHeavyWeightPredicate());
+        assertEquals(expectedAppleGreenAndHeavyWeightList.size(), 1);
     }
 }
