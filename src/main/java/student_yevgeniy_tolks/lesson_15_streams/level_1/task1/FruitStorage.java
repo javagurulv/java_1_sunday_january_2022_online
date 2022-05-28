@@ -27,5 +27,14 @@ class FruitStorage {
         }
         return greenApplesList;
     }
+    public List<Apple> findRedApplesInWarehouse(List<Apple> inventory){
+        List<Apple> greenApplesList = new ArrayList<>();
+        for(Apple apple:inventory){
+            if("red".equals(apple.getColor())){
+                greenApplesList.add(apple);
+            }
+        }
+        return greenApplesList;
+    }
 
 }

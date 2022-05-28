@@ -11,6 +11,13 @@ public class FruitStorageTest {
 
     @Test
     public void findGreenApplesTest() {
+
+        List<Apple> inventory = fruitStorage.getAllApples();
+        List<Apple> expectedGreenAppleList = fruitStorage.findGreenApplesInWarehouse(inventory);
+         assertEquals(expectedGreenAppleList.size(), 3);
+    }
+    @Test
+    public void findRedApplesTest(){
         List<Apple> inventory = fruitStorage.getAllApples();
         List<Apple> expectedGreenAppleList = fruitStorage.findGreenApplesInWarehouse(inventory);
         assertEquals(expectedGreenAppleList.size(), 3);
