@@ -59,4 +59,14 @@ class FruitStorage {
         return listByWeights;
     }
 
+    public List<Apple> findApples(List<Apple> inventory, ApplePredicate applePredicate) {
+        List<Apple> appleList = new ArrayList<>();
+        for (Apple apple : inventory)
+            if (applePredicate.test(apple)) {
+                appleList.add(apple);
+            }
+        return appleList;
+    }
+
+
 }

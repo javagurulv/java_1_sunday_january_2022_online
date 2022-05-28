@@ -35,4 +35,30 @@ public class FruitStorageTest {
         List<Apple> expectedAppleByWeight = fruitStorage.findApplesByWeight(inventory,80);
         assertEquals(expectedAppleByWeight.size(),6);
     }
+    @Test
+    public void findAppleGreenColorTest(){
+        List<Apple> inventory = fruitStorage.getAllApples();
+        List<Apple> expectedGreenApple = fruitStorage.findApples(inventory,new AppleGreenColorPredicate());
+        assertEquals(expectedGreenApple.size(),3);
+    }
+    @Test
+    public void findAppleRedColorTest(){
+        List<Apple> inventory = fruitStorage.getAllApples();
+        List<Apple> expectedRedApple = fruitStorage.findApples(inventory,new AppleRedColorPredicate());
+        assertEquals(expectedRedApple.size(),3);
+    }
+
+    @Test
+    public void findHeavyWeightAppleTest(){
+        List<Apple> inventory = fruitStorage.getAllApples();
+        List<Apple> expectedHeavyApple = fruitStorage.findApples(inventory,new AppleHeavyWeightPredicate());
+        assertEquals(expectedHeavyApple.size(),4);
+    }
+
+    @Test
+    public void findLightWeightAppleTest(){
+        List<Apple> inventory = fruitStorage.getAllApples();
+        List<Apple> expectedLightApple = fruitStorage.findApples(inventory,new AppleLightWeightPredicate());
+        assertEquals(expectedLightApple.size(),4);
+    }
 }
