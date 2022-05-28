@@ -17,33 +17,46 @@ class FruitStorage {
         apples.add(new Apple("yellow", 170));
         return apples;
     }
+
     //method to find all green apples
-    public List<Apple> findGreenApplesInWarehouse(List<Apple> inventory){
+    public List<Apple> findGreenApplesInWarehouse(List<Apple> inventory) {
         List<Apple> greenApplesList = new ArrayList<>();
-        for(Apple apple:inventory){
-            if("green".equals(apple.getColor())){
+        for (Apple apple : inventory) {
+            if ("green".equals(apple.getColor())) {
                 greenApplesList.add(apple);
             }
         }
         return greenApplesList;
     }
-    public List<Apple> findRedApplesInWarehouse(List<Apple> inventory){
+
+    public List<Apple> findRedApplesInWarehouse(List<Apple> inventory) {
         List<Apple> greenApplesList = new ArrayList<>();
-        for(Apple apple:inventory){
-            if("red".equals(apple.getColor())){
+        for (Apple apple : inventory) {
+            if ("red".equals(apple.getColor())) {
                 greenApplesList.add(apple);
             }
         }
         return greenApplesList;
     }
-    public List<Apple> findApplesByColor(List<Apple> inventory, String color){
+
+    public List<Apple> findApplesByColor(List<Apple> inventory, String color) {
         List<Apple> greenApplesList = new ArrayList<>();
-        for(Apple apple:inventory){
-            if(apple.getColor().equals(color)){
+        for (Apple apple : inventory) {
+            if (apple.getColor().equals(color)) {
                 greenApplesList.add(apple);
             }
         }
         return greenApplesList;
+    }
+
+    public List<Apple> findApplesByWeight(List<Apple> inventory, int weight) {
+        List<Apple> listByWeights = new ArrayList<>();
+        for (Apple apple : inventory) {
+            if (apple.getWeight() > weight) {
+                listByWeights.add(apple);
+            }
+        }
+        return listByWeights;
     }
 
 }
