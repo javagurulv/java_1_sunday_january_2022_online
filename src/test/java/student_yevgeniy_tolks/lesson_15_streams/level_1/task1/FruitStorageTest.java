@@ -22,4 +22,11 @@ public class FruitStorageTest {
         List<Apple> expectedGreenAppleList = fruitStorage.findGreenApplesInWarehouse(inventory);
         assertEquals(expectedGreenAppleList.size(), 3);
     }
+
+    @Test
+    public void findApplesByColorTest(){
+        List<Apple> inventory = fruitStorage.getAllApples();
+        List<Apple> expectedAppleColor = fruitStorage.findApplesByColor(inventory,"yellow");
+        assertEquals(expectedAppleColor.size(),2);
+    }
 }
