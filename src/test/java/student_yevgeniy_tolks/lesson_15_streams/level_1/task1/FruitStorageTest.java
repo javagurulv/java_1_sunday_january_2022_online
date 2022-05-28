@@ -1,0 +1,18 @@
+package student_yevgeniy_tolks.lesson_15_streams.level_1.task1;
+
+import org.junit.Test;
+
+import java.util.List;
+
+import static org.junit.Assert.*;
+
+public class FruitStorageTest {
+    FruitStorage fruitStorage = new FruitStorage();
+
+    @Test
+    public void findGreenApplesTest() {
+        List<Apple> inventory = fruitStorage.getAllApples();
+        List<Apple> expectedGreenAppleList = fruitStorage.findGreenApplesInWarehouse(inventory);
+        assertEquals(expectedGreenAppleList.size(), 3);
+    }
+}
