@@ -1,4 +1,4 @@
-package student_sergei_klunkov.lesson_11.level_3.task_8;
+package student_sergei_klunkov.lesson_11.level_3.task_8_10;
 
 import java.util.Objects;
 
