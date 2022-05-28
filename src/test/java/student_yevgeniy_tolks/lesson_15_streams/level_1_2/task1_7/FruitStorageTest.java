@@ -73,4 +73,90 @@ public class FruitStorageTest {
                 inventory, new AppleGreenAndHeavyWeightPredicate());
         assertEquals(expectedAppleGreenAndHeavyWeightList.size(), 1);
     }
+
+    @Test
+    public void findAppleGreenColorWithAnonymousClassTest() {
+        ApplePredicate greenApplePredicate = new ApplePredicate() {
+            @Override
+            public boolean test(Apple apple) {
+                return "green".equals(apple.getColor());
+            }
+        };
+        List<Apple> inventory = fruitStorage.getAllApples();
+        List<Apple> expectedGreenApple = fruitStorage.findApples(inventory, greenApplePredicate);
+        assertEquals(expectedGreenApple.size(), 3);
+    }
+
+    @Test
+    public void findRedColorWithAnonymousClassTest() {
+        ApplePredicate redApplePredicate = new ApplePredicate() {
+            @Override
+            public boolean test(Apple apple) {
+                return "red".equals(apple.getColor());
+            }
+        };
+        List<Apple> inventory = fruitStorage.getAllApples();
+        List<Apple> expectedRedApple = fruitStorage.findApples(inventory, redApplePredicate);
+        assertEquals(expectedRedApple.size(), 3);
+    }
+
+    @Test
+    public void findHeavyWeightAppleWithAnonymousClassTest() {
+        ApplePredicate heavyApplePredicate = new ApplePredicate() {
+            @Override
+            public boolean test(Apple apple) {
+                return apple.getWeight() > 150;
+            }
+        };
+        List<Apple> inventory = fruitStorage.getAllApples();
+        List<Apple> expectedHeavyApple = fruitStorage.findApples(inventory, heavyApplePredicate);
+        assertEquals(expectedHeavyApple.size(), 4);
+    }
+
+    @Test
+    public void findLightWeightAppleWithAnonymousClassTest() {
+        ApplePredicate lightApplePredicate = new ApplePredicate() {
+            @Override
+            public boolean test(Apple apple) {
+                return apple.getWeight() < 150;
+            }
+        };
+        List<Apple> inventory = fruitStorage.getAllApples();
+        List<Apple> expectedLightApple = fruitStorage.findApples(inventory, lightApplePredicate);
+        assertEquals(expectedLightApple.size(), 4);
+    }
+
+    @Test
+    public void findAppleGreenColorWithLambdaExpressionTest() {
+
+        List<Apple> inventory = fruitStorage.getAllApples();
+        List<Apple> expectedGreenApple = fruitStorage.findApples(inventory,
+                apple -> "green".equals(apple.getColor()));
+        assertEquals(expectedGreenApple.size(), 3);
+    }
+
+    @Test
+    public void findRedColorWithLambdaExpressionTest() {
+        List<Apple> inventory = fruitStorage.getAllApples();
+        List<Apple> expectedRedApple = fruitStorage.findApples(inventory,
+                (apple) -> "red".equals(apple.getColor()));
+        assertEquals(expectedRedApple.size(), 3);
+    }
+
+    @Test
+    public void findHeavyWeightAppleWithLambdaExpressionTest() {
+        List<Apple> inventory = fruitStorage.getAllApples();
+        List<Apple> expectedHeavyApple = fruitStorage.findApples(inventory,
+                apple -> apple.getWeight() > 150);
+        assertEquals(expectedHeavyApple.size(), 4);
+    }
+
+    @Test
+    public void findLightWeightAppleWithLambdaExpressionTest() {
+
+        List<Apple> inventory = fruitStorage.getAllApples();
+        List<Apple> expectedLightApple = fruitStorage.findApples(inventory,
+                apple -> apple.getWeight() < 150);
+        assertEquals(expectedLightApple.size(), 4);
+    }
 }
