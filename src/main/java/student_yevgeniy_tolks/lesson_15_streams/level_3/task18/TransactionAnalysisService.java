@@ -10,4 +10,10 @@ class TransactionAnalysisService {
                 .filter(transaction -> transaction.getYear() == 2011)
                 .collect(Collectors.toList());
     }
+
+    List<Transaction> findTransactionByYear(List<Transaction> transactions, int yearOfTransaction) {
+        return transactions.stream()
+                .filter(transaction -> transaction.getYear() == yearOfTransaction)
+                .collect(Collectors.toList());
+    }
 }
