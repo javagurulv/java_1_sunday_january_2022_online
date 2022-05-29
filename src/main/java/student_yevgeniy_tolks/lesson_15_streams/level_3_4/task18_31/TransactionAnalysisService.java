@@ -43,5 +43,10 @@ class TransactionAnalysisService {
                 .map(Transaction::getYear)
                 .collect(Collectors.toList());
     }
-
+    List<Integer> getUniqueTransactionYears(List<Transaction> transactions){
+        return transactions.stream()
+                .map(Transaction::getYear)
+                .distinct()
+                .collect(Collectors.toList());
+    }
 }

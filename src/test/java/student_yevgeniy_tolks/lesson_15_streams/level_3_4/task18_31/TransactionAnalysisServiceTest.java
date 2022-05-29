@@ -99,4 +99,14 @@ public class TransactionAnalysisServiceTest {
         List<Integer> actualTransactionYearList = Arrays.asList(2011, 2012, 2011, 2012, 2012, 2012);
         assertEquals(expectedAllTransactionYearList, actualTransactionYearList);
     }
+
+    @Test
+    public void getAllUniqueTransactionYearsTest() {
+        List<Transaction> allTransactionList = data.getTransactions();
+        List<Integer> expectedAllUniqueTransactionYearList = transactionAnalysisService
+                .getUniqueTransactionYears(allTransactionList);
+        List<Integer> actualTransactionYearList = Arrays.asList(2011, 2012);
+        assertEquals(expectedAllUniqueTransactionYearList, actualTransactionYearList);
+    }
+
 }
