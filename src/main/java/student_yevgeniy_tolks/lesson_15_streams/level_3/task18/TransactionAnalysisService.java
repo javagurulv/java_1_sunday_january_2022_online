@@ -15,5 +15,6 @@ class TransactionAnalysisService {
         return transactions.stream()
                 .filter(transaction -> transaction.getYear() == yearOfTransaction)
                 .collect(Collectors.toList());
+
     }
 }
