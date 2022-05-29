@@ -8,7 +8,7 @@ class BookDatabaseImpl implements BookDatabase {
     private List<Book> bookList = new ArrayList<>();
     private long idForBook;
 
-    public BookDatabaseImpl(long idForBook) {
+    public BookDatabaseImpl() {
         this.idForBook = 0;
     }
 
@@ -24,6 +24,17 @@ class BookDatabaseImpl implements BookDatabase {
     public boolean delete(Long bookId) {
         for (Book bookToCheck : bookList){
             if(bookToCheck.getId() == bookId){
+                bookList.remove(bookToCheck);
+                return true;
+            }
+        }
+        return false;
+    }
+
+    @Override
+    public boolean delete(Book book) {
+        for (Book bookToCheck : bookList){
+            if(bookToCheck.equals(book)){
                 bookList.remove(bookToCheck);
                 return true;
             }
