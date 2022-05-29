@@ -1,4 +1,6 @@
-package student_stanislav_astafjev.lesson_2;
+package main.java.student_stanislav_astafjev.lesson_2;
+
+import student_stanislav_astafjev.lesson_2.Plane;
 
 public class PlaneDemo {
     public static void main(String[] args) {
