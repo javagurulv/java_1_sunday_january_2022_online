@@ -1,4 +1,4 @@
-package student_devids_kropacovs.lesson12.level2;
+package student_devids_kropacovs.lesson12.level1;
 
 import java.util.ArrayList;
 import java.util.List;
