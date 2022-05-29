@@ -61,4 +61,22 @@ class TransactionAnalysisService {
                 .distinct()
                 .collect(Collectors.toList());
     }
+
+    List<String> getTraderNamesFromCambridge(List<Transaction> transactions){
+        return transactions.stream()
+                .map(Transaction::getTrader)
+                .filter(trader -> trader.getCity().equals("Cambridge"))
+                .map(Trader::getName)
+                .distinct()
+                .collect(Collectors.toList());
+    }
+
+    List<String> getTraderNamesFromDifferentCities(List<Transaction> transactions, String city){
+        return transactions.stream()
+                .map(transaction -> transaction.getTrader())
+                .filter(trader -> trader.getCity().equals(city))
+                .map(trader -> trader.getName())
+                .distinct()
+                .collect(Collectors.toList());
+    }
 }
