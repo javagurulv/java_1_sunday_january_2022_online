@@ -112,8 +112,18 @@ public class TransactionAnalysisServiceTest {
     @Test
     public void getAllUniqueTraderNames() {
         List<Transaction> allTransactionList = data.getTransactions();
-        List<String> expectedUniqueTraderNames = transactionAnalysisService.getUniqueTransactionTraderNames(allTransactionList);
+        List<String> expectedUniqueTraderNames = transactionAnalysisService
+                .getUniqueTransactionTraderNames(allTransactionList);
         List<String> actualUniqueNameList = Arrays.asList("Brian", "Raoul", "Mario", "Alan");
         assertEquals(expectedUniqueTraderNames, actualUniqueNameList);
+    }
+
+    @Test
+    public void getAllUniqueTraderCities() {
+        List<Transaction> allTransactionList = data.getTransactions();
+        List<String> expectedUniqueTraderCity = transactionAnalysisService
+                .getUniqueTransactionTraderCities(allTransactionList);
+        List<String> actualUniqueCityList = Arrays.asList("Cambridge", "Milan");
+        assertEquals(expectedUniqueTraderCity, actualUniqueCityList);
     }
 }
