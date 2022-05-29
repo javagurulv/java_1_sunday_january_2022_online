@@ -4,6 +4,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import static org.junit.Assert.*;
@@ -55,5 +56,25 @@ public class TransactionAnalysisServiceTest {
                 .findTransactionByYear(allTransactionList, 2013);
         assertEquals(expectedTransactionList2013.size(), 0);
         assertEquals(expectedTransactionList2013, new ArrayList<>());
+    }
+
+    @Test
+    public void sortTransactionByValueFromLowToHighTest() {
+        List<Transaction> allTransactionList = data.getTransactions();
+        List<Transaction> expectedSortingResult = transactionAnalysisService.sortByValueFromLowToHigh(allTransactionList);
+        int lowestValue = expectedSortingResult.get(0).getValue();
+        int highestValue = expectedSortingResult.get(expectedSortingResult.size() - 1).getValue();
+        assertEquals(lowestValue, 300);
+        assertEquals(highestValue, 1000);
+    }
+
+    @Test
+    public void sortTransactionByValueFromHighToLowTest() {
+        List<Transaction> allTransactionList = data.getTransactions();
+        List<Transaction> expectedSortingResult = transactionAnalysisService.sortByValueFromHighToLow(allTransactionList);
+        int highestValue = expectedSortingResult.get(0).getValue();
+        int lowestValue = expectedSortingResult.get(expectedSortingResult.size() - 1).getValue();
+        assertEquals(lowestValue, 300);
+        assertEquals(highestValue, 1000);
     }
 }
