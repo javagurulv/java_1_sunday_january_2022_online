@@ -1,10 +1,10 @@
-package student_yevgeniy_tolks.lesson_15_streams.level_3.task18;
+package student_yevgeniy_tolks.lesson_15_streams.level_3_4.task18_31;
 
 import org.junit.Before;
 import org.junit.Test;
 
 import java.util.ArrayList;
-import java.util.Collections;
+import java.util.Arrays;
 import java.util.List;
 
 import static org.junit.Assert.*;
@@ -77,17 +77,26 @@ public class TransactionAnalysisServiceTest {
         assertEquals(lowestValue, 300);
         assertEquals(highestValue, 1000);
     }
+
     @Test
-    public void sortByYear2011AndByValueFromLowToHighTest(){
+    public void sortByYear2011AndByValueFromLowToHighTest() {
         List<Transaction> allTransactionList = data.getTransactions();
         List<Transaction> expectedSortingResult = transactionAnalysisService.sortByYear2011AndByValueFromLowToHigh(allTransactionList);
         int year2011 = expectedSortingResult.get(0).getYear();
         int lowestValue = expectedSortingResult.get(0).getValue();
         int highestValue = expectedSortingResult.get(expectedSortingResult.size() - 1).getValue();
-        assertEquals(year2011,2011);
-        assertEquals(expectedSortingResult.size(),2);
-        assertEquals(highestValue,400);
-        assertEquals(lowestValue,300);
+        assertEquals(year2011, 2011);
+        assertEquals(expectedSortingResult.size(), 2);
+        assertEquals(highestValue, 400);
+        assertEquals(lowestValue, 300);
     }
 
+    @Test
+    public void getAllTransactionYearsTest() {
+        List<Transaction> allTransactionList = data.getTransactions();
+        List<Integer> expectedAllTransactionYearList = transactionAnalysisService
+                .getAllTransactionYears(allTransactionList);
+        List<Integer> actualTransactionYearList = Arrays.asList(2011, 2012, 2011, 2012, 2012, 2012);
+        assertEquals(expectedAllTransactionYearList, actualTransactionYearList);
+    }
 }

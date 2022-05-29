@@ -1,4 +1,4 @@
-package student_yevgeniy_tolks.lesson_15_streams.level_3.task18;
+package student_yevgeniy_tolks.lesson_15_streams.level_3_4.task18_31;
 
 import java.util.Comparator;
 import java.util.List;
@@ -33,10 +33,15 @@ class TransactionAnalysisService {
 
     List<Transaction> sortByYear2011AndByValueFromLowToHigh(List<Transaction> transactions) {
         return transactions.stream()
-                .filter(transaction -> transaction.getYear()==2011)
+                .filter(transaction -> transaction.getYear() == 2011)
                 .sorted(Comparator.comparing(Transaction::getValue))
                 .collect(Collectors.toList());
     }
 
+    List<Integer> getAllTransactionYears(List<Transaction> transactions) {
+        return transactions.stream()
+                .map(Transaction::getYear)
+                .collect(Collectors.toList());
+    }
 
 }
