@@ -14,21 +14,32 @@ public class FruitStorageTest {
 
         List<Apple> inventory = fruitStorage.getAllApples();
         List<Apple> expectedGreenAppleList = fruitStorage.findGreenApplesInWarehouse(inventory);
+        String getColor = expectedGreenAppleList.get(0).getColor();
+        String getColor1 = expectedGreenAppleList.get(1).getColor();
+        String getColor2 = expectedGreenAppleList.get(2).getColor();
         assertEquals(expectedGreenAppleList.size(), 3);
+        assertEquals(getColor, "green");
+        assertEquals(getColor1, "green");
+        assertEquals(getColor2, "green");
     }
 
     @Test
     public void findRedApplesTest() {
         List<Apple> inventory = fruitStorage.getAllApples();
-        List<Apple> expectedGreenAppleList = fruitStorage.findGreenApplesInWarehouse(inventory);
-        assertEquals(expectedGreenAppleList.size(), 3);
+        List<Apple> expectedRedAppleList = fruitStorage.findRedApplesInWarehouse(inventory);
+        String getColor = expectedRedAppleList.get(0).getColor();
+        assertEquals(expectedRedAppleList.size(), 3);
+        assertEquals(getColor, "red");
     }
 
     @Test
     public void findApplesByColorTest() {
         List<Apple> inventory = fruitStorage.getAllApples();
         List<Apple> expectedAppleColor = fruitStorage.findApplesByColor(inventory, "yellow");
+        String getColor = expectedAppleColor.get(0).getColor();
         assertEquals(expectedAppleColor.size(), 2);
+        assertEquals(getColor, "yellow");
+
     }
 
     @Test
@@ -42,14 +53,18 @@ public class FruitStorageTest {
     public void findAppleGreenColorTest() {
         List<Apple> inventory = fruitStorage.getAllApples();
         List<Apple> expectedGreenApple = fruitStorage.findApples(inventory, new AppleGreenColorPredicate());
+        String getColor = expectedGreenApple.get(0).getColor();
         assertEquals(expectedGreenApple.size(), 3);
+        assertEquals(getColor, "green");
     }
 
     @Test
     public void findAppleRedColorTest() {
         List<Apple> inventory = fruitStorage.getAllApples();
         List<Apple> expectedRedApple = fruitStorage.findApples(inventory, new AppleRedColorPredicate());
+        String getColor = expectedRedApple.get(0).getColor();
         assertEquals(expectedRedApple.size(), 3);
+        assertEquals(getColor, "red");
     }
 
     @Test
@@ -84,7 +99,9 @@ public class FruitStorageTest {
         };
         List<Apple> inventory = fruitStorage.getAllApples();
         List<Apple> expectedGreenApple = fruitStorage.findApples(inventory, greenApplePredicate);
+        String getColor = expectedGreenApple.get(0).getColor();
         assertEquals(expectedGreenApple.size(), 3);
+        assertEquals(getColor, "green");
     }
 
     @Test
@@ -132,7 +149,9 @@ public class FruitStorageTest {
         List<Apple> inventory = fruitStorage.getAllApples();
         List<Apple> expectedGreenApple = fruitStorage.findApples(inventory,
                 apple -> "green".equals(apple.getColor()));
+        String getColor = expectedGreenApple.get(0).getColor();
         assertEquals(expectedGreenApple.size(), 3);
+        assertEquals(getColor, "green");
     }
 
     @Test
@@ -140,7 +159,9 @@ public class FruitStorageTest {
         List<Apple> inventory = fruitStorage.getAllApples();
         List<Apple> expectedRedApple = fruitStorage.findApples(inventory,
                 (apple) -> "red".equals(apple.getColor()));
+        String getColor = expectedRedApple.get(0).getColor();
         assertEquals(expectedRedApple.size(), 3);
+        assertEquals(getColor, "red");
     }
 
     @Test
