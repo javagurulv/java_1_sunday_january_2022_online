@@ -77,4 +77,17 @@ public class TransactionAnalysisServiceTest {
         assertEquals(lowestValue, 300);
         assertEquals(highestValue, 1000);
     }
+    @Test
+    public void sortByYear2011AndByValueFromLowToHighTest(){
+        List<Transaction> allTransactionList = data.getTransactions();
+        List<Transaction> expectedSortingResult = transactionAnalysisService.sortByYear2011AndByValueFromLowToHigh(allTransactionList);
+        int year2011 = expectedSortingResult.get(0).getYear();
+        int lowestValue = expectedSortingResult.get(0).getValue();
+        int highestValue = expectedSortingResult.get(expectedSortingResult.size() - 1).getValue();
+        assertEquals(year2011,2011);
+        assertEquals(expectedSortingResult.size(),2);
+        assertEquals(highestValue,400);
+        assertEquals(lowestValue,300);
+    }
+
 }

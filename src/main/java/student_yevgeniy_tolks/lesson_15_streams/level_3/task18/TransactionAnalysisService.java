@@ -30,4 +30,13 @@ class TransactionAnalysisService {
                 .sorted(Comparator.comparing(Transaction::getValue).reversed())
                 .collect(Collectors.toList());
     }
+
+    List<Transaction> sortByYear2011AndByValueFromLowToHigh(List<Transaction> transactions) {
+        return transactions.stream()
+                .filter(transaction -> transaction.getYear()==2011)
+                .sorted(Comparator.comparing(Transaction::getValue))
+                .collect(Collectors.toList());
+    }
+
+
 }
