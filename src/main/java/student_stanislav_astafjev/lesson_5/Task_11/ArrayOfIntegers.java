@@ -1,6 +1,7 @@
 package student_stanislav_astafjev.lesson_5.Task_11;
 
 import java.util.Arrays;
+import java.util.Random;
 import java.util.Scanner;
 
 public class ArrayOfIntegers {
