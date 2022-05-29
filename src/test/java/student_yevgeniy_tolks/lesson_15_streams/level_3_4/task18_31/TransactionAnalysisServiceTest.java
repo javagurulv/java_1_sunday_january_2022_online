@@ -109,4 +109,11 @@ public class TransactionAnalysisServiceTest {
         assertEquals(expectedAllUniqueTransactionYearList, actualTransactionYearList);
     }
 
+    @Test
+    public void getAllUniqueTraderNames() {
+        List<Transaction> allTransactionList = data.getTransactions();
+        List<String> expectedUniqueTraderNames = transactionAnalysisService.getUniqueTransactionTraderNames(allTransactionList);
+        List<String> actualUniqueNameList = Arrays.asList("Brian", "Raoul", "Mario", "Alan");
+        assertEquals(expectedUniqueTraderNames, actualUniqueNameList);
+    }
 }

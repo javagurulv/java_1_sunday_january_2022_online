@@ -49,4 +49,10 @@ class TransactionAnalysisService {
                 .distinct()
                 .collect(Collectors.toList());
     }
+    List<String> getUniqueTransactionTraderNames(List<Transaction> transactions){
+        return transactions.stream()
+                .map(transaction -> transaction.getTrader().getName())
+                .distinct()
+                .collect(Collectors.toList());
+    }
 }
