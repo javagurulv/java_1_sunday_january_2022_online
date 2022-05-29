@@ -1,4 +1,4 @@
-package student_yevgeniy_tolks.lesson_15_streams.level_1_2.task1_7;
+package student_yevgeniy_tolks.lesson_15_streams.level_1_2.task1_17;
 
 class Apple {
     private String color;
