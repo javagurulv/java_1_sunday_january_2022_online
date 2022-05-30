@@ -101,4 +101,10 @@ class TransactionAnalysisService {
                 .map(transaction -> transaction.getValue())
                 .max(Integer::compareTo);
     }
+
+    public Optional<Integer> findMinTransactionValue(List<Transaction> transactions){
+        return transactions.stream()
+                .map(transaction -> transaction.getValue())
+                .min(Integer::compareTo);
+    }
 }

@@ -207,5 +207,12 @@ public class TransactionAnalysisServiceTest {
         Optional<Integer> actualMaxValue = Optional.of(1000);
         assertEquals(expectedMaxValue, actualMaxValue);
     }
-
+    @Test
+    public void findTransactionMinValueTest() {
+        List<Transaction> allTransactionList = data.getTransactions();
+        Optional<Integer> expectedMinValue = transactionAnalysisService
+                .findMinTransactionValue(allTransactionList);
+        Optional<Integer> actualMinValue = Optional.of(300);
+        assertEquals(expectedMinValue, actualMinValue);
+    }
 }
