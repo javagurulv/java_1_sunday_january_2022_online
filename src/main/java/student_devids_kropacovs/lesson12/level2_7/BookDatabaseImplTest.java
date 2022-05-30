@@ -17,6 +17,7 @@ class BookDatabaseImplTest {
         bookDatabaseImplTest.findBooksOfOneAuthorTestNoBooks();
         bookDatabaseImplTest.findBooksWithSameTitleTest();
         bookDatabaseImplTest.findBooksWithSameTitleTestNoBooks();
+        bookDatabaseImplTest.countAllBooksTest();
 
     }
 
@@ -167,6 +168,21 @@ class BookDatabaseImplTest {
             System.out.println("No book is found with Title test PASS");
         }else{
             System.out.println("No book is found with Title test FAIL");
+        }
+    }
+
+    public void countAllBooksTest(){
+        BookDatabase bookDatabase = new BookDatabaseImpl();
+        Book book1 = new Book("John", "GOT");
+        Book book2 = new Book("Andy", "Java");
+        Book book3 = new Book("Mary", "Java");
+        Book book4 = new Book("Andy", "Java");
+        bookDatabase.save(book1); bookDatabase.save(book2);
+        bookDatabase.save(book3); bookDatabase.save(book4);
+        if(bookDatabase.countAllBooks() == 4){
+            System.out.println("Count all books test PASS");
+        }else{
+            System.out.println("Count all books test FAIL");
         }
     }
 }
