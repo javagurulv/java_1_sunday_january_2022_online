@@ -20,6 +20,7 @@ class BookDatabaseImplTest {
         bookDatabaseImplTest.countAllBooksTest();
         bookDatabaseImplTest.deleteBookByAuthorTest();
        // bookDatabaseImplTest.deleteBookByTitleTest();
+        bookDatabaseImplTest.bookListWithCriteriaTest();
 
     }
 
@@ -225,4 +226,26 @@ class BookDatabaseImplTest {
             System.out.println("Delete books by Title test FAIL");
         }
     }*/
+
+    public void bookListWithCriteriaTest(){
+        BookDatabase bookDatabase = new BookDatabaseImpl();
+        Book book1 = new Book("John", "GOT");
+        Book book2 = new Book("Andy", "GOT");
+        Book book3 = new Book("Mary", "Java");
+        Book book4 = new Book("Andy", "Java");
+        bookDatabase.save(book1); bookDatabase.save(book2);
+        bookDatabase.save(book3); bookDatabase.save(book4);
+        List<Book> expectedBookList = new ArrayList<>();
+        expectedBookList.add(book2); expectedBookList.add(book3); expectedBookList.add(book4);
+        SearchCriteria authorSearchCriteria = new AuthorSearchCriteria("Andy");
+        SearchCriteria titleSearchCriteria = new TitleSearchCriteria("Java");
+        SearchCriteria searchCriteria = new OrSearchCriteria(authorSearchCriteria,titleSearchCriteria);
+        List<Book> resultedBookList = bookDatabase.find(searchCriteria);
+
+        if(expectedBookList.equals(resultedBookList)){
+            System.out.println("Find books that match criteria test PASS");
+        }else{
+            System.out.println("Find books that match criteria test FAIL");
+        }
+    }
 }
