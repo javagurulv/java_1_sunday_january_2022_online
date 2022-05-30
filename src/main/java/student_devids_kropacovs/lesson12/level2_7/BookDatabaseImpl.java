@@ -2,6 +2,8 @@ package student_devids_kropacovs.lesson12.level2_7;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
+import java.util.Optional;
 
 class BookDatabaseImpl implements BookDatabase {
 
@@ -23,7 +25,7 @@ class BookDatabaseImpl implements BookDatabase {
     @Override
     public boolean delete(Long bookId) {
         for (Book bookToCheck : bookList){
-            if(bookToCheck.getId() == bookId){
+            if(Objects.equals(bookToCheck.getId(), bookId)){
                 bookList.remove(bookToCheck);
                 return true;
             }
@@ -40,6 +42,16 @@ class BookDatabaseImpl implements BookDatabase {
             }
         }
         return false;
+    }
+
+    @Override
+    public Optional<Book> findById(Long bookId) {
+        for(Book book: bookList){
+            if(book.getId().equals(bookId)){
+                return Optional.of(book);
+            }
+        }
+        return Optional.empty();
     }
 
 }
