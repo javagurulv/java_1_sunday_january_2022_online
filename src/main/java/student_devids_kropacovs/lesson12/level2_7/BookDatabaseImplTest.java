@@ -15,6 +15,8 @@ class BookDatabaseImplTest {
         bookDatabaseImplTest.findBookByIDFalse();
         bookDatabaseImplTest.findBooksOfOneAuthorTest();
         bookDatabaseImplTest.findBooksOfOneAuthorTestNoBooks();
+        bookDatabaseImplTest.findBooksWithSameTitleTest();
+        bookDatabaseImplTest.findBooksWithSameTitleTestNoBooks();
 
     }
 
@@ -134,4 +136,37 @@ class BookDatabaseImplTest {
         }
     }
 
+    public void findBooksWithSameTitleTest(){
+        BookDatabase bookDatabase = new BookDatabaseImpl();
+        Book book1 = new Book("John", "GOT");
+        Book book2 = new Book("Andy", "Java");
+        Book book3 = new Book("Mary", "Java");
+        Book book4 = new Book("Andy", "Java");
+        bookDatabase.save(book1); bookDatabase.save(book2);
+        bookDatabase.save(book3); bookDatabase.save(book4);
+
+        List<Book> bookListWithSameTitle = new ArrayList<>();
+        bookListWithSameTitle.add(book2); bookListWithSameTitle.add(book3); bookListWithSameTitle.add(book4);
+        if(bookListWithSameTitle.equals(bookDatabase.findByTitle("Java"))){
+            System.out.println("Find books by Title test PASS");
+        }else{
+            System.out.println("Find books by Title test FAIL");
+        }
+    }
+
+    public void findBooksWithSameTitleTestNoBooks(){
+        BookDatabase bookDatabase = new BookDatabaseImpl();
+        Book book1 = new Book("John", "GOT");
+        Book book2 = new Book("Andy", "Java");
+        Book book3 = new Book("Mary", "Java");
+        Book book4 = new Book("Andy", "Java");
+        bookDatabase.save(book1); bookDatabase.save(book2);
+        bookDatabase.save(book3); bookDatabase.save(book4);
+
+        if(bookDatabase.findByTitle("C++").isEmpty()){
+            System.out.println("No book is found with Title test PASS");
+        }else{
+            System.out.println("No book is found with Title test FAIL");
+        }
+    }
 }
