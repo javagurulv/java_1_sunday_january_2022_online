@@ -107,4 +107,27 @@ class TransactionAnalysisService {
                 .map(transaction -> transaction.getValue())
                 .min(Integer::compareTo);
     }
+
+    public String  findAndSortInAlphabeticalOrderTraders(List<Transaction> transactions){
+        return transactions.stream()
+                .map(transaction -> transaction.getTrader().getName())
+                .distinct()
+                .sorted()
+                .collect(Collectors.joining(","));
+    }
+
+    public String  findAndSortInAlphabeticalOrderUniqueCities(List<Transaction> transactions){
+        return transactions.stream()
+                .map(transaction -> transaction.getTrader().getCity())
+                .distinct()
+                .sorted()
+                .collect(Collectors.joining(","));
+    }
+    //Self training - getASumOfAllTransactionValues()
+
+    public int getASumOfAllTransactionValues(List<Transaction> transactions) {
+        return transactions.stream()
+                .map(transaction -> transaction.getValue())
+                .reduce(0, Integer::sum);
+    }
 }

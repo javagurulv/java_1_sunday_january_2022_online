@@ -207,6 +207,7 @@ public class TransactionAnalysisServiceTest {
         Optional<Integer> actualMaxValue = Optional.of(1000);
         assertEquals(expectedMaxValue, actualMaxValue);
     }
+
     @Test
     public void findTransactionMinValueTest() {
         List<Transaction> allTransactionList = data.getTransactions();
@@ -214,5 +215,31 @@ public class TransactionAnalysisServiceTest {
                 .findMinTransactionValue(allTransactionList);
         Optional<Integer> actualMinValue = Optional.of(300);
         assertEquals(expectedMinValue, actualMinValue);
+    }
+
+    @Test
+    public void findTraderNamesInAlphabeticalOrderTest() {
+        List<Transaction> allTransactionList = data.getTransactions();
+        String expectedTraderNamesInAlphabeticalOrder = transactionAnalysisService
+                .findAndSortInAlphabeticalOrderTraders(allTransactionList);
+        String actualUniqueNames = "Brian,Raoul,Mario,Alan";
+        assertEquals(expectedTraderNamesInAlphabeticalOrder, actualUniqueNames);
+    }
+
+    @Test
+    public void findCitiesInAlphabeticalOrderTest() {
+        List<Transaction> allTransactionList = data.getTransactions();
+        String expectedCitiesInAlphabeticalOrder = transactionAnalysisService
+                .findAndSortInAlphabeticalOrderUniqueCities(allTransactionList);
+        String actualUniqueCities = "Cambridge,Milan";
+        assertEquals(expectedCitiesInAlphabeticalOrder, actualUniqueCities);
+    }
+
+    @Test
+    public void sumAllTransactionValueTest() {
+        List<Transaction> allTransactionList = data.getTransactions();
+        int expectedSumOfAllTransactionValues = transactionAnalysisService
+                .getASumOfAllTransactionValues(allTransactionList);
+        assertEquals(expectedSumOfAllTransactionValues, 4060);
     }
 }
