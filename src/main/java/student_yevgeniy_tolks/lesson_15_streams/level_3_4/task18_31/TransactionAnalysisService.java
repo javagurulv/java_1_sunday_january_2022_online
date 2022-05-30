@@ -88,4 +88,10 @@ class TransactionAnalysisService {
                 .map(transaction -> transaction.getTrader())
                 .anyMatch(trader -> trader.getCity().equals("Milan"));
     }
+
+    public boolean findAtLeastOneTraderFromChosenCity(List<Transaction> transactions, String traderCity) {
+        return transactions.stream()
+                .map(transaction -> transaction.getTrader())
+                .anyMatch(trader -> trader.getCity().equals(traderCity));
+    }
 }
