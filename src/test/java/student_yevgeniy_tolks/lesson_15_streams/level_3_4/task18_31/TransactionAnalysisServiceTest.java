@@ -167,11 +167,36 @@ public class TransactionAnalysisServiceTest {
     }
 
     @Test
-    public void findAtLeastOneTraderFromMilan() {
+    public void findAtLeastOneTraderFromMilanTest() {
         List<Transaction> allTransactionList = data.getTransactions();
         boolean expectedAtLeastOneTraderFromMilan = transactionAnalysisService
                 .findAtLeastOneTraderFromMilan(allTransactionList);
         assertTrue(expectedAtLeastOneTraderFromMilan);
     }
+
+    @Test
+    public void findAtLeastOneTraderFromMilanTestV2() {
+        List<Transaction> allTransactionList = data.getTransactions();
+        boolean expectedAtLeastOneTraderFromMilan = transactionAnalysisService
+                .findAtLeastOneTraderFromChosenCity(allTransactionList, "Milan");
+        assertTrue(expectedAtLeastOneTraderFromMilan);
+    }
+
+    @Test
+    public void findAtLeastOneTraderFromLondonTest() {
+        List<Transaction> allTransactionList = data.getTransactions();
+        boolean expectedAtLeastOneTraderFromLondon = transactionAnalysisService
+                .findAtLeastOneTraderFromChosenCity(allTransactionList, "London");
+        assertFalse(expectedAtLeastOneTraderFromLondon);
+    }
+
+    @Test
+    public void findAtLeastOneTraderFromCambridgeTest() {
+        List<Transaction> allTransactionList = data.getTransactions();
+        boolean expectedAtLeastOneTraderFromCambridge = transactionAnalysisService
+                .findAtLeastOneTraderFromChosenCity(allTransactionList, "Cambridge");
+        assertTrue(expectedAtLeastOneTraderFromCambridge);
+    }
+
 
 }
