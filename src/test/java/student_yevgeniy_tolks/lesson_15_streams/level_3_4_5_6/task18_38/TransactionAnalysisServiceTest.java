@@ -222,7 +222,7 @@ public class TransactionAnalysisServiceTest {
         List<Transaction> allTransactionList = data.getTransactions();
         String expectedTraderNamesInAlphabeticalOrder = transactionAnalysisService
                 .findAndSortInAlphabeticalOrderTraders(allTransactionList);
-        String actualUniqueNames = "Brian,Raoul,Mario,Alan";
+        String actualUniqueNames = "Alan,Brian,Mario,Raoul";
         assertEquals(expectedTraderNamesInAlphabeticalOrder, actualUniqueNames);
     }
 
