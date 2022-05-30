@@ -1,8 +1,6 @@
 package student_devids_kropacovs.lesson12.level2_7;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 
 class BookDatabaseImplTest {
     public static void main(String[] args) {
@@ -21,7 +19,7 @@ class BookDatabaseImplTest {
         bookDatabaseImplTest.deleteBookByAuthorTest();
        // bookDatabaseImplTest.deleteBookByTitleTest();
         bookDatabaseImplTest.bookListWithCriteriaTest();
-
+        bookDatabaseImplTest.findUniqueAuthorsTest();
     }
 
     public void deleteBookByIDTrueTest(){
@@ -247,5 +245,24 @@ class BookDatabaseImplTest {
         }else{
             System.out.println("Find books that match criteria test FAIL");
         }
+    }
+
+    public void findUniqueAuthorsTest(){
+        BookDatabase bookDatabase = new BookDatabaseImpl();
+        Book book1 = new Book("John", "GOT");
+        Book book2 = new Book("Andy", "GOT");
+        Book book3 = new Book("Mary", "Java");
+        Book book4 = new Book("Andy", "Java");
+        bookDatabase.save(book1); bookDatabase.save(book2);
+        bookDatabase.save(book3); bookDatabase.save(book4);
+        Set<String> uniqueAuthors = bookDatabase.findUniqueAuthors();
+        Set<String> expectedResult = new HashSet<>();
+        expectedResult.add(book1.getAuthor()); expectedResult.add(book2.getAuthor()); expectedResult.add(book3.getAuthor());
+        if(expectedResult.equals(uniqueAuthors)){
+            System.out.println("Unique Authors test PASS");
+        }else{
+            System.out.println("Unique Authors test FAIL");
+        }
+
     }
 }
