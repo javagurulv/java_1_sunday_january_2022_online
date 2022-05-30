@@ -18,8 +18,8 @@ class BookDatabaseImplTest {
         bookDatabaseImplTest.findBooksWithSameTitleTest();
         bookDatabaseImplTest.findBooksWithSameTitleTestNoBooks();
         bookDatabaseImplTest.countAllBooksTest();
-        bookDatabaseImplTest.deleteBookByAuthorTest();
-        bookDatabaseImplTest.deleteBookByTitleTest();
+       // bookDatabaseImplTest.deleteBookByAuthorTest();
+       // bookDatabaseImplTest.deleteBookByTitleTest();
 
     }
 
@@ -188,7 +188,7 @@ class BookDatabaseImplTest {
         }
     }
 
-    public void deleteBookByAuthorTest(){
+ /*   public void deleteBookByAuthorTest(){
         BookDatabase bookDatabase = new BookDatabaseImpl();
         Book book1 = new Book("John", "GOT");
         Book book2 = new Book("Andy", "Java");
@@ -223,5 +223,5 @@ class BookDatabaseImplTest {
         }else{
             System.out.println("Delete books by Title test FAIL");
         }
-    }
+    }*/
 }

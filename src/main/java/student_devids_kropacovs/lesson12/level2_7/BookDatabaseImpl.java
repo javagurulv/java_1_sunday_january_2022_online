@@ -84,7 +84,7 @@ class BookDatabaseImpl implements BookDatabase {
     @Override
     public void deleteByAuthor(String author) {
         for(Book book : bookList){
-            if(book.getAuthor().equals(author)){
+            if(Objects.equals(book.getAuthor(), author)){
                 bookList.remove(book);
             }
         }
@@ -93,7 +93,7 @@ class BookDatabaseImpl implements BookDatabase {
     @Override
     public void deleteByTitle(String title) {
         for(Book book : bookList){
-            if(book.getTitle().equals(title)){
+            if(Objects.equals(book.getTitle(), title)){
                 bookList.remove(book);
             }
         }
