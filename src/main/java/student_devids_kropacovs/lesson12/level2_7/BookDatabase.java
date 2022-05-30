@@ -11,4 +11,8 @@ public interface BookDatabase {
     List<Book> findByAuthor(String author);
     List<Book> findByTitle(String title);
     int countAllBooks();
+    void deleteByAuthor(String author);
+    void deleteByTitle(String title);
+
+
 }

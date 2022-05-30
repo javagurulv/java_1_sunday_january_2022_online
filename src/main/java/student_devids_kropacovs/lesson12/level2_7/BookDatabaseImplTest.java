@@ -18,6 +18,8 @@ class BookDatabaseImplTest {
         bookDatabaseImplTest.findBooksWithSameTitleTest();
         bookDatabaseImplTest.findBooksWithSameTitleTestNoBooks();
         bookDatabaseImplTest.countAllBooksTest();
+        bookDatabaseImplTest.deleteBookByAuthorTest();
+        bookDatabaseImplTest.deleteBookByTitleTest();
 
     }
 
@@ -183,6 +185,43 @@ class BookDatabaseImplTest {
             System.out.println("Count all books test PASS");
         }else{
             System.out.println("Count all books test FAIL");
+        }
+    }
+
+    public void deleteBookByAuthorTest(){
+        BookDatabase bookDatabase = new BookDatabaseImpl();
+        Book book1 = new Book("John", "GOT");
+        Book book2 = new Book("Andy", "Java");
+        Book book3 = new Book("Mary", "Java");
+        Book book4 = new Book("Andy", "Java");
+        bookDatabase.save(book1); bookDatabase.save(book2);
+        bookDatabase.save(book3); bookDatabase.save(book4);
+
+        List<Book> bookListWithoutAuthor = new ArrayList<>();
+        bookListWithoutAuthor.add(book1); bookListWithoutAuthor.add(book3);
+        bookDatabase.deleteByAuthor("Andy");
+        if(bookListWithoutAuthor.equals(bookDatabase)){
+            System.out.println("Delete books of same Author test PASS");
+        }else{
+            System.out.println("Delete books of same Author test FAIL");
+        }
+    }
+
+    public void deleteBookByTitleTest(){
+        BookDatabase bookDatabase = new BookDatabaseImpl();
+        Book book1 = new Book("John", "GOT");
+        Book book2 = new Book("Andy", "Java");
+        Book book3 = new Book("Mary", "Java");
+        Book book4 = new Book("Andy", "Java");
+        bookDatabase.save(book1); bookDatabase.save(book2);
+        bookDatabase.save(book3); bookDatabase.save(book4);
+        bookDatabase.deleteByTitle("Java");
+        List<Book> bookListWithSameTitle = new ArrayList<>();
+        bookListWithSameTitle.add(book1);
+        if(bookListWithSameTitle.equals(bookDatabase)){
+            System.out.println("Delete books by Title test PASS");
+        }else{
+            System.out.println("Delete books by Title test FAIL");
         }
     }
 }
