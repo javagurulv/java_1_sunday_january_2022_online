@@ -99,4 +99,69 @@ public class TransactionAnalysisServiceTest {
         List<Integer> actualTransactionYearList = Arrays.asList(2011, 2012, 2011, 2012, 2012, 2012);
         assertEquals(expectedAllTransactionYearList, actualTransactionYearList);
     }
+
+    @Test
+    public void getAllUniqueTransactionYearsTest() {
+        List<Transaction> allTransactionList = data.getTransactions();
+        List<Integer> expectedAllUniqueTransactionYearList = transactionAnalysisService
+                .getUniqueTransactionYears(allTransactionList);
+        List<Integer> actualTransactionYearList = Arrays.asList(2011, 2012);
+        assertEquals(expectedAllUniqueTransactionYearList, actualTransactionYearList);
+    }
+
+    @Test
+    public void getAllUniqueTraderNames() {
+        List<Transaction> allTransactionList = data.getTransactions();
+        List<String> expectedUniqueTraderNames = transactionAnalysisService
+                .getUniqueTransactionTraderNames(allTransactionList);
+        List<String> actualUniqueNameList = Arrays.asList("Brian", "Raoul", "Mario", "Alan");
+        assertEquals(expectedUniqueTraderNames, actualUniqueNameList);
+    }
+
+    @Test
+    public void getAllUniqueTraderCities() {
+        List<Transaction> allTransactionList = data.getTransactions();
+        List<String> expectedUniqueTraderCity = transactionAnalysisService
+                .getUniqueTransactionTraderCities(allTransactionList);
+        List<String> actualUniqueCityList = Arrays.asList("Cambridge", "Milan");
+        assertEquals(expectedUniqueTraderCity, actualUniqueCityList);
+    }
+
+    @Test
+    public void findTradersFromCambridgeTest() {
+        List<Transaction> allTransactionList = data.getTransactions();
+        List<String> expectedTraderList = transactionAnalysisService
+                .getTraderNamesFromCambridge(allTransactionList);
+        List<String> actualNamesFromCambridge = List.of("Brian","Raoul","Alan");
+        assertEquals(expectedTraderList,actualNamesFromCambridge);
+    }
+
+    @Test
+    public void findTraderFromDifferentCitiesTestV1(){
+        List<Transaction> allTransactionList = data.getTransactions();
+        List<String> expectedTradersFromCambridge = transactionAnalysisService
+                .getTraderNamesFromDifferentCities(allTransactionList,"Cambridge");
+        List<String> actualNamesFromCambridge = List.of("Brian","Raoul","Alan");
+        assertEquals(expectedTradersFromCambridge,actualNamesFromCambridge);
+        assertEquals(expectedTradersFromCambridge.size(),3);
+    }
+    @Test
+    public void findTraderFromDifferentCitiesTestV2(){
+        List<Transaction> allTransactionList = data.getTransactions();
+        List<String> expectedTradersFromMilan = transactionAnalysisService
+                .getTraderNamesFromDifferentCities(allTransactionList,"Milan");
+        List<String> actualNamesFromMilan = List.of("Mario");
+        assertEquals(expectedTradersFromMilan,actualNamesFromMilan);
+        assertEquals(expectedTradersFromMilan.size(),1);
+    }
+
+    @Test
+    public void findTraderFromDifferentCities(){
+        List<Transaction> allTransactionList = data.getTransactions();
+        List<String> expectedTradersFromLondon = transactionAnalysisService
+                .getTraderNamesFromDifferentCities(allTransactionList,"London");
+        List<String> actualNamesFromLondon = List.of();
+        assertEquals(expectedTradersFromLondon,actualNamesFromLondon);
+        assertEquals(expectedTradersFromLondon.size(),0);
+    }
 }
