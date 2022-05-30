@@ -1,4 +1,4 @@
-package student_yevgeniy_tolks.lesson_15_streams.level_3_4.task18_31;
+package student_yevgeniy_tolks.lesson_15_streams.level_3_4_5_6.task18_38;
 
 class Trader {
 

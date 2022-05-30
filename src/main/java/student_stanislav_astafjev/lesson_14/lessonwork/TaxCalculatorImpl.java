@@ -5,6 +5,6 @@ public class TaxCalculatorImpl implements TaxCalculator {
 
     @Override
     public double calculate(double income) {
-        return income * 2.25;
+        return income * 0.25;
     }
 }

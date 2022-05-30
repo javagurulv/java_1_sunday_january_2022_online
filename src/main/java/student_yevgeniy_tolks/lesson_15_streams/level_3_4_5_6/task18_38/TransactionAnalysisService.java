@@ -1,7 +1,8 @@
-package student_yevgeniy_tolks.lesson_15_streams.level_3_4.task18_31;
+package student_yevgeniy_tolks.lesson_15_streams.level_3_4_5_6.task18_38;
 
 import java.util.Comparator;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 class TransactionAnalysisService {
@@ -81,5 +82,52 @@ class TransactionAnalysisService {
                 .map(trader -> trader.getName())
                 .distinct()
                 .collect(Collectors.toList());
+    }
+
+    public boolean findAtLeastOneTraderFromMilan(List<Transaction> transactions) {
+        return transactions.stream()
+                .map(transaction -> transaction.getTrader())
+                .anyMatch(trader -> trader.getCity().equals("Milan"));
+    }
+
+    public boolean findAtLeastOneTraderFromChosenCity(List<Transaction> transactions, String traderCity) {
+        return transactions.stream()
+                .map(transaction -> transaction.getTrader())
+                .anyMatch(trader -> trader.getCity().equals(traderCity));
+    }
+
+    public Optional<Integer> findMaxTransactionValue(List<Transaction> transactions){
+        return transactions.stream()
+                .map(transaction -> transaction.getValue())
+                .max(Integer::compareTo);
+    }
+
+    public Optional<Integer> findMinTransactionValue(List<Transaction> transactions){
+        return transactions.stream()
+                .map(transaction -> transaction.getValue())
+                .min(Integer::compareTo);
+    }
+
+    public String  findAndSortInAlphabeticalOrderTraders(List<Transaction> transactions){
+        return transactions.stream()
+                .map(transaction -> transaction.getTrader().getName())
+                .distinct()
+                .sorted()
+                .collect(Collectors.joining(","));
+    }
+
+    public String  findAndSortInAlphabeticalOrderUniqueCities(List<Transaction> transactions){
+        return transactions.stream()
+                .map(transaction -> transaction.getTrader().getCity())
+                .distinct()
+                .sorted()
+                .collect(Collectors.joining(","));
+    }
+    //Self training - getASumOfAllTransactionValues()
+
+    public int getASumOfAllTransactionValues(List<Transaction> transactions) {
+        return transactions.stream()
+                .map(transaction -> transaction.getValue())
+                .reduce(0, Integer::sum);
     }
 }

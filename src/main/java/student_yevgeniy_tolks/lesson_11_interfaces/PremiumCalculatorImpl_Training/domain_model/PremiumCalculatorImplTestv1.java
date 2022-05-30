@@ -3,9 +3,9 @@ package student_yevgeniy_tolks.lesson_11_interfaces.PremiumCalculatorImpl_Traini
 import java.math.BigDecimal;
 import java.util.List;
 
-class PremiumCalculatorImplTest {
+class PremiumCalculatorImplTestv1 {
     public static void main(String[] args) {
-        PremiumCalculatorImplTest test = new PremiumCalculatorImplTest();
+        PremiumCalculatorImplTestv1 test = new PremiumCalculatorImplTestv1();
         test.policyCalculatorTest1();
         test.policyCalculatorTest2();
     }
