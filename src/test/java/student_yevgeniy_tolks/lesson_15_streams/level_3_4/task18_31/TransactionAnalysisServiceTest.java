@@ -6,6 +6,7 @@ import org.junit.Test;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Optional;
 
 import static org.junit.Assert.*;
 
@@ -198,5 +199,13 @@ public class TransactionAnalysisServiceTest {
         assertTrue(expectedAtLeastOneTraderFromCambridge);
     }
 
+    @Test
+    public void findTransactionMaxValueTest() {
+        List<Transaction> allTransactionList = data.getTransactions();
+        Optional<Integer> expectedMaxValue = transactionAnalysisService
+                .findMaxTransactionValue(allTransactionList);
+        Optional<Integer> actualMaxValue = Optional.of(1000);
+        assertEquals(expectedMaxValue, actualMaxValue);
+    }
 
 }

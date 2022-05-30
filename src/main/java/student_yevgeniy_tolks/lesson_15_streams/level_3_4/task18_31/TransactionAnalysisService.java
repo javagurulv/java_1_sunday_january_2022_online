@@ -2,6 +2,7 @@ package student_yevgeniy_tolks.lesson_15_streams.level_3_4.task18_31;
 
 import java.util.Comparator;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 class TransactionAnalysisService {
@@ -93,5 +94,11 @@ class TransactionAnalysisService {
         return transactions.stream()
                 .map(transaction -> transaction.getTrader())
                 .anyMatch(trader -> trader.getCity().equals(traderCity));
+    }
+
+    public Optional<Integer> findMaxTransactionValue(List<Transaction> transactions){
+        return transactions.stream()
+                .map(transaction -> transaction.getValue())
+                .max(Integer::compareTo);
     }
 }
