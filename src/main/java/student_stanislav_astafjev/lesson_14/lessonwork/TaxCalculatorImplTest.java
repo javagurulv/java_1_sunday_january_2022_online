@@ -5,10 +5,10 @@ import org.junit.Ignore;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
-
+@Ignore
 public class TaxCalculatorImplTest {
 
-     //TaxCalculatorImplTest test = new TaxCalculatorImplTest()
+    //TaxCalculatorImplTest test = new TaxCalculatorImplTest()
      //test.init() @before
      //test.shouldReturn25ProcTaxBefore20k()@test
      //test.init() // @before
