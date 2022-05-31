@@ -17,7 +17,7 @@ class BookDatabaseImplTest {
         bookDatabaseImplTest.findBooksWithSameTitleTestNoBooks();
         bookDatabaseImplTest.countAllBooksTest();
         bookDatabaseImplTest.deleteBookByAuthorTest();
-       // bookDatabaseImplTest.deleteBookByTitleTest();
+        bookDatabaseImplTest.deleteBookByTitleTest();
         bookDatabaseImplTest.bookListWithCriteriaTest();
         bookDatabaseImplTest.findUniqueAuthorsTest();
         bookDatabaseImplTest.findUniqueTitleTest();
@@ -103,7 +103,7 @@ class BookDatabaseImplTest {
         bookDatabase.save(book1);
         bookDatabase.save(book2);
         Optional<Book> bookOptional= bookDatabase.findById((long)3);
-        if(!bookOptional.isPresent()){
+        if(bookOptional.isEmpty()){
             System.out.println("Find book by ID test PASS");
         }else{
             System.out.println("Find book by ID test FAIL");
@@ -206,14 +206,14 @@ class BookDatabaseImplTest {
         List<Book> bookListWithoutAuthor = new ArrayList<>();
         bookListWithoutAuthor.add(book1); bookListWithoutAuthor.add(book3);
 
-        if(bookListWithoutAuthor.equals(bookDatabase)){
+        if(bookListWithoutAuthor.equals(bookDatabase.getBookList())){
             System.out.println("Delete books of same Author test PASS");
         }else{
             System.out.println("Delete books of same Author test FAIL");
         }
     }
 
-   /* public void deleteBookByTitleTest(){
+   public void deleteBookByTitleTest(){
         BookDatabase bookDatabase = new BookDatabaseImpl();
         Book book1 = new Book("John", "GOT");
         Book book2 = new Book("Andy", "Java");
@@ -224,12 +224,12 @@ class BookDatabaseImplTest {
         bookDatabase.deleteByTitle("Java");
         List<Book> bookListWithSameTitle = new ArrayList<>();
         bookListWithSameTitle.add(book1);
-        if(bookListWithSameTitle.equals(bookDatabase)){
+        if(bookListWithSameTitle.equals(bookDatabase.getBookList())){
             System.out.println("Delete books by Title test PASS");
         }else{
             System.out.println("Delete books by Title test FAIL");
         }
-    }*/
+    }
 
     public void bookListWithCriteriaTest(){
         BookDatabase bookDatabase = new BookDatabaseImpl();

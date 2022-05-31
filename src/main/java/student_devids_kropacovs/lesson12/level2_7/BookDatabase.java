@@ -6,6 +6,7 @@ import java.util.Optional;
 import java.util.Set;
 
 public interface BookDatabase {
+    List<Book> getBookList();
     Long save(Book book);
     boolean delete(Long bookId);
     boolean delete(Book book);
