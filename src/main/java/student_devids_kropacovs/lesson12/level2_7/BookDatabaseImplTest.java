@@ -1,4 +1,4 @@
-package student_devids_kropacovs.lesson12.level2_7;
+    package student_devids_kropacovs.lesson12.level2_7;
 
 import java.util.*;
 
@@ -20,6 +20,12 @@ class BookDatabaseImplTest {
        // bookDatabaseImplTest.deleteBookByTitleTest();
         bookDatabaseImplTest.bookListWithCriteriaTest();
         bookDatabaseImplTest.findUniqueAuthorsTest();
+        bookDatabaseImplTest.findUniqueTitleTest();
+        bookDatabaseImplTest.findUniqueBooksTest();
+        bookDatabaseImplTest.containsBookTest();
+        bookDatabaseImplTest.notContainsBookTest();
+        bookDatabaseImplTest.getEachAuthorBookCountTest();
+        bookDatabaseImplTest.getAuthorToBooksMapTest();
     }
 
     public void deleteBookByIDTrueTest(){
@@ -264,5 +270,113 @@ class BookDatabaseImplTest {
             System.out.println("Unique Authors test FAIL");
         }
 
+    }
+
+    public void findUniqueTitleTest(){
+        BookDatabase bookDatabase = new BookDatabaseImpl();
+        Book book1 = new Book("John", "GOT");
+        Book book2 = new Book("Andy", "GOT");
+        Book book3 = new Book("Mary", "Java");
+        Book book4 = new Book("Andy", "Java");
+        bookDatabase.save(book1); bookDatabase.save(book2);
+        bookDatabase.save(book3); bookDatabase.save(book4);
+        Set<String> uniqueTitle = bookDatabase.findUniqueTitles();
+        Set<String> expectedResult = new HashSet<>();
+        expectedResult.add(book1.getTitle()); expectedResult.add(book3.getTitle());
+        if(expectedResult.equals(uniqueTitle)){
+            System.out.println("Unique Title test PASS");
+        }else{
+            System.out.println("Unique Title test FAIL");
+        }
+
+    }
+
+    public void findUniqueBooksTest(){
+        BookDatabase bookDatabase = new BookDatabaseImpl();
+        Book book1 = new Book("John", "GOT");
+        Book book2 = new Book("Andy", "Java");
+        Book book3 = new Book("Mary", "Java");
+        Book book4 = new Book("Andy", "Java");
+        bookDatabase.save(book1); bookDatabase.save(book2);
+        bookDatabase.save(book3); bookDatabase.save(book4);
+        Set<Book> uniqueBooks = bookDatabase.findUniqueBooks();
+        Set<Book> expectedResult = new HashSet<>();
+        expectedResult.add(book1); expectedResult.add(book2); expectedResult.add(book3);expectedResult.add(book4);
+        if(expectedResult.equals(uniqueBooks)){
+            System.out.println("Unique Books test PASS");
+        }else{
+            System.out.println("Unique Books test FAIL");
+        }
+
+    }
+
+    public void containsBookTest(){
+        BookDatabase bookDatabase = new BookDatabaseImpl();
+        Book book1 = new Book("John", "GOT");
+        Book book2 = new Book("Andy", "Java");
+        Book book3 = new Book("Mary", "Java");
+        Book book4 = new Book("Andy", "Java");
+        bookDatabase.save(book1); bookDatabase.save(book2);
+        bookDatabase.save(book3); bookDatabase.save(book4);
+        if(bookDatabase.contains(book3)){
+            System.out.println("Contain book test PASS");
+        }else{
+            System.out.println("Contain book test FAIL");
+        }
+    }
+
+    public void notContainsBookTest(){
+        BookDatabase bookDatabase = new BookDatabaseImpl();
+        Book book1 = new Book("John", "GOT");
+        Book book2 = new Book("Andy", "Java");
+        Book book3 = new Book("Mary", "Java");
+        Book book4 = new Book("Andy", "Java");
+        bookDatabase.save(book1); bookDatabase.save(book2);
+        bookDatabase.save(book3); bookDatabase.save(book4);
+        bookDatabase.delete(book3);
+        if(!bookDatabase.contains(book3)){
+            System.out.println("Do not Contain book test PASS");
+        }else{
+            System.out.println("Do not Contain book test FAIL");
+        }
+    }
+
+    public void getEachAuthorBookCountTest(){
+        BookDatabase bookDatabase = new BookDatabaseImpl();
+        Book book1 = new Book("John", "GOT");
+        Book book2 = new Book("Andy", "Java");
+        Book book3 = new Book("Mary", "Java");
+        Book book4 = new Book("Andy", "Java");
+        bookDatabase.save(book1); bookDatabase.save(book2);
+        bookDatabase.save(book3); bookDatabase.save(book4);
+        Map<String, Integer> expectedBookMap = new HashMap<>();
+        expectedBookMap.put("John", 1); expectedBookMap.put("Andy", 2); expectedBookMap.put("Mary", 1);
+        if(expectedBookMap.equals(bookDatabase.getEachAuthorBookCount())){
+            System.out.println("Get each author book count test PASS");
+        }else{
+            System.out.println("Get each author book count test FAIL");
+        }
+    }
+
+    public void getAuthorToBooksMapTest(){
+        BookDatabase bookDatabase = new BookDatabaseImpl();
+        Book book1 = new Book("John", "GOT");
+        Book book2 = new Book("Andy", "Java");
+        Book book3 = new Book("Mary", "Java");
+        Book book4 = new Book("Andy", "Java2.0");
+        bookDatabase.save(book1); bookDatabase.save(book2);
+        bookDatabase.save(book3); bookDatabase.save(book4);
+        List<Book> books1 = new ArrayList<>();
+        List<Book> books2 = new ArrayList<>();
+        List<Book> books3 = new ArrayList<>();
+        books1.add(book1); books2.add(book2);books2.add(book4); books3.add(book3);
+
+        Map<String, List<Book>> expectedBookMap = new HashMap<>();
+        expectedBookMap.put("John", books1); expectedBookMap.put("Andy", books2); expectedBookMap.put("Mary", books3);
+        if(expectedBookMap.equals(bookDatabase.getAuthorToBooksMap())){
+            System.out.println("getAuthorToBooksMap test PASS");
+        }else{
+            System.out.println("getAuthorToBooksMap test FAIL");
+        }
     }
 }

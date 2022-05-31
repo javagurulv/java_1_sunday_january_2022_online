@@ -1,6 +1,7 @@
 package student_devids_kropacovs.lesson12.level2_7;
 
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 import java.util.Set;
 
@@ -16,5 +17,9 @@ public interface BookDatabase {
     void deleteByTitle(String title);
     List<Book> find(SearchCriteria searchCriteria);
     Set<String> findUniqueAuthors();
-
+    Set<String> findUniqueTitles();
+    Set<Book> findUniqueBooks();
+    boolean contains(Book book);
+    Map<String, List<Book>> getAuthorToBooksMap();
+    Map<String, Integer> getEachAuthorBookCount();
 }

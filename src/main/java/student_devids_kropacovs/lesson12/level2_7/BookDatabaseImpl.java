@@ -11,6 +11,10 @@ class BookDatabaseImpl implements BookDatabase {
         this.idForBook = 0;
     }
 
+    public List<Book> getBookList() {
+        return bookList;
+    }
+
     @Override
     public Long save(Book book) {
         this.idForBook = idForBook + 1;
@@ -21,8 +25,8 @@ class BookDatabaseImpl implements BookDatabase {
 
     @Override
     public boolean delete(Long bookId) {
-        for (Book bookToCheck : bookList){
-            if(Objects.equals(bookToCheck.getId(), bookId)){
+        for (Book bookToCheck : bookList) {
+            if (Objects.equals(bookToCheck.getId(), bookId)) {
                 bookList.remove(bookToCheck);
                 return true;
             }
@@ -32,8 +36,8 @@ class BookDatabaseImpl implements BookDatabase {
 
     @Override
     public boolean delete(Book book) {
-        for (Book bookToCheck : bookList){
-            if(bookToCheck.equals(book)){
+        for (Book bookToCheck : bookList) {
+            if (bookToCheck.equals(book)) {
                 bookList.remove(bookToCheck);
                 return true;
             }
@@ -43,8 +47,8 @@ class BookDatabaseImpl implements BookDatabase {
 
     @Override
     public Optional<Book> findById(Long bookId) {
-        for(Book book: bookList){
-            if(book.getId().equals(bookId)){
+        for (Book book : bookList) {
+            if (book.getId().equals(bookId)) {
                 return Optional.of(book);
             }
         }
@@ -54,8 +58,8 @@ class BookDatabaseImpl implements BookDatabase {
     @Override
     public List<Book> findByAuthor(String author) {
         List<Book> bookListOfOneAuthor = new ArrayList<>();
-        for(Book book: bookList){
-            if(book.getAuthor().equals(author)){
+        for (Book book : bookList) {
+            if (book.getAuthor().equals(author)) {
                 bookListOfOneAuthor.add(book);
             }
         }
@@ -65,8 +69,8 @@ class BookDatabaseImpl implements BookDatabase {
     @Override
     public List<Book> findByTitle(String title) {
         List<Book> bookListOfBookWithSameTitle = new ArrayList<>();
-        for(Book book: bookList){
-            if(book.getTitle().equals(title)){
+        for (Book book : bookList) {
+            if (book.getTitle().equals(title)) {
                 bookListOfBookWithSameTitle.add(book);
             }
         }
@@ -91,8 +95,8 @@ class BookDatabaseImpl implements BookDatabase {
     @Override
     public List<Book> find(SearchCriteria searchCriteria) {
         List<Book> bookListWithCriteria = new ArrayList<>();
-        for (Book book : this.bookList){
-            if(searchCriteria.match(book)){
+        for (Book book : this.bookList) {
+            if (searchCriteria.match(book)) {
                 bookListWithCriteria.add(book);
             }
         }
@@ -102,10 +106,51 @@ class BookDatabaseImpl implements BookDatabase {
     @Override
     public Set<String> findUniqueAuthors() {
         Set<String> uniqueAuthor = new HashSet<>();
-        for(Book book : bookList){
+        for (Book book : bookList) {
             uniqueAuthor.add(book.getAuthor());
         }
         return uniqueAuthor;
+    }
+
+    @Override
+    public Set<String> findUniqueTitles() {
+        Set<String> uniqueTitle = new HashSet<>();
+        for (Book book : bookList) {
+            uniqueTitle.add(book.getTitle());
+        }
+        return uniqueTitle;
+    }
+
+    @Override
+    public Set<Book> findUniqueBooks() {
+        Set<Book> uniqueBook = new HashSet<>();
+        uniqueBook.addAll(bookList);
+        return uniqueBook;
+    }
+
+    @Override
+    public boolean contains(Book book) {
+        return bookList.contains(book);
+    }
+
+    @Override
+    public Map<String, List<Book>> getAuthorToBooksMap() {
+        Map<String, List<Book>> listMap = new HashMap<>();
+        for(Book book : bookList){
+            listMap.put(book.getAuthor(), findByAuthor(book.getAuthor()));
+        }
+
+        return listMap;
+    }
+
+    @Override
+    public Map<String, Integer> getEachAuthorBookCount() {
+        Map<String, Integer> listMap = new HashMap<>();
+        for(Book book : bookList){
+            listMap.put(book.getAuthor(), findByAuthor(book.getAuthor()).size());
+        }
+
+        return listMap;
     }
 
 }
