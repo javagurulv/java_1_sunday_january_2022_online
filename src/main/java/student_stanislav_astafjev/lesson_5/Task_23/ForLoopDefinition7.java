@@ -1,6 +1,6 @@
-package student_stanislav_astafjev.lesson_5.Task_22;
+package student_stanislav_astafjev.lesson_5.Task_23;
 
-class ForLoopDefinition6 {
+class ForLoopDefinition7 {
 
     public static void main(String[] args) {
 
