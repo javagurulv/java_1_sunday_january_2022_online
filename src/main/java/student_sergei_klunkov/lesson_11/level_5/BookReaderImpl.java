@@ -1,7 +1,5 @@
 package student_sergei_klunkov.lesson_11.level_5;
 
-import com.sun.source.tree.ReturnTree;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -128,7 +126,7 @@ class BookReaderImpl implements BookReader {
     public List<Book> provideListOfBooksStatusRead(List<Book> listOfBooks) {
         List<Book> arrayOfReadBooks = new ArrayList<>();
         for(Book books: listOfBooks) {
-            if (books.getStatus().equals(StatusOfTheBook.READ)){
+            if(books.getStatus().equals(StatusOfTheBook.READ)){
                 arrayOfReadBooks.add(books);
             }
         }

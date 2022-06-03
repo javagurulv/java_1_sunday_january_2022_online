@@ -20,6 +20,8 @@ class BookReaderTest {
         test.provideAllBooksByTitleV2Test();
         test.statusOfTheBookReadTest();
         test.statusOfTheBookUnreadTest();
+        test.provideAllReadBooks();
+        test.provideAllUnReadBooks();
 
     }
 
@@ -247,5 +249,48 @@ class BookReaderTest {
             System.out.println(" Status of the Book " + " - UNREAD " + " - Test failed!");
         }
     }
+
+    public void provideAllReadBooks() {
+
+        Book book = new Book("Biba", "Man and Woman");
+        book.setStatus(StatusOfTheBook.READ);
+        Book book1 = new Book("Boba", "Grandma and Grandpa");
+        book1.setStatus(StatusOfTheBook.READ);
+        List<Book> books = List.of(book, book1);
+
+        List<Book> expectedReadBooksArray = List.of(
+                new Book("Biba", "Man and Woman"),
+                new Book("Boba", "Grandma and Grandpa"));
+
+        BookReaderImpl bookReader = new BookReaderImpl();
+        List<Book> resultReadBooksArray = bookReader.provideListOfBooksStatusRead(books);
+        if (expectedReadBooksArray.equals(resultReadBooksArray)) {
+            System.out.println(" Read Books provide " + " Test passed! ");
+        } else {
+            System.out.println(" Read Books provide " + " Test failed! ");
+        }
+    }
+
+    public void provideAllUnReadBooks() {
+
+        Book book = new Book("Biba", "Man and Woman");
+        book.setStatus(StatusOfTheBook.UNREAD);
+        Book book1 = new Book("Boba", "Grandma and Grandpa");
+        book1.setStatus(StatusOfTheBook.UNREAD);
+        List<Book> books = List.of(book, book1);
+
+        List<Book> expectedUnReadBooksArray = List.of(
+                new Book("Biba", "Man and Woman"),
+                new Book("Boba", "Grandma and Grandpa"));
+
+        BookReaderImpl bookReader = new BookReaderImpl();
+        List<Book> resultUnReadBooksArray = bookReader.provideListOfBooksStatusUnRead(books);
+        if (expectedUnReadBooksArray.equals(resultUnReadBooksArray)) {
+            System.out.println(" Unread Books provide " + " - Test passed! ");
+        } else {
+            System.out.println(" Unread Books provide " + " - Test failed! ");
+        }
+    }
+
 
 }
