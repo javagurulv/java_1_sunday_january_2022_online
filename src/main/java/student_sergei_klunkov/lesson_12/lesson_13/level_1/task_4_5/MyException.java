@@ -1,4 +1,4 @@
-package student_sergei_klunkov.lesson_13.level_1.task_4_5;
+package student_sergei_klunkov.lesson_12.lesson_13.level_1.task_4_5;
 
 class MyException extends Exception {
 
