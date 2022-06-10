@@ -1,0 +1,10 @@
+Знакомство с классами ошибок.
+
+Найдите в документации Java (javadoc) для чего используются
+следующие ошибки:
+- ArrayIndexOutOfBoundsException - throws exception if indicated an index of array tha not exists
+- IllegalArgumentException - throws when illegal argument is provided;
+- IOException -
+- StackOverflowError - throws when a stack in overflowed
+- OutOfMemoryError - throws when jmv is out of memory
+- NumberFormatException - throws when converting string to number, but provided string is incorrect or word is indicated
