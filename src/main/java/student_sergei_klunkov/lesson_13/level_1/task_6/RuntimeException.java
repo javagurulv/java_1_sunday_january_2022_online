@@ -1,4 +1,4 @@
-package student_sergei_klunkov.lesson_12.lesson_13.level_1.task_6;
+package student_sergei_klunkov.lesson_13.level_1.task_6;
 
 class RuntimeException {
 
