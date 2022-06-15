@@ -23,11 +23,15 @@ public class FruitStore {
 	public List<Fruit> getAllApples() {
 		List<Fruit> apples = new ArrayList<>();
 		for (Fruit fruit : fruits) {
-			if ("apple".equals(fruit.getTitle())) {
+			if (isApple(fruit)) {
 				apples.add(fruit);
 			}
 		}
 		return apples;
+	}
+
+	private boolean isApple(Fruit fruit) {
+		return "apple".equals(fruit.getTitle());
 	}
 
 	// Требование 2: отобрать все груши
