@@ -98,7 +98,7 @@ class CreditCard {
     }
 
     public double printAccountBalanceOnConsole() {
-        return + accountBalance();
+        return +accountBalance();
     }
 
 
