@@ -1,10 +1,12 @@
 package student_stanislav_astafjev.lesson_5.Task_31;
 
-import java.sql.Array;
 import java.util.Arrays;
+import java.util.IntSummaryStatistics;
 import java.util.Random;
 
 public class ArrayUtil {
+
+
     public static int[] createArray(int arrayLength) {
         return new int[arrayLength];
     }
@@ -27,31 +29,43 @@ public class ArrayUtil {
             array[i] = number;
         }
     }
-}
 
-class ArrayUtilTest {
-    public static void main(String[] args) {
-        ArrayUtilTest test = new ArrayUtilTest();
-        test.shouldCreateArray();
-        test.shouldFindMaxNumber();
-    }
 
-    public void shouldCreateArray() {
-        int[] array = ArrayUtil.createArray(5);
-        boolean result = array.getClass().isArray();
-        System.out.println("Is this an array? - " + result);
-    }
-
-    public void shouldFindMaxNumber() {
-        int targetMaxNumber = 175;
-        int[] array = {41, 51, 23, targetMaxNumber};
-
-        int result = ArrayUtil.findMaxNumber(array);
-        if (result == targetMaxNumber) {
-            System.out.println("Both numbers check out");
-        } else {
-            System.out.println("Max number is wrong");
+    static class ArrayUtilTest {
+        public static void main(String[] args) {
+            ArrayUtilTest test = new ArrayUtilTest();
+            test.shouldCreateArray();
+            test.shouldFindMaxNumber();
+            test.shouldFindMinNumber();
         }
-        System.out.println(targetMaxNumber + " vs " + result);
+
+        public void shouldCreateArray() {
+            int[] array = ArrayUtil.createArray(5);
+            boolean result = array.getClass().isArray();
+            System.out.println("Is this an array? - " + result);
+        }
+
+        public void shouldFindMaxNumber() {
+            int targetMaxNumber = 175;
+            int[] array = {41, 51, 23, targetMaxNumber};
+
+            int result = ArrayUtil.findMaxNumber(array);
+            if (result == targetMaxNumber) {
+                System.out.println("Both numbers check out");
+            } else {
+                System.out.println("Max number is wrong");
+            }
+            System.out.println(targetMaxNumber + " vs " + result);
+        }
+
+        public void shouldFindMinNumber() {
+            int[] tab = {12, 1, 21, 8};
+            IntSummaryStatistics stat = Arrays.stream(tab).summaryStatistics();
+            int min = stat.getMin();
+            System.out.println("Min = " + min);
+        }
+
+
     }
+
 }

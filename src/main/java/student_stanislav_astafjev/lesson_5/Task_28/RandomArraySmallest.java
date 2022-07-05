@@ -13,18 +13,18 @@ public class RandomArraySmallest {
 
         System.out.println("Creating array of " + a + " length");
         int[] arr = new int[a];
-        int biggestNumber = boundary;
+        int smallestNumber = boundary;
 
         for (int i = 0; i < arr.length; i++) {
             int number = random.nextInt(boundary);
-            if (biggestNumber > number) {
-                biggestNumber = number;
+            if (smallestNumber > number) {
+                smallestNumber = number;
             }
             arr[i] = number;
         }
 
         System.out.println(Arrays.toString(arr));
-        System.out.println("Smallest number is " + biggestNumber);
+        System.out.println("Smallest number is " + smallestNumber);
     }
 
 }
