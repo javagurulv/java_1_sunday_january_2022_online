@@ -64,8 +64,5 @@ public class ArrayUtil {
             int min = stat.getMin();
             System.out.println("Min = " + min);
         }
-
-
     }
-
 }
