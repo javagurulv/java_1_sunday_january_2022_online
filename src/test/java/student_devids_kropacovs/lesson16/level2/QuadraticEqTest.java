@@ -5,7 +5,7 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-class QuadraticEqTest {
+public class QuadraticEqTest {
     private QuadraticEq quadraticEq = new QuadraticEq();
 
 
