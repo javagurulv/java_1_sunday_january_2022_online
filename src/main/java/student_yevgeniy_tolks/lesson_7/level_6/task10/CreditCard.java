@@ -19,14 +19,17 @@ class CreditCard {
     }
 
     public int getPinCode() {
+
         return pinCode;
     }
 
     public double getMoneyAmount() {
+
         return moneyAmount;
     }
 
     public void setMoneyAmount(double moneyAmount) {
+
         this.moneyAmount = moneyAmount;
     }
 
@@ -49,10 +52,12 @@ class CreditCard {
     }
 
     public double getCreditLimit() {
+
         return creditLimit;
     }
 
     public void setCreditLimit(double creditLimit) {
+
         this.creditLimit = creditLimit;
     }
 
