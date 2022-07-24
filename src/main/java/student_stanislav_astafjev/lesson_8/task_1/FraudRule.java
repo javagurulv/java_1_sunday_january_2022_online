@@ -5,7 +5,6 @@ abstract class FraudRule {
 
     public FraudRule(String ruleName) {
         this.ruleName = ruleName;
-
     }
     public String getRuleName() {
         return ruleName;

@@ -1,6 +1,5 @@
 package student_stanislav_astafjev.lesson_8.task_1;
 
-
 import java.util.List;
 
 class FraudDetector {

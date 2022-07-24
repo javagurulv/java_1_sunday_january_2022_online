@@ -9,6 +9,7 @@ class FraudDetectionResult {
         this.ruleName = ruleName;
     }
     public boolean isFraud() {
+
         return this.fraud;
     }
     public String getRuleName() {
