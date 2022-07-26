@@ -1,24 +1,30 @@
 package student_stanislav_astafjev.lesson_10.task_5;
 
+import java.util.Objects;
+
 public class Safe2 {
-    private String pass;
+    private int pass;
     private double moneyAmountInSafe;
 
     public Safe2(String pass, double moneyAmountInSafe) {
-        this.pass = String.valueOf(pass);
+        this.pass = Integer.parseInt(String.valueOf(pass));
         this.moneyAmountInSafe = moneyAmountInSafe;
     }
-    public double getMoneyAmountInSafe(String pass, double getMoneyFromSafe) {
-        if (this.pass.equals(pass) && this.moneyAmountInSafe >= getMoneyFromSafe) {
-            this.moneyAmountInSafe -= getMoneyFromSafe;
-            return getMoneyFromSafe;
-        } else {
+    public double getMoneyAmountInSafe(int pass, double getMoneyFromSafe) {
+        if (!Objects.equals(this.pass, pass)) {
             return 0;
+        } else {
+            if (this.moneyAmountInSafe >= getMoneyFromSafe) {
+                this.moneyAmountInSafe -= getMoneyFromSafe;
+                return getMoneyFromSafe;
+            } else {
+                return 0;
+            }
         }
     }
 
-    public double putMoneyAmountInSafe(String pass, double putMoneyInsideSafe) {
-        if (this.pass.equals(pass)) {
+    public double putMoneyAmountInSafe(int pass, double putMoneyInsideSafe) {
+        if (Objects.equals(this.pass, pass)) {
             this.moneyAmountInSafe += putMoneyInsideSafe;
             return putMoneyInsideSafe;
         } else {
