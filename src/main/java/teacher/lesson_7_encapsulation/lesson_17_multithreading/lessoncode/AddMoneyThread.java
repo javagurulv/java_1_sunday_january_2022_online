@@ -1,4 +1,4 @@
-package teacher.lesson_17_multithreading.lessoncode;
+package teacher.lesson_7_encapsulation.lesson_17_multithreading.lessoncode;
 
 public class AddMoneyThread implements Runnable {
 

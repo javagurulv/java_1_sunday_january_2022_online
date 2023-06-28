@@ -1,4 +1,4 @@
-package student_deniss_dubko.deniss_dubko_lesson_6_homework.level_2_intern.task_7_day_of_the_week_detector;
+package student_deniss_dubko.deniss_dubko_lesson_6_homework.level_2_intern.task_7_task_11_day_of_the_week_detector;
 
 class DayOfTheWeekDetectorDemo {
 
